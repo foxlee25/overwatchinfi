@@ -1,0 +1,67 @@
+/**
+ * @media query for laptop or tablet
+ */
+@media screen and (min-width: 1024px) {
+	
+.tv-largeScreenHide{
+	display:none !important;
+}
+/*
+ *   begin navigation
+ */
+.tv-pageHeader.tv-IconDiv {
+  width: 200px;
+  height: 60px;
+  display: inline;
+  float: left;
+  cursor: pointer;
+} 	
+.tv-navigation {
+  position: relative;
+  top: 20px;
+  left: 10%;
+  display: inline;
+  overflow: hidden;
+}
+.tv-navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+	display: inline;
+	overflow: hidden;
+}
+.tv-navigation ul li {
+    display: inline;
+    background: none;
+}
+.tv-navigation ul li a {
+    text-decoration: none;
+    font-family: 'Oxygen', sans-serif;
+    color: #626060;
+	font-size: 1.1em;
+  	padding: .2em .8em;
+    text-transform: uppercase;
+}
+.tv-navigation ul li a:hover {
+    color: #2ecc71;
+}
+
+/** end navigation**/
+
+
+.tv-left {
+   width : 80%;
+   margin : 30px auto;
+   float:right;  
+}
+.tv-right {
+   width : 80%;
+   margin : 30px auto;
+   float:left;
+}
+
+
+}
+
+

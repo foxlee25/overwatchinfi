@@ -1,0 +1,260 @@
+/**
+ * @media query for phone
+ */ 
+@media screen and (max-width: 1024px) {
+	
+#tv-mainContent{
+	padding: 30px 10px !important;
+}	
+.tv-smallScreenPadding{
+	padding: 0px !important;
+}	
+.tv-smallScreenHide{
+	display:none !important;
+}
+.container-fluid{
+	padding: 0px !important;
+}
+/*
+ *   begin navigation
+ */
+#tv-leftSideNav {
+	background: -webkit-linear-gradient(to right, rgb(242, 242, 242) 90%, rgba(152, 152, 152, 0.6)) repeat scroll 0% 0% !important;
+    background: -moz-linear-gradient(to right, rgb(242, 242, 242) 90%, rgba(152, 152, 152, 0.6)) repeat scroll 0% 0% !important;
+    background: linear-gradient(to right, rgb(242, 242, 242) 90%, rgba(152, 152, 152, 0.6)) repeat scroll 0% 0% !important;
+}
+
+#tv-navbar{
+	position : fixed !important;
+}
+
+ul.tv-sideBar-socialLink{
+ margin: 0;
+  padding: 20px 0;
+  list-style-type: none;
+}
+
+ul.tv-sideBar-socialLink li{
+display: inline;
+}
+
+.tv-sideBar-socialLink .tv-socialLink-facebook{
+	  background: url(../image/footer_socialIcons.png) no-repeat 0px -45px;
+}
+.tv-sideBar-socialLink .tv-socialLink-facebook:hover {
+  background: url(../image/footer_socialIcons.png) no-repeat 0px -24px;
+}
+.tv-sideBar-socialLink .tv-socialLink-twitter{
+	  background: url(../image/footer_socialIcons.png) no-repeat -71px -45px;
+}
+.tv-sideBar-socialLink .tv-socialLink-twitter:hover {
+  background: url(../image/footer_socialIcons.png) no-repeat -71px -24px;
+}
+.tv-sideBar-socialLink .tv-socialLink-plus{
+	background: url(../image/footer_socialIcons.png) no-repeat -322px -45px;
+}
+.tv-sideBar-socialLink .tv-socialLink-plus:hover {
+  background: url(../image/footer_socialIcons.png) no-repeat -322px -24px;
+}
+.tv-sideBar-socialLink .tv-socialLink-pinterest{
+	background: url(../image/footer_socialIcons.png) no-repeat -214px -45px;
+}
+.tv-sideBar-socialLink .tv-socialLink-pinterest:hover {
+  background: url(../image/footer_socialIcons.png) no-repeat -214px -24px;
+}
+.tv-sideBar-socialLink .tv-socialLink-mail{
+	 background: url(../image/footer_socialIcons.png) no-repeat -353px -45px;
+}
+.tv-sideBar-socialLink  .tv-socialLink-mail:hover {
+  background: url(../image/footer_socialIcons.png) no-repeat -353px -24px;
+}
+
+
+.tv-navigation-mobileIcon {
+  position: relative;
+  z-index: 100;
+display: inline;
+  float: left;
+  margin-top: 10px;
+  border: 1px solid rgb(240, 240, 240);
+  border-radius: 5px;
+    padding: 6px 10px;
+  padding-bottom: 3px;
+  box-shadow: 0px 0px 3px rgb(166, 166, 166) inset;
+  background-color: rgba(232, 232, 232, 0.3);
+}
+
+.tv-navigation-mobileSetting {
+z-index: 10;
+  display: inline;
+  position: absolute;
+  left: 90%;
+  top: 20px;
+}
+
+span.glyphicon.glyphicon-menu-hamburger {
+  -webkit-transform: scale(1.2,1.2);
+  -moz-transform: scale(1.2,1.2);
+  -ms-transform: scale(1.2,1.2);
+  -o-transform: scale(1.2,1.2);
+  transform: scale(1.2,1.2);
+    opacity: 0.8;
+}
+
+span.glyphicon.glyphicon-cog {
+  -webkit-transform: scale(1.5,1.5);
+  -moz-transform: scale(1.5,1.5);
+  -ms-transform: scale(1.5,1.5);
+  -o-transform: scale(1.5,1.5);
+  transform: scale(1.5,1.5);
+    opacity: 0.8;
+}
+nav#tv-rightSideNav {
+  width: 240px;
+  margin-top: 62px;
+  background: -webkit-linear-gradient(to right, rgb(228, 228, 228), rgb(245, 245, 245)) repeat scroll 0% 0% !important;
+  background: -moz-linear-gradient(to right, rgb(228, 228, 228), rgb(245, 245, 245)) repeat scroll 0% 0% !important;
+  background: linear-gradient(to right, rgb(228, 228, 228), rgb(245, 245, 245)) repeat scroll 0% 0% !important;
+}
+
+#tv-navbar.cbp-spmenu-push-toright .tv-pageHeader.tv-IconDiv {
+  position: absolute;
+  left: 45%;
+  margin: 0 0 0 -37.5%;
+  width: 75%;
+  z-index: 10;
+}
+
+
+#tv-navbar.cbp-spmenu-push-toright .tv-pageHeader.tv-IconDiv .tv-pandaIcon{
+  position: relative;
+  left: 80px;
+}
+
+.tv-pageHeader.tv-IconDiv {
+width: 180px;
+height: 60px;
+cursor: pointer;
+  display: inline;
+
+}
+#tv-navbar .container{
+  text-align: center;
+  height: 60px;
+  display: block;
+  width: 100%;
+}
+/** end navigation**/
+/**begin home page**/
+#panda_home {
+      margin-top: 30px;
+}	
+
+#panda_home hr {
+     width:96% !important;
+	 margin: 0 auto !important;
+}
+
+.tv-home-mobileTitle{
+margin-top:20px;
+background-color: #F5F5F5;
+border-color: #DDD;
+font-size: 24px !important;
+padding: 10px 15px;
+border-top-left-radius: 3px;
+border-top-right-radius: 3px;
+box-shadow: 0px 0px 3px #D8D8D8 inset;
+line-height: 32px;
+ont-family: "Oxygen";
+text-align:center;
+color: #666;
+font-weight: 300;
+}	
+
+.tv-homepage-mobileTab{
+	margin-top:20px;
+	margin-bottom:10px;
+}
+
+/** end home page**/
+
+/* General styles for all menus */
+.form-control.tv-halfwidth.tv-mobile-fullWidth {
+  width: 98%;
+  display: block;
+  margin-top: 15px;
+}
+
+.form-control.tv-tinywidth.tv-mobile-tinywidth{
+	width: 36%;
+}
+
+.form-control.tv-smallwidth.tv-mobile-smallwidth{
+	width: 60%;
+}
+.cbp-spmenu {
+	position: fixed;
+}
+.cbp-spmenu > a {
+    font-family: "Oxygen",sans-serif;
+    font-size: 1.2em;
+    line-height: 26px;
+    color: #5D5D5D;
+    font-weight: 300;
+    display: block;
+
+}
+.cbp-spmenu a:hover {
+	 background: -webkit-linear-gradient(rgb(240, 240, 240),rgb(255, 255, 255),rgb(240, 240, 240));
+  background: -moz-linear-gradient(rgb(240, 240, 240),rgb(255, 255, 255),rgb(240, 240, 240));
+  background: linear-gradient(rgb(240, 240, 240),rgb(255, 255, 255),rgb(240, 240, 240));
+	text-decoration: none;
+}
+/* Orientation-dependent styles for the content of the menu */
+
+.cbp-spmenu-vertical {
+	width: 240px;
+	height: 100%;
+	top: 0;
+	z-index: 1000;
+}
+.cbp-spmenu-vertical> a {
+	border-bottom: 1px solid #969696;
+	padding: 1em;
+}
+/* Vertical menu that slides from the left or right */
+.cbp-spmenu-left {
+	left: -240px;
+}
+.cbp-spmenu-right {
+	right: -240px;
+}
+.cbp-spmenu-left.cbp-spmenu-open {
+	left: 0px;
+}
+.cbp-spmenu-right.cbp-spmenu-open {
+	right: 0px;
+}
+
+/* Push classes applied to the body */
+.cbp-spmenu-push {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+.cbp-spmenu-push-toright {
+	left: 240px;
+}
+.cbp-spmenu-push-toleft {
+	left: -240px;
+}
+/* Transitions */
+.cbp-spmenu,
+.cbp-spmenu-push {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+
+}

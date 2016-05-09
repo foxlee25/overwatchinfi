@@ -1,0 +1,15 @@
+{
+  "name": "time",
+  "version": "1.0.0",
+  "description": "time service",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Peter Jin",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cors": "^2.7.1",
+    "express": "^4.13.4"
+  }
+}

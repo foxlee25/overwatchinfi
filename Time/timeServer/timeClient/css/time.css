@@ -1,0 +1,366 @@
+/*
+ *   begin navigation
+ */
+body {
+    font-family: "Oxygen", sans-serif;
+    font-size: 17px;
+    line-height: 26px;
+    color: #535353;
+    font-weight: 300;
+}
+
+.page-wrap {
+    width: 100%;
+}
+
+.tv-hide {
+    display: none !important;
+}
+
+.tv-show {
+    display: block !important;
+}
+
+nav#tv-navbar {
+    box-shadow: 0px 3px 5px #D3D3D3;
+    background: -webkit-linear-gradient( rgb(250, 250, 250), rgb(236, 236, 236)) repeat scroll 0% 0% !important;
+  background: -moz-linear-gradient( rgb(250, 250, 250), rgb(236, 236, 236)) repeat scroll 0% 0% !important;
+  background: linear-gradient( rgb(250, 250, 250), rgb(236, 236, 236)) repeat scroll 0% 0% !important;
+}
+
+nav#tv-navbar .tv-navigation>ul>li.dropdown>ul.dropdown-menu{
+	display:none;
+}
+
+nav#tv-navbar .tv-navigation>ul>li.dropdown.open>ul.dropdown-menu{
+	display:block;
+}
+
+.jumbotron {
+    background-color: #FAFAFA !important;
+    margin-bottom: 0px !important;
+	padding-bottom: 10px !important;
+}
+
+.popover-content {
+    overflow-y: scroll;
+    max-height: 300px;
+}
+
+hr {
+    display: block;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-style: inset;
+    border-width: 1px;
+    clear: both;
+}
+
+
+.dropdown-menu {
+    box-shadow: 1px 1px 10px #888888;
+}
+
+/** end navigation*/
+/**home page**/
+div.tv-pageContent {
+    overflow: hidden;
+    padding: 0 0 0 0;
+}
+
+.panda-home-partOne {
+    background: url("../image/homePage-backgroundOne.jpg") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    text-align: center;
+    padding-top: 100px;
+    color: rgb(218, 68, 68);
+}
+
+.tv-homebookNow {
+    transition: font-size 0.3s ease;
+}
+
+.tv-homebookNow:hover {
+    font-size: 56px;
+}
+
+.tv-testHeader {
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+/**end home page **/
+
+
+.signup-card {
+padding: 20px;
+width: 300px;
+background-color: #F7F7F7;
+margin: 50px auto 10px;
+border-radius: 2px;
+box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+overflow: hidden;
+}
+
+.signup-card h1 {
+  font-weight: 100;
+  text-align: center;
+  font-size: 2.3em;
+}
+
+.signup-card input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+  border-radius: 3px;
+}
+
+.signup-card input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border-radius: 3px;
+}
+
+#tv-registerForm-panelAlert{
+	  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+   border-radius: 3px;
+}
+
+.signup-card input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.signup-card input[type="radio"]{
+	display: inline;
+   margin-bottom: 20px;
+}
+
+.signup-card label{
+	margin-right:20px;
+	font-size: 16px;
+	 font-weight: 300;
+}
+
+.signup {
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+  user-select: none; */
+}
+
+.signup-submit {
+  /* border: 1px solid #3079ed; */
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  background-color: #4d90fe;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.signup-submit:hover {
+  /* border: 1px solid #2f5bb7; */
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #357ae8;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.signup-card a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+}
+
+.signup-card a:hover {
+  opacity: 1;
+}
+
+.signup-help {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+}
+
+.login-card {
+padding: 20px;
+width: 300px;
+background-color: #F7F7F7;
+margin: 50px auto 10px;
+border-radius: 2px;
+box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+overflow: hidden;
+}
+
+.login-card h1 {
+  font-weight: 100;
+  text-align: center;
+  font-size: 2.3em;
+}
+
+.login-card input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+  border-radius: 3px;
+}
+
+.login-card input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border-radius: 3px;
+}
+
+#tv-loginForm-panelAlert{
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+.login-card input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.login {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+  user-select: none; */
+}
+
+.login-submit {
+  /* border: 1px solid #3079ed; */
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  background-color: #4d90fe;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.login-submit:hover {
+  /* border: 1px solid #2f5bb7; */
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #357ae8;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.login-card a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+}
+
+.login-card a:hover {
+  opacity: 1;
+}
+
+.login-help {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+}
+
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  margin-top: 20px;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+.navbar-wrapper .navbar {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar-content
+{
+    width:320px;
+    padding: 15px;
+    padding-bottom:0px;
+}
+.navbar-content:before, .navbar-content:after
+{
+    display: table;
+    content: "";
+    line-height: 0;
+}
+.navbar-nav.navbar-right:last-child {
+margin-right: 15px !important;
+}
+.navbar-footer 
+{
+    background-color:#DDD;
+}
+.navbar-footer-content { padding:15px 15px 15px 15px; }
+.dropdown-menu {
+padding: 0px;
+overflow: hidden;
+}
+
+
