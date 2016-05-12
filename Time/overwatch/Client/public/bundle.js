@@ -42,9 +42,9 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/*!**************************************!*\
-  !*** ./timeServer/timeClient/app.js ***!
-  \**************************************/
+/*!*********************************!*\
+  !*** ./overwatch/Client/app.js ***!
+  \*********************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26337,16 +26337,16 @@
 
 /***/ },
 /* 229 */
-/*!************************************************!*\
-  !*** ./timeServer/timeClient/config/routes.js ***!
-  \************************************************/
+/*!*******************************************!*\
+  !*** ./overwatch/Client/config/routes.js ***!
+  \*******************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	var React = __webpack_require__(/*! react */ 1);
 	var Base = __webpack_require__(/*! ../components/BaseComponent */ 230);
-	var Home = __webpack_require__(/*! ../components/HomeComponent */ 231);
+	var Home = __webpack_require__(/*! ../components/HomeComponent */ 232);
 	var Router = __webpack_require__(/*! react-router */ 168);
 	var Route = Router.Route;
 	var IndexRoute = Router.IndexRoute;
@@ -26359,15 +26359,15 @@
 
 /***/ },
 /* 230 */
-/*!***********************************************************!*\
-  !*** ./timeServer/timeClient/components/BaseComponent.js ***!
-  \***********************************************************/
+/*!******************************************************!*\
+  !*** ./overwatch/Client/components/BaseComponent.js ***!
+  \******************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	var React = __webpack_require__(/*! react */ 1);
-	var appValues = __webpack_require__(/*! ../i18/AppProps */ 233);
+	var appValues = __webpack_require__(/*! ../i18/AppProps */ 231);
 	
 	var Base = React.createClass({
 	  displayName: 'Base',
@@ -26402,9 +26402,22 @@
 
 /***/ },
 /* 231 */
-/*!***********************************************************!*\
-  !*** ./timeServer/timeClient/components/HomeComponent.js ***!
-  \***********************************************************/
+/*!******************************************!*\
+  !*** ./overwatch/Client/i18/AppProps.js ***!
+  \******************************************/
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	module.exports = {
+		appName: 'OverwatchInfi'
+	};
+
+/***/ },
+/* 232 */
+/*!******************************************************!*\
+  !*** ./overwatch/Client/components/HomeComponent.js ***!
+  \******************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -26428,20 +26441,6 @@
 	});
 	
 	module.exports = Home;
-
-/***/ },
-/* 232 */,
-/* 233 */
-/*!***********************************************!*\
-  !*** ./timeServer/timeClient/i18/AppProps.js ***!
-  \***********************************************/
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	module.exports = {
-		appName: 'OverwatchInfi'
-	};
 
 /***/ }
 /******/ ]);
