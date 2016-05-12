@@ -1,8 +1,8 @@
 var webpack = require('webpack');
 var path = require('path');
 
-var BUILD_DIR = path.resolve(__dirname, 'timeServer/timeClient/public');
-var APP_DIR = path.resolve(__dirname, 'timeServer/timeClient');
+var BUILD_DIR = path.resolve(__dirname, 'overwatch/Client/public');
+var APP_DIR = path.resolve(__dirname, 'overwatch/Client');
 
 var config = {
   entry: APP_DIR + '/app.js',
