@@ -1,0 +1,15 @@
+#herocard {
+	background: #cee3f8;
+}
+
+#cardTitle {
+	text-align: center;
+	font-size: 20px;
+}
+
+#herosComponent {
+	background-image: url("../img/background/herosBg.jpg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}

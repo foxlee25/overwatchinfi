@@ -1,3 +1,5 @@
 module.exports = {
-	appName: 'OverwatchInfi'
+	appName: 'OverwatchInfi',
+	heros: 'Heros',
+	about: 'About'
 };

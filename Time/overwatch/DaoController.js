@@ -1,7 +1,7 @@
 /**
  * @author Jin, Zheyang
  */
-// var fs = require('fs')
+var fs = require('fs')
 // fs.readFile()
 //request(url,function(){callback})
 
@@ -35,6 +35,18 @@ daoController.getDao = function (daoFileName, daoMethodName, restCallback) {
 
     }
 
+};
+
+daoController.getHeros = function(restCallback) {
+    fs.readFile('./overwatch/Json/heros.json', 'utf8', function(err, data){
+        if(err){
+            console.error(err);
+            restCallback([]);
+            return;
+        }
+        console.log(data);
+        restCallback(data);
+    });
 };
 
 

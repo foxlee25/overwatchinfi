@@ -13,15 +13,25 @@ app.use(cors());
 //app.listen(80);
 //use on local
 app.listen(3000, '127.0.0.1');
-app.use('/', express.static('./timeClient/'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 
+app.get('/ping', function(req, res){
+	res.send('pong');
+});
 
 /**
  * process all rest call
  */
 app.use(RestController);
+
+//serve front end files
+app.use(express.static('./overwatch/Client/'));
+
+//load html default
+app.get('/', function(req, res) {
+	res.sendfile('./overwatch/Client/index.html');
+});
 console.log('Time Server start...');
