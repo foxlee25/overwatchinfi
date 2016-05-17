@@ -21,7 +21,7 @@ var DBConnection;
  * will reuse connection if already created
  */
 var DBController = {};
-DBController.getConnection = function (callback) {
+DBController.getConnection = function (req, callback) {
     if (DBConnection === undefined) {
         MongoClient.connect(url, function (err, db) {
             if (err) {

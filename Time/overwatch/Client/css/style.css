@@ -47,3 +47,59 @@ background: rgba(134, 198, 217, 0.5);
 .navTitle:hover {
 	background: #080808 !important;
 }
+
+.newsImgMargin {
+	margin-top: 10px;
+}
+
+.newsImgMargin img{
+	padding: 20px;
+}
+
+.newsDescriptionColor: {
+	color: #ffffff;
+}
+
+#newsCard p, #newsCard b, #newsCard h4{
+	color: #ffffff;
+}
+
+#author {
+	float: left;
+}
+
+#domain {
+	float: right;
+}
+
+#newsCard {
+	margin: 15px;
+	border-radius: 10px;
+	background: rgba(20, 33, 41, 0.5);
+}
+
+#newsText {
+	margin-top: 15px;
+}
+
+#twitCard {
+	padding-top: 20px;
+	margin: 15px;
+	border-radius: 10px;
+	background: rgba(20, 33, 41, 0.5);
+}
+
+#twitCard img {
+	width: 100px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#twitCard p {
+	color: #ffffff;
+}
+
+#retweets {
+	float: left;	
+}

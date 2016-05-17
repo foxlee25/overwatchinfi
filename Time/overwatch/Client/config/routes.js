@@ -2,6 +2,8 @@ var React = require('react');
 var Base = require('../components/BaseComponent');
 var Home = require('../components/HomeComponent');
 var Heros = require('../components/HerosComponent');
+var News = require('../components/NewsComponent');
+var Twits = require('../components/TwitComponent');
 var NoMatch = require('../components/NoMatchComponent');
 var Router = require('react-router');
 var browserHistory = Router.browserHistory;
@@ -14,6 +16,8 @@ module.exports = (
 			<IndexRoute component={Home}></IndexRoute>
 			<Route path="home" component={Home} />
 			<Route path='heros' component={Heros} />
+			<Route path="news" component={News} />
+			<Route path="twits" component={Twits} />
 			<Route path="*" component={NoMatch} />
 		</Route>
 	</Router>
