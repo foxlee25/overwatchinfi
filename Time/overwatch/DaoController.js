@@ -2,15 +2,15 @@
  * @author Jin, Zheyang
  */
 var fs = require('fs')
-// fs.readFile()
-//request(url,function(){callback})
+    // fs.readFile()
+    //request(url,function(){callback})
 
 /**** keep track all the dao go through DB**/
 var DBController = require('./DBController.js');
 var DaoManager = {};
 // !!! add all the dao file here
 DaoManager.UserDao = require('./Dao/UserDao.js');
-
+DaoManager.VideoDao = require('./Dao/VideoDao.js');
 /**
  *  daoFileName use to separate dao files.
  */
@@ -37,9 +37,9 @@ daoController.getDao = function (daoFileName, daoMethodName, restCallback) {
 
 };
 
-daoController.getHeros = function(restCallback) {
-    fs.readFile('./overwatch/Json/heros.json', 'utf8', function(err, data){
-        if(err){
+daoController.getHeros = function (restCallback) {
+    fs.readFile('./overwatch/Json/heros.json', 'utf8', function (err, data) {
+        if (err) {
             console.error(err);
             restCallback([]);
             return;

@@ -17,21 +17,16 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-
-app.get('/ping', function(req, res){
-	res.send('pong');
-});
-
 /**
  * process all rest call
  */
 app.use(RestController);
 
 //serve front end files
-app.use(express.static('./overwatch/Client/'));
+//app.use(express.static('./overwatch/Client/'));
 
 //load html default
-app.get('/', function(req, res) {
-	res.sendfile('./overwatch/Client/index.html');
+app.get('/', function (req, res) {
+    res.sendfile('./overwatch/Client/index.html');
 });
 console.log('Time Server start...');
