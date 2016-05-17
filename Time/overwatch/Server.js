@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({
 app.use(RestController);
 
 //serve front end files
-//app.use(express.static('./overwatch/Client/'));
+app.use(express.static('./overwatch/Client/'));
 
 //load html default
 app.get('/', function (req, res) {

@@ -5,16 +5,17 @@ import { Router, Route, Link } from 'react-router'
 var Base = React.createClass({
   render: function(){
     return(
-      <div>
-        <div className="navbar navbar-default navbar-static-top">
+      <div className="container">
+        <div id="navBand" className="navbar navbar-inverse">
           <div>
-            <div className="collapse navbar-collapse" id="js-navbar-collapse">
-              <ul className="nav navbar-nav">
-                <li><Link to={'/home'}>{appValues.appName}</Link></li>
-                <li><Link to={'/heros'}>{appValues.heros}</Link></li>
-                <li><Link to={'/about'}>{appValues.about}</Link></li>
-              </ul>
+            <div className="navbar-header">
+              <a className="navbar-brand"><Link to={'/home'}>{appValues.appName}</Link></a>
             </div>
+            <ul className="nav navbar-nav">
+              <li className="navTitle"><a><Link to={'/home'}>{appValues.home}</Link></a></li>
+              <li className="navTitle"><a><Link to={'/heros'}>{appValues.heros}</Link></a></li>
+              <li className="navTitle"><a><Link to={'/about'}>{appValues.about}</Link></a></li> 
+            </ul>
           </div>
         </div>
         <div>

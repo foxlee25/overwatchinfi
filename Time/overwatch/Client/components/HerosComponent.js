@@ -11,7 +11,7 @@ var Heros = React.createClass({
 	},
 	render: function(){
 		return (
-			<div className="container" id="herosComponent">
+			<div id="herosComponent">
 				<div className="row-fluid">
 					{_.map(this.state.heros, function(hero){
 						return(<HeroCard key={hero.key} hero={hero} />);
