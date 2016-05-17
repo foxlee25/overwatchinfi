@@ -1,5 +1,21 @@
 #herocard {
-	background: #cee3f8;
+	width: 120px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	background: rgba(147,206,222,0.81);
+	background: -moz-linear-gradient(left, rgba(147,206,222,0.81) 0%, rgba(73,165,191,0.81) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(147,206,222,0.81)), color-stop(100%, rgba(73,165,191,0.81)));
+	background: -webkit-linear-gradient(left, rgba(147,206,222,0.81) 0%, rgba(73,165,191,0.81) 100%);
+	background: -o-linear-gradient(left, rgba(147,206,222,0.81) 0%, rgba(73,165,191,0.81) 100%);
+	background: -ms-linear-gradient(left, rgba(147,206,222,0.81) 0%, rgba(73,165,191,0.81) 100%);
+	background: linear-gradient(to right, rgba(147,206,222,0.81) 0%, rgba(73,165,191,0.81) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf', GradientType=1 );
+
+}
+
+#centerImg {
+	text-align: center;
 }
 
 #cardTitle {
@@ -8,7 +24,17 @@
 }
 
 #herosComponent {
-	background-image: url("../img/background/herosBg.jpg");
+background: rgba(134, 198, 217, 0.5);
+}
+
+#cardDiv {
+	padding: 10px;
+	margin: 10px;
+	background: rgba(82, 164, 193, 0.5);
+}
+
+#app {
+	background-image: url("../img/background/bodyBg.jpg");
 	background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
