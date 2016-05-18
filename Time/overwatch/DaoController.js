@@ -81,7 +81,7 @@ daoController.getDingDangNews = function(req, callback) {
     });
 };
 
-daoController.getTwits = function(req, restCallback) {
+daoController.getTwits = function(req, callback) {
     var T = new Twit({
       consumer_key:         props.twitter.apiKey,
       consumer_secret:      props.twitter.apiSecret,
@@ -90,13 +90,21 @@ daoController.getTwits = function(req, restCallback) {
       timeout_ms:           60*1000, 
     });
 
-    T.get('search/tweets', { q: '%40'+req.headers.q, count: req.headers.count }, function(err, data, response) {
-      if(err){
-        restCallback([]);
-        return;
-      }
+    var promise = new Promise(function(resolve, reject){
+        T.get('search/tweets', { q: '%40'+req.headers.q, count: req.headers.count }, function(err, data, response) {
+          if(err){
+            reject([]);
+            return;
+          }
 
-      restCallback(data.statuses);
+          resolve(data.statuses);
+        });        
+    });
+
+    promise.then(function(data){
+        callback(null, data);
+    }).catch(function(data){
+        callback(true, [])
     });
 };
 

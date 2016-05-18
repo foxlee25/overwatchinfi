@@ -9,7 +9,7 @@ var Base = React.createClass({
         <div id="navBand" className="navbar navbar-inverse">
           <div>
             <div className="navbar-header">
-              <a className="navbar-brand"><Link to={'/home'}>{appValues.appName}</Link></a>
+              <a className="navbar-brand"><Link to={'/home'}><img src="./img/logo/logo1.png" /></Link></a>
             </div>
             <ul className="nav navbar-nav">
               <li className="navTitle"><a><Link to={'/home'}>{appValues.home}</Link></a></li>

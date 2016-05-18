@@ -1,0 +1,2 @@
+# overwatchinfi
+Front end: run "npm run dev" in dev to convert jsx and es6 files to bundle.js, and index.html will load the bundle.js

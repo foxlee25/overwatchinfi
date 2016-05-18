@@ -10,8 +10,13 @@ router.get('/allTwits', function(req, res) {
 	res.header('Access-Control-Allow-Headers', '*');
 	res.header('Access-Control-Allow-Origin', '*');
 	res.header('Charset', 'utf8');
-	daoController.getTwits(req, function(twits){
-		res.send(twits);
+
+	var cacheKey = req.headers.q + req.headers.count;
+
+	memCache.wrap(cacheKey, function(callback){
+		daoController.getTwits(req, callback);
+	},function(err, data){
+		res.send(data);
 	});
 });
 

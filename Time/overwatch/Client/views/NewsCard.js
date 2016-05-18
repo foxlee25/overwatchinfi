@@ -11,7 +11,7 @@ var NewsCard = React.createClass({
 		return (
 			<div id="newsCard" className="row" onClick={this.openNewsLink.bind(this, this.props.new.url)}>
 				<div className="col-md-3 newsImgMargin" >
-					<img className="img-responsive" src={this.props.new.iurl} />
+					{this.props.new.iurl?<img className="img-responsive" src={this.props.new.iurl} />:null}
 				</div>
 			    <div className="col-md-9" id="newsText">
 				    <h4>{this.props.new.title}</h4>

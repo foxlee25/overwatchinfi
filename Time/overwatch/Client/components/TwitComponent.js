@@ -12,7 +12,7 @@ var Twit = React.createClass({
 	render: function(){
 		var i = 0;
 		return (
-			<div className="container">
+			<div id="twitComponent" className="container">
 				{_.map(this.state.twits, function(twit){
 					i++;
 					return (<TwitCard key={i} twit={twit} />);
@@ -25,7 +25,9 @@ var Twit = React.createClass({
 	},
 	getTwits: function(){
 		HttpService.getTwits().then(function(response){
+			console.log(response);
 			this.state.twits = response.data;
+			this.forceUpdate();
 		}.bind(this)).catch(function(response){
 			console.log(response);
 		});
