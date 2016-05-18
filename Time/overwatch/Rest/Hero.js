@@ -9,7 +9,8 @@ router.get('/allheros', apicache('1 hour'), function(req, res) {
 	res.header('Access-Control-Allow-Headers', '*');
 	res.header('Access-Control-Allow-Origin', '*');
 	res.header('Charset', 'utf8');
-	daoController.getHeros(function(heros){
+    
+    daoController.getDataFromFile('heros.json',function(heros){
 		res.send(heros);
 	});
 });
