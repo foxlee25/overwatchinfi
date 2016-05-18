@@ -14,6 +14,7 @@ var Base = React.createClass({
             <ul className="nav navbar-nav">
               <li className="navTitle"><a><Link to={'/home'}>{appValues.home}</Link></a></li>
               <li className="navTitle"><a><Link to={'/heros'}>{appValues.heros}</Link></a></li>
+              <li className="navTitle"><a><Link to={'/video'}>{appValues.video}</Link></a></li>
               <li className="navTitle"><a><Link to={'/news'}>{appValues.news}</Link></a></li>
               <li className="navTitle"><a><Link to={'/twits'}>{appValues.twits}</Link></a></li>
               <li className="navTitle"><a><Link to={'/about'}>{appValues.about}</Link></a></li> 
