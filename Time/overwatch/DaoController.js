@@ -7,20 +7,34 @@ var fs = require('fs')
 var DBController = require('./DBController.js');
 var DaoManager = {};
 
-// !!! add all the dao file here
+// !!! add all the dao file here !!!
 DaoManager.UserDao = require('./Dao/UserDao.js');
 DaoManager.VideoDao = require('./Dao/VideoDao.js');
 /**
- *  daoFileName use to separate dao files.
+ *  daoFileName use to separate dao files. 
+ *  callback will garante call after daoMethod excute.
  */
 var daoController = {};
-daoController.getDao = function (daoFileName, daoMethodName, restCallback) {
+daoController.getDao = function (daoFileName, daoMethodName, data, restCallback) {
     if (daoFileName && daoMethodName) {
         DBController.getConnection(function (DBConnection) {
             if (DaoManager[daoFileName]) {
                 if (DaoManager[daoFileName][daoMethodName]) {
                     console.log('DaoFile : ' + daoFileName + ' Method :' + daoMethodName + ' is success !!!');
-                    DaoManager[daoFileName][daoMethodName](DBConnection, restCallback);
+                    
+                    if(data && typeof restCallback === 'function'){
+                        DaoManager[daoFileName][daoMethodName](DBConnection, data,restCallback);
+                
+                    }else if(data && !(typeof restCallback === 'function')){
+                        DaoManager[daoFileName][daoMethodName](DBConnection, data);
+        
+                    }else if( !data && typeof restCallback === 'function'){
+                        DaoManager[daoFileName][daoMethodName](DBConnection, restCallback);
+                    
+                    }else{
+                         DaoManager[daoFileName][daoMethodName](DBConnection);
+                    }
+                    
                 } else {
                     console.log('DaoFile : ' + daoFileName + ' Method :' + daoMethodName + ' do not exists!!!');
                 }
@@ -30,11 +44,9 @@ daoController.getDao = function (daoFileName, daoMethodName, restCallback) {
             }
 
         });
-
-
     }
-
 };
+
 /**
  * get data from json file
  */

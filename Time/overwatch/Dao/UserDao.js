@@ -1,4 +1,4 @@
-var db_user_findAll = function (db, restCallback) {
+var findAllUser = function (db, restCallback) {
     userArr = [];
     var cursor = db.collection('Users').find();
     cursor.each(function (err, doc) {
@@ -12,7 +12,7 @@ var db_user_findAll = function (db, restCallback) {
 };
 
 var UserDao = {
-    user_findAll: db_user_findAll
+    user_findAll: findAllUser
 }
 
 module.exports = UserDao;
