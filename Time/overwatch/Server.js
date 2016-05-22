@@ -29,10 +29,10 @@ app.enable('trust proxy');
 app.use(RestController);
 
 //serve front end files
-app.use(express.static('./overwatch/Client/'));
+app.use(express.static('./Client/'));
 
 //load html default
-app.get('/', function (req, res) {
-    res.sendfile('./overwatch/Client/index.html');
-});
+//app.get('/', function (req, res) {
+//    res.sendfile('./Client/index.html');
+//});
 console.log('Time Server start...');

@@ -4,7 +4,7 @@
   "description": "time service",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack -d --watch & nodemon overwatch/Server.js",
+    "dev": "webpack -d --watch & nodemon Server.js",
     "build": "webpack -p"
   },
   "author": "Peter Jin",

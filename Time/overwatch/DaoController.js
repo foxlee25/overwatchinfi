@@ -51,7 +51,7 @@ daoController.getDao = function (daoFileName, daoMethodName, data, restCallback)
  * get data from json file
  */
 daoController.getDataFromFile = function(fileName,restCallback){
-        fs.readFile('./overwatch/Json/'+fileName, 'utf8', function (err, data) {
+        fs.readFile('./Json/'+fileName, 'utf8', function (err, data) {
         if (err) {
             console.error(err);
             restCallback([]);
