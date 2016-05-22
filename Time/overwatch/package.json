@@ -12,7 +12,8 @@
   "dependencies": {
     "body-parser": "^1.15.0",
     "cors": "^2.7.1",
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "jquery": "^2.2.4"
   },
   "devDependencies": {
     "apicache": "0.0.14",
