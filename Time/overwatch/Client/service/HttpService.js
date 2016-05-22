@@ -1,9 +1,6 @@
 var axios = require('axios');
 
 var service = {
-	getHeros: function(){
-		return axios.get('/heros/allheros');
-	},
 	getDingDangNews: function(index) {
 		return axios({
 			method: 'get',

@@ -1,10 +1,10 @@
-var findAllVideo = function (db, restCallback) {
+//using paging get video data
+var findAllVideo = function (db, data ,restCallback) {
     videoArr = [];
-    var cursor = db.collection('Video').find();
+    var cursor = db.collection('Video').find().skip(12*(data.pageIndex-1)).limit(12);
     cursor.each(function (err, doc) {
         if (doc != null) {
             videoArr.push(doc);
-            console.dir(videoArr[0]);
         } else {
             restCallback(videoArr);
         }
@@ -17,12 +17,9 @@ var addAllVideoFromPlaylist = function (db, playlistVideos) {
         var video = playlistVideos[i];
        
         var existVideo= db.collection('Video').find({videoId: video.VideoId}).count(true);
+        //if video do not exist then insert
           if(Object.keys(existVideo).length === 0){
-             console.log('addAllVideoFromPlaylist : '+video);
              db.collection('Video').insert(video);
-          }else{
-              console.log('video exist : '+JSON.stringify(existVideo));
-
           }
        
     }

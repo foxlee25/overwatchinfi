@@ -145,38 +145,6 @@ cursor: pointer;
   width: 100%;
 }
 /** end navigation**/
-/**begin home page**/
-#panda_home {
-      margin-top: 30px;
-}	
-
-#panda_home hr {
-     width:96% !important;
-	 margin: 0 auto !important;
-}
-
-.tv-home-mobileTitle{
-margin-top:20px;
-background-color: #F5F5F5;
-border-color: #DDD;
-font-size: 24px !important;
-padding: 10px 15px;
-border-top-left-radius: 3px;
-border-top-right-radius: 3px;
-box-shadow: 0px 0px 3px #D8D8D8 inset;
-line-height: 32px;
-ont-family: "Oxygen";
-text-align:center;
-color: #666;
-font-weight: 300;
-}	
-
-.tv-homepage-mobileTab{
-	margin-top:20px;
-	margin-bottom:10px;
-}
-
-/** end home page**/
 
 /* General styles for all menus */
 .form-control.tv-halfwidth.tv-mobile-fullWidth {

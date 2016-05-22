@@ -9,7 +9,7 @@ var NewsCard = React.createClass({
 	},
 	render: function(){
 		return (
-			<div id="newsCard" className="row" onClick={this.openNewsLink.bind(this, this.props.new.url)}>
+			<div className="newsCard row" onClick={this.openNewsLink.bind(this, this.props.new.url)}>
 				<div className="col-md-3 newsImgMargin" >
 					{this.props.new.iurl?<img className="img-responsive" src={this.props.new.iurl} />:null}
 				</div>

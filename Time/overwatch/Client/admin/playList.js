@@ -47,8 +47,12 @@ function requestVideoPlaylist(playlistId) {
           videoModel.title = item.snippet.title;
           videoModel.publishedTime = item.snippet.publishedAt;
           videoModel.playlistId = item.snippet.playlistId;
-          videoModel.channelId = item.snippet.playlistId;
-          videoModel.url = urlBase + 'v=' + videoModel.videoId +'&list=' + videoModel.playlistId;
+          videoModel.channelId = item.snippet.channelId;
+          videoModel.watchTime=0;
+          videoModel.likeTime=0;
+          videoModel.dislikeTime=0;
+          videoModel.url='https://www.youtube.com/embed/'+videoModel.videoId;
+          videoModel.urlFull = urlBase + 'v=' + videoModel.videoId +'&list=' + videoModel.playlistId;
         playlistVideoArr.push(videoModel);
         displaySaveResult(videoModel);
       });

@@ -7,9 +7,9 @@ var MongoClient = mongodb.MongoClient;
 
 // Connection URL. This is where your mongodb server is running.
 //use on local
-var url = 'mongodb://localhost:27017/local';
+//var url = 'mongodb://localhost:27017/local';
 //!! ec2 test environment !!
-//var url = 'mongodb://ec2-52-37-155-150.us-west-2.compute.amazonaws.com:27017/overwatch';
+var url = 'mongodb://ec2-52-37-155-150.us-west-2.compute.amazonaws.com:27017/overwatch';
 //!! ec2 production environment. !!
 //var url = 'mongodb://ec2-52-36-229-82.us-west-2.compute.amazonaws.com:27017/overwatch';
 //use on ec2 admin

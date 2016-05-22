@@ -6,8 +6,8 @@ var router = express.Router();
 router.post('/getAllVideos', function (req, res) {
     res.header('Content-type', 'application/json');
     res.header('Charset', 'utf8');
-    daoController.getDao('VideoDao', 'video_findAll', {} ,function (videoArr) {
-        console.log(videoArr[0]);
+    var pageIndex = req.body.pageIndex;
+    daoController.getDao('VideoDao', 'video_findAll', {pageIndex : pageIndex} ,function (videoArr) {
         res.send(videoArr);
     });
 });

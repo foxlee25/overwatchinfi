@@ -6,7 +6,7 @@ var TwitCard = React.createClass({
 	},
 	render: function(){
 		return (
-			<div id="twitCard" className="row">
+			<div className="twitCard row">
 				<div className="col-md-2">
 					{this.props.twit.user?<img className="img-responsive" src={this.props.twit.user.profile_image_url}/>:null}}
 				</div>
