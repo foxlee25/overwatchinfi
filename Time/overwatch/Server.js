@@ -32,7 +32,7 @@ app.use(RestController);
 app.use(express.static('./Client/'));
 
 //load html default
-//app.get('/', function (req, res) {
-//    res.sendfile('./Client/index.html');
-//});
+app.get('/', function (req, res) {
+    res.sendfile('./Client/index.html');
+});
 console.log('Time Server start...');
