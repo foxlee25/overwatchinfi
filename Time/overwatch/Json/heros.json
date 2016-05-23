@@ -3,7 +3,7 @@
 	{"key": "MCCREE", "heroname": "Mccree","imgPath": "Mccree.png"},
 	{"key": "PHARAH", "heroname": "Pharah","imgPath": "Pharah.png"},
 	{"key": "REAPER", "heroname": "Reaper","imgPath": "Reaper.png"},
-	{"key": "SOLDiER:76", "heroname": "Soldier:76","imgPath": "Soldier76.png"},
+	{"key": "SOLDIER76", "heroname": "Soldier:76","imgPath": "Soldier76.png"},
 	{"key": "TRACER", "heroname": "Tracer","imgPath": "Tracer.png"},
 	{"key": "BASTION", "heroname": "Bastion","imgPath": "Bastion.png"},
 	{"key": "HANZO", "heroname": "Hanzo","imgPath": "Hanzo.png"},

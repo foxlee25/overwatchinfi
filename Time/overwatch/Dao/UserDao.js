@@ -1,5 +1,5 @@
-var findAllUser = function (db, restCallback) {
-    userArr = [];
+var findAllUser = function (db,data, restCallback) {
+    var userArr = [];
     var cursor = db.collection('Users').find();
     cursor.each(function (err, doc) {
         if (doc != null) {

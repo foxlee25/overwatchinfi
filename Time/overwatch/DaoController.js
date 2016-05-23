@@ -10,6 +10,7 @@ var DaoManager = {};
 // !!! add all the dao file here !!!
 DaoManager.UserDao = require('./Dao/UserDao.js');
 DaoManager.VideoDao = require('./Dao/VideoDao.js');
+DaoManager.HeroDao = require('./Dao/HeroDao.js');
 /**
  *  daoFileName use to separate dao files. 
  *  callback will garante call after daoMethod excute.
@@ -22,17 +23,11 @@ daoController.getDao = function (daoFileName, daoMethodName, data, restCallback)
                 if (DaoManager[daoFileName][daoMethodName]) {
                     console.log('DaoFile : ' + daoFileName + ' Method :' + daoMethodName + ' is success !!!');
                     
-                    if(data && typeof restCallback === 'function'){
+                    if( typeof restCallback === 'function'){
                         DaoManager[daoFileName][daoMethodName](DBConnection, data,restCallback);
                 
-                    }else if(data && !(typeof restCallback === 'function')){
-                        DaoManager[daoFileName][daoMethodName](DBConnection, data);
-        
-                    }else if( !data && typeof restCallback === 'function'){
-                        DaoManager[daoFileName][daoMethodName](DBConnection, restCallback);
-                    
                     }else{
-                         DaoManager[daoFileName][daoMethodName](DBConnection);
+                        DaoManager[daoFileName][daoMethodName](DBConnection, data);
                     }
                     
                 } else {
