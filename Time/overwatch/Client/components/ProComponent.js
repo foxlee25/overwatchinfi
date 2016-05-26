@@ -4,15 +4,17 @@ var AjaxService = require('../service/AjaxService');
 
 var Pro = React.createClass({
 	getInitialState: function() {
-		return {info: null};
+		return {info: null, fbLogin: null};
 	},
 	componentWillMount: function(){
-		this.setState({fbLogin: AppStore.getLoginData()});
+
+		let data = AppStore.getLoginData();
+		this.state.fbLogin = data;
 		let config = {
 			data: this.state.fbLogin
 		};
+
 		AjaxService.post('/pro/all', config, function(response){
-			debugger;
 			if(response.data.info){
 				this.setState({info: response.data.info});
 			}

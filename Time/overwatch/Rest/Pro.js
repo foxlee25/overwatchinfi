@@ -7,7 +7,7 @@ router.post('/all', function(req, res) {
 	res.header('Access-Control-Allow-Headers', '*');
 	res.header('Access-Control-Allow-Origin', '*');
 	res.header('Charset', 'utf8');
-	
+
 	daoController.getDao('ProDao', 'pro_getData', req.body, function (doc, db) {
 		db.close();
 		if(doc.length > 0){

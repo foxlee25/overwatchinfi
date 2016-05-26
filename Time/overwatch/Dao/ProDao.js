@@ -4,7 +4,7 @@ var getProData = function (db, data,restCallback) {
         restCallback(null);
         return;
    }
-    var cursor = db.collection(data.id.toString()).find();
+    var cursor = db.collection(data.data.id.toString()).find();
     cursor.toArray(function (err, doc) {
         restCallback(doc, db);
     });
