@@ -6,7 +6,7 @@ var memCache = cacheManager.caching({store: 'memory', max: 1000000000, ttl: 3600
 /***twitter stuff**/
 var Twit = require('twit');
 
-//Router to get heros
+//Router to get twits
 router.get('/allTwits', function(req, res) {
 	res.header('Content-type', 'application/json');
 	res.header('Access-Control-Allow-Headers', '*');
@@ -15,6 +15,8 @@ router.get('/allTwits', function(req, res) {
 
 	var cacheKey = req.headers.q + req.headers.count;
 
+  //use memory cache to cache call
+  //headers {q:,count:}
 	memCache.wrap(cacheKey, function(callback){
 		getTwits(req, callback);
 	},function(err, data){
@@ -32,6 +34,8 @@ var getTwits = function(req, callback) {
       timeout_ms:           60*1000, 
     });
 
+    //make request to twitter for twits using oauth
+    //oath tokens secrets are in ./util/properties
     var promise = new Promise(function(resolve, reject){
         T.get('search/tweets', { q: '%40'+req.headers.q, count: req.headers.count }, function(err, data, response) {
           if(err){

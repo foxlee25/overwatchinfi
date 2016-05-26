@@ -24,6 +24,7 @@ var Twit = React.createClass({
 		this.getTwits(1);
 	},
 	getTwits: function(){
+		//client side call to get twits
 		HttpService.getTwits().then(function(response){
 			console.log(response);
 			this.state.twits = response.data;

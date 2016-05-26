@@ -10,6 +10,8 @@ var News = React.createClass({
 		};
 	},
 	getNews: function(index){
+		//client side call to get dingdang news
+		//!important need to call forceudpate to update UI
 		HttpService.getDingDangNews(index).then(function(response){
 			this.state.news = response.data.results;
 			this.forceUpdate();
@@ -19,6 +21,7 @@ var News = React.createClass({
 		});
 	},
 	componentDidMount: function(){
+		//call this when first launch
 		this.getNews(1);
 	},
 	render: function(){

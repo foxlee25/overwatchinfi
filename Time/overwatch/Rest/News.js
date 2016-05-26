@@ -14,6 +14,8 @@ router.get('/allDingDangNews', function(req, res) {
 	res.header('Access-Control-Allow-Origin', '*');
 	res.header('Charset', 'utf8');
 
+    //use memory cache to cache the call
+    //duration 3600s/ 1 hour
 	memCache.wrap(cacheKey, function(callback){
 		getDingDangNews(req, callback);
 	},function(err, data){
@@ -31,6 +33,8 @@ var getDingDangNews = function(req, callback) {
         }
     };
 
+    //make request to dingdang news
+    //header {pagination:,language:}
     var promise = new Promise(function(resolve, reject){
         request(options, function(err, response, body){
             if(err){

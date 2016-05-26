@@ -1,8 +1,14 @@
 var React = require('react');
 var appValues = require('../i18/AppProps');
+var FbBtnView = require('../views/FbBtnView');
 import { Router, Route, Link } from 'react-router'
 
 var Base = React.createClass({
+  getInitialState: function(){
+    return {
+      id: null,
+    };
+  },
   render: function(){
     return(
       <div className="container">
@@ -19,13 +25,16 @@ var Base = React.createClass({
               <li className="navTitle"><a><Link to={'/twits'}>{appValues.twits}</Link></a></li>
               <li className="navTitle"><a><Link to={'/about'}>{appValues.about}</Link></a></li> 
             </ul>
+            <div className="navbar-header navbar-right">
+              <FbBtnView />
+            </div>
           </div>
         </div>
         <div>
           {this.props.children}
         </div>
       </div>
-      );
+    );
   }
 });
 
