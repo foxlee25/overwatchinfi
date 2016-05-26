@@ -11,8 +11,19 @@ var findAllHero = function (db, data,restCallback) {
     });
 };
 
+var addHeroDetails = function (db, heroDetails) {
+    var existHero= db.collection('HeroDetail').find({key: heroDetails.key}).count(true);
+    //if video do not exist then insert
+    if(Object.keys(existHero).length === 0){
+        db.collection('HeroDetail').insert(heroDetails);
+    }
+
+
+};
+
 var HeroDao = {
-    hero_findAll: findAllHero
+    hero_findAll: findAllHero,
+    hero_addDetails : addHeroDetails
 }
 
 module.exports = HeroDao;

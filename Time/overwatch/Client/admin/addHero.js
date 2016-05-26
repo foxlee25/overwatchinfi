@@ -6,9 +6,12 @@ $(function(){
 
     $('#submitHeroForm').click(function(){
         var heroModel = {};
-        var heroName = $('#heroForm').find('input[name="heroName"]').val();
-        if(heroName)
-            heroModel.heroName = heroName;
+        var key = $('#heroForm').find('input[name="heroKey"]').val();
+        if(key)
+            heroModel.key = key;
+        var heroname = $('#heroForm').find('input[name="heroName"]').val();
+        if(heroname)
+            heroModel.heroname = heroname;
         var heroRole = $('#heroForm').find('input[name="heroRole"]').val();
         if(heroRole)
             heroModel.heroRole = heroRole;
@@ -42,7 +45,7 @@ $(function(){
         var heroAbility8 = $('#heroForm').find('input[name="heroAbility8"]').val()
         if(heroAbility8)
             heroModel.heroAbility8 = heroAbility8;
-        var url= '';
+        var url= '/heros/addHeroDetails';
         var serverData = {data : heroModel};
         Ajax.post(url,serverData);
     });

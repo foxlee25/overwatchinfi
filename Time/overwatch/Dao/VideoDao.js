@@ -26,7 +26,18 @@ var addAllVideoFromPlaylist = function (db, playlistVideos) {
   
 };
 
+var videoClick = function(db, video){
+     console.log('dao title : '+ JSON.stringify(video));
+    if(video.type === 'like'){
+        db.collection('Video').update({videoId: video.videoId},{$set : {likeTime : video.likeTime} });
+    }else if(video.type === 'dislike'){
+        db.collection('Video').update({videoId: video.videoId},{$set : {dislikeTime : video.dislikeTime} });
+    }
+
+}
+
 var VideoDao = {
+    video_click : videoClick,
     video_findAll: findAllVideo,
     video_addAllFromPlaylist : addAllVideoFromPlaylist
 }
