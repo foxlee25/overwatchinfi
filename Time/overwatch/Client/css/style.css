@@ -144,3 +144,8 @@ background: rgba(134, 198, 217, 0.5);
 	margin-top: 20px;
 	background: #3b5998;
 }
+
+.welcome {
+	font-size: 16px;
+	color: #ffffff;
+}

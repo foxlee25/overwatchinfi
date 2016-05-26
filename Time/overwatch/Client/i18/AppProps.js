@@ -5,5 +5,6 @@ module.exports = {
 	news: 'News',
 	twits: 'Twitter',
     video: 'Video',
-	about: 'About'
+	about: 'About',
+	pro: 'Pro'
 };

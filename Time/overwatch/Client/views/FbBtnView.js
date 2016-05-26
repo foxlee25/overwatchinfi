@@ -1,6 +1,7 @@
 var React = require('react');
 var FacebookLogin = require('react-facebook-login');
 var AjaxService = require('../service/AjaxService');
+var AppAction = require('../flux/Actions');
 
 var FbBtnView = React.createClass({
 	responseFacebook: function(response){
@@ -8,11 +9,7 @@ var FbBtnView = React.createClass({
 			this.setState({
 				id: response.id
 			});
-			AjaxService.post('/login/fb', response, function(response){
-				if(response.status === 200){
-					
-				}
-			});
+			AppAction.loginSuccess(response);
 		}
 	},
 	getInitialState: function(){

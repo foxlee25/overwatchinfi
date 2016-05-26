@@ -8,11 +8,13 @@ var hero = require('./Rest/Hero.js');
 var news = require('./Rest/News.js');
 var twits = require('./Rest/Twits.js');
 var video = require('./Rest/Video.js');
+var pro = require('./Rest/Pro.js');
 restController.use('/user', user);
 restController.use('/heros', hero);
 restController.use('/news', news);
 restController.use('/twits',twits);
 restController.use('/video',video);
+restController.use('/pro', pro);
 
 
 module.exports = restController;

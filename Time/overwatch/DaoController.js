@@ -11,6 +11,7 @@ var DaoManager = {};
 DaoManager.UserDao = require('./Dao/UserDao.js');
 DaoManager.VideoDao = require('./Dao/VideoDao.js');
 DaoManager.HeroDao = require('./Dao/HeroDao.js');
+DaoManager.ProDao = require('./Dao/ProDao.js');
 /**
  *  daoFileName use to separate dao files. 
  *  callback will garante call after daoMethod excute.

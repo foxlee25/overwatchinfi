@@ -5,6 +5,7 @@ var Heros = require('../components/HerosComponent');
 var News = require('../components/NewsComponent');
 var Twits = require('../components/TwitComponent');
 var Video = require('../components/VideoComponent');
+var Pro = require('../components/ProComponent');
 var NoMatch = require('../components/NoMatchComponent');
 var Router = require('react-router');
 var browserHistory = Router.browserHistory;
@@ -20,6 +21,7 @@ module.exports = (
 			<Route path="news" component={News} />
 			<Route path="twits" component={Twits} />
             <Route path="video" component={Video} />
+            <Route path="pro" component={Pro} />
 			<Route path="*" component={NoMatch} />
 		</Route>
 	</Router>
