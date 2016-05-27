@@ -1,27 +1,109 @@
 var React = require('react');
-var Chart = require('./ChartComponent');
-
-var sampleData = [
-	{id: '5fbmzmtc', x: 7, y: 41, z: 6},
-	{id: 's4f8phwm', x: 11, y: 45, z: 9},
-	// ...
-];
+var AppStore = require('../flux/Store');
+import { Link } from 'react-router'
 
 var Home = React.createClass({
 	getInitialState: function() {
-		return {
-			data: sampleData,
-			domain: {x: [0, 30], y: [0, 100]}
-		};
+	    return {
+	      loginData: null,
+	    };
 	},
-
+	getLoginData: function(){
+		this.setState({loginData: AppStore.getLoginData()});
+	},
+	componentDidMount: function(){
+		AppStore.addListener(this.getLoginData);
+	},
+	componentDidUnMount: function(){
+		AppStore.removeListener(this.getLoginData);
+	},
 	render: function() {
 		return (
-			<div className="Container">
-			<Chart
-		       data={this.state.data}
-		       domain={this.state.domain} />
-		</div>
+			<div>
+				<section className="work-list">
+					<div className="inner">
+						<article className="work-item" data-show="on-scroll">
+							<a><Link to={'/heros'}>
+							<img src="./img/wallpapers/Hero.jpg" />
+							<div className="content">
+								<div>
+									<div>
+										<h1>Heros</h1>
+									</div>
+								</div>
+							</div>
+							</Link>
+							</a>
+						</article>
+						<article className="work-item" data-show="on-scroll">
+							<a><Link to={'/video'}>
+							<img src="./img/wallpapers/Video.jpg" />
+							<div className="content">
+								<div>
+									<div>
+										<h1>Video</h1>
+									</div>
+								</div>
+							</div>							
+							</Link>
+							</a>
+						</article>
+						<article className="work-item" data-show="on-scroll">
+							<a><Link to={'/news'}>
+							<img src="./img/wallpapers/News.jpg" />
+							<div className="content">
+								<div>
+									<div>
+										<h1>News</h1>
+									</div>
+								</div>
+							</div>							
+							</Link>
+							</a>
+						</article>
+						<article className="work-item" data-show="on-scroll">
+							<a><Link to={'/twits'}>
+							<img src="./img/wallpapers/Twitter.jpg" />
+							<div className="content">
+								<div>
+									<div>
+										<h1>Twitter</h1>
+									</div>
+								</div>
+							</div>							
+							</Link>
+							</a>
+						</article>
+						<article className="work-item" data-show="on-scroll">
+							<a><Link to={'/about'}>
+							<img src="./img/wallpapers/About.jpg" />
+							<div className="content">
+								<div>
+									<div>
+										<h1>About</h1>
+									</div>
+								</div>
+							</div>							
+							</Link>
+							</a>
+						</article>
+						{this.state.loginData?
+						<article className="work-item" data-show="on-scroll">
+							<a><Link to={'/pro'}>
+							<img src="./img/wallpapers/Pro.jpg" />
+							<div className="content">
+								<div>
+									<div>
+										<h1>Pro</h1>
+									</div>
+								</div>
+							</div>							
+							</Link>
+							</a>
+						</article>:null}
+					</div>
+				</section>
+			</div>
 		);
 	}
 });

@@ -22,7 +22,7 @@ var Base = React.createClass({
   render: function(){
     return(
       <div className="container">
-        {this.state.loginData?<b className="welcome">welcome {this.state.loginData.name}</b>:null}
+        {this.state.loginData?<b className="welcome">Welcome {this.state.loginData.name}</b>:null}
         <div id="navBand" className="navbar navbar-inverse">
           <div>
             <div className="navbar-header">
