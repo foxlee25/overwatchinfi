@@ -5,7 +5,7 @@ import { Link } from 'react-router'
 var Home = React.createClass({
 	getInitialState: function() {
 	    return {
-	      loginData: null,
+	      loginData: AppStore.getLoginData(),
 	    };
 	},
 	getLoginData: function(){
@@ -87,7 +87,7 @@ var Home = React.createClass({
 							</Link>
 							</a>
 						</article>
-						{this.state.loginData?
+						{this.state.loginData.id?
 						<article className="work-item" data-show="on-scroll">
 							<a><Link to={'/pro'}>
 							<img src="./img/wallpapers/Pro.jpg" />
