@@ -4,8 +4,8 @@
   "description": "time service",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack -d --watch & nodemon Server.js",
-    "build": "webpack -p"
+    "dev": "webpack -d --watch & nodemon Server.js & grunt dev",
+    "build": "webpack -p & grunt deploy"
   },
   "author": "Peter Jin",
   "license": "MIT",
@@ -28,6 +28,8 @@
     "fbemitter": "^2.0.2",
     "firebase": "^2.4.2",
     "flux": "^2.1.1",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
     "mongodb": "^2.1.19",
     "morgan": "^1.7.0",
     "oauth": "^0.9.14",

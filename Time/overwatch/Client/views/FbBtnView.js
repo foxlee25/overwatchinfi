@@ -25,7 +25,7 @@ var FbBtnView = React.createClass({
 		}else{
 			return(
 				<FacebookLogin 
-				appId="238534016527081"
+				appId="239756926404790"
 				autoLoad={true}
 				cssClass="fbBtn"
 				callback={this.responseFacebook} />
