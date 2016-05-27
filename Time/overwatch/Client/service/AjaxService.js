@@ -8,18 +8,7 @@ var service = {
                    callback(response);
                }
            }).catch(function (response) {
-               console.log('request : ' + options.url);
-               if (response instanceof Error) {
-                   // Something happened in setting up the request that triggered an Error
-                   console.log('Error', response.message);
-               } else {
-                   // The request was made, but the server responded with a status code
-                   // that falls out of the range of 2xx
-                   console.log(response.data);
-                   console.log(response.status);
-                   console.log(response.headers);
-                   console.log(response.config);
-               }
+              service.error(options.url,response);
            });
     },
     get: function (url, callback) {
@@ -29,18 +18,7 @@ var service = {
                    callback(response);
                }
            }).catch(function (response) {
-               console.log('get request : ' + url);
-               if (response instanceof Error) {
-                   // Something happened in setting up the request that triggered an Error
-                   console.log('Error', response.message);
-               } else {
-                   // The request was made, but the server responded with a status code
-                   // that falls out of the range of 2xx
-                   console.log(response.data);
-                   console.log(response.status);
-                   console.log(response.headers);
-                   console.log(response.config);
-               }
+               service.error(url,response);
            });
     },
     post:function(url,data,callback){
@@ -52,19 +30,22 @@ var service = {
                    callback(response);
                }
            }).catch(function (response) {
-              console.log('post request : ' + url);
-               if (response instanceof Error) {
-                   // Something happened in setting up the request that triggered an Error
-                   console.log('Error', response.message);
-               } else {
-                   // The request was made, but the server responded with a status code
-                   // that falls out of the range of 2xx
-                   console.log(response.data);
-                   console.log(response.status);
-                   console.log(response.headers);
-                   console.log(response.config);
-               }
+              service.error(url,response);
            });
+    },
+    error : function(url,response){
+        console.log('request : ' + url);
+        if (response instanceof Error) {
+            // Something happened in setting up the request that triggered an Error
+            console.log('Error', response.message);
+        } else {
+            // The request was made, but the server responded with a status code
+            // that falls out of the range of 2xx
+            console.log(response.data);
+            console.log(response.status);
+            console.log(response.headers);
+            console.log(response.config);
+        }
     }
 }
 

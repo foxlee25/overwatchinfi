@@ -16,7 +16,7 @@ var addAllVideoFromPlaylist = function (db, playlistVideos) {
     for(i=0 ; i < playlistVideos.length; i++ ){
         var video = playlistVideos[i];
        
-        var existVideo= db.collection('Video').find({videoId: video.VideoId}).count(true);
+        var existVideo= db.collection('Video').find({videoId: video.videoId}).count(true);
         //if video do not exist then insert
           if(Object.keys(existVideo).length === 0){
              db.collection('Video').insert(video);
@@ -27,12 +27,19 @@ var addAllVideoFromPlaylist = function (db, playlistVideos) {
 };
 
 var videoClick = function(db, video){
-     console.log('dao title : '+ JSON.stringify(video));
-    if(video.type === 'like'){
-        db.collection('Video').update({videoId: video.videoId},{$set : {likeTime : video.likeTime} });
-    }else if(video.type === 'dislike'){
-        db.collection('Video').update({videoId: video.videoId},{$set : {dislikeTime : video.dislikeTime} });
-    }
+     db.collection('Video').find({videoId: video.videoId}).limit(1).nextObject(function (err, realTimeVideo) {
+         console.log('dao title : '+ JSON.stringify(realTimeVideo));
+         if(video.type === 'like'){
+             db.collection('Video').update({videoId: video.videoId},{$set : {likeTime :realTimeVideo.likeTime+ 1} });
+       //      db.collection('Video').update({videoId: video.videoId},{$set : {likeTime : 1} });
+
+         }else if(video.type === 'dislike'){
+            db.collection('Video').update({videoId: video.videoId},{$set : {dislikeTime :realTimeVideo.dislikeTime+ 1} });
+        //     db.collection('Video').update({videoId: video.videoId},{$set : {dislikeTime :1} });
+
+         }
+    });
+
 
 }
 
