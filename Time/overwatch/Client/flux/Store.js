@@ -1,6 +1,6 @@
 var Dispatcher = require('./Dispatcher');
 var Constants = require('./Constants');
-var assign = require('react/lib/Object.assign');
+var assign = require('object-assign');
 var emitter = require('events').EventEmitter;
 
 var EVENT = "CAHNGE";
