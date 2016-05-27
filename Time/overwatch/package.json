@@ -30,6 +30,7 @@
     "flux": "^2.1.1",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
+    "grunt-text-replace": "^0.4.0",
     "mongodb": "^2.1.19",
     "morgan": "^1.7.0",
     "oauth": "^0.9.14",
