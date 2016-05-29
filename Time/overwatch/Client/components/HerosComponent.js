@@ -2,7 +2,7 @@ var React = require('react');
 var AjaxService = require('../service/AjaxService');
 var Underscore= require('underscore');
 var HeroCard = require('../views/HeroCard');
-var url = '/heros/allheros';
+var url = '/hero/allheros';
 var Heros = React.createClass({
 	getInitialState: function(){
 		return {

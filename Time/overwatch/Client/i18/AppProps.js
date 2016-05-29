@@ -6,5 +6,7 @@ module.exports = {
 	twits: 'Twitter',
     video: 'Video',
 	about: 'About',
-	pro: 'Pro'
+	pro: 'Pro',
+	youtube: 'Youtube',
+	gfycat: 'Gfycat'
 };

@@ -4,7 +4,8 @@ var Home = require('../components/HomeComponent');
 var Heros = require('../components/HerosComponent');
 var News = require('../components/NewsComponent');
 var Twits = require('../components/TwitComponent');
-var Video = require('../components/VideoComponent');
+var VideoYoutube = require('../components/VideoYoutubeComponent');
+var VideoGfycat = require('../components/VideoGfycatComponent');
 var Pro = require('../components/ProComponent');
 var NoMatch = require('../components/NoMatchComponent');
 var Router = require('react-router');
@@ -20,7 +21,8 @@ module.exports = (
 			<Route path='heros' component={Heros} />
 			<Route path="news" component={News} />
 			<Route path="twits" component={Twits} />
-            <Route path="video" component={Video} />
+            <Route path="videoYoutube" component={VideoYoutube} />
+			<Route path="videoGfycat" component={VideoGfycat} />
             <Route path="pro" component={Pro} />
 			<Route path="*" component={NoMatch} />
 		</Route>

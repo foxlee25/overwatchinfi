@@ -1,6 +1,9 @@
 var React = require('react');
 var appValues = require('../i18/AppProps');
 var FbBtnView = require('../views/FbBtnView');
+var NavDropdown = require("react-bootstrap/lib/NavDropdown");
+var MenuItem = require("react-bootstrap/lib/MenuItem");
+require("react-bootstrap/lib/Nav");
 var AppStore = require('../flux/Store');
 import { Router, Route, Link } from 'react-router'
 
@@ -31,10 +34,14 @@ var Base = React.createClass({
             <ul className="nav navbar-nav">
               <li className="navTitle"><a><Link to={'/home'}>{appValues.home}</Link></a></li>
               <li className="navTitle"><a><Link to={'/heros'}>{appValues.heros}</Link></a></li>
-              <li className="navTitle"><a><Link to={'/video'}>{appValues.video}</Link></a></li>
+              <NavDropdown eventKey={3} title={appValues.video} className="navTitle" >
+                         <MenuItem className="menuItem" eventKey={3}> <Link to={'/videoGfycat'}>{appValues.gfycat}</Link></MenuItem>
+                         <MenuItem divider />
+                         <MenuItem className="menuItem" eventKey={3}> <Link to={'/videoYoutube'}>{appValues.youtube}</Link></MenuItem>
+              </NavDropdown>
               <li className="navTitle"><a><Link to={'/news'}>{appValues.news}</Link></a></li>
               <li className="navTitle"><a><Link to={'/twits'}>{appValues.twits}</Link></a></li>
-              <li className="navTitle"><a><Link to={'/about'}>{appValues.about}</Link></a></li> 
+              <li className="navTitle"><a><Link to={'/about'}>{appValues.about}</Link></a></li>
               {this.state.loginData?<li className="navTitle"><a><Link to={'/pro'}>{appValues.pro}</Link></a></li>:null}
             </ul>
             <div className="navbar-header navbar-right">

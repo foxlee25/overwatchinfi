@@ -13,8 +13,8 @@ DaoManager.VideoDao = require('./Dao/VideoDao.js');
 DaoManager.HeroDao = require('./Dao/HeroDao.js');
 DaoManager.ProDao = require('./Dao/ProDao.js');
 /**
- *  daoFileName use to separate dao files. 
- *  callback will garante call after daoMethod excute.
+ *  daoFileName use to separate dao files.
+ *  restCallback will be called after daoMethod excute.
  */
 var daoController = {};
 daoController.getDao = function (daoFileName, daoMethodName, data, restCallback) {

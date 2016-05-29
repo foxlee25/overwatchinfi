@@ -103,6 +103,7 @@ var Home = React.createClass({
 						</article>:null}
 					</div>
 				</section>
+		<iframe src='https://gfycat.com/ifr/VapidDisfiguredHorsechestnutleafminer' frameborder='0' scrolling='no' width='640' height='360' allowfullscreen></iframe>
 			</div>
 		);
 	}

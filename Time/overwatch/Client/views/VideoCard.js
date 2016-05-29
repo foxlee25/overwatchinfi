@@ -1,8 +1,9 @@
 var React = require('react');
 var $ = require('jquery');
 var AjaxService = require('../service/AjaxService');
-var clickLikeVideo = false;
-var clickDisLikeVideo = false;
+var clickLikeVideoList = [];
+var clickDislikeVideoList = [];
+
 var VideoCard = React.createClass({
 	getInitialState: function(){
 		return {};
@@ -16,21 +17,22 @@ var VideoCard = React.createClass({
 
     },
 	likeVideo: function(){
-		if(clickLikeVideo)
+		var video = this.props.video;
+		if(clickLikeVideoList.indexOf(video.videoId) > -1)
 			return;
-		clickLikeVideo=true;
+		clickLikeVideoList.push(video.videoId);
 		var url = '/video/clickVideo';
-		var video = this.props.video
+
 		this.state.likeTime = this.state.likeTime+1;
 		this.forceUpdate();
 		AjaxService.post(url,{data: {videoId : video.videoId,type : 'like'}});
 	},
 	dislikeVideo: function(){
-		if(clickDisLikeVideo)
-			return;
-		clickDisLikeVideo=true;
-		var url = '/video/clickVideo';
 		var video = this.props.video;
+		if(clickDislikeVideoList.indexOf(video.videoId) > -1)
+			return;
+		clickDislikeVideoList.push(video.videoId);
+		var url = '/video/clickVideo';
 		this.state.dislikeTime = this.state.dislikeTime+1;
 		this.forceUpdate();
 		AjaxService.post(url,{data: {videoId : video.videoId ,type : 'dislike'}});

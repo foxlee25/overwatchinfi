@@ -48,6 +48,7 @@ function requestVideoPlaylist(playlistId) {
           videoModel.publishedTime = item.snippet.publishedAt;
           videoModel.playlistId = item.snippet.playlistId;
           videoModel.channelId = item.snippet.channelId;
+          videoModel.source = 'youtube';
           videoModel.watchTime=0;
           videoModel.likeTime=0;
           videoModel.dislikeTime=0;

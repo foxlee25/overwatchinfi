@@ -1,7 +1,7 @@
 /**  video page begin */
 .videoCard{
     margin-top:20px;
-    margin-bottom:20px;
+    margin-bottom:30px;
     width: 100%;
 }
 .videoCardIframe{
@@ -27,6 +27,22 @@
 
 }
 
+.dropdown-menu, .dropdown-menu>li.menuItem {
+    min-width: 145px;
+    padding: 0px;
+    background-color: #222222 !important;
+    border:none !important;
+}
+
+.dropdown-menu>li.menuItem:hover, .dropdown-menu>.menuItem>li:focus{
+    background-color: #222222 !important;
+    border:none !important;
+}
+
+.menuItem a, .menuItem a:hover{
+    background-color: #222222 !important;
+    border:none !important;
+}
 .video-clickTime{
     color: #DEDCDC;
     margin-left: 5px;

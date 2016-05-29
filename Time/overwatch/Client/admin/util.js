@@ -34,7 +34,7 @@ var Ajax = {
                 callback(data);
 
         }).fail(function (jqXHR, textStatus) {
-            timeAjax.fail(jqXHR, textStatus);
+            Ajax.fail(jqXHR, textStatus);
         });
     }
 };
