@@ -3,7 +3,8 @@ var $ = require('jquery');
 var AjaxService = require('../service/AjaxService');
 var clickLikeVideoList = [];
 var clickDislikeVideoList = [];
-
+var AppAction = require('../flux/Actions');
+import { Link } from 'react-router'
 var VideoCard = React.createClass({
 	getInitialState: function(){
 		return {};
@@ -13,7 +14,6 @@ var VideoCard = React.createClass({
 		this.state.dislikeTime = this.props.video.dislikeTime;
 	},
     componentDidMount: function() {
-       $('.videoCard').children('iframe').attr('allowfullscreen','allowfullscreen');
 
     },
 	likeVideo: function(){
@@ -37,18 +37,30 @@ var VideoCard = React.createClass({
 		this.forceUpdate();
 		AjaxService.post(url,{data: {videoId : video.videoId ,type : 'dislike'}});
 	},
+	setVideoData: function(){
+		AppAction.loginSuccess(this.props.video);
+	},
 	render: function(){
 		return (
 			<div className="col-md-4 col-sm-6 col-xs-12">
-				<div  className="videoCard">
-                    <iframe className="videoCardIframe"
-                        src={this.props.video.url}>
-                    </iframe>
-		            <span><a onClick={this.likeVideo} className="btn btn-video glyphicon glyphicon-thumbs-up"></a></span>
-			         <span className="video-clickTime">{this.state.likeTime}</span>
-			         <span><a onClick={this.dislikeVideo} className="btn btn-video glyphicon glyphicon-thumbs-down"></a></span>
-		        	<span className="video-clickTime" >{this.state.dislikeTime}</span>
-			    </div>
+				<a >
+				
+						<div  className="videoCard">
+                           	<Link to={'/player'}>
+							<picture onClick={this.setVideoData.bind(this)}>
+								<source srcSet={"http://img.youtube.com/vi/"+this.props.video.videoId+"/mqdefault.jpg"} media="(min-width:991px)" />
+								<source srcSet={"http://img.youtube.com/vi/"+this.props.video.videoId+"/hqdefault.jpg"} media="(min-width:767px)" />
+								<source srcSet={"http://img.youtube.com/vi/"+this.props.video.videoId+"/sddefault.jpg"} />
+								<img className="videoCardImg" srcSet />
+							</picture>
+                            </Link>
+				            <span><a onClick={this.likeVideo} className="btn btn-video glyphicon glyphicon-thumbs-up"></a></span>
+					         <span className="video-clickTime">{this.state.likeTime}</span>
+					         <span><a onClick={this.dislikeVideo} className="btn btn-video glyphicon glyphicon-thumbs-down"></a></span>
+				        	<span className="video-clickTime" >{this.state.dislikeTime}</span>
+					    </div>
+			    	
+			    </a>
 			</div>
 		);
 	}

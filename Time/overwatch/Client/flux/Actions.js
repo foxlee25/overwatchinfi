@@ -7,6 +7,12 @@ var AppAction = {
 			actionType: constants.loginSuccess,
 			data: loginData
 		});
+	},
+	videoData: function(videoData){
+		dispatcher.handleViewAction({
+			actionType: constants.videoData,
+			data: videoData
+		});
 	}
 };
 

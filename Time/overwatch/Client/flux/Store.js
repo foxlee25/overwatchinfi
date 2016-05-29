@@ -6,6 +6,7 @@ var emitter = require('events').EventEmitter;
 var EVENT = "CAHNGE";
 
 var loginData = {};
+var videoData = {};
 
 function _setLoginData(data){
 	loginData = data;
@@ -15,9 +16,20 @@ function _getLoginData(){
 	return loginData;
 }
 
+function _setVideoData(data){
+	videoData = data;
+}
+
+function _getVideoData(){
+	return videoData;
+}
+
 var AppStore = assign(emitter.prototype, {
 	getLoginData: function(){
 		return _getLoginData();
+	},
+	getVideoData: function(){
+		return _getVideoData();
 	},
 	emitChange: function(){
 		this.emit(EVENT);
@@ -33,9 +45,11 @@ var AppStore = assign(emitter.prototype, {
 		switch(action.actionType){
 			case Constants.loginSuccess:
 				_setLoginData(action.data);
+				AppStore.emitChange();
+			case Constants.videoData:
+				_setVideoData(action.data)
 		}
 
-		AppStore.emitChange();
 		return true;
 	})
 });

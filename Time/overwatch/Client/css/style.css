@@ -235,4 +235,32 @@ background: rgba(134, 198, 217, 0.5);
     -moz-transform: translate(0,80px);	
 }
 
+.wrapper {
+    position:absolute;
+    top: 80px;
+    left: -150px;
+    height: 150%;
+    width: 120%;
+}
 
+.wrapper {
+	position: relative;
+	top:0;
+	left:0;
+	width:100%; 
+	height:100%;
+}
+
+.y-iframe {
+   width: 50%;
+    height: 500px;
+    margin: 0 auto;
+    vertical-align: middle;
+    padding-top: 30px; 
+}
+
+.ytbPlayer {
+	height: 100%;
+	width: 100%;
+	frameBorder: 0;
+}
