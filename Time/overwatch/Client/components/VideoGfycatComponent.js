@@ -1,7 +1,7 @@
 var React = require('react');
 var AjaxService = require('../service/AjaxService');
 var Underscore= require('underscore');
-var VideoCard = require('../views/VideoCard');
+var VideoCard = require('../views/GfycatCard');
 var url = '/video/getAllVideos';
 
 var Video = React.createClass({
@@ -31,6 +31,7 @@ var Video = React.createClass({
             <li><a onClick={this.getVideos.bind(this, 1)}>1</a></li>
         <li><a onClick={this.getVideos.bind(this, 2)}>2</a></li>
         <li><a onClick={this.getVideos.bind(this, 3)}>3</a></li>
+
         </ul>
         </nav>
         </div>

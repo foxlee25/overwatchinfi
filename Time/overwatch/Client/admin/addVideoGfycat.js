@@ -10,7 +10,7 @@ $(function(){
                  var $this = $(this);
                  var video = {};
                  video.videoId = $this.attr('href').split('/')[4];
-                 video.url = 'https://gfycat.com/ifr/' + video.videoId;
+                 video.url = 'https://gfycat.com/ifr/' + video.videoId+'?autoplay=0';
                  video.source = 'gfycat';
                  video.watchTime=0;
                  video.likeTime=0;
