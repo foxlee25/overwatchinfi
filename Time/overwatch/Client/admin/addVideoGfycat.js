@@ -6,7 +6,8 @@ $(function(){
     $('#submitVideo').click(function(){
         var videoArr = [];
         var url = '/video/addVideosFromPlaylist' ;
-         $('gfy-small-thumb a').each(function(index){
+        console.log($('gfy-small-thumb a').length);
+         $('gfy-small-thumb a').each(function(){
                  var $this = $(this);
                  var video = {};
                  video.videoId = $this.attr('href').split('/')[4];
@@ -17,8 +18,8 @@ $(function(){
                  video.dislikeTime=0;
                  videoArr.push(video);
          });
-        var serverData = {data : videoArr};
-        Ajax.post(url,serverData);
+       var serverData = {data : videoArr};
+       Ajax.post(url,serverData);
 
     });
 

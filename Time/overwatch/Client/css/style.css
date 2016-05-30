@@ -252,8 +252,9 @@ background: rgba(134, 198, 217, 0.5);
 }
 
 .y-iframe {
-   width: 50%;
-    height: 500px;
+   width: 80%;
+	max-width:800px;
+	height:500px;
     margin: 0 auto;
     vertical-align: middle;
     padding-top: 30px; 
@@ -263,4 +264,6 @@ background: rgba(134, 198, 217, 0.5);
 	height: 100%;
 	width: 100%;
 	frameBorder: 0;
+	border-style:none;
+	box
 }

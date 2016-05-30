@@ -11,7 +11,7 @@ var Video = React.createClass({
 		};
 	},
     getVideos : function(pageIndex){
-        AjaxService.post(url,{data :{source :'youtube',pageIndex: pageIndex}},function(response){
+        AjaxService.post(url,{data :{source :'youtube',pageIndex: pageIndex,videoNum : 12}},function(response){
             this.state.videos = response.data;
             this.forceUpdate();
         }.bind(this));

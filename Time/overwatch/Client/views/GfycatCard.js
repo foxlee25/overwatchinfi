@@ -37,7 +37,7 @@ var VideoCard = React.createClass({
     },
     render: function(){
         return (
-            <div className="col-md-4 col-sm-6 col-xs-12">
+            <div className="col-md-6 col-sm-6 col-xs-12">
             <div  className="videoCard">
             <iframe className="videoCardIframe"
         src={this.props.video.url}>

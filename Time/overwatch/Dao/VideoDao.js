@@ -1,7 +1,7 @@
 //using paging get video data
 var findAllVideo = function (db, data ,restCallback) {
    var videoArr = [];
-    var cursor = db.collection('Video').find({source : data.source}).skip(12*(data.pageIndex-1)).limit(12);
+    var cursor = db.collection('Video').find({source : data.source}).skip(data.videoNum*(data.pageIndex-1)).limit(data.videoNum);
     cursor.each(function (err, doc) {
         if (doc != null) {
             videoArr.push(doc);

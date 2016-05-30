@@ -40,7 +40,6 @@ var Base = React.createClass({
                          <MenuItem className="menuItem" eventKey={3}> <Link to={'/videoYoutube'}>{appValues.youtube}</Link></MenuItem>
               </NavDropdown>
               <li className="navTitle"><a><Link to={'/news'}>{appValues.news}</Link></a></li>
-              <li className="navTitle"><a><Link to={'/twits'}>{appValues.twits}</Link></a></li>
               <li className="navTitle"><a><Link to={'/about'}>{appValues.about}</Link></a></li>
               {this.state.loginData?<li className="navTitle"><a><Link to={'/pro'}>{appValues.pro}</Link></a></li>:null}
             </ul>
