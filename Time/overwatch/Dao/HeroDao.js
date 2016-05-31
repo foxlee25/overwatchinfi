@@ -1,3 +1,5 @@
+var Underscore= require('underscore');
+
 var findAllHero = function (db, data,restCallback) {
    var heroArr = [];
     var cursor = db.collection('Hero').find();
@@ -11,11 +13,12 @@ var findAllHero = function (db, data,restCallback) {
 };
 
 var addHeroDetails = function (db, heroDetails) {
-    var existHero= db.collection('HeroDetail').find({key: heroDetails.key}).count(true);
-    //if video do not exist then insert
-    if(Object.keys(existHero).length === 0){
-        db.collection('HeroDetail').insert(heroDetails);
-    }
+    db.collection('HeroDetail').find({key: heroDetails.key}).nextObject(function (err, existHero) {
+        if(Underscore.isEmpty(existHero)){
+            db.collection('HeroDetail').insert(heroDetails);
+        }
+    });
+    
 
 
 };

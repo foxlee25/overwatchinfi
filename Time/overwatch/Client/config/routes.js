@@ -6,6 +6,8 @@ var News = require('../components/NewsComponent');
 var Twits = require('../components/TwitComponent');
 var VideoYoutube = require('../components/VideoYoutubeComponent');
 var VideoGfycat = require('../components/VideoGfycatComponent');
+var Login = require('../components/LoginComponent');
+var Signup = require('../components/SignupComponent');
 var Pro = require('../components/ProComponent');
 var Player = require('../components/PlayerComponent');
 var NoMatch = require('../components/NoMatchComponent');
@@ -24,6 +26,8 @@ module.exports = (
 			<Route path="twits" component={Twits} />
             <Route path="videoYoutube" component={VideoYoutube} />
 			<Route path="videoGfycat" component={VideoGfycat} />
+	        <Route path="login" component={Login} />
+	        <Route path="signup" component={Signup} />
             <Route path="pro" component={Pro} />
 			<Route path="player" component={Player} />
 			<Route path="*" component={NoMatch} />
