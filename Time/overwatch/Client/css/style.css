@@ -29,15 +29,64 @@ background: rgba(134, 198, 217, 0.5);
 }
 
 .heroCard {
-    padding: 20px;
+    padding: 10px;
     padding-bottom: 10px;
 	margin: 10px;
-	border-radius: 15px;
 	background: rgba(20, 33, 41, 0.5);
+    border-top-color: rgba(255, 255, 255, 0.4);
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-right-color: rgba(255, 255, 255, 0.4);
+    border-right-style: solid;
+    border-right-width: 2px;
+    border-bottom-color: rgba(255, 255, 255, 0.4);
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-left-color: rgba(255, 255, 255, 0.4);
+    border-left-style: solid;
+    border-left-width: 2px;
+    transition: all .1s ease-in-out;
+}
+
+.heroCard:hover {
+	background: rgba(20, 33, 41, 1);
+	transform: scale3d(1.25, 1.25, 1.25);
+}
+
+.heroCard:hover p {
+	color: #f7931e;
 }
 
 .heroCard p {
 	color: #ffffff;
+}
+
+@media only screen and (min-width: 991px){
+	.heroCardContainer {
+		float: left;
+		width: 16.6%;
+	}
+}
+
+@media only screen and (min-width: 767px) and (max-width: 990px){
+	.heroCardContainer {
+		float: left;
+		width: 20%;
+	}
+}
+
+@media only screen and (min-width: 399px) and (max-width: 766px){
+	.heroCardContainer {
+		float: left;
+		width: 33.3%;
+	}
+}
+
+@media only screen and (max-width: 398px){
+	.heroCardContainer {
+		float: left;
+		width: 100%;
+	}
 }
 
 #app {

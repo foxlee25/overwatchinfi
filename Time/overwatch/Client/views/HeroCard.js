@@ -41,8 +41,8 @@ var HeroCard = React.createClass({
 	},
 	render: function(){
 		return (
-			<div className="col-md-3 col-sm-6 col-xs-12">
-				<div className="heroCard hvr-bob">
+			<div className="heroCardContainer">
+				<div className="heroCard">
 		  			<img className="heroCardImg img-responsive" src={"./img/hero/"+this.props.hero.imgPath} />
 			        <p className="card-text cardTitle">{this.props.hero.heroname}</p>
 					<span><a onClick={this.likeHero} className="btn btn-video glyphicon glyphicon-thumbs-up"></a></span>
