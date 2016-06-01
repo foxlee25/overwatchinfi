@@ -9,20 +9,31 @@ var Player = React.createClass({
 
 	},
 	componentDidMount: function(){
-		$('.y-iframe').children('iframe').attr('allowfullscreen','allowfullscreen');
 	},
 	render: function() {
 		if(this.state.videoInfo.url){
-			return (
-				<div className="container">
-					<div className="wrapper">
-						<div className="y-iframe">
-							<iframe className="ytbPlayer" src={this.state.videoInfo.url}>
-							</iframe>
-						</div>
-					</div>	
-				</div>
-			);
+			if(this.state.videoInfo.genre === 'youtube'){
+				return (
+					<div className="container">
+						<div className="wrapper">
+							<div className="y-iframe">
+								<iframe className="mediaPlayer" src={this.state.videoInfo.url}>
+								</iframe>
+							</div>
+						</div>	
+					</div>
+				);
+			}else if(this.state.videoInfo.genre === 'gyfcat'){
+					<div className="container">
+						<div className="wrapper">
+							<div className="y-iframe">
+								<video control className="mediaPlayer">
+									<source src={this.state.videoInfo.url} type="video/mp4" />
+								</video>
+							</div>
+						</div>	
+					</div>
+			}	
 		}else{
 			return (
 				<div className="container">

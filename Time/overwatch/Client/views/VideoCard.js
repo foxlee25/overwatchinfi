@@ -38,7 +38,8 @@ var VideoCard = React.createClass({
 		AjaxService.post(url,{data: {videoId : video.videoId ,type : 'dislike'}});
 	},
 	setVideoData: function(){
-		AppAction.loginSuccess(this.props.video);
+		this.props.video.genre = "youtube";
+		AppAction.videoData(this.props.video);
 	},
 	render: function(){
 		return (
