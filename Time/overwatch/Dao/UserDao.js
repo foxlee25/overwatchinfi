@@ -26,9 +26,12 @@ var signup = function (db,user) {
 
 var login = function (db, data, restCallback) {
 
-    db.collection('User').find({email: data.email}).limit(1).nextObject(function (err, user) {
-        console.log('dao login : '+user.email);
-        restCallback(user);
+    db.collection('User').find({email: data.email}).nextObject(function (err, existUser) {
+        console.log('signup : ' + JSON.stringify(existUser));
+        if(Underscore.isEmpty(existUser)) {
+            console.log('dao login ');
+            restCallback(existUser);
+        }
     });
 };
 

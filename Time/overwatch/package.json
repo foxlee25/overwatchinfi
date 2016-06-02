@@ -10,12 +10,13 @@
   "author": "Peter Jin",
   "license": "MIT",
   "dependencies": {
-    "bcryptjs": "^2.3.0",
     "babel-preset-react": "^6.5.0",
+    "bcryptjs": "^2.3.0",
     "body-parser": "^1.15.0",
     "cors": "^2.7.1",
     "express": "^4.13.4",
     "jquery": "^2.2.4",
+    "jshashes": "^1.0.5",
     "object-assign": "^4.1.0"
   },
   "devDependencies": {

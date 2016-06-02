@@ -1,31 +1,38 @@
 var React = require('react');
 var AjaxService = require('../service/AjaxService');
+var Hashes = require('jshashes');
 var $ = require('jquery');
 var url = '/user/signup';
 var Signup = React.createClass({
     getInitialState: function(){
         return {
-            email:null,
-            password:null
         };
     },
-    handleSubmit: function(){
+    handleSubmit :function(e){
         var signup = {};
         signup.email = $('#signupComponent').find('input[name="signup-email"]').val();
-        signup.password = $('#signupComponent').find('input[name="signup-password"]').val();
-        alert( signup.email +  signup.password);
+        signup.username = $('#signupComponent').find('input[name="signup-username"]').val();
+        var pwd= $('#signupComponent').find('input[name="signup-password"]').val();
+        signup.password  = new Hashes.SHA256().hex(pwd);
         AjaxService.post(url,{data : signup});
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        e.stopImmediatePropagation();
     },
     render: function(){
         return (
             <div className = "container-fluid">
-            <div id="signupComponent" className="row">
-            <form role="form">
-               <input name="signup-email" value={this.state.email} type="email" className="form-control" placeholder="email" required/>
-               <input name="signup-password" value={this.state.password} type="password" className="form-control" placeholder="password"  required/>
-            </form>
-             <button onClick={this.handleSubmit}  className="btn btn-lg btn-primary btn-block">Sign Up</button>
-            </div>
+                <div  id="signupComponent" className="signup-card account-form">
+                  <h1>Sign Up</h1>
+                  <br/>
+                  <form className="signupForm" onSubmit={ this.handleSubmit }>
+                     <input name="signup-email"  type="email" className="form-control account-input" placeholder="Email"  required />
+                     <input name="signup-username" type="text" className="form-control account-input"  placeholder="Username"   />
+                     <input name="signup-password"  type="password" className="form-control account-input" placeholder="Password" required />
+                     <input type="submit" name="signupSubmit" className="signup signup-submit"  />
+                  </form>
+               </div>
             </div>
         );
     },
@@ -35,3 +42,4 @@ var Signup = React.createClass({
 });
 
 module.exports = Signup;
+

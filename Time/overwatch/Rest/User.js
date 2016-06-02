@@ -19,12 +19,15 @@ router.post('/signup', function (req, res) {
     res.header('Content-type', 'application/json');
     res.header('Charset', 'utf8');
     var signup = req.body.data;
-    console.log('signup : ' + JSON.stringify(signup));
-    var salt = bcrypt.genSaltSync(10);
-    var hash = bcrypt.hashSync(signup.password, salt);
-    signup.password=hash;
-    console.log('signup : '+ hash);
-    daoController.getDao('UserDao', 'user_signup', signup);
+    if(signup && signup.email){
+        console.log('signup : ' + JSON.stringify(signup));
+        var salt = bcrypt.genSaltSync(10);
+        var hash = bcrypt.hashSync(signup.password, salt);
+        signup.password=hash;
+        console.log('signup : '+ hash);
+        daoController.getDao('UserDao', 'user_signup', signup);
+    }
+
 });
 
 
@@ -33,16 +36,20 @@ router.post('/login', function (req, res) {
     res.header('Content-type', 'application/json');
     res.header('Charset', 'utf8');
     var login = req.body.data;
-    daoController.getDao('UserDao', 'user_login', login , function(user){
-        var realPwd =user.password;
-        var currentPwd = login.password;
-        var flag = bcrypt.compareSync(currentPwd, realPwd);
-        if(flag){
-            console.log('Login success !!! ');
-        }else{
-            console.log('Login fail !!! ');
-        }
-    });
+    if(login && login.email){
+        console.log('login rest');
+        daoController.getDao('UserDao', 'user_login', login , function(user){
+            var realPwd =user.password;
+            var currentPwd = login.password;
+            var flag = bcrypt.compareSync(currentPwd, realPwd);
+            if(flag){
+                console.log('Login success !!! ');
+            }else{
+                console.log('Login fail !!! ');
+            }
+        });
+    }
+
 });
 
 module.exports = router;
