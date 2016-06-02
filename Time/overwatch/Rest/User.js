@@ -8,8 +8,6 @@ router.post('/getAllUsers', function (req, res) {
     res.header('Content-type', 'application/json');
     res.header('Charset', 'utf8');
     daoController.getDao('UserDao', 'user_findAll', {},function (userArr) {
-        console.log('User rest getAllUsers' + userArr);
-        console.log(userArr[0]);
         res.send(userArr[0]);
     });
 });
@@ -20,11 +18,9 @@ router.post('/signup', function (req, res) {
     res.header('Charset', 'utf8');
     var signup = req.body.data;
     if(signup && signup.email){
-        console.log('signup : ' + JSON.stringify(signup));
         var salt = bcrypt.genSaltSync(10);
         var hash = bcrypt.hashSync(signup.password, salt);
         signup.password=hash;
-        console.log('signup : '+ hash);
         daoController.getDao('UserDao', 'user_signup', signup);
     }
 
@@ -37,7 +33,6 @@ router.post('/login', function (req, res) {
     res.header('Charset', 'utf8');
     var login = req.body.data;
     if(login && login.email){
-        console.log('login rest');
         daoController.getDao('UserDao', 'user_login', login , function(user){
             var realPwd =user.password;
             var currentPwd = login.password;

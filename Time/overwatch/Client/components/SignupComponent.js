@@ -17,8 +17,6 @@ var Signup = React.createClass({
         AjaxService.post(url,{data : signup});
         e.preventDefault();
         e.stopImmediatePropagation();
-        e.preventDefault();
-        e.stopImmediatePropagation();
     },
     render: function(){
         return (
