@@ -12,23 +12,21 @@ var findAllUser = function (db,data, restCallback) {
     });
 };
 
-var signup = function (db,user) {
+var signup = function (db,user , restCallback) {
     db.collection('User').find({email: user.email}).nextObject(function (err, existUser) {
         if(Underscore.isEmpty(existUser)){
-            console.log('dao sign up');
             db.collection('User').insert(user);
+            restCallback({status: true});
+        }else{
+            restCallback({status: false});
         }
     });
     
 };
 
 var login = function (db, data, restCallback) {
-
     db.collection('User').find({email: data.email}).nextObject(function (err, existUser) {
-        if(Underscore.isEmpty(existUser)) {
-            console.log('dao login ');
             restCallback(existUser);
-        }
     });
 };
 
