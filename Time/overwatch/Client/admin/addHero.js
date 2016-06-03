@@ -45,7 +45,7 @@ $(function(){
         var heroAbility8 = $('#heroForm').find('input[name="heroAbility8"]').val()
         if(heroAbility8)
             heroModel.heroAbility8 = heroAbility8;
-        var url= '/heros/addHeroDetails';
+        var url= '/hero/addHeroDetails';
         var serverData = {data : heroModel};
         Ajax.post(url,serverData);
     });

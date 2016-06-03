@@ -14,9 +14,16 @@ var Signup = React.createClass({
         signup.username = $('#signupComponent').find('input[name="signup-username"]').val();
         var pwd= $('#signupComponent').find('input[name="signup-password"]').val();
         signup.password  = new Hashes.SHA256().hex(pwd);
-        AjaxService.post(url,{data : signup});
+        AjaxService.post(url,{data : signup},function(response){
+            var status = response.data.status;
+            console.log('status : '+status);
+            if(status){
+                window.sessionStorage.setItem('username',signup.email);
+                window.location.assign("#/home");
+            }
+        }.bind(this));
         e.preventDefault();
-        e.stopImmediatePropagation();
+        e.stopPropagation();
     },
     render: function(){
         return (

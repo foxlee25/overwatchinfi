@@ -18,7 +18,7 @@ router.get('/allheros', apicache('1 hour'), function(req, res) {
 	});
 });
 
-/** path is /heros/addHeroDetails **/
+/** path is /hero/addHeroDetails **/
 router.post('/addHeroDetails', function (req, res) {
 	var heroDetails = req.body.data;
 	daoController.getDao('HeroDao', 'hero_addDetails', heroDetails);

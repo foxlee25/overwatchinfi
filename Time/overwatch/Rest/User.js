@@ -21,7 +21,9 @@ router.post('/signup', function (req, res) {
         var salt = bcrypt.genSaltSync(10);
         var hash = bcrypt.hashSync(signup.password, salt);
         signup.password=hash;
-        daoController.getDao('UserDao', 'user_signup', signup);
+        daoController.getDao('UserDao', 'user_signup', signup , function(data){
+            res.send(data);
+        });
     }
 
 });
@@ -34,14 +36,22 @@ router.post('/login', function (req, res) {
     var login = req.body.data;
     if(login && login.email){
         daoController.getDao('UserDao', 'user_login', login , function(user){
-            var realPwd =user.password;
-            var currentPwd = login.password;
-            var flag = bcrypt.compareSync(currentPwd, realPwd);
-            if(flag){
-                console.log('Login success !!! ');
+            if(user){
+                var realPwd =user.password;
+                var currentPwd = login.password;
+                var flag = bcrypt.compareSync(currentPwd, realPwd);
+                if(flag){
+                    console.log('Login success !!! ');
+                    res.send({status: true});
+                }else{
+                    console.log('Login fail !!! ');
+                    res.send({status: false});
+                }
             }else{
                 console.log('Login fail !!! ');
+                res.send({status: false});
             }
+
         });
     }
 
