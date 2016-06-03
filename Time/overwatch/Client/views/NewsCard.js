@@ -7,17 +7,20 @@ var NewsCard = React.createClass({
 	openNewsLink: function(link){
 		window.open(link);
 	},
+	componentWillMount: function(){
+		if(this.props.new.source.enriched.url.text.length > 300){
+			this.props.new.source.enriched.url.text = this.props.new.source.enriched.url.text.substring(0, 300)+"...";
+		}
+	},
 	render: function(){
 		return (
-			<div className="newsCard row" onClick={this.openNewsLink.bind(this, this.props.new.url)}>
+			<div className="newsCard row" onClick={this.openNewsLink.bind(this, this.props.new.source.enriched.url.url)}>
 				<div className="col-md-3 newsImgMargin" >
-					{this.props.new.iurl?<img className="img-responsive" src={this.props.new.iurl} />:null}
+					{this.props.new.source.enriched.url.image?<img className="img-responsive" src={this.props.new.source.enriched.url.image} />:null}
 				</div>
 			    <div className="col-md-9" id="newsText">
-				    <h4>{this.props.new.title}</h4>
-				    <p className="newsDescriptionColor">{this.props.new.kwic}</p>
-				    {this.props.new.author?<p id="author">author {this.props.new.author}</p>:null}
-				    {this.props.new.domain?<p id="domain">{this.props.new.domain}</p>:null}
+				    <h4>{this.props.new.source.enriched.url.title}</h4>
+				    <p className="newsDescriptionColor">{this.props.new.source.enriched.url.text}</p>
 				</div>
 			</div>
 		);

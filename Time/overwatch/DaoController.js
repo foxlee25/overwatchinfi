@@ -8,6 +8,7 @@ var DBController = require('./DBController.js');
 var DaoManager = {};
 
 // !!! add all the dao file here !!!
+DaoManager.NewsDao = require('./Dao/NewsDao.js');
 DaoManager.UserDao = require('./Dao/UserDao.js');
 DaoManager.VideoDao = require('./Dao/VideoDao.js');
 DaoManager.HeroDao = require('./Dao/HeroDao.js');

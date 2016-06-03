@@ -22,7 +22,12 @@ var Heros = React.createClass({
 	},
 	componentDidMount: function(){    
         AjaxService.get(url,function(response){
+        	if(response instanceof Error){
+        		console.error("Can't get hero data");
+        		return;
+        	}
             this.state.heros = response.data;
+            console.table(this.state.heros);
 			this.forceUpdate();
         }.bind(this));
 	}

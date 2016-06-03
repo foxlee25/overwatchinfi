@@ -3,7 +3,6 @@ var Base = require('../components/BaseComponent');
 var Home = require('../components/HomeComponent');
 var Heros = require('../components/HerosComponent');
 var News = require('../components/NewsComponent');
-var Twits = require('../components/TwitComponent');
 var VideoYoutube = require('../components/VideoYoutubeComponent');
 var VideoGfycat = require('../components/VideoGfycatComponent');
 var Login = require('../components/LoginComponent');
@@ -23,7 +22,6 @@ module.exports = (
 			<Route path="home" component={Home} />
 			<Route path='heros' component={Heros} />
 			<Route path="news" component={News} />
-			<Route path="twits" component={Twits} />
             <Route path="videoYoutube" component={VideoYoutube} />
 			<Route path="videoGfycat" component={VideoGfycat} />
 	        <Route path="login" component={Login} />

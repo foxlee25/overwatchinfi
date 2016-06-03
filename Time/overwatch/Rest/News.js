@@ -1,40 +1,48 @@
 var express = require('express');
 var props = require('../util/properties.js');
 var request = require('request');
+var daoController = require('../DaoController');
 var router = express.Router();
-var cacheManager = require('cache-manager');
-var memCache = cacheManager.caching({store: 'memory', max: 1000000000, ttl: 3600});
 
 //Router to get news
-router.get('/allDingDangNews', function(req, res) {
-	var cacheKey = req.headers.pagination+req.headers.language;
+router.get('/allNews', function(req, res) {
 
 	res.header('Content-type', 'application/json');
 	res.header('Access-Control-Allow-Headers', '*');
 	res.header('Access-Control-Allow-Origin', '*');
 	res.header('Charset', 'utf8');
 
-    //use memory cache to cache the call
-    //duration 3600s/ 1 hour
-	memCache.wrap(cacheKey, function(callback){
-		getDingDangNews(req, callback);
-	},function(err, data){
-		res.send(data);
-	});
+    daoController.getDao('NewsDao', 'read_news', null,function (heroArr) {
+        console.log(heroArr.length+"length");
+        if(heroArr.length === 0){
+            //db is empty
+            //make a news request and store the data
+            getNews(req, function(err, data){
+                if(err){
+                    console.error("Can't get news data");
+                    res.send([]);
+                    return;
+                }
+
+                console.info("Success get news data");
+                //res.send(data.result.docs);
+                res.send(data);
+                //daoController.getDao('NewsDao', 'save_news', data.result.docs);
+                daoController.getDao('NewsDao', 'save_news', data);
+            });
+        }else{
+            res.send(heroArr);
+        }
+    });
 
 });
 
-var getDingDangNews = function(req, callback) {
+var getNews = function(req, callback) {
     var options = {
-        url: props.dingDangNews,
-        headers: {
-            pagination: req.headers.pagination,
-            language: req.headers.language
-        }
+        url: props.mockNewsSource,
     };
 
-    //make request to dingdang news
-    //header {pagination:,language:}
+    //make request to watson news
     var promise = new Promise(function(resolve, reject){
         request(options, function(err, response, body){
             if(err){

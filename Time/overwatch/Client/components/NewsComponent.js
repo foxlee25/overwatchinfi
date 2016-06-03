@@ -1,5 +1,5 @@
 var React = require('react');
-var HttpService = require('../service/HttpService');
+var AjaxService = require('../service/AjaxService');
 var _  = require('underscore');
 var NewsCard = require('../views/NewsCard');
 
@@ -12,13 +12,17 @@ var News = React.createClass({
 	getNews: function(index){
 		//client side call to get dingdang news
 		//!important need to call forceudpate to update UI
-		HttpService.getDingDangNews(index).then(function(response){
-			this.state.news = response.data.results;
+		AjaxService.get('/news/allNews', function(response){
+			if(response instanceof Error){
+				console.error("Can't get news data");
+				return;
+			}
+
+			this.state.news = response.data;
+			console.table(this.state.news);
 			this.forceUpdate();
-			window.scrollTo(0, 0);
-		}.bind(this)).catch(function(response){
-			console.error(response);
-		});
+			window.scrollTo(0, 0);			
+		}.bind(this));
 	},
 	componentDidMount: function(){
 		//call this when first launch
@@ -30,7 +34,7 @@ var News = React.createClass({
 				<div id="newsComponent" className="container">
 					<div className="marketing">
 					{_.map(this.state.news, function(item){
-						return(<NewsCard key={item.url} new={item} />);
+						return(<NewsCard key={item.id} new={item} />);
 					}.bind(this))}
 					</div>
 				</div>
