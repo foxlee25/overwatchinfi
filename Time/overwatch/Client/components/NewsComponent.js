@@ -6,10 +6,11 @@ var NewsCard = require('../views/NewsCard');
 var News = React.createClass({
 	getInitialState: function(){
 		return {
-			news: []
+			news: [],
+			page: []
 		};
 	},
-	getNews: function(index){
+	getNews: function(){
 		//client side call to get dingdang news
 		//!important need to call forceudpate to update UI
 		AjaxService.get('/news/allNews', function(response){
@@ -19,32 +20,36 @@ var News = React.createClass({
 			}
 
 			this.state.news = response.data;
-			console.table(this.state.news);
-			this.forceUpdate();
-			window.scrollTo(0, 0);			
+			console.table(this.state.news);	
+			this.pagination(1);		
 		}.bind(this));
 	},
 	componentDidMount: function(){
 		//call this when first launch
-		this.getNews(1);
+		this.getNews();
+	},
+	pagination: function(index){
+		this.state.page = this.state.news.slice((index-1)*10, index*10);
+		this.forceUpdate();
+		window.scrollTo(0, 0);
 	},
 	render: function(){
 		return (
 			<div>
 				<div id="newsComponent" className="container">
 					<div className="marketing">
-					{_.map(this.state.news, function(item){
+					{_.map(this.state.page, function(item){
 						return(<NewsCard key={item.id} new={item} />);
 					}.bind(this))}
 					</div>
 				</div>
 				<nav className="pagin col-sm-offset-5 col-sm-6">
 				  <ul className="pagination">
-				  	  <li><a onClick={this.getNews.bind(this, 1)}>1</a></li>
-			  	  	  <li><a onClick={this.getNews.bind(this, 11)}>2</a></li>
-			  	  	  <li><a onClick={this.getNews.bind(this, 21)}>3</a></li>
-			  	  	  <li><a onClick={this.getNews.bind(this, 31)}>4</a></li>
-			  	  	  <li><a onClick={this.getNews.bind(this, 41)}>5</a></li>
+				  	  <li><a onClick={this.pagination.bind(this, 1)}>1</a></li>
+			  	  	  <li><a onClick={this.pagination.bind(this, 2)}>2</a></li>
+			  	  	  <li><a onClick={this.pagination.bind(this, 3)}>3</a></li>
+			  	  	  <li><a onClick={this.pagination.bind(this, 4)}>4</a></li>
+			  	  	  <li><a onClick={this.pagination.bind(this, 5)}>5</a></li>
 				  </ul>
 				</nav>
 			</div>

@@ -8,8 +8,8 @@ var NewsCard = React.createClass({
 		window.open(link);
 	},
 	componentWillMount: function(){
-		if(this.props.new.source.enriched.url.text.length > 300){
-			this.props.new.source.enriched.url.text = this.props.new.source.enriched.url.text.substring(0, 300)+"...";
+		if(this.props.new.source.enriched.url.text.length > 500){
+			this.props.new.source.enriched.url.text = this.props.new.source.enriched.url.text.substring(0, 500)+"...";
 		}
 	},
 	render: function(){

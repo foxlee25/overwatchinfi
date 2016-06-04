@@ -120,6 +120,10 @@ background: rgba(134, 198, 217, 0.5);
 	color: #ffffff;
 }
 
+.newsCard:hover {
+	cursor: pointer;
+}
+
 #author {
 	float: left;
 }
@@ -314,4 +318,12 @@ background: rgba(134, 198, 217, 0.5);
 	frameBorder: 0;
 	border-style:none;
 	box
+}
+
+.pagination:hover {
+	cursor: pointer !important;
+}
+
+.newsImgMargin img {
+	max-height: 200px;
 }
