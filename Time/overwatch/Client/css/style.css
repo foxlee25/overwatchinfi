@@ -90,6 +90,7 @@ background: rgba(134, 198, 217, 0.5);
 }
 
 #app {
+	min-height: 100vh;
 	background-image: url("../img/background/bodyBg.jpg");
 	background-repeat: no-repeat;
     background-attachment: fixed;

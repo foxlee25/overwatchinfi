@@ -43,6 +43,7 @@ var News = React.createClass({
 					}.bind(this))}
 					</div>
 				</div>
+				{this.state.news.length>0?				
 				<nav className="pagin col-sm-offset-5 col-sm-6">
 				  <ul className="pagination">
 				  	  <li><a onClick={this.pagination.bind(this, 1)}>1</a></li>
@@ -51,7 +52,7 @@ var News = React.createClass({
 			  	  	  <li><a onClick={this.pagination.bind(this, 4)}>4</a></li>
 			  	  	  <li><a onClick={this.pagination.bind(this, 5)}>5</a></li>
 				  </ul>
-				</nav>
+				</nav>:null}
 			</div>
 		);
 	}

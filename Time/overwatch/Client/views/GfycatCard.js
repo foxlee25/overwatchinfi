@@ -18,12 +18,13 @@ var Gfycat = React.createClass({
     componentDidMount: function() {
         var key = this.props.video.videoId;
         $('#'+this.props.video.videoId).hover(function(){
-            this.state[key] = true;
+            $('#'+this.props.video.videoId).find('video').attr('controls', true);
             this.forceUpdate();
             $('#'+this.props.video.videoId).find('video')[0].play();
         }.bind(this),function(){
-            this.state[key] = false;
+            $('#'+this.props.video.videoId).find('video').attr('controls', false);
             this.forceUpdate();
+            $('#'+this.props.video.videoId).find('video')[0].load();
         }.bind(this));
         $('.videoCard').children('iframe').attr('allowfullscreen','allowfullscreen');
     },
@@ -59,9 +60,9 @@ var Gfycat = React.createClass({
         return (
             <div className="col-md-6 col-sm-6 col-xs-12">
                 <div id={this.props.video.videoId} className="videoCard" onClick={this.setVideoData.bind(this)}>
-                    {this.state[this.props.video.videoId]?<video preload="auto" controls autoplay loop muted className="videoCardImg" >
-                        <source src={"https://thumbs.gfycat.com/"+this.props.video.videoId+"-360.mp4"} type="video/mp4" />
-                    </video>:<img className="videoCardImg" src={"https://thumbs.gfycat.com/"+this.props.video.videoId+"-thumb360.jpg"} />}
+                    <video preload='auto' poster={'https://thumbs.gfycat.com/'+this.props.video.videoId+'-thumb360.jpg'} loop className='videoCardImg' >
+                        <source src={'https://thumbs.gfycat.com/'+this.props.video.videoId+'-360.mp4'} type='video/mp4' />
+                    </video>
                     <span>
                         <a onClick={this.likeVideo} className="btn btn-video glyphicon glyphicon-thumbs-up">
                         </a>

@@ -26,13 +26,14 @@ var Video = React.createClass({
 					}.bind(this))}
 				</div>
 			</div>
+			{this.state.videos.length>0?
             <nav className="pagin col-sm-offset-5 col-sm-6">
 				  <ul className="pagination">
 				  	  <li><a onClick={this.getVideos.bind(this, 1)}>1</a></li>
 			  	  	  <li><a onClick={this.getVideos.bind(this, 2)}>2</a></li>
 			  	  	  <li><a onClick={this.getVideos.bind(this, 3)}>3</a></li>
 				  </ul>
-            </nav>  
+            </nav>:null} 
          </div>
 		);
 	},

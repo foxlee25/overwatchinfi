@@ -3,6 +3,7 @@ var AjaxService = require('../service/AjaxService');
 var Underscore= require('underscore');
 var VideoCard = require('../views/GfycatCard');
 var url = '/video/getAllVideos';
+var $ = require('jquery');
 var totalNum = 57;
 var Video = React.createClass({
     getInitialState: function(){
@@ -30,6 +31,7 @@ var Video = React.createClass({
         AjaxService.post(url,{data :{source :'gfycat',pageIndex: currentPageIndex, videoNum : 6}},function(response){
             this.state.videos = response.data;
             this.forceUpdate();
+            window.scrollTo(0, 0);
         }.bind(this));
     },
     render: function(){
@@ -42,6 +44,7 @@ var Video = React.createClass({
             }.bind(this))}
         </div>
         </div>
+        {this.state.videos.length>0?
         <nav className="pagin col-sm-offset-5 col-sm-6">
             <ul className="pagination">
             <li><a onClick={this.getVideos.bind(this,'first')}>First</a></li>
@@ -49,8 +52,8 @@ var Video = React.createClass({
             <li><a href="#">{this.state.currentPageIndex} of 57</a></li>
             <li><a onClick={this.getVideos.bind(this,'next')}>Next</a></li>
             <li><a onClick={this.getVideos.bind(this,'last')}>Last</a></li>
-        </ul>
-        </nav>
+            </ul>
+        </nav>:null}
         </div>
         );
     },
