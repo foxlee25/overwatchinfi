@@ -1,8 +1,27 @@
 var express = require('express');
 var props = require('../util/properties.js');
 var request = require('request');
+var cronJob = require('cron').CronJob;
 var daoController = require('../DaoController');
 var router = express.Router();
+
+var job = new cronJob({
+    cronTime: '00 00 24 * * *',
+    onTick: function() {
+        getNews(req, function(err, data){
+            if(err){
+                return;
+            }
+
+            daoController.getDao('NewsDao', 'save_news', data.result.docs);
+        });
+
+      },
+      start: false,
+      timeZone: "America/Los_Angeles"
+});
+
+job.start();
 
 //Router to get news
 router.get('/allNews', function(req, res) {
@@ -25,10 +44,8 @@ router.get('/allNews', function(req, res) {
                 }
 
                 console.info("Success get news data");
-                //res.send(data.result.docs);
-                res.send(data);
-                //daoController.getDao('NewsDao', 'save_news', data.result.docs);
-                daoController.getDao('NewsDao', 'save_news', data);
+                res.send(data.result.docs);
+                daoController.getDao('NewsDao', 'save_news', data.result.docs);
             });
         }else{
             res.send(heroArr);
@@ -39,7 +56,7 @@ router.get('/allNews', function(req, res) {
 
 var getNews = function(req, callback) {
     var options = {
-        url: props.mockNewsSource,
+        url: props.newsSource,
     };
 
     //make request to watson news
