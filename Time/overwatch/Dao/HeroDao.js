@@ -38,13 +38,32 @@ var heroClick = function(db, hero){
         }
     });
 
-
 }
+
+var getHeroDetail = function(db, id, callback){
+    if(typeof id === 'string'){
+        var cursor = db.collection('HeroDetail').find({_id: id.replace(/\./g,'')});
+        cursor.each(function(err, doc){
+            if(doc != null){
+                callback(doc);
+            }else{
+                callback(null);
+            }
+
+            //break out of the loop
+            return false;
+        });
+    }else{
+        callback(null);
+    }
+    
+};
 
 var HeroDao = {
     hero_click : heroClick,
     hero_findAll: findAllHero,
-    hero_addDetails : addHeroDetails
+    hero_addDetails : addHeroDetails,
+    hero_detail: getHeroDetail
 }
 
 module.exports = HeroDao;

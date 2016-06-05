@@ -7,6 +7,7 @@ var EVENT = "CAHNGE";
 
 var loginData = {};
 var videoData = {};
+var heroId = '';
 
 function _setLoginData(data){
 	loginData = data;
@@ -24,12 +25,23 @@ function _getVideoData(){
 	return videoData;
 }
 
+function _setHeroId(id){
+	heroId = id;
+}
+
+function _getHeroId(){
+	return heroId;
+}
+
 var AppStore = assign(emitter.prototype, {
 	getLoginData: function(){
 		return _getLoginData();
 	},
 	getVideoData: function(){
 		return _getVideoData();
+	},
+	getHeroId: function(){
+		return _getHeroId();
 	},
 	emitChange: function(){
 		this.emit(EVENT);
@@ -46,8 +58,13 @@ var AppStore = assign(emitter.prototype, {
 			case Constants.loginSuccess:
 				_setLoginData(action.data);
 				AppStore.emitChange();
+				break;
 			case Constants.videoData:
-				_setVideoData(action.data)
+				_setVideoData(action.data);
+				break;
+			case Constants.setHeroId:
+				_setHeroId(action.data);
+				break;
 		}
 
 		return true;

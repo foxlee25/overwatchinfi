@@ -32,4 +32,20 @@ router.post('/clickHero', function (req, res) {
 	daoController.getDao('HeroDao', 'hero_click', hero);
 });
 
+/**path is /video/heroDetail **/
+router.get('/heroDetail/:id', function(req, res) {
+	res.header('Content-type', 'application/json');
+	res.header('Charset', 'utf8');
+	var id = req.params.id;
+	daoController.getDao('HeroDao', 'hero_detail', id.toLowerCase(), function(detailObj) {
+		if(detailObj === null){
+			res.send({});
+			return;
+		}
+
+		res.send(detailObj);
+
+	})
+});
+
 module.exports = router;

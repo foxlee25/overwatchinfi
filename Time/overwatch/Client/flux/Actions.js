@@ -13,6 +13,12 @@ var AppAction = {
 			actionType: constants.videoData,
 			data: videoData
 		});
+	},
+	setHeroId: function(id){
+		dispatcher.handleViewAction({
+			actionType: constants.setHeroId,
+			data: id
+		});
 	}
 };
 

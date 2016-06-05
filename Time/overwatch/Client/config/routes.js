@@ -9,6 +9,7 @@ var Login = require('../components/LoginComponent');
 var Signup = require('../components/SignupComponent');
 var Pro = require('../components/ProComponent');
 var Player = require('../components/PlayerComponent');
+var HeroDetail = require('../components/HeroDetailComponent');
 var NoMatch = require('../components/NoMatchComponent');
 var Router = require('react-router');
 var browserHistory = Router.browserHistory;
@@ -28,6 +29,7 @@ module.exports = (
 	        <Route path="signup" component={Signup} />
             <Route path="pro" component={Pro} />
 			<Route path="player" component={Player} />
+			<Route path="herodetail" component={HeroDetail} />
 			<Route path="*" component={NoMatch} />
 		</Route>
 	</Router>
