@@ -10,7 +10,7 @@ import { Router, Route, Link } from 'react-router'
 var Base = React.createClass({
   getInitialState: function(){
     return {
-      loginData: null,
+      loginData: null
     };
   },
   getLoginData: function(){
@@ -25,7 +25,7 @@ var Base = React.createClass({
   render: function(){
     return(
       <div className="container">
-        {this.state.loginData?<b className="welcome">Welcome {this.state.loginData.name}</b>:null}
+        {this.state.loginData?<b className="welcome">Welcome {this.state.loginData.username}</b>:null}
         <div id="navBand" className="navbar navbar-inverse">
           <div>
             <div className="navbar-header">

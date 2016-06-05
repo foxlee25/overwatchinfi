@@ -87,7 +87,7 @@ var Home = React.createClass({
 							</Link>
 							</a>
 						</article>
-						{this.state.loginData.id?
+						{this.state.loginData.userId?
 						<article className="work-item" data-show="on-scroll">
 							<a><Link to={'/pro'}>
 							<img src="./img/wallpapers/Pro.jpg" />

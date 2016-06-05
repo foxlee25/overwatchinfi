@@ -42,11 +42,14 @@ router.post('/login', function (req, res) {
                 var flag = bcrypt.compareSync(currentPwd, realPwd);
                 if(flag){
                     console.log('Login success !!! ');
-                    res.send({status: true});
+                    user.status = true;
                 }else{
                     console.log('Login fail !!! ');
-                    res.send({status: false});
+                    user.status = false;
                 }
+                user.userId = user.email;
+                delete user.password;
+                res.send(user);
             }else{
                 console.log('Login fail !!! ');
                 res.send({status: false});

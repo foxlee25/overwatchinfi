@@ -1,5 +1,6 @@
 var React = require('react');
 var AjaxService = require('../service/AjaxService');
+var AppAction = require('../flux/Actions');
 var Hashes = require('jshashes');
 var $ = require('jquery');
 var url = '/user/login';
@@ -17,9 +18,9 @@ var Login = React.createClass({
         login.password  = new Hashes.SHA256().hex(pwd);
         AjaxService.post(url,{data : login},function(response){
             var status = response.data.status;
-            console.log('status : '+status);
             if(status){
-                window.sessionStorage.setItem('username',login.email);
+                window.sessionStorage.setItem('userId',login.email);
+                AppAction.loginSuccess(response.data);
                 window.location.assign("#/home");
 
             }else{

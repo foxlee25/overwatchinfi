@@ -16,7 +16,6 @@ var Signup = React.createClass({
         signup.password  = new Hashes.SHA256().hex(pwd);
         AjaxService.post(url,{data : signup},function(response){
             var status = response.data.status;
-            console.log('status : '+status);
             if(status){
                 window.sessionStorage.setItem('username',signup.email);
                 window.location.assign("#/home");
@@ -33,7 +32,7 @@ var Signup = React.createClass({
                   <br/>
                   <form className="signupForm" onSubmit={ this.handleSubmit }>
                      <input name="signup-email"  type="email" className="form-control account-input" placeholder="Email"  required />
-                     <input name="signup-username" type="text" className="form-control account-input"  placeholder="Username"   />
+                     <input name="signup-username" type="text" className="form-control account-input"  placeholder="Username"  required />
                      <input name="signup-password"  type="password" className="form-control account-input" placeholder="Password" required />
                      <input type="submit" name="signupSubmit" className="signup signup-submit"  />
                   </form>
