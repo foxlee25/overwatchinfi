@@ -7,6 +7,7 @@ var VideoYoutube = require('../components/VideoYoutubeComponent');
 var VideoGfycat = require('../components/VideoGfycatComponent');
 var Login = require('../components/LoginComponent');
 var Signup = require('../components/SignupComponent');
+var Guide = require('../components/GuideComponent');
 var Pro = require('../components/ProComponent');
 var Player = require('../components/PlayerComponent');
 var HeroDetail = require('../components/HeroDetailComponent');
@@ -27,6 +28,7 @@ module.exports = (
 			<Route path="videoGfycat" component={VideoGfycat} />
 	        <Route path="login" component={Login} />
 	        <Route path="signup" component={Signup} />
+			<Route path="guide" component={Guide} />
             <Route path="pro" component={Pro} />
 			<Route path="player" component={Player} />
 			<Route path="herodetail" component={HeroDetail} />

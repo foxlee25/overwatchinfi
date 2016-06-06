@@ -33,6 +33,7 @@ var Base = React.createClass({
             </div>
             <ul className="nav navbar-nav">
               <li className="navTitle"><a><Link to={'/home'}>{appValues.home}</Link></a></li>
+              <li className="navTitle"><a><Link to={'/guide'}>{appValues.guide}</Link></a></li>
               <li className="navTitle"><a><Link to={'/heros'}>{appValues.heros}</Link></a></li>
               <NavDropdown eventKey={3} title={appValues.video} className="navTitle" >
                    <MenuItem className="menuItem" eventKey={3}> <Link to={'/videoGfycat'}>{appValues.gfycat}</Link></MenuItem>

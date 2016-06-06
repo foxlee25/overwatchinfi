@@ -21,6 +21,7 @@ router.post('/signup', function (req, res) {
         var salt = bcrypt.genSaltSync(10);
         var hash = bcrypt.hashSync(signup.password, salt);
         signup.password=hash;
+        signup.userId = signup.email;
         daoController.getDao('UserDao', 'user_signup', signup , function(data){
             res.send(data);
         });

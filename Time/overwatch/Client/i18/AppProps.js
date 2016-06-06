@@ -11,5 +11,6 @@ module.exports = {
 	gfycat: 'Gfycat',
 	account: 'Account',
 	login: 'login',
-	signup: 'Sign up'
+	signup: 'Sign up',
+	guide: 'Guide'
 };

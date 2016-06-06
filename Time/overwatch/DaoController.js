@@ -13,6 +13,7 @@ DaoManager.UserDao = require('./Dao/UserDao.js');
 DaoManager.VideoDao = require('./Dao/VideoDao.js');
 DaoManager.HeroDao = require('./Dao/HeroDao.js');
 DaoManager.ProDao = require('./Dao/ProDao.js');
+DaoManager.GuideDao = require('./Dao/GuideDao.js');
 /**
  *  daoFileName use to separate dao files.
  *  restCallback will be called after daoMethod excute.

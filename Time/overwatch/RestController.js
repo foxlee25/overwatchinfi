@@ -9,12 +9,13 @@ var news = require('./Rest/News.js');
 var twits = require('./Rest/Twits.js');
 var video = require('./Rest/Video.js');
 var pro = require('./Rest/Pro.js');
+var guide = require('./Rest/Guide.js');
 restController.use('/user', user);
 restController.use('/hero', hero);
 restController.use('/news', news);
 restController.use('/twits',twits);
 restController.use('/video',video);
 restController.use('/pro', pro);
-
+restController.use('/guide', guide);
 
 module.exports = restController;

@@ -250,7 +250,27 @@
 
 
 /** login and signup end **/
+/** guide begin **/
 
+.guideHeroList{
+    width :80%;
+    margin: 0px auto;
+}
+.guideHeroImg{
+    display:inline;
+    width:60px;
+    height:80px;
+    margin-left:10px;
+}
+.guideCard {
+    padding-top: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    color: white;
+    background: rgba(20, 33, 41, 0.5);
+}
+
+/** guide ends **/
 
 /*
  *   begin navigation
