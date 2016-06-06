@@ -259,7 +259,7 @@
 .guideHeroImg{
     display:inline;
     width:60px;
-    height:80px;
+    height:100px;
     margin-left:10px;
 }
 .guideCard {
@@ -268,6 +268,12 @@
     border-radius: 10px;
     color: white;
     background: rgba(20, 33, 41, 0.5);
+}
+
+.guide-map{
+    width:100%;
+    margin:10px;
+
 }
 
 /** guide ends **/

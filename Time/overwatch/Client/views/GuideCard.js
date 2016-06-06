@@ -6,11 +6,11 @@ var GuideCard = React.createClass({
 	},
 	render: function(){
 		return (
-			<div className="guideCard">
-				<div className="col-md-2">
-					<img className="img-responsive"  src={"./img/map/"+this.props.guide.map} />
+			<div className="guideCard col-md-12">
+				<div className="col-md-3">
+					<img className="guide-map"  src={"./img/map/"+this.props.guide.map} />
 				</div>
-				<div className="col-md-10">
+				<div className="col-md-9">
 					<p><span>Title : {this.props.guide.title},</span><span> Role : {this.props.guide.role}</span></p>
 		             <p><span>User : {this.props.guide.user[0].username},</span><span> Time : {this.props.guide.createTime}</span></p>
 
@@ -20,6 +20,7 @@ var GuideCard = React.createClass({
 					</div>
 					<p>{this.props.guide.description}</p>
 				</div>
+	
 			</div>
 		);
 	}
