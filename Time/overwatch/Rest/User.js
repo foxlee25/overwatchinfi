@@ -17,14 +17,15 @@ router.post('/signup', function (req, res) {
     res.header('Content-type', 'application/json');
     res.header('Charset', 'utf8');
     var signup = req.body.data;
-    if(signup && signup.email){
+    if(signup && signup.email && signup.userId){
         var salt = bcrypt.genSaltSync(10);
         var hash = bcrypt.hashSync(signup.password, salt);
         signup.password=hash;
-        signup.userId = signup.email;
         daoController.getDao('UserDao', 'user_signup', signup , function(data){
             res.send(data);
         });
+    }else{
+        res.send({status: false});
     }
 
 });
@@ -35,7 +36,7 @@ router.post('/login', function (req, res) {
     res.header('Content-type', 'application/json');
     res.header('Charset', 'utf8');
     var login = req.body.data;
-    if(login && login.email){
+    if(login && login.userId){
         daoController.getDao('UserDao', 'user_login', login , function(user){
             if(user){
                 var realPwd =user.password;
@@ -48,7 +49,6 @@ router.post('/login', function (req, res) {
                     console.log('Login fail !!! ');
                     user.status = false;
                 }
-                user.userId = user.email;
                 delete user.password;
                 res.send(user);
             }else{
@@ -57,6 +57,9 @@ router.post('/login', function (req, res) {
             }
 
         });
+    }else{
+        console.log('Login fail !!! ');
+        res.send({status: false});
     }
 
 });

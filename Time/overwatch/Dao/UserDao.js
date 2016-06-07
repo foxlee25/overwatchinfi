@@ -13,7 +13,7 @@ var findAllUser = function (db,data, restCallback) {
 };
 
 var signup = function (db,user , restCallback) {
-    db.collection('User').find({email: user.email}).nextObject(function (err, existUser) {
+    db.collection('User').find({$or : [{email: user.email},{userId : user.userId } ]}).nextObject(function (err, existUser) {
         if(Underscore.isEmpty(existUser)){
             db.collection('User').insert(user);
             restCallback({status: true});
@@ -25,7 +25,7 @@ var signup = function (db,user , restCallback) {
 };
 
 var login = function (db, data, restCallback) {
-    db.collection('User').find({email: data.email}).nextObject(function (err, existUser) {
+    db.collection('User').find({$or : [{email: data.userId},{userId : data.userId } ]}).nextObject(function (err, existUser) {
             restCallback(existUser);
     });
 };

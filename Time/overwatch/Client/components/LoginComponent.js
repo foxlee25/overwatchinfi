@@ -13,13 +13,13 @@ var Login = React.createClass({
     handleSubmit :function(e){
         $('#loginForm-panelAlert').hide();
         var login = {};
-        login.email = $('#loginComponent').find('input[name="login-email"]').val();
+        login.userId = $('#loginComponent').find('input[name="login-userId"]').val();
         var pwd = $('#loginComponent').find('input[name="login-password"]').val();
         login.password  = new Hashes.SHA256().hex(pwd);
         AjaxService.post(url,{data : login},function(response){
             var status = response.data.status;
             if(status){
-                window.sessionStorage.setItem('userId',login.email);
+                window.sessionStorage.setItem('userId',login.userId);
                 AppAction.loginSuccess(response.data);
                 window.location.assign("#/home");
 
@@ -35,11 +35,11 @@ var Login = React.createClass({
         return (
             <div className = "container-fluid">
               <div  id="loginComponent" className="login-card account-form">
-                <h1>Log-in</h1>
+                <h1>Login</h1>
                 <br/>
                 <form className="loginForm" onSubmit={ this.handleSubmit } >
                 <div id="loginForm-panelAlert" className="alert alert-danger" role="alert" >Error : Incorrect Username or Password</div>
-                <input name="login-email" type="email" className="form-control account-input"  placeholder="Email"  required />
+                <input name="login-userId" type="text" className="form-control account-input"  placeholder="Email or Username"  required />
                 <input name="login-password" type="password" className="form-control account-input"  placeholder="Password" required />
                 <input type="submit" name="loginSubmit" className="login login-submit"  />
                 </form>
