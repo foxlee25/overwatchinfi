@@ -2,6 +2,7 @@ var React = require('react');
 var AjaxService = require('../service/AjaxService');
 var AppAction = require('../flux/Actions');
 var Hashes = require('jshashes');
+var properties = require('../i18/AppProps');
 var $ = require('jquery');
 var url = '/user/login';
 var Login = React.createClass({
@@ -21,10 +22,12 @@ var Login = React.createClass({
             if(status){
                 window.sessionStorage.setItem('userId',login.email);
                 AppAction.loginSuccess(response.data);
+                AppAction.toast(properties.loginSuccess);
                 window.location.assign("#/home");
 
             }else{
                 $('#loginForm-panelAlert').show();
+                AppAction.toast(properties.loginError);
             }
 
         }.bind(this));

@@ -12,6 +12,7 @@ var Pro = require('../components/ProComponent');
 var Player = require('../components/PlayerComponent');
 var HeroDetail = require('../components/HeroDetailComponent');
 var NoMatch = require('../components/NoMatchComponent');
+var BuildGuide = require('../components/BuildGuideComponent');
 var Router = require('react-router');
 var browserHistory = Router.browserHistory;
 var Route = Router.Route;
@@ -32,6 +33,7 @@ module.exports = (
             <Route path="pro" component={Pro} />
 			<Route path="player" component={Player} />
 			<Route path="herodetail" component={HeroDetail} />
+			<Route path="buildGuide" component={BuildGuide} />
 			<Route path="*" component={NoMatch} />
 		</Route>
 	</Router>

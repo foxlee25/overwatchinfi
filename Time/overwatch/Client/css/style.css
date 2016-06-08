@@ -1,4 +1,5 @@
-.heroCardImg {
+.
+Img {
 	width: 120px;
 	display: block;
     margin-left: auto;
@@ -379,3 +380,329 @@ background: rgba(134, 198, 217, 0.5);
 .heroImg {
 	width: 100%;
 }
+
+.mapSelectionImg {
+	width: 100%;
+	border: 2px solid dodgerblue;
+	border-radius: 5px;
+}
+
+.heroSelectionImg {
+	width: 100%;
+	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	border: 2px solid dodgerblue;
+	border-radius: 5px;
+}
+
+.mapSelectionSpan {
+	position: relative;
+	left: 0;
+	top: 0;
+	float: left;
+	width: 30%;
+	margin: 10px;
+}
+
+.heroSelectionSpan {
+	position: relative;
+	left: 0;
+	top: 0;
+	float: left;
+	width: 20%;
+	margin: 5px;
+}
+
+.mapSelectionSpan p{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.2em;
+	color: whitesmoke;
+	text-align: center;
+ }
+
+.mapTarget {
+	width: 50%;
+}
+
+.mapTarget p {
+	color: whitesmoke;
+	font-family: 'Arial', sans-serif;
+	font-style: italic;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.mapTarget button {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.emptyMapTarget {
+	border: 5px dashed darkgrey;
+	border-radius: 20px;
+	margin: 10px;
+	background: rgba(239, 239, 239, 0.8);
+	height: 30%;
+	margin-top: 100px;
+	max-height: 300px;
+}
+
+.emptyMapTarget p{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 2em;
+	color: whitesmoke;
+	padding:50px 20px 50px 20px;
+}
+
+.mapTargetImg {
+	border: 5px dashed darkgrey;
+	border-radius: 20px;
+	height: 30%;
+	width: 100%;
+	max-width: 500px;
+	margin: 10px;
+	margin-top: 100px;
+}
+
+.addMap {
+	position: absolute;
+	top: 10%;
+	left: 25%;
+	width: 50%;
+	visibility: hidden;
+	display: inline;
+	max-height: 200px;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.3s linear;
+}
+
+.addHero {
+	position: absolute;
+	top: 35%;
+	left: 25%;
+	width: 50%;
+	visibility: hidden;
+	display: inline;
+	max-height: 150px;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.3s linear;
+}
+
+.mapSelectionSpan:hover .addMap{
+	display: inline;
+	visibility: visible;
+	z-index: 1000;
+	opacity: 1;
+	cursor: pointer;
+}
+
+.heroSelectionSpan:hover .addHero{
+	display: inline;
+	visibility: visible;
+	z-index: 1000;
+	opacity: 1;
+	cursor: pointer;
+}
+
+.stepNav {
+	margin: 30px 20px;
+	height: 43px;
+	padding-right: 20px;
+	position: relative;
+	z-index: 0;
+}
+
+/* z-index to make sure the buttons stack from left to right */
+
+.stepNav li {
+	float: left;
+	position: relative;
+	z-index: 3;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.12);
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.12);
+	box-shadow: 0 1px 1px rgba(0,0,0,0.12);
+}
+
+.stepNav li:first-child {
+	-webkit-border-radius: 5px 0 0 5px;
+	-moz-border-radius: 5px 0 0 5px;
+	border-radius: 5px 0 0 5px;
+}
+
+.stepNav li:nth-child(2) { z-index: 1; }
+.stepNav li:nth-child(3) { z-index: 0; }
+
+/* different widths */
+
+.stepNav.twoWide li { width: 50%; }
+.stepNav.threeWide li { width: 33.33%; }
+
+/* step links */
+
+.stepNav a, .stepNav a:visited {
+	width: 100%;
+	height: 43px;
+	padding: 0 0 0 25px;
+	color: black;
+	text-align: center;
+	line-height: 43px;
+	white-space: nowrap;
+	border: 1px solid #cbcbcb;
+	text-decoration: none;
+	border-top-color: #dddddd;
+	border-right: 0;
+	background-color: #fbfbfb;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(251, 251, 251)), to(rgb(233, 233, 233)));
+	background-image: -webkit-linear-gradient(top, rgb(251, 251, 251), rgb(233, 233, 233));
+	background-image: -moz-linear-gradient(top, rgb(251, 251, 251), rgb(233, 233, 233));
+	background-image: -o-linear-gradient(top, rgb(251, 251, 251), rgb(233, 233, 233));
+	background-image: -ms-linear-gradient(top, rgb(251, 251, 251), rgb(233, 233, 233));
+	background-image: linear-gradient(top, rgb(251, 251, 251), rgb(233, 233, 233));
+	float: left;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.stepNav li:first-child a {
+	padding-left: 12px;
+	-webkit-border-radius: 5px 0 0 5px;
+	-moz-border-radius: 5px 0 0 5px;
+	border-radius: 5px 0 0 5px;
+}
+
+.stepNav a:before {
+	content: "";
+	width: 29px;
+	height: 29px;
+	border-right: 1px solid #dddddd;
+	border-bottom: 1px solid #cbcbcb;
+	background-image: -webkit-gradient(linear, right top, left bottom, from(rgb(251, 251, 251)), to(rgb(233, 233, 233)));
+	background-image: -webkit-linear-gradient(right top, rgb(251, 251, 251), rgb(233, 233, 233));
+	background-image: -moz-linear-gradient(right top, rgb(251, 251, 251), rgb(233, 233, 233));
+	background-image: -o-linear-gradient(right top, rgb(251, 251, 251), rgb(233, 233, 233));
+	background-image: -ms-linear-gradient(right top, rgb(251, 251, 251), rgb(233, 233, 233));
+	background-image: linear-gradient(right top, rgb(251, 251, 251), rgb(233, 233, 233));
+	display: block;
+	position: absolute;
+	top: 6px;
+	right: -16px;
+	z-index: -1;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+/* selected */
+
+.stepNav li.selected {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.stepNav li.selected a, .stepNav li.selected a:before {
+	background: #cecdcf;
+}
+
+.stepNav li.selected a {
+	border-top-color: #bebebe;
+	-webkit-box-shadow: inset 2px 1px 2px rgba(0,0,0,0.12);
+	-moz-box-shadow: inset 2px 1px 2px rgba(0,0,0,0.12);
+	box-shadow: inset 2px 1px 2px rgba(0,0,0,0.12);
+}
+
+@-webkit-keyframes left-to-right{
+	from{left:-100%}
+	to{left:0}
+}
+@-webkit-keyframes right-to-left{
+	from{left:0}
+	to{left:100%}
+}
+
+@keyframes left-to-right{
+	from{left:-100%}
+	to{left:0}
+}
+@keyframes right-to-left{
+	from{left:0}
+	to{left:100%}
+}
+
+.heroTargetSpan {
+	position: relative;
+	left: 0;
+	top: 0;
+	float: left;
+	width: 30%;
+	margin: 5px;
+	border: 3px dashed darkgray;
+	border-radius: 6px;
+}
+
+.heroTargetImg {
+	width: 100%;
+}
+
+.deleteMap {
+	position: absolute;
+	top:5%;
+	right:5%;
+	width: 10%;
+}
+
+.emptyHeroTarget {
+	width: 100%;
+}
+
+#titlePage label {
+	color: whitesmoke;
+	font-size: 1.5em;
+	padding: 10px;
+	font-family: 'Arial', sans-serif;
+}
+
+#heroSelectionPage .btn {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#titlePage .btn{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#titlePage .form-group{
+	margin-top: 50px;
+}
+
+#titlePage span {
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+
+.switchSide {
+	height: 20px !important;
+}
+
+#guideTitleHint {
+	margin-top: 20px;
+	margin-bottom: 50px;
+	visibility: hidden;
+}
+
+.choose-side, .choose-team {
+	margin-top:30px;
+	margin-bottom: 30px;
+}
+
+.rc-switch {
+	margin-left: 40px;
+}
+
+#mapNext, #heroNext {
+	margin-top: 40px !important;
+}
+

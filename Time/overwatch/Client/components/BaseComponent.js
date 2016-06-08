@@ -5,6 +5,9 @@ var NavDropdown = require("react-bootstrap/lib/NavDropdown");
 var MenuItem = require("react-bootstrap/lib/MenuItem");
 require("react-bootstrap/lib/Nav");
 var AppStore = require('../flux/Store');
+var ReactToastr = require("react-toastr");
+var {ToastContainer} = ReactToastr;
+var ToastMessageFactory = React.createFactory(ReactToastr.ToastMessage.animation);
 import { Router, Route, Link } from 'react-router'
 
 var Base = React.createClass({
@@ -16,15 +19,29 @@ var Base = React.createClass({
   getLoginData: function(){
     this.setState({loginData: AppStore.getLoginData()});
   },
+    triggerToast: function(){
+        var message = AppStore.getToastMessage();
+        this.refs.container.success(
+            "",
+            message, {
+                timeOut: 5000,
+                extendedTimeOut: 10000
+            });
+    },
   componentDidMount: function(){
-    AppStore.addListener(this.getLoginData);
+    AppStore.addListener("CHANGE", this.getLoginData);
+      AppStore.addListener("TOAST", this.triggerToast);
   },
   componentDidUnMount: function(){
-    AppStore.removeListener(this.getLoginData);
+    AppStore.removeListener("CHANGE", this.getLoginData);
+      AppStore.removeListener("TOAST", this.triggerToast);
   },
   render: function(){
     return(
       <div className="container">
+          <ToastContainer ref="container"
+                          toastMessageFactory={ToastMessageFactory}
+                          className="toast-top-right" />
         {this.state.loginData?<b className="welcome">Welcome {this.state.loginData.username}</b>:null}
         <div id="navBand" className="navbar navbar-inverse">
           <div>

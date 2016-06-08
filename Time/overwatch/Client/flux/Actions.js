@@ -19,6 +19,12 @@ var AppAction = {
 			actionType: constants.setHeroId,
 			data: id
 		});
+	},
+	toast: function(message){
+		dispatcher.handleViewAction({
+			actionType: constants.toast,
+			data: message
+		});
 	}
 };
 

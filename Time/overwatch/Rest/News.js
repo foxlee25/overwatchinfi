@@ -8,7 +8,7 @@ var router = express.Router();
 var job = new cronJob({
     cronTime: '00 00 24 * * *',
     onTick: function() {
-        getNews(req, function(err, data){
+        getNews(null, function(err, data){
             if(err){
                 return;
             }

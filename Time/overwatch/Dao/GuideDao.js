@@ -35,8 +35,19 @@ var findAllGuides = function (db, data ,restCallback) {
     });
 };
 
+var insertGuide = function(db, data, restCallback){
+    db.collection('HeroGuide').insertOne(data, function(err, result){
+        if(err){
+            restCallback(false);
+            return;
+        }
+        restCallback(true);
+    });
+};
+
 var GuideDao = {
-    guide_findAll : findAllGuides
+    guide_findAll : findAllGuides,
+    insert_guide: insertGuide
 }
 
 module.exports = GuideDao;
