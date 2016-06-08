@@ -12,9 +12,19 @@ import { Router, Route, Link } from 'react-router'
 
 var Base = React.createClass({
   getInitialState: function(){
-    return {
-      loginData: null
-    };
+    var userId = window.sessionStorage.getItem('userId');
+    if(userId){
+      var user={};
+      user.userId=userId;
+      return {
+        loginData: user
+      };
+    }else{
+      return {
+        loginData: null
+      };
+    }
+
   },
   getLoginData: function(){
     this.setState({loginData: AppStore.getLoginData()});
@@ -58,16 +68,16 @@ var Base = React.createClass({
                    <MenuItem className="menuItem" eventKey={3}> <Link to={'/videoYoutube'}>{appValues.youtube}</Link></MenuItem>
               </NavDropdown>
               <li className="navTitle"><a><Link to={'/news'}>{appValues.news}</Link></a></li>
-              <NavDropdown eventKey={3} title={appValues.account} className="navTitle" >
-                   <MenuItem className="menuItem" eventKey={3}> <Link to={'/login'}>{appValues.login}</Link></MenuItem>
+    {this.state.loginData?null:<NavDropdown eventKey={3} title={appValues.account} className="navTitle" >
+                    <MenuItem className="menuItem" eventKey={3}> <Link to={'/login'}>{appValues.login}</Link></MenuItem>
                    <MenuItem divider />
                    <MenuItem className="menuItem" eventKey={3}> <FbBtnView /> </MenuItem>
                    <MenuItem divider />
                    <MenuItem className="menuItem" eventKey={3}> <Link to={'/signup'}>{appValues.signup}</Link></MenuItem>
-               </NavDropdown>
+               </NavDropdown>}
               <li className="navTitle"><a><Link to={'/about'}>{appValues.about}</Link></a></li>
-              {this.state.loginData?<li className="navTitle"><a><Link to={'/pro'}>{appValues.pro}</Link></a></li>:null}
             </ul>
+             {this.state.loginData?<b className="helloUser">Hello {this.state.loginData.userId}</b>:null}
           </div>
         </div>
         <div>

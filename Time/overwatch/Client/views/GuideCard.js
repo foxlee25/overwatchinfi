@@ -12,7 +12,7 @@ var GuideCard = React.createClass({
 				</div>
 				<div className="col-md-9">
 					<p><span>Title : {this.props.guide.title},</span><span> Role : {this.props.guide.role}</span></p>
-		             <p><span>User : {this.props.guide.user[0].username},</span><span> Time : {this.props.guide.createTime}</span></p>
+		             <p><span>User : {this.props.guide.user[0].userId},</span><span> Time : {this.props.guide.createTime}</span></p>
 
 					<div className="guideHeroList">{Underscore.map(this.props.guide.heroList, function(hero){
 							return(<img className="guideHeroImg"  src={"./img/hero/"+hero} />);
@@ -20,7 +20,7 @@ var GuideCard = React.createClass({
 					</div>
 					<p>{this.props.guide.description}</p>
 				</div>
-	
+
 			</div>
 		);
 	}

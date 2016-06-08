@@ -87,20 +87,6 @@ var Home = React.createClass({
 							</Link>
 							</a>
 						</article>
-						{this.state.loginData.userId?
-						<article className="work-item" data-show="on-scroll">
-							<a><Link to={'/pro'}>
-							<img src="./img/wallpapers/Pro.jpg" />
-							<div className="content">
-								<div>
-									<div>
-										<h1>Pro</h1>
-									</div>
-								</div>
-							</div>							
-							</Link>
-							</a>
-						</article>:null}
 					</div>
 				</section>
 			</div>
