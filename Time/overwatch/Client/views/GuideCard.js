@@ -5,7 +5,6 @@ var GuideCard = React.createClass({
 		return {};
 	},
 	render: function(){
-		debugger;
 		return (
 			<div className="guideCard col-md-12">
 				<div className="col-md-3">

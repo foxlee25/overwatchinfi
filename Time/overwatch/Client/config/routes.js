@@ -8,6 +8,7 @@ var VideoGfycat = require('../components/VideoGfycatComponent');
 var Login = require('../components/LoginComponent');
 var Signup = require('../components/SignupComponent');
 var Guide = require('../components/GuideComponent');
+//var Comment = require('../components/CommentComponent');
 var Pro = require('../components/ProComponent');
 var Player = require('../components/PlayerComponent');
 var HeroDetail = require('../components/HeroDetailComponent');

@@ -18,9 +18,9 @@ var Login = React.createClass({
         var pwd = $('#loginComponent').find('input[name="login-password"]').val();
         login.password  = new Hashes.SHA256().hex(pwd);
         AjaxService.post(url,{data : login},function(response){
-            var status = response.data.status;
-            if(status){
-                window.sessionStorage.setItem('userId',login.userId);
+            var existingUser = response.data;
+            if(existingUser.status){
+                window.sessionStorage.setItem('userId',existingUser.userId);
                 AppAction.loginSuccess(response.data);
                 AppAction.toast(properties.loginSuccess);
                 window.location.assign("#/home");

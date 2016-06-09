@@ -52,7 +52,6 @@ var Base = React.createClass({
           <ToastContainer ref="container"
                           toastMessageFactory={ToastMessageFactory}
                           className="toast-top-right" />
-        {this.state.loginData?<b className="welcome">Welcome {this.state.loginData.username}</b>:null}
         <div id="navBand" className="navbar navbar-inverse">
           <div>
             <div className="navbar-header">

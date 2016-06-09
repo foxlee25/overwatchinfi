@@ -33,18 +33,19 @@ var Guide = React.createClass({
     render: function(){
         return (
             <div className="container-fluid">
+        {this.state.userId?
+        <div className="container-fluid">
+            <a><Link to={'/buildGuide'}><button className="btn btn-block btn-info goToBuildGuide">{properties.buildGuide}</button></Link></a>
+        </div>
+        :<div>
+        <span className="label label-info">{properties.loginToBuildGuid}</span>
+        </div>}
               <div id="guideComponent" className="row">
                     {Underscore.map(this.state.guides, function(guide){
                         return(<GuideCard key={guide.createTime} guide={guide} />);
                     }.bind(this))}
               </div>
-                {this.state.userId?
-                    <div className="container-fluid">
-                        <a><Link to={'/buildGuide'}><button className="btn btn-block btn-info goToBuildGuide">{properties.buildGuide}</button></Link></a>
-                    </div>
-                    :<div>
-                        <span className="label label-info">{properties.loginToBuildGuid}</span>
-                    </div>}
+
             </div>
         );
     }

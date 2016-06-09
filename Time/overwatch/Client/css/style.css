@@ -657,8 +657,19 @@ background: rgba(134, 198, 217, 0.5);
 	width: 100%;
 }
 
+#titlePage{
+	width: 60%;
+	margin: 0 auto;
+	background-color: whitesmoke;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	color: black;
+	border-radius: 10px;
+}
+
 #titlePage label {
-	color: whitesmoke;
+	color: #6d6d6d;
 	font-size: 1.5em;
 	padding: 10px;
 	font-family: 'Arial', sans-serif;
