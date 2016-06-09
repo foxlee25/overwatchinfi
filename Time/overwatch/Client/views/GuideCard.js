@@ -5,10 +5,11 @@ var GuideCard = React.createClass({
 		return {};
 	},
 	render: function(){
+		debugger;
 		return (
 			<div className="guideCard col-md-12">
 				<div className="col-md-3">
-					<img className="guide-map"  src={"./img/map/"+this.props.guide.map} />
+					<img className="guide-map"  src={"./img/guide/map/"+this.props.guide.map} />
 				</div>
 				<div className="col-md-9">
 					<p><span>Title : {this.props.guide.title},</span><span> Role : {this.props.guide.role}</span></p>

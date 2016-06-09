@@ -698,11 +698,20 @@ background: rgba(134, 198, 217, 0.5);
 	margin-bottom: 30px;
 }
 
-.rc-switch {
-	margin-left: 40px;
+.choose-side p, .choose-team p {
+	font-family: 'Arial', sans-serif;
+	font-size: 1.3em;
+	color: whitesmoke;
+	padding-top: 20px;
+}
+
+.choose-side span {
 }
 
 #mapNext, #heroNext {
 	margin-top: 40px !important;
 }
 
+.goToBuildGuide {
+	margin-bottom: 40px;
+}

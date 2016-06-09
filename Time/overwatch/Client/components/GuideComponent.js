@@ -25,7 +25,7 @@ var Guide = React.createClass({
     },
     componentWillMount: function(){
         //check if user is login
-        this.state.userId = AppStore.getLoginData().userId;
+        this.state.userId = window.sessionStorage.getItem('userId');
     },
     componentDidMount: function(){
         this.getGuides();
@@ -40,7 +40,7 @@ var Guide = React.createClass({
               </div>
                 {this.state.userId?
                     <div className="container-fluid">
-                        <a><Link to={'/buildGuide'}><button className="btn btn-block btn-info">{properties.buildGuide}</button></Link></a>
+                        <a><Link to={'/buildGuide'}><button className="btn btn-block btn-info goToBuildGuide">{properties.buildGuide}</button></Link></a>
                     </div>
                     :<div>
                         <span className="label label-info">{properties.loginToBuildGuid}</span>

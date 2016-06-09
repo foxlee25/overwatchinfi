@@ -2,7 +2,7 @@
 var xRay = require('x-ray');
 var fs = require('fs');
 var async = require('async');
-fs.readFile('./json/heros.json', 'utf8', function (err, data) {
+fs.readFile('../Json/heros.json', 'utf8', function (err, data) {
     if (err) {
         return;
     }
@@ -14,7 +14,8 @@ fs.readFile('./json/heros.json', 'utf8', function (err, data) {
 	    //get the bio
 	    var descriptionFunc = [];
 	    dataArr.forEach(function(element){
-	    	let url = 'https://playoverwatch.com/en-us/heroes/'+element['heroname'].toLowerCase()+'/';
+			let name = element['heroname'].replace(":","-");
+	    	let url = 'https://playoverwatch.com/en-us/heroes/'+name.toLowerCase()+'/';
 	    	descriptionFunc.push(xray(url,
 	    	 {
 	    	 	poster: '.hero-image@src',
@@ -38,7 +39,7 @@ fs.readFile('./json/heros.json', 'utf8', function (err, data) {
 	    });
 
 	    async.parallel(descriptionFunc, function(){
-	    	fs.writeFile('./json/scrape.json', JSON.stringify(result));
+	    	fs.writeFile('../Json/scrape.json', JSON.stringify(result));
 	    });
 	})();
 

@@ -5,7 +5,6 @@ var $ = require('jquery');
 var properties = require('../i18/AppProps');
 var AppStore = require('../flux/Store');
 var AppAction = require('../flux/Actions');
-import { Router, Route, Link } from 'react-router'
 var Switch = require('rc-switch');
 
 var BuildGuide = React.createClass({
@@ -104,8 +103,12 @@ var BuildGuide = React.createClass({
             $("#guideTitleHint").css('visibility', 'visible');
             return;
         }
-        var userId = AppStore.getLoginData().userId;
-        debugger;
+        var userId = window.sessionStorage.getItem('userId');
+        if(!userId){
+            AppAction.toast(properties.guideBuildFail);
+            window.location.assign("#/guide");
+            return;
+        }
         var heroList = [];
         var role = this.state.side?"offense":"defense";
         for(let i in this.state.selection.heros){
@@ -131,6 +134,7 @@ var BuildGuide = React.createClass({
                 window.location.assign("#/guide");
             }else{
                 AppAction.toast(properties.guideBuildFail);
+                window.location.assign("#/guide");
             }
         });
     },
@@ -140,6 +144,7 @@ var BuildGuide = React.createClass({
         } else {
             this.state.side = side;
         }
+        this.forceUpdate();
     },
     render: function () {
         if(this.state.maps) {
@@ -175,9 +180,11 @@ var BuildGuide = React.createClass({
                                                 <button id="mapNext" className="btn btn-block btn-info" disabled>
                                                     {properties.next}
                                                 </button>
-                                                <a><Link to={'/buildGuide'}><button className="btn btn-block btn-danger">
+                                                <button onClick={() => {
+                                                    window.location.assign("#/guide");
+                                                }} className="btn btn-block btn-danger">
                                                     {properties.cancel}
-                                                </button></Link></a>
+                                                </button>
                                             </span>
                                         </div>
                                     </div>
@@ -197,13 +204,13 @@ var BuildGuide = React.createClass({
                                         </div>
                                         <div className="col-md-6">
                                             <div className="choose-side">
-                                                <span className="label label-info ">{properties.chooseSide}</span>
+                                                <p>{properties.chooseSide}</p>
                                                 <Switch checkedChildren={properties.offense}
                                                         unCheckedChildren={properties.defense}
                                                         onChange={this.switchSide.bind(this)} />
                                             </div>
                                             <div className="choose-team">
-                                                <span className="label label-info">{properties.chooseTeam}</span>
+                                                <p>{properties.chooseTeam}</p>
                                             </div>
                                             <div>
                                                 {Underscore.map(this.state.loop, function(index){
@@ -227,8 +234,8 @@ var BuildGuide = React.createClass({
                                             this.state.steps = 1;
                                             $('#step2').removeClass('selected');
                                             $('#step1').addClass('selected');
-                                            $('#mapNext').prop('disabled', false);
                                             this.forceUpdate();
+                                            $('#mapNext').prop('disabled', false);
                                             }} className="btn btn-block btn-danger">
                                                 {properties.previous}
                                             </button>
@@ -251,8 +258,8 @@ var BuildGuide = React.createClass({
                                             this.state.steps = 2;
                                             $('#step3').removeClass('selected');
                                             $('#step2').addClass('selected');
-                                            $('#heroNext').prop('disabled', false);
                                             this.forceUpdate();
+                                            $('#heroNext').prop('disabled', false);
                                             }} className="btn btn-block btn-danger">
                                                 {properties.previous}
                                             </button>
