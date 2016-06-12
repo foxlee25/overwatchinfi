@@ -4,6 +4,7 @@ var AppAction = require('../flux/Actions');
 var Hashes = require('jshashes');
 var properties = require('../i18/AppProps');
 var $ = require('jquery');
+import { Router, Route, Link } from 'react-router'
 var url = '/user/login';
 var Login = React.createClass({
     getInitialState: function(){
@@ -47,7 +48,7 @@ var Login = React.createClass({
                 <input type="submit" name="loginSubmit" className="login login-submit"  />
                 </form>
                 <div class="login-help">
-                <a href="#">Forgot Password</a>
+                 <Link to={'/signup'}>Sign Up</Link>
                 </div>
              </div>
 

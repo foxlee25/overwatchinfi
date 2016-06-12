@@ -15,16 +15,16 @@ var Comment = React.createClass({
     render: function(){
         return (
             <div id="commentable-container" className="container commentable-container">
-        
-        <p data-section-id="1" className="commentable-section">
+
+        <div data-section-id="1" className="commentable-section">
             Each paragraph tag has the "commentable-section" class, making it a section which can be commented on after you've initialized a new SideComments object and pointed it at the parent element, which is "#commentable-container" for this demo.
-        </p>
-        <p data-section-id="2" className="commentable-section">
+        </div>
+        <div data-section-id="2" className="commentable-section">
             Clicking on the markers on the right will show the SideComments. Sections without any comments only show their marker on hover.
-        </p>
-        <p data-section-id="3" className="commentable-section">
+        </div>
+        <div data-section-id="3" className="commentable-section">
             This is the default theme that comes with SideComments.js. You can easily theme SideComments to your liking by not including "default-theme.css" and just styling it all yourself.
-        </p>
+        </div>
         </div>
         );
     },
