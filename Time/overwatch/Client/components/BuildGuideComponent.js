@@ -10,7 +10,7 @@ var Switch = require('rc-switch');
 var BuildGuide = React.createClass({
     getInitialState: function () {
         return {
-            side: true,
+            side: false,
             loop: [0, 1, 2, 3, 4, 5],
             steps: 1,
             heros: null,
@@ -139,7 +139,7 @@ var BuildGuide = React.createClass({
         });
     },
     switchSide: function(side) {
-        if (side) {
+        if (side === 'true') {
             this.state.side = side;
         } else {
             this.state.side = side;

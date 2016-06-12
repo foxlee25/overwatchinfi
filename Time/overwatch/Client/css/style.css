@@ -96,7 +96,7 @@ background: rgba(134, 198, 217, 0.5);
 
 #app {
 	min-height: 100vh;
-	background-image: url("../img/background/bodyBg.jpg");
+	background-color: black;
 	background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
@@ -725,4 +725,121 @@ background: rgba(134, 198, 217, 0.5);
 
 .goToBuildGuide {
 	margin-bottom: 40px;
+}
+
+.home-video {
+	width: 100%;
+}
+
+.home-video-poster {
+	width: 100%;
+}
+
+.home-poster {
+	width: 90%;
+	margin: 40px;
+	max-height: 1000px;
+}
+
+.home-div h4 {
+	font-family: 'Arial', sans-serif;
+	font-size: 1.6em;
+	margin-left: 30px;
+	color: whitesmoke;
+}
+
+.home-video-div{
+	float: left;
+	position: relative;
+	max-height: 100px;
+}
+
+.home-guide-div {
+	margin:20px;
+	width: 90%;
+	background-color: rgba(128, 128, 128, 0.3);
+	height: 120px;
+	padding-right: 30px;
+}
+
+.home-guide-div>img {
+	height: 70%;
+	float: left;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 10px;
+}
+
+.home-guide-hero-div {
+	float: left;
+	width: 60%;
+}
+
+.home-guide-hero {
+	display: block;
+	width: 100%;
+	clear: both;
+}
+
+.home-guide-hero:hover {
+	cursor: pointer;
+}
+
+.home-guide-hero img {
+	width: 50px;
+	max-height: 50px;
+	float: left;
+	margin: 5px;
+	border-radius: 25px;
+	background-color: whitesmoke;
+}
+
+.home-news {
+	width: 60%;
+	float: left;
+}
+
+.home-news:hover {
+	cursor: pointer;
+}
+
+.home-news>div {
+	padding-left: 40px;
+	width: 100%;
+	padding-right: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: rgba(128, 128, 128, 0.3);
+}
+
+.home-news p {
+	color: whitesmoke;
+}
+
+.home-news b {
+	color: whitesmoke;
+	font-family: 'Arial', sans-serif;
+}
+
+.home-guide {
+	width: 40%;
+	float: left;
+}
+
+.home-video-div {
+	poistion: relative;
+	padding-bottom: 200px;
+}
+
+.home-video-div:hover {
+	cursor: pointer;
+}
+
+.play-button {
+	position: absolute;
+	left: 40%;
+	top: 30%;
+	width: 20%;
 }

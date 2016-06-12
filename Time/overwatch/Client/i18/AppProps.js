@@ -31,5 +31,8 @@ module.exports = {
 	loginSuccess: 'You have successfully login!',
 	loginError: 'Wrong username or password, please try again',
 	chooseSide: 'Please choose the side of the team',
-	chooseTeam: 'Choose 6 heros from left to build your team'
+	chooseTeam: 'Choose 6 heros from left to build your team',
+	latestVideo: 'Latest Videos',
+	latestNews: 'Latest News',
+	teamGuide: 'Team Guide'
 };
