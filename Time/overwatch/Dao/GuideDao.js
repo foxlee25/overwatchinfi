@@ -19,7 +19,6 @@ var findAllGuides = function (db, data ,restCallback) {
         if (doc != null) {
             guideArr.push(doc);
         } else {
-            console.log(JSON.stringify(guideArr));
             restCallback(guideArr);
         }
     });
