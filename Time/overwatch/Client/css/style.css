@@ -725,6 +725,8 @@ background: rgba(134, 198, 217, 0.5);
 
 .goToBuildGuide {
 	margin-bottom: 40px;
+	width: 90%;
+	margin-left: 3.6%;
 }
 
 .home-video {

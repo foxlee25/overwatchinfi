@@ -11,7 +11,6 @@ router.post('/allGuides', function (req, res) {
     res.header('Content-type', 'application/json');
     res.header('Charset', 'utf8');
     daoController.getDao('GuideDao', 'guide_findAll', {} ,function (guideArr) {
-        console.log(JSON.stringify(guideArr)) ;
         res.send(guideArr);
     });
 });
