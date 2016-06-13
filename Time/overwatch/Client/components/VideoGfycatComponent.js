@@ -59,7 +59,7 @@ var Video = React.createClass({
     },
     componentDidMount: function(){
 
-        this.getVideos(1);
+        this.getVideos();
 
     }
 });

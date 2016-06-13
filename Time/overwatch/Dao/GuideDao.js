@@ -4,17 +4,9 @@
 
 var findAllGuides = function (db, data ,restCallback) {
     var guideArr = [];
-    var cursor = db.collection('HeroGuide').aggregate([
-        {
-            $lookup:
-            {
-                from: "User",
-                localField: "userId",
-                foreignField: "userId",
-                as: "user"
-            }
-        }
-    ]);
+    console.log(' guideNum : '+data.guideNum + ' data.pageIndex : '+data.pageIndex);
+    var cursor = db.collection('HeroGuide').find().skip(data.guideNum*(data.pageIndex-1)).limit(data.guideNum);
+   // var cursor = db.collection('HeroGuide').find();
     cursor.each(function (err, doc) {
         if (doc != null) {
             guideArr.push(doc);
@@ -23,6 +15,22 @@ var findAllGuides = function (db, data ,restCallback) {
         }
     });
 };
+
+// var findAllGuides = function (db, data ,restCallback) {
+//     var guideArr = [];
+//     var cursor = db.collection('HeroGuide').aggregate([
+//         {
+//             $lookup:
+//             {
+//                 from: "User",
+//                 localField: "userId",
+//                 foreignField: "userId",
+//                 as: "user"
+//             }
+//         }
+//     ]);
+//
+// };
 
 var insertGuide = function(db, data, restCallback){
     db.collection('HeroGuide').insertOne(data, function(err, result){

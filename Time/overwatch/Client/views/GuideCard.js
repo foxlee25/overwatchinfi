@@ -22,7 +22,7 @@ var GuideCard = React.createClass({
 				</div>
 				<div className="col-md-8">
 					<div className="guide-title"><span>Title : {this.props.guide.title}  ({this.props.guide.role})</span></div>
-		             <div className="guide-user">{this.props.guide.user[0].userId} at {dateFormat(this.props.guide.createTime,'mmmm dd hh:MM TT')}</div>
+		             <div className="guide-user">{this.props.guide.userId} at {dateFormat(this.props.guide.createTime,'mmmm dd hh:MM TT')}</div>
 
 					<div className="guideHeroList">{Underscore.map(this.props.guide.heroList, function(hero){
 							return(<img className="guideHeroImg"  src={"./img/hero/"+hero} />);

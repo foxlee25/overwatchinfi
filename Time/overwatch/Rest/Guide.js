@@ -10,7 +10,8 @@ var router = express.Router();
 router.post('/allGuides', function (req, res) {
     res.header('Content-type', 'application/json');
     res.header('Charset', 'utf8');
-    daoController.getDao('GuideDao', 'guide_findAll', {} ,function (guideArr) {
+    var data = req.body.data;
+    daoController.getDao('GuideDao', 'guide_findAll', data ,function (guideArr) {
         res.send(guideArr);
     });
 });

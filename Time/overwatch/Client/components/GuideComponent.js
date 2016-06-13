@@ -10,6 +10,8 @@ var AppStore = require('../flux/Store.js');
 var GuideCard = require('../views/GuideCard');
 var properties = require('../i18/AppProps');
 import { Router, Route, Link } from 'react-router'
+
+var totalNum = 3;
 var Guide = React.createClass({
     getInitialState: function(){
         return {
@@ -17,17 +19,32 @@ var Guide = React.createClass({
             userId: null
         };
     },
-    getGuides: function(){
+    getGuides: function(control){
         var url = '/guide/allGuides';
-        AjaxService.post(url,{},function(response){
+        var currentPageIndex = this.state.currentPageIndex;
+        if(control==='pre'){
+            if (currentPageIndex > 1)
+                currentPageIndex--;
+        }else if(control==='next') {
+            if (currentPageIndex < totalNum)
+                currentPageIndex++;
+        }else if(control==='first'){
+            currentPageIndex=1;
+        }else if(control==='last'){
+            currentPageIndex=3;
+        }
+        this.state.currentPageIndex = currentPageIndex;
+        AjaxService.post(url,{data :{sortType :'latest',pageIndex: currentPageIndex, guideNum : 6}},function(response){
             this.state.guides = response.data;
             this.forceUpdate();
             this.loadComments();
+            window.scrollTo(0, 0);
         }.bind(this));
     },
     componentWillMount: function(){
         //check if user is login
         this.state.userId = window.sessionStorage.getItem('userId');
+        this.state.currentPageIndex = 1;
     },
     componentDidMount: function(){
         this.getGuides();
@@ -89,11 +106,22 @@ var Guide = React.createClass({
         <Link to={'/login'}> <button className="btn btn-lg btn-block btn-info">{properties.loginToBuildGuid}</button></Link>
         </div>}
               <div id="guideComponent" className="row">
-               <div id="commentable-container" className="container commentable-container">
+                <div id="commentable-container" className="container commentable-container">
                     {Underscore.map(this.state.guides, function(guide,index){
                         return( <div data-section-id={index} className="commentable-section"><GuideCard key={guide.createTime} guide={guide} /><div className="commentable-section-last"></div></div>);
                     }.bind(this))}
                 </div>
+                {this.state.guides.length>0?
+                <nav className="pagin col-sm-offset-5 col-sm-6">
+                    <ul className="pagination">
+                        <li><a onClick={this.getGuides.bind(this,'first')}>First</a></li>
+                        <li><a onClick={this.getGuides.bind(this,'pre')}>Pre</a></li>
+                        <li><a href="#">{this.state.currentPageIndex} of 3</a></li>
+                        <li><a onClick={this.getGuides.bind(this,'next')}>Next</a></li>
+                        <li><a onClick={this.getGuides.bind(this,'last')}>Last</a></li>
+                    </ul>
+                </nav>:null}
+
               </div>
 
             </div>
