@@ -16,6 +16,24 @@ var findAllGuides = function (db, data ,restCallback) {
     });
 };
 
+var guideClick = function(db, guide){
+    db.collection('HeroGuide').find({createTime: guide.createTime}).limit(1).nextObject(function (err, realGuide) {
+        if(guide.type === 'like'){
+            if(!realGuide.likeTime)
+                realGuide.likeTime =0;
+            db.collection('HeroGuide').update({createTime: guide.createTime},{$set : {likeTime :realGuide.likeTime+ 1} });
+
+        }else if(guide.type === 'dislike'){
+            if(!realGuide.dislikeTime)
+                realGuide.dislikeTime =0;
+            db.collection('HeroGuide').update({createTime: guide.createTime},{$set : {dislikeTime :realGuide.dislikeTime+ 1} });
+
+        }
+    });
+
+
+}
+
 // var findAllGuides = function (db, data ,restCallback) {
 //     var guideArr = [];
 //     var cursor = db.collection('HeroGuide').aggregate([
@@ -44,7 +62,8 @@ var insertGuide = function(db, data, restCallback){
 
 var GuideDao = {
     guide_findAll : findAllGuides,
-    insert_guide: insertGuide
+    insert_guide: insertGuide,
+    guide_click: guideClick
 }
 
 module.exports = GuideDao;

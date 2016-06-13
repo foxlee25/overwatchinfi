@@ -16,6 +16,15 @@ router.post('/allGuides', function (req, res) {
     });
 });
 
+/**path is /guide/clickGuide**/
+router.post('/clickGuide', function (req, res) {
+    res.header('Content-type', 'application/json');
+    res.header('Charset', 'utf8');
+    var guide = req.body.data;
+    console.log(JSON.stringify(guide));
+    daoController.getDao('GuideDao', 'guide_click', guide);
+});
+
 /**path is /guide/mapList**/
 //for now just read from json file
 //convert to db when schema is more mature

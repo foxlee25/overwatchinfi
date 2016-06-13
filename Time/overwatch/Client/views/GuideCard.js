@@ -1,7 +1,9 @@
 var React = require('react');
 var Underscore = require('underscore');
 var dateFormat = require('dateformat');
-
+var AjaxService = require('../service/AjaxService');
+var likeGuideList = [];
+var dislikeGuideList = [];
 var GuideCard = React.createClass({
 	getInitialState: function(){
 		return {};
@@ -9,7 +11,39 @@ var GuideCard = React.createClass({
 	componentWillMount: function(){
 		this.state.likeStyle = {width: '35%'};
 		this.state.dislikeStyle = {width: '65%'};
+        if(this.props.guide.likeTime){
+            this.state.likeTime = this.props.guide.likeTime;
+        }else{
+            this.state.likeTime = 0;
+        }
+
+        if(this.props.guide.dislikeTime){
+            this.state.dislikeTime = this.props.guide.dislikeTime;
+        }else{
+            this.state.dislikeTime = 0;
+        }
+
 	},
+    likeGuide: function(){
+        var guide = this.props.guide;
+        if(likeGuideList.indexOf(guide.createTime) > -1)
+            return;
+        likeGuideList.push(guide.createTime);
+        var url = '/guide/clickGuide';
+        this.state.likeTime = this.state.likeTime+1;
+        this.forceUpdate();
+        AjaxService.post(url,{data: {createTime : guide.createTime ,type : 'like'}});
+    },
+    dislikeGuide: function(){
+        var guide = this.props.guide;
+        if(dislikeGuideList.indexOf(guide.createTime) > -1)
+            return;
+        dislikeGuideList.push(guide.createTime);
+        var url = '/guide/clickGuide';
+        this.state.dislikeTime = this.state.dislikeTime+1;
+        this.forceUpdate();
+        AjaxService.post(url,{data: {createTime : guide.createTime,type : 'dislike'}});
+    },
 	componentDidMount: function() {
 
 	},
@@ -28,18 +62,19 @@ var GuideCard = React.createClass({
 							return(<img className="guideHeroImg"  src={"./img/hero/"+hero} />);
 						}.bind(this))}
 					</div>
-		            <span className="guide-button"><a href="#" className="btn btn-video glyphicon glyphicon-thumbs-up"></a></span>
-					<div className="progress guideProgress">
+		            <span className="guide-button"><a onClick={this.likeGuide}  className="btn btn-video glyphicon glyphicon-thumbs-up"></a></span>
+
+                    <div className="progress guideProgress">
 
 						<div className="progress-bar progress-bar-success" style={this.state.likeStyle} >
-							{this.state.likeStyle.width} Agree
+                                {this.state.likeTime} Agree ({this.state.likeStyle.width})
 						</div>
 						<div className="progress-bar progress-bar-danger" style={this.state.dislikeStyle}  >
-							{this.state.dislikeStyle.width} Disagree
+							    {this.state.dislikeTime} Disagree ({this.state.dislikeStyle.width})
 						</div>
 					</div>
-					<span className="guide-button"><a href="#" className="btn btn-video glyphicon glyphicon-thumbs-down"></a></span>
-				</div>
+					<span className="guide-button"><a onClick={this.dislikeGuide}  className="btn btn-video glyphicon glyphicon-thumbs-down"></a></span>
+              </div>
 
 			</div>
 		);

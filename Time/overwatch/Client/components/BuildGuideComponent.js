@@ -125,8 +125,8 @@ var BuildGuide = React.createClass({
             "createTime": dateIso,
             "role": role,
             "likeTime": 0,
-            "viewTime": 0,
-            "winningPercentage": 1
+            "dislikeTime": 0,
+            "viewTime": 0
         };
         AjaxService.post("/guide/buildGuide", data, function(response){
             if(response.status === 200){
