@@ -47,15 +47,15 @@ var HeroCard = React.createClass({
 	render: function(){
 		return (
 			<div className="heroCardContainer">
-				<div className="heroCard" onClick={this.setId.bind(this, this.props.hero.heroname)}>
+				<div className="heroCard">
 					<a><Link to={'/herodetail'}>
-		  			<img className="heroCardImg img-responsive" src={"./img/hero/"+this.props.hero.imgPath} />
+		  			<img onClick={this.setId.bind(this, this.props.hero.heroname)} className="heroCardImg img-responsive" src={"./img/hero/"+this.props.hero.imgPath} />
+					</Link></a>
 			        <p className="card-text cardTitle">{this.props.hero.heroname}</p>
 					<span><a onClick={this.likeHero} className="btn btn-video glyphicon glyphicon-thumbs-up"></a></span>
 					<span className="video-clickTime">{this.state.likeTime}</span>
 					<span><a onClick={this.dislikeHero} className="btn btn-video glyphicon glyphicon-thumbs-down"></a></span>
 					<span className="video-clickTime" >{this.state.dislikeTime}</span>
-					</Link></a>
 			    </div>
 
 			</div>
