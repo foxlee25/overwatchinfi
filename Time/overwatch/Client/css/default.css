@@ -279,6 +279,10 @@
     margin-right: 12px;
     border-radius: 36px;
 }
+
+.guide-header-button{
+    margin-left:32%;
+}
 .guideCard {
     padding-top: 15px;
     padding-left: 0px;
@@ -286,7 +290,7 @@
     margin-bottom : 10px;
     border-radius: 10px;
     color: white;
-    background: rgba(20, 33, 41, 0.5);
+    background: rgba(70, 70, 70, 0.5);
 }
 
 .guideProgress{

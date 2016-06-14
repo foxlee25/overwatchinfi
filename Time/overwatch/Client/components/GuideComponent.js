@@ -100,10 +100,10 @@ var Guide = React.createClass({
             <div className="container-fluid">
         {this.state.userId?
         <div className="goToBuildGuide">
-            <Link to={'/buildGuide'}><button className="btn btn-lg btn-block btn-info ">{properties.buildGuide}</button></Link>
+            <Link to={'/buildGuide'}><button className="btn btn-lg btn-primary guide-header-button">{properties.buildGuide}</button></Link>
         </div>
         :<div>
-        <Link to={'/login'}> <button className="btn btn-lg btn-block btn-info">{properties.loginToBuildGuid}</button></Link>
+        <Link to={'/login'}> <button className="btn btn-lg btn-primary guide-header-button">{properties.loginToBuildGuid}</button></Link>
         </div>}
               <div id="guideComponent" className="row">
                 <div id="commentable-container" className="container commentable-container">

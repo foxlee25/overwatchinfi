@@ -96,7 +96,8 @@ Img {
 
 #app {
 	min-height: 100vh;
-	background-color: black;
+	/*background-image: url("../img/background/background_overwatch.jpg");*/
+	background-color: #282B35;
 	background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
@@ -730,7 +731,6 @@ Img {
 }
 
 .goToBuildGuide {
-	margin-bottom: 40px;
 	width: 90%;
 	margin-left: 3.6%;
 }

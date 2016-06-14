@@ -9,8 +9,6 @@ var GuideCard = React.createClass({
 		return {};
 	},
 	componentWillMount: function(){
-		this.state.likeStyle = {width: '35%'};
-		this.state.dislikeStyle = {width: '65%'};
         if(this.props.guide.likeTime){
             this.state.likeTime = this.props.guide.likeTime;
         }else{
@@ -22,8 +20,21 @@ var GuideCard = React.createClass({
         }else{
             this.state.dislikeTime = 0;
         }
-
+        this.updateProgressbar();
 	},
+    updateProgressbar: function(){
+        var totalTime = this.state.likeTime + this.state.dislikeTime;
+        if(totalTime > 0){
+            var likePercent = Math.round((this.state.likeTime / totalTime)*100);
+            var dislikePercent = 100 - likePercent;
+            this.state.likeStyle = {width: likePercent+'%'};
+            this.state.dislikeStyle = {width: dislikePercent+'%'};
+        }else{
+            this.state.likeStyle = {width: '0%'};
+            this.state.dislikeStyle = {width: '0%'};
+        }
+
+    },
     likeGuide: function(){
         var guide = this.props.guide;
         if(likeGuideList.indexOf(guide.createTime) > -1)
@@ -31,6 +42,7 @@ var GuideCard = React.createClass({
         likeGuideList.push(guide.createTime);
         var url = '/guide/clickGuide';
         this.state.likeTime = this.state.likeTime+1;
+        this.updateProgressbar();
         this.forceUpdate();
         AjaxService.post(url,{data: {createTime : guide.createTime ,type : 'like'}});
     },
@@ -41,6 +53,7 @@ var GuideCard = React.createClass({
         dislikeGuideList.push(guide.createTime);
         var url = '/guide/clickGuide';
         this.state.dislikeTime = this.state.dislikeTime+1;
+        this.updateProgressbar();
         this.forceUpdate();
         AjaxService.post(url,{data: {createTime : guide.createTime,type : 'dislike'}});
     },
