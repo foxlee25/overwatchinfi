@@ -43,7 +43,8 @@ var Home = React.createClass({
 		}.bind(this));
 		//make call to get key festure
 		var url = '/guide/allGuides';
-		AjaxService.post(url,{},function(response){
+		AjaxService.post(url,{data :{sortType :'latest',pageIndex: 1, guideNum : 6}},function(response){
+			debugger;
 			if(response.data.length > 6){
 				this.state.guides = response.data.slice(0, 6);
 			}else{

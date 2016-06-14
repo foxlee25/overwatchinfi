@@ -40,9 +40,6 @@ var BuildGuide = React.createClass({
     insertMap: function(item) {
         this.state.selection.map = item;
         $("#mapNext").prop("disabled", false);
-        $("#mapNext").click(function(e){
-        this.nextHero();
-        }.bind(this));
         this.forceUpdate();
     },
     insertHero: function(item) {
@@ -60,12 +57,6 @@ var BuildGuide = React.createClass({
             team.shift();
         }
 
-        if(team.length === 6){
-            $("#heroNext").prop("disabled", false);
-            $("#heroNext").click(function(e){
-                this.nextTitle();
-            }.bind(this));
-        }
         this.forceUpdate();
     },
     removeHero: function(index, side){
@@ -89,6 +80,7 @@ var BuildGuide = React.createClass({
                 this.forceUpdate();
             }.bind(this));
         }
+        this.forceUpdate();
     },
     nextTitle: function(){
         $("#step2").removeClass("selected");
@@ -139,9 +131,16 @@ var BuildGuide = React.createClass({
         });
     },
     switchSide: function(side) {
-        if (side === 'true') {
+        if (side) {
+            $("#sideOffense").prop("disabled", true);
+            $("#sideDefense").prop("disabled", false);
             this.state.side = side;
+            $("#sideDefense").click(function(){
+                this.switchSide(false);
+            }.bind(this));
         } else {
+            $("#sideDefense").prop("disabled", true);
+            $("#sideOffense").prop("disabled", false);
             this.state.side = side;
         }
         this.forceUpdate();
@@ -177,12 +176,14 @@ var BuildGuide = React.createClass({
                                                     <img className="mapTargetImg" src={"./img/guide/map/"+this.state.selection.map.path} />:
                                                     <div className="emptyMapTarget"><p>{properties.mapSelection}</p></div> }
                                                 {this.state.selection.map?<p>{this.state.selection.map.mapName}</p>:null}
-                                                <button id="mapNext" className="btn btn-block btn-info" disabled>
+                                                {this.state.selection.map?<button id="mapNext" className="btn btn-block btn-info btn-left" onClick={this.nextHero.bind(this)}>
                                                     {properties.next}
-                                                </button>
+                                                </button>:<button id="mapNext" className="btn btn-block btn-info btn-left" disabled>
+                                                    {properties.next}
+                                                </button>}
                                                 <button onClick={() => {
                                                     window.location.assign("#/guide");
-                                                }} className="btn btn-block btn-danger">
+                                                }} className="btn btn-block btn-danger btn-right">
                                                     {properties.cancel}
                                                 </button>
                                             </span>
@@ -204,10 +205,9 @@ var BuildGuide = React.createClass({
                                         </div>
                                         <div className="col-md-6">
                                             <div className="choose-side">
-                                                <p>{properties.chooseSide}</p>
-                                                <Switch checkedChildren={properties.offense}
-                                                        unCheckedChildren={properties.defense}
-                                                        onChange={this.switchSide.bind(this)} />
+                                                <p>{properties.chooseSide}, current side: {this.state.side?properties.offense:properties.defense}</p>
+                                                <button id="sideOffense" onClick={this.switchSide.bind(this, true)} className="btn btn-block btn-success btn-left">{properties.offense}</button>
+                                                <button id="sideDefense" className="btn btn-block btn-danger btn-right" disabled>{properties.defense}</button>
                                             </div>
                                             <div className="choose-team">
                                                 <p>{properties.chooseTeam}</p>
@@ -216,27 +216,28 @@ var BuildGuide = React.createClass({
                                                 {Underscore.map(this.state.loop, function(index){
                                                     let hero = this.state.selection.heros[index];
                                                     if(hero){
-                                                        return (<span className="col-sm-2 heroTargetSpan">
+                                                        return (<span className="col-sm-2 heroTargetSpanSolid">
                                                                 <img className="heroTargetImg" src={"./img/hero/"+hero.imgPath} />
                                                                 <img onClick={this.removeHero.bind(this, index, true)} className="deleteMap" src="./img/icon/deleteMap.png" />
                                                             </span>);
                                                     }else{
-                                                        return (<span className="col-sm-2 heroTargetSpan">
+                                                        return (<span className="col-sm-2 heroTargetSpanDash">
                                                             <img className="emptyHeroTarget" src="./img/icon/question.png" />
                                                         </span>);
                                                     }
                                                 }.bind(this))}
                                             </div>
-                                            <button id="heroNext" className="btn btn-block btn-info" disabled>
+                                            {this.state.selection.heros.length==6?<button id="heroNext" className="btn btn-block btn-info btn-left" onClick={this.nextTitle.bind(this)}>
                                                 {properties.next}
-                                            </button>
+                                            </button>:<button id="heroNext" className="btn btn-block btn-info btn-left" disabled>
+                                                {properties.next}
+                                            </button>}
                                             <button onClick={() => {
                                             this.state.steps = 1;
                                             $('#step2').removeClass('selected');
                                             $('#step1').addClass('selected');
                                             this.forceUpdate();
-                                            $('#mapNext').prop('disabled', false);
-                                            }} className="btn btn-block btn-danger">
+                                            }} className="btn btn-block btn-danger btn-right">
                                                 {properties.previous}
                                             </button>
                                         </div>
@@ -259,7 +260,7 @@ var BuildGuide = React.createClass({
                                             $('#step3').removeClass('selected');
                                             $('#step2').addClass('selected');
                                             this.forceUpdate();
-                                            $('#heroNext').prop('disabled', false);
+                                            setTimeOut(function(){$('#mapNext').prop('disabled', false);}, 200);
                                             }} className="btn btn-block btn-danger">
                                                 {properties.previous}
                                             </button>

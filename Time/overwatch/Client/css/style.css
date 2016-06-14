@@ -396,16 +396,16 @@ Img {
 
 .mapSelectionSpan {
 	position: relative;
-	left: 0;
+	left: 50px;
 	top: 0;
-	float: left;
+	float: inherit;
 	width: 30%;
 	margin: 10px;
 }
 
 .heroSelectionSpan {
 	position: relative;
-	left: 0;
+	left: 50px;
 	top: 0;
 	float: left;
 	width: 20%;
@@ -432,12 +432,10 @@ Img {
 }
 
 .mapTarget button {
-	margin-top: 20px;
-	margin-bottom: 20px;
 }
 
 .emptyMapTarget {
-	border: 5px dashed darkgrey;
+	border: 5px dashed whitesmoke;
 	border-radius: 20px;
 	margin: 10px;
 	background: rgba(239, 239, 239, 0.8);
@@ -454,7 +452,7 @@ Img {
 }
 
 .mapTargetImg {
-	border: 5px dashed darkgrey;
+	border: 5px solid darkgrey;
 	border-radius: 20px;
 	height: 30%;
 	width: 100%;
@@ -603,14 +601,11 @@ Img {
 }
 
 .stepNav li.selected a, .stepNav li.selected a:before {
-	background: #cecdcf;
+	background: #5bc0de;
 }
 
 .stepNav li.selected a {
-	border-top-color: #bebebe;
-	-webkit-box-shadow: inset 2px 1px 2px rgba(0,0,0,0.12);
-	-moz-box-shadow: inset 2px 1px 2px rgba(0,0,0,0.12);
-	box-shadow: inset 2px 1px 2px rgba(0,0,0,0.12);
+	border-top-color: #5bc0de;
 }
 
 @-webkit-keyframes left-to-right{
@@ -631,7 +626,18 @@ Img {
 	to{left:100%}
 }
 
-.heroTargetSpan {
+.heroTargetSpanSolid {
+	position: relative;
+	left: 0;
+	top: 0;
+	float: left;
+	width: 30%;
+	margin: 5px;
+	border: 3px solid darkgray;
+	border-radius: 6px;
+}
+
+.heroTargetSpanDash {
 	position: relative;
 	left: 0;
 	top: 0;
@@ -704,7 +710,11 @@ Img {
 	visibility: hidden;
 }
 
-.choose-side, .choose-team {
+.choose-side {
+	padding-bottom: 70px;
+}
+
+.choose-team {
 	margin-top:30px;
 	margin-bottom: 30px;
 }
@@ -717,10 +727,6 @@ Img {
 }
 
 .choose-side span {
-}
-
-#mapNext, #heroNext {
-	margin-top: 40px !important;
 }
 
 .goToBuildGuide {
@@ -845,3 +851,21 @@ Img {
 	top: 30%;
 	width: 20%;
 }
+
+.btn-left {
+	margin-left: 20px;
+	width: 40%;
+	float: left;
+}
+
+.btn-right {
+	width: 40%;
+	float: right;
+	margin-right: 20px;
+}
+
+#mapNext {
+	margin-top: 5px;
+}
+
+
