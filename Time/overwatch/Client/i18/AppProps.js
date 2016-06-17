@@ -34,5 +34,8 @@ module.exports = {
 	chooseTeam: 'Choose 6 heros from left to build your team',
 	latestVideo: 'Latest Videos',
 	latestNews: 'Latest News',
-	teamGuide: 'Team Guide'
+	teamGuide: 'Team Guide',
+	battleTag: 'Please type in your battle tag',
+	region: 'Region',
+	platform: 'Platform'
 };

@@ -74,7 +74,7 @@ var Base = React.createClass({
                    <MenuItem divider />
                    <MenuItem className="menuItem" eventKey={3}> <Link to={'/signup'}>{appValues.signup}</Link></MenuItem>
                </NavDropdown>}
-              <li className="navTitle"><a><Link to={'/about'}>{appValues.about}</Link></a></li>
+              <li className="navTitle"><a><Link to={'/pro'}>{appValues.pro}</Link></a></li>
             </ul>
              {this.state.loginData?<b className="helloUser">Hello {this.state.loginData.userId}</b>:null}
           </div>
