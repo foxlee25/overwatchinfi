@@ -10,7 +10,7 @@ module.exports = {
 	youtube: 'Youtube',
 	gfycat: 'Gfycat',
 	account: 'Account',
-	login: 'login',
+	login: 'Login',
 	signup: 'Sign up',
 	guide: 'Guide',
 	buildGuide: 'Build your own guide combination',

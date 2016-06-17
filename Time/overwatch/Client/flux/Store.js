@@ -3,7 +3,7 @@ var Constants = require('./Constants');
 var assign = require('object-assign');
 var emitter = require('events').EventEmitter;
 
-var EVENT = "CAHNGE";
+var EVENT = "CHANGE";
 var TOAST = "TOAST";
 
 var loginData = {};
