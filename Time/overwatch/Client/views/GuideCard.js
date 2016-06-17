@@ -22,6 +22,9 @@ var GuideCard = React.createClass({
         }
         this.updateProgressbar();
 	},
+    propTypes: {
+        guide: React.PropTypes.object
+    },
     updateProgressbar: function(){
         var totalTime = this.state.likeTime + this.state.dislikeTime;
         if(totalTime > 0){

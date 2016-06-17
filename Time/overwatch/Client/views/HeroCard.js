@@ -9,6 +9,9 @@ var HeroCard = React.createClass({
 	getInitialState: function(){
 		return {};
 	},
+	propTypes: {
+		hero: React.PropTypes.object
+	},
 	componentWillMount: function(){
 		if(this.props.hero.likeTime)
 		    this.state.likeTime = this.props.hero.likeTime ;

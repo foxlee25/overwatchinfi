@@ -919,4 +919,22 @@ Img {
 	margin-right: 5px;
 }
 
+.profile-card-div img {
+	float: left;
+	margin: 5px;
+}
 
+.profile-card-div div:first-child {
+	float: left;
+	margin: 5px;
+}
+
+.profile-card-div div:first-child div, .profile-card-div div:first-child p {
+	float: left;
+}
+
+.profile-card-div div:first-child p {
+	font-size: 1.2em;
+	color: whitesmoke;
+	font-family: 'Arial', sans-serif;
+}

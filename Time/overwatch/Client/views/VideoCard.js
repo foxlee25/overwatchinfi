@@ -16,6 +16,9 @@ var VideoCard = React.createClass({
     componentDidMount: function() {
 
     },
+	propTypes: {
+		video: React.PropTypes.object
+	},
 	likeVideo: function(){
 		var video = this.props.video;
 		if(clickLikeVideoList.indexOf(video.videoId) > -1)

@@ -15,6 +15,9 @@ var Gfycat = React.createClass({
         this.state.likeTime = this.props.video.likeTime;
         this.state.dislikeTime = this.props.video.dislikeTime;
     },
+    propTypes: {
+        video: React.PropTypes.object
+    },
     componentDidMount: function() {
         var key = this.props.video.videoId;
         $('#'+this.props.video.videoId).hover(function(){

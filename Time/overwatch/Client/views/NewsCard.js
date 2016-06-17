@@ -12,6 +12,9 @@ var NewsCard = React.createClass({
 			this.props.new.source.enriched.url.text = this.props.new.source.enriched.url.text.substring(0, 500)+"...";
 		}
 	},
+	propTypes: {
+		new: React.PropTypes.object
+	},
 	render: function(){
 		return (
 			<div className="newsCard row" onClick={this.openNewsLink.bind(this, this.props.new.source.enriched.url.url)}>
