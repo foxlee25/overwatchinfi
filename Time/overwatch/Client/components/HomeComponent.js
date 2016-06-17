@@ -43,8 +43,7 @@ var Home = React.createClass({
 		}.bind(this));
 		//make call to get key festure
 		var url = '/guide/allGuides';
-		AjaxService.post(url,{data :{sortType :'latest',pageIndex: 1, guideNum : 6}},function(response){
-			debugger;
+		AjaxService.post(url,{data :{sortType :'newest',pageIndex: 1, guideNum : 6}},function(response){
 			if(response.data.length > 6){
 				this.state.guides = response.data.slice(0, 6);
 			}else{
@@ -95,8 +94,8 @@ var Home = React.createClass({
 									newsItem.source.enriched.url.text = newsItem.source.enriched.url.text.substring(0, 500)+"...";
 								}
 								return(
-								<div onClick={() => {window.open(newsItem.source.enriched.url.url);}}>
-									<b>{newsItem.source.enriched.url.title}</b>
+								<div className="home-news-div" onClick={() => {window.open(newsItem.source.enriched.url.url);}}>
+									<p>{newsItem.source.enriched.url.title}</p>
 									<p>{newsItem.source.enriched.url.text}</p>
 								</div>
 								);

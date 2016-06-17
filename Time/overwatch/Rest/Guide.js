@@ -16,6 +16,16 @@ router.post('/allGuides', function (req, res) {
     });
 });
 
+/**path is /guide/getTotalGuideNum **/
+router.post('/getTotalGuideNum', function (req, res) {
+    res.header('Content-type', 'application/json');
+    res.header('Charset', 'utf8');
+    var data = req.body.data;
+    daoController.getDao('GuideDao', 'guide_findTotalNum' ,{},function (data) {
+        res.send(data);
+    });
+});
+
 /**path is /guide/clickGuide**/
 router.post('/clickGuide', function (req, res) {
     res.header('Content-type', 'application/json');

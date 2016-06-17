@@ -6,6 +6,7 @@ var MenuItem = require("react-bootstrap/lib/MenuItem");
 require("react-bootstrap/lib/Nav");
 var AppStore = require('../flux/Store');
 var ReactToastr = require("react-toastr");
+var $ = require("jquery");
 var {ToastContainer} = ReactToastr;
 var ToastMessageFactory = React.createFactory(ReactToastr.ToastMessage.animation);
 import { Router, Route, Link } from 'react-router'
@@ -28,6 +29,8 @@ var Base = React.createClass({
   },
   getLoginData: function(){
     this.setState({loginData: AppStore.getLoginData()});
+    debugger;
+    $(".login-signup-div").hide();
   },
     triggerToast: function(){
         var message = AppStore.getToastMessage();
@@ -52,6 +55,11 @@ var Base = React.createClass({
           <ToastContainer ref="container"
                           toastMessageFactory={ToastMessageFactory}
                           className="toast-top-right" />
+          {this.state.loginData?null:                
+          <div className="login-signup-div">
+            <a><Link to={'/login'}><button id="login-btn" className="login-signup-btn">{appValues.login}</button></Link></a>
+            <a><Link to={'/signup'}><button id="signup-btn" className="login-signup-btn">{appValues.signup}</button></Link></a>
+          </div>}
         <div id="navBand" className="navbar navbar-inverse">
           <div>
             <div className="navbar-header">
@@ -67,13 +75,6 @@ var Base = React.createClass({
                    <MenuItem className="menuItem" eventKey={3}> <Link to={'/videoYoutube'}>{appValues.youtube}</Link></MenuItem>
               </NavDropdown>
               <li className="navTitle"><a><Link to={'/news'}>{appValues.news}</Link></a></li>
-    {this.state.loginData?null:<NavDropdown eventKey={3} title={appValues.account} className="navTitle" >
-                    <MenuItem className="menuItem" eventKey={3}> <Link to={'/login'}>{appValues.login}</Link></MenuItem>
-                   <MenuItem divider />
-                   <MenuItem className="menuItem" eventKey={3}> <FbBtnView /> </MenuItem>
-                   <MenuItem divider />
-                   <MenuItem className="menuItem" eventKey={3}> <Link to={'/signup'}>{appValues.signup}</Link></MenuItem>
-               </NavDropdown>}
               <li className="navTitle"><a><Link to={'/pro'}>{appValues.pro}</Link></a></li>
             </ul>
              {this.state.loginData?<b className="helloUser">Hello {this.state.loginData.userId}</b>:null}

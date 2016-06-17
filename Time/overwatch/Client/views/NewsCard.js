@@ -16,7 +16,7 @@ var NewsCard = React.createClass({
 		return (
 			<div className="newsCard row" onClick={this.openNewsLink.bind(this, this.props.new.source.enriched.url.url)}>
 				<div className="col-md-3 newsImgMargin" >
-					{this.props.new.source.enriched.url.image?<img className="img-responsive" src={this.props.new.source.enriched.url.image} />:null}
+					{this.props.new.source.enriched.url.image?<img className="img-responsive" src={this.props.new.source.enriched.url.image} />:<img className="img-responsive" src={"./img/icon/logo.jpg"} />}
 				</div>
 			    <div className="col-md-9" id="newsText">
 				    <h4>{this.props.new.source.enriched.url.title}</h4>
