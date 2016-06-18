@@ -78,8 +78,7 @@ var GuideCard = React.createClass({
 							return(<img className="guideHeroImg"  src={"./img/hero/"+hero} />);
 						}.bind(this))}
 					</div>
-		            <span className="guide-button"><a onClick={this.likeGuide}  className="btn btn-video glyphicon glyphicon-thumbs-up"></a></span>
-
+                   <span className="guide-button"><img className="guide-button-img-like" onClick={this.likeGuide} src={"./img/icon/Down.png"}/></span>
                     <div className="progress guideProgress">
 
 						<div className="progress-bar progress-bar-success" style={this.state.likeStyle} >
@@ -89,12 +88,15 @@ var GuideCard = React.createClass({
 							    {this.state.dislikeTime} Disagree ({this.state.dislikeStyle.width})
 						</div>
 					</div>
-					<span className="guide-button"><a onClick={this.dislikeGuide}  className="btn btn-video glyphicon glyphicon-thumbs-down"></a></span>
-              </div>
+                    <span className="guide-button"><img className="guide-button-img-dislike" onClick={this.dislikeGuide} src={"./img/icon/Up.png"}/></span>
+
+            </div>
 
 			</div>
 		);
 	}
 });
 //		<p>{this.props.guide.description}</p>
+//	<span className="guide-button"><a onClick={this.dislikeGuide}  className="btn btn-video glyphicon glyphicon-thumbs-down"></a></span>
+//  <span className="guide-button"><a onClick={this.likeGuide}  className="btn btn-video glyphicon glyphicon-thumbs-up"></a></span>
 module.exports = GuideCard;

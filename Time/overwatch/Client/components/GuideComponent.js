@@ -64,49 +64,42 @@ var Guide = React.createClass({
         }.bind(this));
     },
     loadComments: function(){
-        var existingComments = [
-            {
-                "sectionId": "1",
-                "comments": [
-                    {
-                        "id": 88,
-                        "authorName": "Jon Sno",
-                        "authorId": 1,
-                        "comment": "I'm Ned Stark's bastard. Related: I know nothing."
-                    },
-                    {
-                        "id": 112,
-                        "authorName": "Donald Draper",
-                        "authorId": 2,
-                        "comment": "I need a scotch."
-                    }
-                ]
-            },
-            {
-                "sectionId": "3",
-                "comments": [
-                    {
-                        "id": 66,
-                        "authorName": "Senator Clay Davis",
-                        "authorId": 3,
-                        "comment": "These Side Comments are incredible. Sssshhhiiiiieeeee."
-                    }
-                ]
-            }
-        ];
+        var userId = window.sessionStorage.getItem('userId');
         var currentUser = {
-            "id": 4,
-            "authorUrl": "http://google.com/",
-            "name": "You"
+            "id": userId,
+            "name": userId
         };
         var SideComments = CommentsLib.addFile('side-comments');
-        var comments = new SideComments('#commentable-container', currentUser, existingComments);
+        var comments = new SideComments('#commentable-container', currentUser);
+
+        var existingComments = [];
+        for(var i=0 ; i<this.state.guides.length ; i++){
+            var guide = this.state.guides[i];
+            if(guide.guideComment.length>0){
+                var guideCommentModel = {};
+                guideCommentModel.comments = [];
+                for(var j= 0; j<guide.guideComment.length ; j++){
+                     var guideCommentdb = guide.guideComment[j];
+                     guideCommentModel.sectionId = guideCommentdb.sectionId;
+                      var commentModel = {}
+                    commentModel.comment = guideCommentdb.comment;
+                    commentModel.authorName = guideCommentdb.authorName;
+                    commentModel.authorId = guideCommentdb.authorId;
+                    commentModel.id = guideCommentdb.commentId;
+                    guideCommentModel.comments.push(commentModel);
+                }
+                existingComments.push(guideCommentModel);
+            }
+        };
+        comments.initialize(existingComments);
         comments.on('commentPosted', function( comment ) {
-            comment.id = parseInt(Math.random() * (100000 - 1) + 1);
+            var date = new Date();
+            var dateIso = date.toISOString();
+            comment.commentId = dateIso;
             comments.insertComment(comment);
-        });
-        comments.on('commentDeleted', function( comment ) {
-            comments.removeComment(comment.sectionId, comment.id);
+            var url = '/guide/postComment';
+            AjaxService.post(url,{data:comment},function(response){
+            }.bind(this));
         });
     },
     render: function(){
@@ -127,7 +120,7 @@ var Guide = React.createClass({
                 </div>
                 <div id="commentable-container" className="container commentable-container">
                     {Underscore.map(this.state.guides, function(guide,index){
-                        return( <div data-section-id={index} className="commentable-section"><GuideCard key={guide.createTime} guide={guide} /><div className="commentable-section-last"></div></div>);
+                        return( <div id={guide.createTime} data-section-id={guide.createTime} className="commentable-section"><GuideCard key={guide.createTime} guide={guide} /><div className="commentable-section-last"></div></div>);
                     }.bind(this))}
                 </div>
                 {this.state.totalNum}>0?

@@ -16,6 +16,14 @@ router.post('/allGuides', function (req, res) {
     });
 });
 
+/**path is /guide/postComment **/
+router.post('/postComment', function (req, res) {
+    res.header('Content-type', 'application/json');
+    res.header('Charset', 'utf8');
+    var data = req.body.data;
+    daoController.getDao('CommentDao', 'comment_insert' ,data);
+});
+
 /**path is /guide/getTotalGuideNum **/
 router.post('/getTotalGuideNum', function (req, res) {
     res.header('Content-type', 'application/json');
