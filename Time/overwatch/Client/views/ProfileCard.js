@@ -13,14 +13,13 @@ var ProfileCard = React.createClass({
                 <div className="col-md-6 profile-card-div">
                     <img className="img-responsive" src={this.props.profile.data.avatar} />
                     <div>
-                        <div className="progress">
-                            <div className="progress-bar" role="progressbar" aria-valuenow={this.props.profile.data.games.win_percentage}
-                                 aria-valuemin="0" aria-valuemax="100" style={{width: this.props.profile.data.games.win_percentage+"%"}}>
-                            </div>
-                            <p>Wins: {this.props.profile.data.games.wins}</p>
-                            <p>Lost: {this.props.profile.data.games.lost}</p>
-                            <p>Played: {this.props.profile.data.games.played}</p>
-                        </div>
+                        <p>User: {this.props.profile.data.username}</p>
+                        <p>Wins: {this.props.profile.data.games.wins}</p>
+                        <p>Lost: {this.props.profile.data.games.lost}</p>
+                        <p>Played: {this.props.profile.data.games.played}</p>
+                    </div>
+                    <div>
+                        {this.props.profile.data.level}
                     </div>
                 </div>
             </div>
@@ -29,3 +28,9 @@ var ProfileCard = React.createClass({
 });
 
 module.exports = ProfileCard;
+
+// <div className="progress">
+//     <div className="progress-bar" role="progressbar" aria-valuenow={this.props.profile.data.games.win_percentage}
+//          aria-valuemin="0" aria-valuemax="100" style={{width: this.props.profile.data.games.win_percentage+"%"}}>
+//     </div>
+// </div>
