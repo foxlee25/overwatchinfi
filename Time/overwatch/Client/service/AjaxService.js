@@ -12,18 +12,20 @@ var service = {
            });
     },
     get: function (url, callback) {
-           axios.get(url).then(function (response) {
+           axios.get(url, {timeout: 25000}).then(function (response) {
                console.log('get request : ' + url);
                if (typeof callback === 'function') {
                    callback(response);
                }
            }).catch(function (response) {
+               callback(response);
                service.error(url,response);
            });
     },
     post:function(url,data,callback){
         if(!data)
             data = {};
+            data.timeout = 25000;
           axios.post(url,data).then(function (response) {
                console.log('post request : ' + url);
                if (typeof callback === 'function') {

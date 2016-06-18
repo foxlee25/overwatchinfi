@@ -37,5 +37,7 @@ module.exports = {
 	teamGuide: 'Team Guide',
 	battleTag: 'Please type in your battle tag',
 	region: 'Region',
-	platform: 'Platform'
+	platform: 'Platform',
+	noMatchFound: 'Found no user with the battletag, please try another one',
+	searchError: 'An error happened during the search, please try again'
 };

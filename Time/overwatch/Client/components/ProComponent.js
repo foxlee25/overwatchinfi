@@ -1,5 +1,4 @@
 var React = require('react');
-var AppStore = require('../flux/Store');
 var properties = require('../i18/AppProps');
 var AjaxService = require('../service/AjaxService');
 var ProfileCard = require('../views/ProfileCard');
@@ -10,6 +9,7 @@ var underscore = require('underscore');
 var AppStore = require('../flux/Store');
 var AppAction = require('../flux/Actions');
 var async = require('async');
+var $ = require('jquery');
 
 var Pro = React.createClass({
 	getInitialState: function() {
@@ -38,6 +38,7 @@ var Pro = React.createClass({
 	},
 	search: function(battleTag, region, platform){
 		this.state.loading = true;
+		this.state.searchError = false;
 		this.forceUpdate();
 		var battleTag = battleTag;
 		var region = region;
@@ -50,26 +51,53 @@ var Pro = React.createClass({
 		async.parallel({
 			achievements: (callback) => {
 				AjaxService.get(achievements, (response) => {
+					if(response instanceof Error){
+						callback(response, null);
+						return;
+					}
 					callback(null, response.data);
 				});
 			},
 			allHero: (callback) => {
 				AjaxService.get(allHero, (response) => {
+					if(response instanceof Error){
+						callback(response, null);
+						return;
+					}
 					callback(null, response.data);
 				});
 			},
 			heros: (callback) => {
 				AjaxService.get(heros, (response) => {
+					if(response instanceof Error){
+						callback(response, null);
+						return;
+					}
 					callback(null, response.data);
 				});
 			},
 			profile: (callback) => {
 				AjaxService.get(profile, (response) => {
+					if(response instanceof Error){
+						callback(response, null);
+						return;
+					}
 					callback(null, response.data);
 				});
 			}}, (err, response) => {
-				if(response.profile.data === null){
+				this.state.loading = false;
+
+				if(err){
 					this.state.searchError = true;
+					AppAction.toast(properties.searchError);
+					this.forceUpdate();
+					return;
+				}
+
+				if(response.profile.error){
+					AppAction.toast(properties.noMatchFound);
+					this.forceUpdate();
+					return;
 				}
 
 				let data = {
@@ -79,7 +107,6 @@ var Pro = React.createClass({
 				};
 				this.state.gameData = response;
 				this.state.battleTag = data;
-				this.state.loading = false;
 				AppAction.setHeroData(response);
 				this.forceUpdate();
 				window.localStorage.setItem('battleTag', JSON.stringify(data));
@@ -215,8 +242,17 @@ var Pro = React.createClass({
 			}
 		}else {
 			return (
-				<div>
-					<p>login to get your personal data trainer</p>
+				<div className="container">
+					<div className="feature-tip">
+						<h4>Login to get the latest stats.</h4>
+					</div>
+					< div id="feature-slider">
+						<figure>
+							<img src={'./img/pro/feature1.png'} alt />
+							<img src={'./img/pro/feature2.png'} alt />
+							<img src={'./img/pro/feature1.png'} alt />
+						</figure>
+					</div>
 				</div>
 			);
 		}
