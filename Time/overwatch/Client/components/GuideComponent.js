@@ -15,11 +15,13 @@ var newest = 'newest';
 var mostagree = 'mostagree';
 var oldest = 'oldest';
 
+
 var Guide = React.createClass({
     getInitialState: function(){
         return {
             guides: [],
-            userId: null
+            userId: null,
+            currentSortType: 'newest'
         };
     },
     getGuides: function(control,refresh){
@@ -125,9 +127,9 @@ var Guide = React.createClass({
         </div>}
               <div id="guideComponent" className="row">
                 <div className="btn-group  guideSortButtonGroup">
-                <a onClick={this.updateSort.bind(this,newest)} className="btn btn-info">Newest</a>
-                <a onClick={this.updateSort.bind(this,mostagree)} className="btn btn-info">Most Agree</a>
-                <a onClick={this.updateSort.bind(this,oldest)} className="btn btn-info">Oldest</a>
+                {this.state.currentSortType != 'newest' ? <a onClick={this.updateSort.bind(this,newest)}  className="btn btn-info" >Newest</a> : <a onClick={this.updateSort.bind(this,newest)}    className="btn btn-info active">Newest</a>}
+                 {this.state.currentSortType != 'mostagree' ? <a onClick={this.updateSort.bind(this,mostagree)} className="btn btn-info" >Most Agree</a> : <a onClick={this.updateSort.bind(this,mostagree)} className="btn btn-info active">Most Agree</a>}
+                {this.state.currentSortType != 'oldest' ? <a onClick={this.updateSort.bind(this,oldest)}  className="btn btn-info"  >Oldest</a> :<a onClick={this.updateSort.bind(this,oldest)} className="btn btn-info active">Oldest</a> }
                 </div>
                 <div id="commentable-container" className="container commentable-container">
                     {Underscore.map(this.state.guides, function(guide,index){
