@@ -15,6 +15,10 @@ Img {
 
 }
 
+.pageMarginTop{
+	margin-top: 90px;
+}
+
 #centerImg {
 	text-align: center;
 }
@@ -97,7 +101,7 @@ Img {
 #app {
 	min-height: 100vh;
 	/*background-image: url("../img/background/background_overwatch.jpg");*/
-	background-color: #282B35;
+	background-color: #f2f2f2;
 	background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -107,12 +111,26 @@ Img {
 }
 
 #navBand {
-	margin-top: 50px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 9999;
+	display: block;
+	margin: 0;
+	width: 100%;
+	min-width: 1024px;
+	height: 75px;
+	max-height: 75px;
+	background: #333;
+	background: rgba(0,0,0,0.8);
+	font-size: 18px;
+	-webkit-user-select: none;
 }
 
-.navTitle:hover {
-	background: #080808 !important;
-}
+/*.navTitle:hover {*/
+	/*background: #080808 !important;*/
+/*}*/
 
 .newsImgMargin {
 	margin-top: 10px;
@@ -187,10 +205,31 @@ Img {
 }
  
 .navTitle a {
-	margin-top: 10px;
-	margin-bottom: 10px;
-	color: #ffffff !important;
-	font-size: 20px;
+	/*margin-top: 10px;*/
+	/*margin-bottom: 10px;*/
+	/*color: #ffffff !important;*/
+	/*font-size: 20px;*/
+
+	font-size: 16px;
+	line-height: 2.75;
+	font-weight: 400;
+	letter-spacing: normal;
+	opacity: 1;
+	-ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=$ieopacity)';
+	filter: alpha(opacity=100);
+	color: #fff;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	padding: 0 15px;
+	height: 44px;
+	background: no-repeat;
+	text-decoration: none;
+	white-space: nowrap;
+	-webkit-transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+	transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-webkit-tap-highlight-color: transparent;
+	outline-offset: -7px;
 }
 
 .fbLoginBtn {
@@ -731,7 +770,7 @@ Img {
 }
 
 .choose-side p, .choose-team p {
-	font-family: 'Arial', sans-serif;
+	font-family: "Myriad Set Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 1.3em;
 	color: whitesmoke;
 	padding-top: 20px;
@@ -755,15 +794,17 @@ Img {
 
 .home-poster {
 	width: 90%;
-	margin: 40px;
+	margin-top: 10px;
+	margin-left: 40px;
+	margin-bottom: 40px;
+	margin-right: 40px;
 	max-height: 1000px;
 }
 
 .home-div h4 {
-	font-family: 'Arial', sans-serif;
+	font-family: "Myriad Set Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 1.6em;
 	margin-left: 30px;
-	color: whitesmoke;
 }
 
 .home-video-div{
@@ -775,10 +816,14 @@ Img {
 .home-guide-div {
 	margin:20px;
 	width: 90%;
-	background-color: rgba(34, 34, 34, 0.5);
+
+	background-color: rgba(128, 128, 128, 0.1);
+
+/*	background-color: rgba(34, 34, 34, 0.5);
 	border: 2px solid #000000;
 	border-radius: 5px;
-	box-shadow: 6px 6px 3px #111111;
+	box-shadow: 6px 6px 3px #111111;*/
+
 	height: 120px;
 	padding-right: 30px;
 }
@@ -812,12 +857,13 @@ Img {
 	float: left;
 	margin: 5px;
 	border-radius: 25px;
-	background-color: whitesmoke;
+	background-color: f2f2f2;
 }
 
 .home-news {
-	width: 60%;
+	width: 56%;
 	float: left;
+	margin-left: 15px;
 }
 
 .home-news:hover {
@@ -832,14 +878,18 @@ Img {
 	margin-bottom: 20px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	background-color: rgba(34, 34, 34, 0.5);
+
+	background-color: rgba(128, 128, 128, 0.1);
+
+/*	background-color: rgba(34, 34, 34, 0.5);
 	border: 2px solid #000000;
 	border-radius: 5px;
-	box-shadow: 6px 6px 3px #111111;
+	box-shadow: 6px 6px 3px #111111;*/
+
 }
 
 .home-news p {
-	color: whitesmoke;
+	color: #333;
 }
 
 .home-news b {
@@ -849,7 +899,7 @@ Img {
 
 .home-guide {
 	width: 40%;
-	float: left;
+	float: right;
 }
 
 .home-video-div {
@@ -1021,7 +1071,48 @@ Img {
 	text-align: left;
 	color: whitesmoke;
 	font-family: 'Arial', sans-serif;
-	font-size: 1.1em;
+
+}
+.marginSpace{
+	margin-left: 15px;
+}
+
+.marginTop{
+	margin-top: 20px;
+}
+
+.marginBottom{
+	margin-bottom: 20px;
+}
+
+.violator-compact {
+	font-size: 13px;
+	padding: 0 11px;
+	line-height: 22px;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+.violator {
+	background: transparent;
+	border: 1px solid #999;
+	border-radius: 4px;
+	color: #999;
+	font-size: 15px;
+	line-height: 32px;
+	text-align: center;
+	white-space: nowrap;
+	padding: 0 16px;
+	display: inline-block;
+}
+
+.violator > a > a{
+	color: #999 !important;
+}
+
+.violator > a > a:hover{
+	color: #f2f2f2 !important;
+	text-decoration: none !important;
 }
 
 .achievement-span, .played-heros-span{
@@ -1416,3 +1507,4 @@ div#home-slider figure {
 	95% { left: -300%; }
 	100% { left: -400%; }
 }
+
