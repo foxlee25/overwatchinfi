@@ -55,11 +55,7 @@ var Base = React.createClass({
           <ToastContainer ref="container"
                           toastMessageFactory={ToastMessageFactory}
                           className="toast-top-right" />
-          {this.state.loginData?null:                
-          <div className="login-signup-div">
-            <a><Link to={'/login'}><button id="login-btn" className="login-signup-btn">{appValues.login}</button></Link></a>
-            <a><Link to={'/signup'}><button id="signup-btn" className="login-signup-btn">{appValues.signup}</button></Link></a>
-          </div>}
+
         <div id="navBand" className="navbar navbar-inverse">
           <div>
             <div className="navbar-header">
@@ -77,10 +73,10 @@ var Base = React.createClass({
               <li className="navTitle"><a><Link to={'/news'}>{appValues.news}</Link></a></li>
               <li className="navTitle"><a><Link to={'/pro'}>{appValues.pro}</Link></a></li>
             </ul>
-             {this.state.loginData?<b className="helloUser">Hello {this.state.loginData.userId}</b>:null}
+             {this.state.loginData?<span className="helloUser">Hi, {this.state.loginData.userId}</span>:<span className="violator violator-compact pull-right"><a><Link to={'/login'}>Login</Link></a></span>}
           </div>
         </div>
-        <div>
+        <div className="pageMarginTop">
           {this.props.children}
         </div>
       </div>

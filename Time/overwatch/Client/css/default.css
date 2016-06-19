@@ -39,17 +39,18 @@
 .dropdown-menu, .dropdown-menu>li.menuItem {
     min-width: 145px;
     padding: 0px;
-    background-color: #222222 !important;
+    background-color: rgba(0,0,0,0.55) !important;
     border:none !important;
 }
 
 .dropdown-menu>li.menuItem:hover, .dropdown-menu>.menuItem>li:focus{
-    background-color: #222222 !important;
+    /*background-color: #222222 !important;*/
     border:none !important;
 }
 
 .menuItem a, .menuItem a:hover{
-    background-color: #222222 !important;
+    background-color: rgba(0,0,0,0) !important;
+    color: gray;
     border:none !important;
 }
 .video-clickTime{
@@ -259,11 +260,12 @@
 }
 
 .helloUser{
-    font-size: 18px;
+    font-size: 16px;
     color: #ffffff;
     float: right;
     margin-right: 20px;
-    margin-top: 21px;
+    margin-top: 25px;
+    font-weight: 200;
 }
 
 /** login and signup end **/

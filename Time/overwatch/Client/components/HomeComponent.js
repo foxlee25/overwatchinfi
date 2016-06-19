@@ -70,7 +70,9 @@ var Home = React.createClass({
 				</div>
 				{this.state.videos.length>0?
 					<div className="row">
-						<h4>{properties.latestVideo}</h4>
+						<h4 className="marginBottom">{properties.latestVideo}<span className="glyphicon glyphicon-th-list marginSpace" aria-hidden="true"></span></h4>
+
+
 						{underscore.map(this.state.videos, function(video){
 							return(
 							<a>
@@ -85,10 +87,10 @@ var Home = React.createClass({
 						}.bind(this))}
 					</div>:null
 				}
-				<div className="row">
+				<div className="row marginTop">
 					{this.state.news.length>0 ?
 						<div className="home-news">
-							<h4>{properties.latestNews}</h4>
+							<h4>{properties.latestNews}<span className="glyphicon glyphicon-th-list marginSpace" aria-hidden="true"></span></h4>
 							{underscore.map(this.state.news, function(newsItem){
 								if(newsItem.source.enriched.url.text.length > 500){
 									newsItem.source.enriched.url.text = newsItem.source.enriched.url.text.substring(0, 500)+"...";
@@ -104,7 +106,7 @@ var Home = React.createClass({
 					}
 					{this.state.guides.length>0?
 						<div className="home-guide">
-							<h4>{properties.teamGuide}</h4>
+							<h4>{properties.teamGuide}<span className="glyphicon glyphicon-th-list marginSpace" aria-hidden="true"></span></h4>
 							{underscore.map(this.state.guides, function(guide){
 								return(
 									<div className="home-guide-div">
