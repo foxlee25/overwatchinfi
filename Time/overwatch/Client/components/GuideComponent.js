@@ -4,6 +4,7 @@
 var React = require('react');
 var AjaxService = require('../service/AjaxService');
 var CommentsLib= require('../side-comments/release/side-comments.js');
+//var SideComments=require('./CommentComponent.js');
 var $ = require('jquery');
 var Underscore = require('underscore');
 var AppStore = require('../flux/Store.js');
@@ -13,6 +14,7 @@ import { Router, Route, Link } from 'react-router'
 var newest = 'newest';
 var mostagree = 'mostagree';
 var oldest = 'oldest';
+
 var Guide = React.createClass({
     getInitialState: function(){
         return {
@@ -20,7 +22,7 @@ var Guide = React.createClass({
             userId: null
         };
     },
-    getGuides: function(control){
+    getGuides: function(control,refresh){
         var url = '/guide/allGuides';
         var currentPageIndex = this.state.currentPageIndex;
         if(control==='pre'){
@@ -38,14 +40,14 @@ var Guide = React.createClass({
         AjaxService.post(url,{data :{sortType :this.state.currentSortType,pageIndex: currentPageIndex, guideNum : 10}},function(response){
             this.state.guides = response.data;
             this.forceUpdate();
-            this.loadComments();
+            this.loadComments(refresh);
             window.scrollTo(0, 0);
         }.bind(this));
     },
     updateSort : function(sort){
         this.state.currentPageIndex = 1;
         this.state.currentSortType = sort;
-        this.getGuides();
+        this.getGuides('first',false);
 
     },
     componentWillMount: function(){
@@ -56,22 +58,28 @@ var Guide = React.createClass({
         this.state.currentSortType = newest;
     },
     componentDidMount: function(){
-        this.getGuides();
+        var userId = window.sessionStorage.getItem('userId');
+        if(userId){
+            var currentUser = {
+                "id": userId,
+                "name": userId
+            };
+        }else{
+            var currentUser = {
+                "id": 'Anonymous',
+                "name": 'Anonymous'
+            };
+        }
+        var SideComments = CommentsLib.addFile('side-comments');
+        this.state.comments = new SideComments('#commentable-container', currentUser);
+        this.getGuides('first',true);
         var url = '/guide/getTotalGuideNum';
         AjaxService.post(url,{},function(response){
             this.state.totalNum = Math.ceil((response.data.guideNum / 10));
             this.forceUpdate();
         }.bind(this));
     },
-    loadComments: function(){
-        var userId = window.sessionStorage.getItem('userId');
-        var currentUser = {
-            "id": userId,
-            "name": userId
-        };
-        var SideComments = CommentsLib.addFile('side-comments');
-        var comments = new SideComments('#commentable-container', currentUser);
-
+    loadComments: function(refresh){
         var existingComments = [];
         for(var i=0 ; i<this.state.guides.length ; i++){
             var guide = this.state.guides[i];
@@ -91,12 +99,12 @@ var Guide = React.createClass({
                 existingComments.push(guideCommentModel);
             }
         };
-        comments.initialize(existingComments);
-        comments.on('commentPosted', function( comment ) {
+        this.state.comments.initialize(existingComments,refresh);
+        this.state.comments.on('commentPosted', function( comment ) {
             var date = new Date();
             var dateIso = date.toISOString();
             comment.commentId = dateIso;
-            comments.insertComment(comment);
+            this.state.comments.insertComment(comment);
             var url = '/guide/postComment';
             AjaxService.post(url,{data:comment},function(response){
             }.bind(this));
@@ -126,11 +134,11 @@ var Guide = React.createClass({
                 {this.state.totalNum}>0?
                 <nav className="pagin col-sm-offset-5 col-sm-6">
                     <ul className="pagination">
-                        <li><a onClick={this.getGuides.bind(this,'first')}>First</a></li>
-                        <li><a onClick={this.getGuides.bind(this,'pre')}>Pre</a></li>
+                        <li><a onClick={this.getGuides.bind(this,'first',false)}>First</a></li>
+                        <li><a onClick={this.getGuides.bind(this,'pre',false)}>Pre</a></li>
                         <li><a href="#">{this.state.currentPageIndex} of {this.state.totalNum}</a></li>
-                        <li><a onClick={this.getGuides.bind(this,'next')}>Next</a></li>
-                        <li><a onClick={this.getGuides.bind(this,'last')}>Last</a></li>
+                        <li><a onClick={this.getGuides.bind(this,'next',false)}>Next</a></li>
+                        <li><a onClick={this.getGuides.bind(this,'last',false)}>Last</a></li>
                     </ul>
                 </nav>:null}
 

@@ -414,15 +414,32 @@ Emitter(SideComments.prototype);
 /**
  * Adds the comments beside each commentable section.
  */
-SideComments.prototype.initialize = function( existingComments ) {
+var allExistingSestionId = [];
+SideComments.prototype.initialize = function( existingComments ,refresh) {
   this.existingComments = _.cloneDeep(existingComments) || [];
-  _.each(this.$el.find('.commentable-section'), function( section ){
-    var $section = $(section);
-    var sectionId = $section.data('section-id').toString();
-    var sectionComments = _.find(this.existingComments, { sectionId: sectionId });
+  this.$el.off();
+  if(refresh){
+    alert('refresh')
+    _.each(this.$el.find('.commentable-section'), function( section ){
+      var $section = $(section);
+      var sectionId = $section.data('section-id').toString();
+        allExistingSestionId.push(sectionId);
+        var sectionComments = _.find(this.existingComments, { sectionId: sectionId });
+        this.sections.push(new Section(this.eventPipe, $section, this.currentUser, sectionComments));
+    }, this);
+  }
+  else{
+    _.each(this.$el.find('.commentable-section'), function( section ){
+      var $section = $(section);
+      var sectionId = $section.data('section-id').toString();
+      if(allExistingSestionId.indexOf(sectionId)==-1){
+        allExistingSestionId.push(sectionId);
+        var sectionComments = _.find(this.existingComments, { sectionId: sectionId });
+        this.sections.push(new Section(this.eventPipe, $section, this.currentUser, sectionComments));
+      }
+    }, this);
+  }
 
-    this.sections.push(new Section(this.eventPipe, $section, this.currentUser, sectionComments));
-  }, this);
 };
 
 /**
@@ -587,6 +604,7 @@ var mobileCheck = addFile('./helpers/mobile-check.js');
  * @param {Object} eventPipe The Emitter object used for passing around events.
  * @param {Array} comments   The array of comments for this section. Optional.
  */
+
 function Section( eventPipe, $el, currentUser, comments ) {
 	this.eventPipe = eventPipe;
 	this.$el = $el;
@@ -595,7 +613,6 @@ function Section( eventPipe, $el, currentUser, comments ) {
 	this.clickEventName = mobileCheck() ? 'touchstart' : 'click';
 
 	this.id = $el.data('section-id');
-
 	this.$el.on(this.clickEventName, '.side-comment .marker', _.bind(this.markerClick, this));
 	this.$el.on(this.clickEventName, '.side-comment .add-comment', _.bind(this.addCommentClick, this));
 	this.$el.on(this.clickEventName, '.side-comment .post', _.bind(this.postCommentClick, this));
@@ -609,7 +626,7 @@ function Section( eventPipe, $el, currentUser, comments ) {
  * @param  {Object} event The event object.
  */
 Section.prototype.markerClick = function( event ) {
-	event.preventDefault();
+  alert('marker click');
 	this.select();
 };
 
@@ -3238,7 +3255,7 @@ module.exports = function() {
 });
 
 addFile.register("side-comments/templates/section.html", function(exports, addFile, module){
-module.exports = '<div class="side-comment <%= sectionClasses %>">\n  <a href="#" class="marker">\n    <span class="markerNumber"><%= comments.length %></span>\n  <span class="markerComment"> Comment </span>\n </a>\n  \n  <div class="comments-wrapper">\n    <ul class="comments">\n      <% _.each(comments, function( comment ){ %>\n        <%= _.template(commentTemplate, { comment: comment, currentUser: currentUser }) %>\n      <% }) %>\n    </ul>\n    \n    <a href="#" class="add-comment">Leave a comment</a>\n    \n    <% if (currentUser){ %>\n      <div class="comment-form">\n        <div class="author-avatar">\n          <img src="<%= currentUser.avatarUrl %>">\n        </div>\n             <div class="actions form-inline">\n       <p class="author-name">\n          <%= currentUser.name %>\n        </p>\n        <input type="text" class="comment-box form-control input-sm" placeholder="Leave a comment..." required>\n      <a href="#" class="action-link post">Post</a>\n          <a href="#" class="action-link cancel">Cancel</a>\n        </div>\n      </div>\n    <% } %>\n  </div>\n</div>';
+module.exports = '<div class="side-comment <%= sectionClasses %>">\n  <div  class="marker">\n    <span class="markerNumber"><%= comments.length %></span>\n  <span class="markerComment"> Comment </span>\n </div>\n  \n  <div class="comments-wrapper">\n    <ul class="comments">\n      <% _.each(comments, function( comment ){ %>\n        <%= _.template(commentTemplate, { comment: comment, currentUser: currentUser }) %>\n      <% }) %>\n    </ul>\n    \n    <a href="#" class="add-comment">Leave a comment</a>\n    \n    <% if (currentUser){ %>\n      <div class="comment-form">\n        <div class="author-avatar">\n          <img src="<%= currentUser.avatarUrl %>">\n        </div>\n             <div class="actions form-inline">\n       <p class="author-name">\n          <%= currentUser.name %>\n        </p>\n        <input type="text" class="comment-box form-control input-sm" placeholder="Leave a comment..." required>\n      <a href="#" class="action-link post">Post</a>\n          <a href="#" class="action-link cancel">Cancel</a>\n        </div>\n      </div>\n    <% } %>\n  </div>\n</div>';
 });
 addFile.register("side-comments/templates/comment.html", function(exports, addFile, module){
   module.exports = '<li data-comment-id="<%= comment.id %>">\n  <div class="author-avatar">\n    <img src="<%= comment.authorAvatarUrl %>">\n  </div>\n  <p class="author-name right-of-avatar">\n      <%= comment.authorName %>\n    </p>\n  <p class="comment right-of-avatar">\n    <%= comment.comment %>\n  </p>\n  </li>';
