@@ -62,13 +62,6 @@ var Base = React.createClass({
           <ToastContainer ref="container"
                           toastMessageFactory={ToastMessageFactory}
                           className="toast-top-right" />
-
-          {this.state.loginData?<button onClick={this.logout.bind(this)} className="login-signup-btn logout-btn">{appValues.logout}</button>:
-          <div className="login-signup-div">
-            <a><Link to={'/login'}><button id="login-btn" className="login-signup-btn">{appValues.login}</button></Link></a>
-            <a><Link to={'/signup'}><button id="signup-btn" className="login-signup-btn">{appValues.signup}</button></Link></a>
-          </div>}
-
         <div id="navBand" className="navbar navbar-inverse">
           <div>
             <div className="navbar-header">
@@ -85,7 +78,7 @@ var Base = React.createClass({
               <MenuItem className="menuItem" eventKey={3}> <Link to={'/videoYoutube'}>{appValues.youtube}</Link></MenuItem>
               </NavDropdown>
             </ul>
-             {this.state.loginData?<span className="helloUser">Hi, {this.state.loginData.userId}</span>:<span className="violator violator-compact pull-right"><a><Link to={'/login'}>Login</Link></a></span>}
+             {this.state.loginData?<div className="logout-btn"><span className="helloUser">Hi, {this.state.loginData.userId} </span> <span onClick={this.logout.bind(this)} className="violator violator-compact ">{appValues.logout}</span></div>:<span className="violator violator-compact pull-right"><a><Link to={'/login'}>Login</Link></a></span>}
           </div>
         </div>
         <div className="pageMarginTop">

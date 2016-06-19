@@ -4,7 +4,7 @@ var Underscore= require('underscore');
 var VideoCard = require('../views/GfycatCard');
 var url = '/video/getAllVideos';
 var $ = require('jquery');
-var totalNum = 57;
+var totalNum = 28;
 var Video = React.createClass({
     getInitialState: function(){
         return {
@@ -28,7 +28,7 @@ var Video = React.createClass({
             currentPageIndex=totalNum;
         }
         this.state.currentPageIndex = currentPageIndex;
-        AjaxService.post(url,{data :{source :'gfycat',pageIndex: currentPageIndex, videoNum : 6}},function(response){
+        AjaxService.post(url,{data :{source :'gfycat',pageIndex: currentPageIndex, videoNum : 12}},function(response){
             this.state.videos = response.data;
             this.forceUpdate();
             window.scrollTo(0, 0);

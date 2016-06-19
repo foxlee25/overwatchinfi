@@ -389,21 +389,21 @@ function SideComments( el, currentUser, existingComments ) {
   this.$el = $(el);
   this.$body = $('body');
   this.eventPipe = new Emitter;
-
   this.currentUser = _.clone(currentUser) || null;
  // this.existingComments = _.cloneDeep(existingComments) || [];
   this.sections = [];
   this.activeSection = null;
-
   // Event bindings
-  this.eventPipe.on('showComments', _.bind(this.showComments, this));
-  this.eventPipe.on('hideComments', _.bind(this.hideComments, this));
-  this.eventPipe.on('sectionSelected', _.bind(this.sectionSelected, this));
-  this.eventPipe.on('sectionDeselected', _.bind(this.sectionDeselected, this));
-  this.eventPipe.on('commentPosted', _.bind(this.commentPosted, this));
-  this.eventPipe.on('commentDeleted', _.bind(this.commentDeleted, this));
-  this.eventPipe.on('addCommentAttempted', _.bind(this.addCommentAttempted, this));
-  this.$body.on('click', _.bind(this.bodyClick, this));
+    this.eventPipe.off();
+    this.eventPipe.on('showComments', _.bind(this.showComments, this));
+    this.eventPipe.on('hideComments', _.bind(this.hideComments, this));
+    this.eventPipe.on('sectionSelected', _.bind(this.sectionSelected, this));
+    this.eventPipe.on('sectionDeselected', _.bind(this.sectionDeselected, this));
+    this.eventPipe.on('commentPosted', _.bind(this.commentPosted, this));
+    this.eventPipe.on('commentDeleted', _.bind(this.commentDeleted, this));
+    this.eventPipe.on('addCommentAttempted', _.bind(this.addCommentAttempted, this));
+    this.$body.on('click', _.bind(this.bodyClick, this));
+
  // this.initialize(this.existingComments);
 }
 
@@ -419,7 +419,6 @@ SideComments.prototype.initialize = function( existingComments ,refresh) {
   this.existingComments = _.cloneDeep(existingComments) || [];
   this.$el.off();
   if(refresh){
-    alert('refresh')
     _.each(this.$el.find('.commentable-section'), function( section ){
       var $section = $(section);
       var sectionId = $section.data('section-id').toString();
@@ -486,7 +485,8 @@ SideComments.prototype.sectionDeselected = function( section ) {
  * @param  {Object} comment  The comment object to be posted.
  */
 SideComments.prototype.commentPosted = function( comment ) {
-  this.emit('commentPosted', comment);
+    this.emit('commentPosted', comment);
+
 };
 
 /**
@@ -611,7 +611,7 @@ function Section( eventPipe, $el, currentUser, comments ) {
 	this.comments = comments ? comments.comments : [];
 	this.currentUser = currentUser || null;
 	this.clickEventName = mobileCheck() ? 'touchstart' : 'click';
-
+    this.$el.off();
 	this.id = $el.data('section-id');
 	this.$el.on(this.clickEventName, '.side-comment .marker', _.bind(this.markerClick, this));
 	this.$el.on(this.clickEventName, '.side-comment .add-comment', _.bind(this.addCommentClick, this));
@@ -626,7 +626,6 @@ function Section( eventPipe, $el, currentUser, comments ) {
  * @param  {Object} event The event object.
  */
 Section.prototype.markerClick = function( event ) {
-  alert('marker click');
 	this.select();
 };
 

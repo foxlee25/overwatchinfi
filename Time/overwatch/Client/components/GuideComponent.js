@@ -72,6 +72,16 @@ var Guide = React.createClass({
         }
         var SideComments = CommentsLib.addFile('side-comments');
         this.state.comments = new SideComments('#commentable-container', currentUser);
+        this.state.comments.on('commentPosted', function( comment ) {
+                var date = new Date();
+                var dateIso = date.toISOString();
+                comment.commentId = dateIso;
+                this.state.comments.insertComment(comment);
+                var url = '/guide/postComment';
+                AjaxService.post(url,{data:comment},function(response){
+
+                }.bind(this));
+        }.bind(this));
         this.getGuides('first',true);
         var url = '/guide/getTotalGuideNum';
         AjaxService.post(url,{},function(response){
@@ -100,15 +110,7 @@ var Guide = React.createClass({
             }
         };
         this.state.comments.initialize(existingComments,refresh);
-        this.state.comments.on('commentPosted', function( comment ) {
-            var date = new Date();
-            var dateIso = date.toISOString();
-            comment.commentId = dateIso;
-            this.state.comments.insertComment(comment);
-            var url = '/guide/postComment';
-            AjaxService.post(url,{data:comment},function(response){
-            }.bind(this));
-        });
+
     },
     render: function(){
         return (
@@ -132,7 +134,7 @@ var Guide = React.createClass({
                         return( <div id={guide.createTime} data-section-id={guide.createTime} className="commentable-section"><GuideCard key={guide.createTime} guide={guide} /><div className="commentable-section-last"></div></div>);
                     }.bind(this))}
                 </div>
-                {this.state.totalNum}>0?
+
                 <nav className="pagin col-sm-offset-5 col-sm-6">
                     <ul className="pagination">
                         <li><a onClick={this.getGuides.bind(this,'first',false)}>First</a></li>
@@ -141,7 +143,7 @@ var Guide = React.createClass({
                         <li><a onClick={this.getGuides.bind(this,'next',false)}>Next</a></li>
                         <li><a onClick={this.getGuides.bind(this,'last',false)}>Last</a></li>
                     </ul>
-                </nav>:null}
+                </nav>
 
               </div>
 
