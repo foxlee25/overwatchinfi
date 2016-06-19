@@ -115,14 +115,15 @@ var Guide = React.createClass({
             <div className="container-fluid">
         {this.state.userId?
         <div className="goToBuildGuide">
-            <Link to={'/buildGuide'}><button className="btn btn-lg btn-primary guide-header-button">{properties.buildGuide}</button></Link>
+            <span className="buildLink buildLink-compact guide-header-button"><a><Link to={'/buildGuide'}>{properties.buildGuide}</Link></a></span>
         </div>
         :<div>
-        <Link to={'/login'}> <button className="btn btn-lg btn-primary guide-header-button">{properties.loginToBuildGuid}</button></Link>
+        <span className="buildLink buildLink-compact guide-header-button"><a><Link to={'/login'}>{properties.loginToBuildGuid}</Link></a></span>
+
         </div>}
               <div id="guideComponent" className="row">
                 <div className="btn-group  guideSortButtonGroup">
-                <a onClick={this.updateSort.bind(this, newest)} className="btn btn-info">Newest</a>
+                <a onClick={this.updateSort.bind(this,newest)} className="btn btn-info">Newest</a>
                 <a onClick={this.updateSort.bind(this,mostagree)} className="btn btn-info">Most Agree</a>
                 <a onClick={this.updateSort.bind(this,oldest)} className="btn btn-info">Oldest</a>
                 </div>

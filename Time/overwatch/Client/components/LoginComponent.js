@@ -47,7 +47,7 @@ var Login = React.createClass({
                 <input name="login-password" type="password" className="form-control account-input"  placeholder="Password" required />
                 <input type="submit" name="loginSubmit" className="login login-submit"  />
                 </form>
-                <div class="login-help">
+                <div className="login-help">
                  <Link to={'/signup'}>Sign Up</Link>
                 </div>
              </div>

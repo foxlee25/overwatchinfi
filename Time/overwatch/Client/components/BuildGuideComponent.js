@@ -183,7 +183,7 @@ var BuildGuide = React.createClass({
                                                 </button>}
                                                 <button onClick={() => {
                                                     window.location.assign("#/guide");
-                                                }} className="btn btn-block btn-danger btn-right">
+                                                }} id="mapCancel" className="btn btn-block btn-danger btn-right">
                                                     {properties.cancel}
                                                 </button>
                                             </span>
@@ -237,7 +237,7 @@ var BuildGuide = React.createClass({
                                             $('#step2').removeClass('selected');
                                             $('#step1').addClass('selected');
                                             this.forceUpdate();
-                                            }} className="btn btn-block btn-danger btn-right">
+                                            }} id="heroCancel" className="btn btn-block btn-danger btn-right">
                                                 {properties.previous}
                                             </button>
                                         </div>
@@ -252,7 +252,7 @@ var BuildGuide = React.createClass({
                                             <label for="comboDescription">Comment:</label>
                                             <textarea ref="description" className="form-control" rows="5" id="comboDescription" maxlength="1000"></textarea>
                                             <span id="guideTitleHint" className="label label-info">{properties.guideInputHint}</span>
-                                            <button onClick={this.submitCombo.bind(this)} id="titleNext" className="btn btn-block btn-info">
+                                            <button onClick={this.submitCombo.bind(this)} id="finishNext" className="btn btn-block btn-info">
                                                 {properties.finish}
                                             </button>
                                             <button onClick={() => {
@@ -261,7 +261,7 @@ var BuildGuide = React.createClass({
                                             $('#step2').addClass('selected');
                                             this.forceUpdate();
                                             setTimeOut(function(){$('#mapNext').prop('disabled', false);}, 200);
-                                            }} className="btn btn-block btn-danger">
+                                            }} id="finishCancel" className="btn btn-block btn-danger">
                                                 {properties.previous}
                                             </button>
                                         </div>

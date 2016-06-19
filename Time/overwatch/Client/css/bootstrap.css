@@ -3176,9 +3176,9 @@ fieldset[disabled] .btn-success.active {
   background-color: #fff;
 }
 .btn-info {
-  color: #fff;
-  background-color: #5bc0de;
-  border-color: #46b8da;
+  color: #333;
+  background-color: #ebebeb;
+  border-color: #d3d3d3;
 }
 .btn-info:hover,
 .btn-info:focus,
@@ -3187,8 +3187,8 @@ fieldset[disabled] .btn-success.active {
 .btn-info.active,
 .open > .dropdown-toggle.btn-info {
   color: #fff;
-  background-color: #31b0d5;
-  border-color: #269abc;
+  background-color: #eb9b27;
+  border-color: #eb9b27;
 }
 .btn-info:active,
 .btn-info.active,
@@ -4510,7 +4510,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-  color: darkgray;
+  color: #eb9b27;
   background-color: transparent;
 }
 
@@ -4519,7 +4519,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 .navbar-inverse .navbar-nav > li > a > a:hover,
 .navbar-inverse .navbar-nav > li > a > a:focus {
-  color: darkgray;
+  color: #eb9b27;
   background-color: transparent;
 }
 .navbar-inverse .navbar-nav > .active > a,
@@ -4635,10 +4635,10 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 6px 12px;
   margin-left: -1px;
   line-height: 1.42857143;
-  color: #337ab7;
+  color: #fff;
   text-decoration: none;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: #eb9b27;
+  border: 1px solid #eb9b27;
 }
 .pagination > li:first-child > a,
 .pagination > li:first-child > span {

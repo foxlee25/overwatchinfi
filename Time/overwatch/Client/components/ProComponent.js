@@ -125,7 +125,7 @@ var Pro = React.createClass({
 									<input ref="search" type="text" className="form-control"
 										   placeholder={properties.battleTag}/>
 								  <span className="input-group-btn">
-									<button className="btn btn-default" type="button" onClick={this.searchBox.bind(this)}>Search</button>
+									<button id="proSearchBTN" className="btn btn-default" type="button" onClick={this.searchBox.bind(this)}>Search</button>
 								  </span>
 								</div>
 							</div>
@@ -178,15 +178,15 @@ var Pro = React.createClass({
 								<div className="row">
 									<div className="col-md-6">
 										<div className="achievement-span">
-											<span style={{color: "#ffffff"}}>Achievements</span>
+											<span style={{color: "#333"}}>Achievements</span>
 										</div>
 										{underscore.map(this.state.gameData.achievements.achievements, (item) => {
 											return (<AchievementCard achievement={item}/>);
 										})}
 									</div>
 									<div className="col-md-6">
-										<div className="played-heros-span">
-											<span style={{color: "#ffffff"}}>Played heros</span>
+										<div className="played-hero-span">
+											<span style={{color: "#333"}}>Played heros</span>
 										</div>
 										{underscore.map(this.state.gameData.heros, (hero) => {
 											if (hero.percentage > 0) {
@@ -199,7 +199,7 @@ var Pro = React.createClass({
 								</div>
 								<div className="row">
 									<div className="played-heros-span">
-										<span style={{color: "#ffffff"}}>Stats</span>
+										<span style={{color: "#333"}}>Stats</span>
 									</div>
 									<div className="tbl-header">
 										<table className="pro-table" cellpadding="0" cellspacing="0" border="0">

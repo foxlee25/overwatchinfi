@@ -13,7 +13,7 @@ var AchievementCard = React.createClass({
     render: function () {
         return (
             <div className="achievement-div">
-                {this.props.achievement.finished?<img src={this.props.achievement.image} />:<img style={{background: "rgba(0,255,255, 0.5)"}} src={this.props.achievement.image} />}
+                {this.props.achievement.finished?<img src={this.props.achievement.image} />:<img style={{background: "rgba(0,0,0, 0.2)"}} src={this.props.achievement.image} />}
                 <div className="achievement-tip">
                     <span>
                         <p>Name: {this.props.achievement.name}</p>

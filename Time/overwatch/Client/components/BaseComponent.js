@@ -78,13 +78,12 @@ var Base = React.createClass({
               <li className="navTitle"><a><Link to={'/home'}>{appValues.home}</Link></a></li>
               <li className="navTitle"><a><Link to={'/guide'}>{appValues.guide}</Link></a></li>
               <li className="navTitle"><a><Link to={'/heros'}>{appValues.heros}</Link></a></li>
-              <NavDropdown eventKey={3} title={appValues.video} className="navTitle" >
-                   <MenuItem className="menuItem" eventKey={3}> <Link to={'/videoGfycat'}>{appValues.gfycat}</Link></MenuItem>
-                   <MenuItem divider />
-                   <MenuItem className="menuItem" eventKey={3}> <Link to={'/videoYoutube'}>{appValues.youtube}</Link></MenuItem>
-              </NavDropdown>
               <li className="navTitle"><a><Link to={'/news'}>{appValues.news}</Link></a></li>
-              <li className="navTitle"><a><Link to={'/pro'}>{appValues.pro}</Link></a></li>
+              <NavDropdown eventKey={3} title={appValues.video} className="navTitle" >
+                  <MenuItem className="menuItem" eventKey={3}> <Link to={'/videoGfycat'}>{appValues.gfycat}</Link></MenuItem>
+              <MenuItem divider />
+              <MenuItem className="menuItem" eventKey={3}> <Link to={'/videoYoutube'}>{appValues.youtube}</Link></MenuItem>
+              </NavDropdown>
             </ul>
              {this.state.loginData?<span className="helloUser">Hi, {this.state.loginData.userId}</span>:<span className="violator violator-compact pull-right"><a><Link to={'/login'}>Login</Link></a></span>}
           </div>

@@ -50,11 +50,11 @@
 
 .menuItem a, .menuItem a:hover{
     background-color: rgba(0,0,0,0) !important;
-    color: gray;
+    color: #eb9b27;
     border:none !important;
 }
 .video-clickTime{
-    color: #DEDCDC;
+    color: #333;
     margin-left: 5px;
 }
 /**  video page end */
@@ -138,7 +138,7 @@
     border: 0px;
     color: #fff;
     text-shadow: 0 1px rgba(0,0,0,0.1);
-    background-color: #4d90fe;
+    background-color: #eb9b27;
     /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
 }
 
@@ -146,7 +146,7 @@
     /* border: 1px solid #2f5bb7; */
     border: 0px;
     text-shadow: 0 1px rgba(0,0,0,0.3);
-    background-color: #357ae8;
+    background-color: #e38f15;
     /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
 }
 
@@ -233,7 +233,7 @@
     border: 0px;
     color: #fff;
     text-shadow: 0 1px rgba(0,0,0,0.1);
-    background-color: #4d90fe;
+    background-color: #eb9b27;
     /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
 }
 
@@ -241,7 +241,7 @@
     /* border: 1px solid #2f5bb7; */
     border: 0px;
     text-shadow: 0 1px rgba(0,0,0,0.3);
-    background-color: #357ae8;
+    background-color: #e38f15;
     /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
 }
 
@@ -328,7 +328,7 @@
 }
 
 .guide-header-button{
-    margin-left:32%;
+    margin-left:40%;
 }
 .guideCard {
     padding-top: 15px;
@@ -336,11 +336,13 @@
     padding-right: 0px;
     margin-bottom : 10px;
     border-radius: 10px;
-    color: white;
-    background-color: rgba(34, 34, 34, 0.5);
-    box-shadow: 6px 6px 3px #111111;
-    border-radius: 5px;
-    border: 2px solid black;
+    color: #333;
+    background-color: rgba(128, 128, 128, 0);
+    border: 2px solid #d3d3d3;
+    border-radius: 0;
+}
+.guideCard:hover{
+    background-color: #ffffff;
 }
 
 .guideProgress{
@@ -357,14 +359,14 @@
 .guide-title{
     font-size: 16px;
     display: inline;
-    color: whitesmoke;
+    color: #333;
 }
 
 .guide-user{
     font-size:12px;
     display: inline;
     margin-left:30px;
-    color: #cacaca;
+    color: #333;
 }
 
 .guide-button{
@@ -526,7 +528,7 @@
 }
 .marker .markerComment{
     margin-left:30px;
-    color: whitesmoke !important;
+    color: #333 !important;
 }
 .side-comment .marker span {
     line-height: 20px;
@@ -545,11 +547,11 @@
 }
 .side-comment .marker:hover,
 .side-comment.active .marker {
-    background: #4FAF62;
+    background: #eb9b27;
 }
 .side-comment .marker:hover:after,
 .side-comment.active .marker:after {
-    border-color: #4FAF62 transparent;
+    border-color: #eb9b27 transparent;
 }
 .side-comment .comments-wrapper {
     width: 98%;
@@ -562,7 +564,7 @@
 
 .side-comment ul.comments li,
 .side-comment .comment-form {
-    border: 1px solid #F2F2F0;
+    border: 1px solid #666;
     border-left: 0;
     border-right: 0;
     padding: 15px 0;
@@ -592,7 +594,7 @@
     line-height: 24px;
     margin: 0 0 2px 0;
     text-decoration: none;
-    color: whitesmoke;
+    color: #333;
     display: inline;
     float: left;
     margin-left: 20px;
@@ -602,7 +604,7 @@
     color: #444;
 }
 .side-comment .action-link {
-    color: whitesmoke;
+    color: #333;
     font-size: 15px;
     text-decoration: none;
 }
@@ -615,10 +617,10 @@
 .side-comment .action-link.post:hover,
 .side-comment .action-link.cancel:hover,
 .side-comment .action-link.delete:hover {
-    color: #57AD68;
+    color: #eb9b27;
 }
 .side-comment .add-comment {
-    color: #B3B3B1;
+    color: #333;
     font-size: 14px;
     line-height: 22px;
     font-weight: 300;
@@ -630,11 +632,11 @@
 }
 .side-comment .add-comment:before {
     content: "+";
-    border: 2px solid #DEDEDC;
+    border: 2px solid #333;
     border-radius: 100px;
     width: 24px;
     height: 24px;
-    color: #DEDEDC;
+    color: #333;
     display: block;
     text-align: center;
     font-size: 24px;
@@ -651,11 +653,11 @@
     text-decoration: none;
 }
 .side-comment .add-comment:hover {
-    color: #4FAF62;
+    color: #eb9b27;
 }
 .side-comment .add-comment:hover:before {
-    border-color: #4FAF62;
-    color: #4FAF62;
+    border-color: #eb9b27;
+    color: #eb9b27;
 }
 .side-comment .comment-box {
     outline: none;
@@ -667,14 +669,14 @@
 }
 
 .side-comment .actions a:hover {
-    color: #4FAF62;
+    color: #eb9b27;
 }
 .side-comment .actions a {
     cursor:pointer;
 }
 .side-comment .actions .cancel:before {
     content: '\00B7';
-    color: #B3B3B1;
+    color: #eb9b27;
     padding: 0 5px;
 }
 @media (max-width: 768px) {
@@ -697,7 +699,7 @@
 #commentable-container {
     margin-top: 30px;
     max-width: 93%;
-    color: whitesmoke;
+    color: #333;
 }
 
 .container {
