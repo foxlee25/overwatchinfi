@@ -25,6 +25,12 @@ var AppAction = {
 			actionType: constants.toast,
 			data: message
 		});
+	},
+	setHeroData: function(pro){
+		dispatcher.handleViewAction({
+			actionType: constants.setProData,
+			data: pro
+		});
 	}
 };
 

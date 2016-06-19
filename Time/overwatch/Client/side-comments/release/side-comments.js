@@ -391,7 +391,7 @@ function SideComments( el, currentUser, existingComments ) {
   this.eventPipe = new Emitter;
 
   this.currentUser = _.clone(currentUser) || null;
-  this.existingComments = _.cloneDeep(existingComments) || [];
+ // this.existingComments = _.cloneDeep(existingComments) || [];
   this.sections = [];
   this.activeSection = null;
 
@@ -404,8 +404,9 @@ function SideComments( el, currentUser, existingComments ) {
   this.eventPipe.on('commentDeleted', _.bind(this.commentDeleted, this));
   this.eventPipe.on('addCommentAttempted', _.bind(this.addCommentAttempted, this));
   this.$body.on('click', _.bind(this.bodyClick, this));
-  this.initialize(this.existingComments);
+ // this.initialize(this.existingComments);
 }
+
 
 // Mix in Emitter
 Emitter(SideComments.prototype);
@@ -414,6 +415,7 @@ Emitter(SideComments.prototype);
  * Adds the comments beside each commentable section.
  */
 SideComments.prototype.initialize = function( existingComments ) {
+  this.existingComments = _.cloneDeep(existingComments) || [];
   _.each(this.$el.find('.commentable-section'), function( section ){
     var $section = $(section);
     var sectionId = $section.data('section-id').toString();
@@ -701,8 +703,7 @@ Section.prototype.postComment = function() {
   	comment: commentBody,
   	authorAvatarUrl: this.currentUser.avatarUrl,
   	authorName: this.currentUser.name,
-  	authorId: this.currentUser.id,
-  	authorUrl: this.currentUser.authorUrl || null
+  	authorId: this.currentUser.id
   };
   $commentBox.val(''); // Clear the comment.
   this.eventPipe.emit('commentPosted', comment);
@@ -728,7 +729,7 @@ Section.prototype.insertComment = function( comment ) {
  * Increments the comment count for a given section.
  */
 Section.prototype.updateCommentCount = function() {
-	this.$el.find('.marker span').text(this.comments.length);
+	this.$el.find('.marker span.markerNumber').text(this.comments.length);
 };
 
 /**
@@ -3237,10 +3238,10 @@ module.exports = function() {
 });
 
 addFile.register("side-comments/templates/section.html", function(exports, addFile, module){
-module.exports = '<div class="side-comment <%= sectionClasses %>">\n  <a href="#" class="marker">\n    <span><%= comments.length %></span>\n  <span class="markerComment"> Comment </span>\n </a>\n  \n  <div class="comments-wrapper">\n    <ul class="comments">\n      <% _.each(comments, function( comment ){ %>\n        <%= _.template(commentTemplate, { comment: comment, currentUser: currentUser }) %>\n      <% }) %>\n    </ul>\n    \n    <a href="#" class="add-comment">Leave a comment</a>\n    \n    <% if (currentUser){ %>\n      <div class="comment-form">\n        <div class="author-avatar">\n          <img src="<%= currentUser.avatarUrl %>">\n        </div>\n             <div class="actions form-inline">\n       <p class="author-name">\n          <%= currentUser.name %>\n        </p>\n        <input type="text" class="comment-box form-control input-sm" placeholder="Leave a comment..." required>\n      <a href="#" class="action-link post">Post</a>\n          <a href="#" class="action-link cancel">Cancel</a>\n        </div>\n      </div>\n    <% } %>\n  </div>\n</div>';
+module.exports = '<div class="side-comment <%= sectionClasses %>">\n  <a href="#" class="marker">\n    <span class="markerNumber"><%= comments.length %></span>\n  <span class="markerComment"> Comment </span>\n </a>\n  \n  <div class="comments-wrapper">\n    <ul class="comments">\n      <% _.each(comments, function( comment ){ %>\n        <%= _.template(commentTemplate, { comment: comment, currentUser: currentUser }) %>\n      <% }) %>\n    </ul>\n    \n    <a href="#" class="add-comment">Leave a comment</a>\n    \n    <% if (currentUser){ %>\n      <div class="comment-form">\n        <div class="author-avatar">\n          <img src="<%= currentUser.avatarUrl %>">\n        </div>\n             <div class="actions form-inline">\n       <p class="author-name">\n          <%= currentUser.name %>\n        </p>\n        <input type="text" class="comment-box form-control input-sm" placeholder="Leave a comment..." required>\n      <a href="#" class="action-link post">Post</a>\n          <a href="#" class="action-link cancel">Cancel</a>\n        </div>\n      </div>\n    <% } %>\n  </div>\n</div>';
 });
 addFile.register("side-comments/templates/comment.html", function(exports, addFile, module){
-module.exports = '<li data-comment-id="<%= comment.id %>">\n  <div class="author-avatar">\n    <img src="<%= comment.authorAvatarUrl %>">\n  </div>\n  <% if (comment.authorUrl) { %>\n    <a class="author-name right-of-avatar" href="<%= comment.authorUrl %>">\n      <%= comment.authorName %>\n    </a>\n  <% } else { %>\n    <p class="author-name right-of-avatar">\n      <%= comment.authorName %>\n    </p>\n  <% } %>\n  <p class="comment right-of-avatar">\n    <%= comment.comment %>\n  </p>\n  <% if (currentUser && comment.authorId === currentUser.id){ %>\n  <a href="#" class="action-link delete">Delete</a>\n  <% } %>\n</li>';
+  module.exports = '<li data-comment-id="<%= comment.id %>">\n  <div class="author-avatar">\n    <img src="<%= comment.authorAvatarUrl %>">\n  </div>\n  <p class="author-name right-of-avatar">\n      <%= comment.authorName %>\n    </p>\n  <p class="comment right-of-avatar">\n    <%= comment.comment %>\n  </p>\n  </li>';
 });
 addFile.alias("component-emitter/index.js", "side-comments/deps/emitter/index.js");
 addFile.alias("component-emitter/index.js", "emitter/index.js");

@@ -5,11 +5,42 @@
 var findAllGuides = function (db, data ,restCallback) {
     var guideArr = [];
     if(data.sortType==='newest'){
-        var cursor = db.collection('HeroGuide').find().sort({createTime:-1}).skip(data.guideNum*(data.pageIndex-1)).limit(data.guideNum);
+       // var cursor = db.collection('HeroGuide').find().sort({createTime:-1}).skip(data.guideNum*(data.pageIndex-1)).limit(data.guideNum);
+        var cursor = db.collection('HeroGuide').aggregate([
+            {
+                $lookup:
+                {
+                    from: "GuideComment",
+                    localField: "createTime",
+                    foreignField: "sectionId",
+                    as: "guideComment"
+                }
+            }
+        ]).sort({createTime:-1}).skip(data.guideNum*(data.pageIndex-1)).limit(data.guideNum);
     }else if(data.sortType==='mostagree'){
-        var cursor = db.collection('HeroGuide').find().sort({likeTime: -1}).skip(data.guideNum*(data.pageIndex-1)).limit(data.guideNum);
+        var cursor = db.collection('HeroGuide').aggregate([
+            {
+                $lookup:
+                {
+                    from: "GuideComment",
+                    localField: "createTime",
+                    foreignField: "sectionId",
+                    as: "guideComment"
+                }
+            }
+        ]).sort({likeTime: -1}).skip(data.guideNum*(data.pageIndex-1)).limit(data.guideNum);
     }else if(data.sortType==='oldest'){
-        var cursor = db.collection('HeroGuide').find().skip(data.guideNum*(data.pageIndex-1)).limit(data.guideNum);
+        var cursor = db.collection('HeroGuide').aggregate([
+            {
+                $lookup:
+                {
+                    from: "GuideComment",
+                    localField: "createTime",
+                    foreignField: "sectionId",
+                    as: "guideComment"
+                }
+            }
+        ]).skip(data.guideNum*(data.pageIndex-1)).limit(data.guideNum);
     }
     cursor.each(function (err, doc) {
         if (doc != null) {

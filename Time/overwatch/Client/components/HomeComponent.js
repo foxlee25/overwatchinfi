@@ -65,8 +65,14 @@ var Home = React.createClass({
 	render: function() {
 		return (
 			<div className="home-div">
-				<div>
-					<img className="home-poster" src="./img/wallpapers/Home.jpg" />
+				<div id="home-slider">
+					<figure>
+						<img src="./img/wallpapers/Home.jpg" alt />
+						<img src="./img/wallpapers/Video.jpg" alt />
+						<img src="./img/wallpapers/Hero.jpg" alt />
+						<img src="./img/wallpapers/About.jpg" alt />
+						<img src="./img/wallpapers/Home.jpg" alt />
+					</figure>
 				</div>
 				{this.state.videos.length>0?
 					<div className="row">

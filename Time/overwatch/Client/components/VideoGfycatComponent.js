@@ -25,7 +25,7 @@ var Video = React.createClass({
         }else if(control==='first'){
             currentPageIndex=1;
         }else if(control==='last'){
-            currentPageIndex=57;
+            currentPageIndex=totalNum;
         }
         this.state.currentPageIndex = currentPageIndex;
         AjaxService.post(url,{data :{source :'gfycat',pageIndex: currentPageIndex, videoNum : 6}},function(response){
@@ -49,7 +49,7 @@ var Video = React.createClass({
             <ul className="pagination">
             <li><a onClick={this.getVideos.bind(this,'first')}>First</a></li>
             <li><a onClick={this.getVideos.bind(this,'pre')}>Pre</a></li>
-            <li><a href="#">{this.state.currentPageIndex} of 57</a></li>
+            <li><a href="#">{this.state.currentPageIndex} of {totalNum}</a></li>
             <li><a onClick={this.getVideos.bind(this,'next')}>Next</a></li>
             <li><a onClick={this.getVideos.bind(this,'last')}>Last</a></li>
             </ul>
