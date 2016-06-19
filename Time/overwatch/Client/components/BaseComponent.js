@@ -1,5 +1,6 @@
 var React = require('react');
 var appValues = require('../i18/AppProps');
+var AppAction = require('../flux/Actions');
 var FbBtnView = require('../views/FbBtnView');
 var NavDropdown = require("react-bootstrap/lib/NavDropdown");
 var MenuItem = require("react-bootstrap/lib/MenuItem");
@@ -27,6 +28,12 @@ var Base = React.createClass({
     }
 
   },
+    logout: function(){
+        window.sessionStorage.setItem('userId','');
+        AppStore.setLoginData({})
+        AppAction.toast(appValues.logout);
+        window.location.reload(false);
+    },
   getLoginData: function(){
     this.setState({loginData: AppStore.getLoginData()});
     debugger;
@@ -55,7 +62,7 @@ var Base = React.createClass({
           <ToastContainer ref="container"
                           toastMessageFactory={ToastMessageFactory}
                           className="toast-top-right" />
-          {this.state.loginData?null:                
+          {this.state.loginData?<button onClick={this.logout.bind(this)} className="login-signup-btn logout-btn">{appValues.logout}</button>:
           <div className="login-signup-div">
             <a><Link to={'/login'}><button id="login-btn" className="login-signup-btn">{appValues.login}</button></Link></a>
             <a><Link to={'/signup'}><button id="signup-btn" className="login-signup-btn">{appValues.signup}</button></Link></a>

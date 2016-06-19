@@ -1,6 +1,7 @@
 var React = require('react');
 var AjaxService = require('../service/AjaxService');
 var AppAction = require('../flux/Actions');
+var properties = require('../i18/AppProps');
 var Hashes = require('jshashes');
 var $ = require('jquery');
 var url = '/user/signup';
@@ -22,6 +23,7 @@ var Signup = React.createClass({
                 window.sessionStorage.setItem('userId',signup.userId);
                 delete signup.password;
                 AppAction.loginSuccess(signup);
+                AppAction.toast(properties.signupSuccess);
                 window.location.assign("#/home");
             }else{
                 $('#signupForm-panelAlert').show();

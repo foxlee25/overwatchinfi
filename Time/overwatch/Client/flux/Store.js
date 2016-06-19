@@ -56,6 +56,9 @@ var AppStore = assign(emitter.prototype, {
 	getLoginData: function(){
 		return _getLoginData();
 	},
+    setLoginData: function(data){
+		return _setLoginData(data);
+	},
 	getVideoData: function(){
 		return _getVideoData();
 	},

@@ -60,6 +60,12 @@
 
 /** login and signup begin **/
 
+.logout-btn{
+    float:right;
+    margin-right:50px;
+    margin-top:10px;
+}
+
 .account-form{
     width :50%;
     margin: 0 auto;
