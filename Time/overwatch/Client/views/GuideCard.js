@@ -67,11 +67,11 @@ var GuideCard = React.createClass({
 		return (
 			<div className="guideCard col-md-12" >
 				<div className="col-md-4">
-					<img className="guide-map"  src={"./img/guide/map/"+this.props.guide.map} />
+					<img className="guide-map"  src={"./img/map_origin/"+this.props.guide.map} />
 			
 				</div>
 				<div className="col-md-8">
-					<div className="guide-title"><span>Title : {this.props.guide.title}  ({this.props.guide.role})</span></div>
+					<div className="guide-title"><span>{this.props.guide.title}  ({this.props.guide.role})</span></div>
 		             <div className="guide-user">{this.props.guide.userId} at {dateFormat(this.props.guide.createTime,'mmmm dd hh:MM TT')}</div>
 
 					<div className="guideHeroList">{Underscore.map(this.props.guide.heroList, function(hero){
