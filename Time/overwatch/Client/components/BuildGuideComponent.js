@@ -163,7 +163,7 @@ var BuildGuide = React.createClass({
                                             {Underscore.map(this.state.maps, function(item){
                                                 return (
                                                     <span key={item.mapName} className="mapSelectionSpan" onClick={this.insertMap.bind(this, item)}>
-                                                        <img className="mapSelectionImg" src={"./img/guide/map/"+item.path} />
+                                                        <img className="mapSelectionImg" src={"./img/map_origin/"+item.path} />
                                                         <img className="addMap" src="./img/icon/add.png" />
                                                         <p>{item.mapName}</p>
                                                     </span>
@@ -173,7 +173,7 @@ var BuildGuide = React.createClass({
                                         <div className="col-md-6">
                                             <span className="mapTarget">
                                                 {this.state.selection.map?
-                                                    <img className="mapTargetImg" src={"./img/guide/map/"+this.state.selection.map.path} />:
+                                                    <img className="mapTargetImg" src={"./img/map_origin/"+this.state.selection.map.path} />:
                                                     <div className="emptyMapTarget"><p>{properties.mapSelection}</p></div> }
                                                 {this.state.selection.map?<p>{this.state.selection.map.mapName}</p>:null}
                                                 {this.state.selection.map?<button id="mapNext" className="btn btn-block btn-info btn-left" onClick={this.nextHero.bind(this)}>
