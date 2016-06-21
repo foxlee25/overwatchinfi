@@ -13,6 +13,7 @@ var Player = require('../components/PlayerComponent');
 var HeroDetail = require('../components/HeroDetailComponent');
 var NoMatch = require('../components/NoMatchComponent');
 var BuildGuide = require('../components/BuildGuideComponent');
+var Search = require('../components/SearchComponent');
 var Router = require('react-router');
 var browserHistory = Router.browserHistory;
 var Route = Router.Route;
@@ -21,8 +22,9 @@ var IndexRoute = Router.IndexRoute;
 module.exports = (
 	<Router history={browserHistory}>
 		<Route path='/' component={Base}>
-			<IndexRoute component={Home}></IndexRoute>
+			<IndexRoute component={Search}></IndexRoute>
 			<Route path="home" component={Home} />
+			<Route path="search" component={Search} />
 			<Route path='heros' component={Heros} />
 			<Route path="news" component={News} />
             <Route path="videoYoutube" component={VideoYoutube} />

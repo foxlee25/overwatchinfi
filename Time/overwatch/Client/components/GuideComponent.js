@@ -119,10 +119,10 @@ var Guide = React.createClass({
             <div className="container-fluid">
         {this.state.userId?
         <div className="goToBuildGuide">
-            <span className="buildLink buildLink-compact guide-header-button"><a><Link to={'/buildGuide'}>{properties.buildGuide}</Link></a></span>
+            <span className="buildLink buildLink-compact guide-header-button"><Link to={'/buildGuide'}>{properties.buildGuide}</Link></span>
         </div>
         :<div>
-        <span className="buildLink buildLink-compact guide-header-button"><a><Link to={'/login'}>{properties.loginToBuildGuid}</Link></a></span>
+        <span className="buildLink buildLink-compact guide-header-button"><Link to={'/login'}>{properties.loginToBuildGuid}</Link></span>
 
         </div>}
               <div id="guideComponent" className="row">
@@ -137,7 +137,7 @@ var Guide = React.createClass({
                     }.bind(this))}
                 </div>
 
-                <nav className="pagin col-sm-offset-5 col-sm-6">
+                <nav className="pagin guide-pagin col-lg-12">
                     <ul className="pagination">
                         <li><a onClick={this.getGuides.bind(this,'first',false)}>First</a></li>
                         <li><a onClick={this.getGuides.bind(this,'pre',false)}>Pre</a></li>

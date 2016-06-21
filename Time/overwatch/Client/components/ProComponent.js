@@ -114,7 +114,6 @@ var Pro = React.createClass({
 		);
 	},
 	render: function() {
-		if(this.state.userId) {
 			if (!this.state.battleTag){
 				return (
 					<div className="container">
@@ -240,22 +239,6 @@ var Pro = React.createClass({
 					}
 				}
 			}
-		}else {
-			return (
-				<div className="container">
-					<div className="feature-tip">
-						<h4>Login to get the latest stats.</h4>
-					</div>
-					< div id="feature-slider">
-						<figure>
-							<img src={'./img/pro/feature1.png'} alt />
-							<img src={'./img/pro/feature2.png'} alt />
-							<img src={'./img/pro/feature1.png'} alt />
-						</figure>
-					</div>
-				</div>
-			);
-		}
 	}
 });
 

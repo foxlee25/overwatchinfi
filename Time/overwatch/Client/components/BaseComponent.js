@@ -65,10 +65,10 @@ var Base = React.createClass({
         <div id="navBand" className="navbar navbar-inverse">
           <div>
             <div className="navbar-header">
-              <a className="navbar-brand"><Link to={'/home'}><img src="./img/logo/logo1.png" /></Link></a>
+              <a className="navbar-brand"><Link to={'/search'}><img src="./img/logo/logo1.png" /></Link></a>
             </div>
             <ul className="nav navbar-nav">
-              <li className="navTitle"><a><Link to={'/home'}>{appValues.home}</Link></a></li>
+              <li className="navTitle"><a><Link to={'/search'}>{appValues.home}</Link></a></li>
               <li className="navTitle"><a><Link to={'/guide'}>{appValues.guide}</Link></a></li>
               <li className="navTitle"><a><Link to={'/heros'}>{appValues.heros}</Link></a></li>
               <li className="navTitle"><a><Link to={'/news'}>{appValues.news}</Link></a></li>

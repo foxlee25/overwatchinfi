@@ -8,7 +8,7 @@
     max-width: 500px;
     width:90%;
     margin: 10px auto;
-    min-height:200px;
+    min-height: 175px;
     min-width:300px;
     box-shadow: 0 0 3px 3px #353535;
     border-radius: 10px;
@@ -60,11 +60,17 @@
 /**  video page end */
 
 /** login and signup begin **/
-
 .logout-btn{
     float:right;
     margin-right:50px;
     margin-top:10px;
+    float:right;
+}
+
+.logout-btn{
+    float:right;
+    margin-right:50px;
+    margin-top: -2px;
 }
 
 .account-form{
@@ -274,33 +280,110 @@
     font-weight: 200;
 }
 
+.homeSearch{
+    background-color:#eb9b27;;
+}
+
+
 /** login and signup end **/
+/** search page begin **/
+.pro-search {
+    margin-top: 60px;
+}
+
+.searchRegion{
+    width: 49%;
+    float: left;
+}
+
+.searchPlatform{
+    width : 49%;
+    float: left;
+    margin-left:10px;
+}
+
+.searchDiv{
+    color:whitesmoke;
+    width: 60%;
+    max-width: 600px;
+    margin: 0px auto;
+    margin-top: 30px;
+}
+
+.subsearchDiv{
+    color:whitesmoke;
+    width: 60%;
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.searchRegionSelection{
+    width : 30%;
+}
+
+.searchPlatformSelection{
+    width : 30%;
+}
+
+.search-sample-img{
+    width :75%;
+    margin-bottom:20px;
+}
+
+.row.search-sample {
+    padding-top: 100px;
+    margin-top: 100px;
+    padding-bottom: 100px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.search-sample-title {
+    text-align: center;
+    color: #666666;
+    line-height: 30px;
+    font-size: 28px;
+    font-family: 'Oxygen',serif;
+    position: relative;
+    top: -36px;
+}
+
+.search-hero-icon {
+    text-align: center;
+}
+
+.search-sample-block{
+    text-align: center;
+    font-size: 16px;
+    color:#666666;
+}
+/** search page end **/
 /** guide begin **/
 .guideSortButtonGroup .sortActive {
 
 }
 
+.guide-pagin {
+    text-align: center;
+}
+
 .guide-button-img-dislike{
-    width: 36px;
+    width: 40px;
     height: 36px;
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
     position: relative;
     top: -5px;
-    background-color: #c1534f;;
-    border-radius: 30px;
     margin-left:10px;
 }
 
 .guide-button-img-like{
-    width: 36px;
+    width: 40px;
     height: 36px;
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
     position: relative;
     top: -5px;
-    background-color: #4d9c4d;
-    border-radius: 30px;
 }
 .guide-button-img{
     width: 50px;
@@ -698,12 +781,48 @@
 
 #commentable-container {
     margin-top: 30px;
-    max-width: 93%;
     color: #333;
+    margin-left: 4%;
+    width: 95%;
 }
 
 .container {
     margin: 0 auto;
+    background-color:#f2f2f2;
+    width:100%;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+div#newsComponent {
+    width:96%;
+}
+
+.row{
+    background-color:#f2f2f2;
+    margin-left:0px;
+    margin-right:0px;
 }
 
 /** side-comments end **/
+
+/** footer begin **/
+#footer {
+    letter-spacing: normal;
+    background-color: #f2f2f2;
+    overflow: hidden;
+    padding-top:50px;
+}
+
+.footer-content {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #666666;
+    font-size: 14px;
+}
+
+.btn-social-icon{
+    margin-left:10px;
+}
+
+/** footer end **/

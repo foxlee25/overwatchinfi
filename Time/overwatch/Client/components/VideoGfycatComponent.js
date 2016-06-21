@@ -45,7 +45,7 @@ var Video = React.createClass({
         </div>
         </div>
         {this.state.videos.length>0?
-        <nav className="pagin col-sm-offset-5 col-sm-6">
+        <nav className="pagin guide-pagin col-lg-12">
             <ul className="pagination">
             <li><a onClick={this.getVideos.bind(this,'first')}>First</a></li>
             <li><a onClick={this.getVideos.bind(this,'pre')}>Pre</a></li>
