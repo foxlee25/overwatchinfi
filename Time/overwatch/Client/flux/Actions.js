@@ -31,6 +31,12 @@ var AppAction = {
 			actionType: constants.setProData,
 			data: pro
 		});
+	},
+	setBattleTag: function(data){
+		dispatcher.handleViewAction({
+			actionType: constants.setBattleTag,
+			data: data
+		});		
 	}
 };
 

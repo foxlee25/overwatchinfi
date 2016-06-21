@@ -14,17 +14,18 @@ var $ = require('jquery');
 var Pro = React.createClass({
 	getInitialState: function() {
 		var userId = window.sessionStorage.getItem('userId');
-		var battleTag = JSON.parse(window.localStorage.getItem('battleTag'));
+		var battleTag = {};
+		if(AppStore.getBattleTag().battleTag) {
+			battleTag = AppStore.getBattleTag();
+		}else{
+			battleTag = JSON.parse(window.localStorage.getItem('battleTag'));
+		}
 
 		return {info: null, userId: userId, searchError: false, battleTag: battleTag, gameData: null, loading: false};
 	},
 	componentWillMount: function(){
 		if(this.state.battleTag) {
-			if(AppStore.getProData().profile != null){
-				this.state.gameData = AppStore.getProData();
-			}else {
-				this.search(this.state.battleTag.battleTag, this.state.battleTag.region, this.state.battleTag.platform);
-			}
+			this.search(this.state.battleTag.battleTag, this.state.battleTag.region, this.state.battleTag.platform);
 		}
 	},
 	componentDidMount: function(){
@@ -91,12 +92,14 @@ var Pro = React.createClass({
 					this.state.searchError = true;
 					AppAction.toast(properties.searchError);
 					this.forceUpdate();
+					window.location.assign("#/search");
 					return;
 				}
 
 				if(response.profile.error){
 					AppAction.toast(properties.noMatchFound);
 					this.forceUpdate();
+					window.location.assign("#/search");
 					return;
 				}
 

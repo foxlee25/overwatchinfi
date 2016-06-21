@@ -13,6 +13,7 @@ var AppStore = require('../flux/Store');
 var AppAction = require('../flux/Actions');
 var async = require('async');
 var $ = require('jquery');
+import { Router, Route, Link } from 'react-router'
 
 var Search = React.createClass({
     getInitialState: function() {
@@ -38,84 +39,12 @@ var Search = React.createClass({
         }).resize();
     },
     searchBox: function(){
-        this.search(this.refs.search.value.replace("#","-"), this.refs.region.value, this.refs.platform.value);
-    },
-    search: function(battleTag, region, platform){
-        this.state.loading = true;
-        this.state.searchError = false;
-        this.forceUpdate();
-        var battleTag = battleTag;
-        var region = region;
-        var platform = platform;
-        var achievements = `https://api.lootbox.eu/${platform}/${region}/${battleTag}/achievements`;
-        var allHero = `https://api.lootbox.eu/${platform}/${region}/${battleTag}/allHeroes/`;
-        var heros = `https://api.lootbox.eu/${platform}/${region}/${battleTag}/heroes`;
-        var profile = `https://api.lootbox.eu/${platform}/${region}/${battleTag}/profile`;
-
-        async.parallel({
-                achievements: (callback) => {
-                AjaxService.get(achievements, (response) => {
-                if(response instanceof Error){
-            callback(response, null);
-            return;
-        }
-        callback(null, response.data);
-    });
-    },
-        allHero: (callback) => {
-            AjaxService.get(allHero, (response) => {
-                if(response instanceof Error){
-                callback(response, null);
-                return;
-            }
-            callback(null, response.data);
-        });
-        },
-        heros: (callback) => {
-            AjaxService.get(heros, (response) => {
-                if(response instanceof Error){
-                callback(response, null);
-                return;
-            }
-            callback(null, response.data);
-        });
-        },
-        profile: (callback) => {
-            AjaxService.get(profile, (response) => {
-                if(response instanceof Error){
-                callback(response, null);
-                return;
-            }
-            callback(null, response.data);
-        });
-        }}, (err, response) => {
-            this.state.loading = false;
-
-            if(err){
-                this.state.searchError = true;
-                AppAction.toast(properties.searchError);
-                this.forceUpdate();
-                return;
-            }
-
-            if(response.profile.error){
-                AppAction.toast(properties.noMatchFound);
-                this.forceUpdate();
-                return;
-            }
-
-            let data = {
-                battleTag: battleTag,
-                region: region,
-                platform: platform
-            };
-            this.state.gameData = response;
-            this.state.battleTag = data;
-            AppAction.setHeroData(response);
-            this.forceUpdate();
-            window.localStorage.setItem('battleTag', JSON.stringify(data));
-        }
-        );
+        let battleTag = {
+            battleTag: this.refs.search.value.replace("#","-"),
+            region: this.refs.region.value,
+            platform: this.refs.platform.value
+        };
+        AppAction.setBattleTag(battleTag);
     },
     render: function() {
 
@@ -130,7 +59,7 @@ var Search = React.createClass({
                                     </div>
                                     <div className="input-group input-group-lg searchDiv">
                                      <input ref="search" type="text"  className="form-control" placeholder="Username" placeholder={properties.battleTag}/>
-                                     <span className="input-group-addon homeSearch" ><span className="glyphicon glyphicon-search proSearchBTN" onClick={this.searchBox.bind(this)}></span></span>
+                                     <span className="input-group-addon homeSearch" ><Link to={'/pro'}><span className="glyphicon glyphicon-search proSearchBTN" onClick={this.searchBox.bind(this)}></span></Link></span>
                                     </div>
                                 </div>
                                 <div className="col-lg-12">

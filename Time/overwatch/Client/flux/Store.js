@@ -9,6 +9,7 @@ var TOAST = "TOAST";
 var loginData = {};
 var videoData = {};
 var proData = {};
+var battleTag = {};
 var heroId = '';
 var message = '';
 
@@ -36,6 +37,10 @@ function _setProData(pro){
 	proData = pro;
 }
 
+function _setBattleTag(battle){
+	battleTag = battle;
+}
+
 function _getHeroId(){
 	return heroId;
 }
@@ -50,6 +55,10 @@ function _getToastMessage(){
 
 function _getProData(){
 	return proData;
+}
+
+function _getBattleTag(){
+	return battleTag;
 }
 
 var AppStore = assign(emitter.prototype, {
@@ -70,6 +79,9 @@ var AppStore = assign(emitter.prototype, {
 	},
 	getProData: function(){
 		return _getProData();
+	},
+	getBattleTag: function(){
+		return _getBattleTag();
 	},
 	emitChange: function(type){
 		this.emit(type);
@@ -110,6 +122,9 @@ var AppStore = assign(emitter.prototype, {
 				break;
 			case Constants.setProData:
 				_setProData(action.data);
+				break;
+			case Constants.setBattleTag:
+				_setBattleTag(action.data);
 				break;
 			case Constants.toast:
 				_setToastMessage(action.data);

@@ -4,4 +4,5 @@ module.exports = {
 	setHeroId: 'SET_HERO_ID',
 	toast: 'TOAST',
 	setProData: 'SET_PRO_DATA',
+	setBattleTag: 'SET_BATTLE_TAG'
 };
