@@ -397,9 +397,10 @@ Img {
 
 .detailBg {
 	padding: 30px 50px 30px 50px;
-	width: 100%;
 	opacity: 0.8;
 	background-image: url("../img/background/detailBg.jpg");
+	margin-left: 50px;
+	margin-right: 50px;
 }
 
 .heroText {
@@ -524,7 +525,6 @@ position: relative;
 	border-radius: 10px;
 	height: 30%;
 	width: 100%;
-	max-width: 500px;
 	margin: 10px;
 	margin-top: 100px;
 }
@@ -1676,4 +1676,23 @@ div#home-slider figure {
 #mapSelector{
 	position: relative;
 	right: 15px;
+}
+#guideComponent{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+#herosComponent{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+#newsComponent{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+#videosComponent{
+	margin-left: 50px;
+	margin-right: 50px;
 }
