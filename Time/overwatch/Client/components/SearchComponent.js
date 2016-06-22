@@ -81,15 +81,15 @@ var Search = React.createClass({
                                 </div>
                         </div>
                         <div className="row search-sample">
-                            <div className="col-lg-12 search-sample-title">What is OverwatchInfi</div>
+                            <div className="col-lg-12 search-sample-title">What is OverWatchinfi ?</div>
                             <div className="col-xs-12 col-sm-6 col-md-6 search-sample-block">
                                     <img className="search-sample-img"  src="./img/pro/pro_sample.png" />
-                                     <div className="sample-text">Searching personal statistics in overwatch</div>
+                                     <div className="sample-text">Search personal statistics in OverWatch</div>
                             </div>
 
                             <div className="col-xs-12 col-sm-6 col-md-6 search-sample-block">
                                 <img className="search-sample-img"  src="./img/pro/guide_sample.png" />
-                                <div className="sample-text">Building your own guide by choosing the map and heros</div>
+                                <div className="sample-text">Build your own guide</div>
                             </div>
 
                         </div>

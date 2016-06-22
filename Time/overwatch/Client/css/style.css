@@ -210,8 +210,9 @@ Img {
 }
 
 .navbar-brand img {
-	width: 70px;
-	margin-top: -7px;
+	width: 150px;
+	margin-top: -11px;
+	margin-left: 10px;
 }
  
 .navTitle a {
@@ -956,6 +957,8 @@ position: relative;
 }
 
 #mapNext {
+	position: relative;
+	left: 20px;
 	margin-top: 5px;
 	background-color: #eb9b27 !important;
 	color: #fff !important;
@@ -1186,8 +1189,8 @@ position: relative;
 	font-size: 13px;
 	padding: 0 11px;
 	line-height: 22px;
-	margin-right: 20px;
 	margin-top: 20px;
+	margin-right: 20px;
 }
 
 .violator {
@@ -1203,12 +1206,12 @@ position: relative;
 	display: inline-block;
 }
 
-.violator > a > a{
+.violator > a{
 	color: #eb9b27 !important;
 	text-decoration: none;
 }
 
-.violator > a > a:hover{
+.violator > a:hover{
 	color: #fff !important;
 	text-decoration: none;
 }
@@ -1235,16 +1238,16 @@ position: relative;
 }
 
 .buildLink:hover{
-	background-color: #fff
+	background-color: #fff;
 }
 
-.buildLink > a > a{
+.buildLink > a{
 	color: #eb9b27 !important;
 	text-decoration: none;
 }
 
-.buildLink > a > a:hover{
-	/*color: #fff !important;*/
+.buildLink > a:hover{
+
 	text-decoration: none;
 }
 
@@ -1657,3 +1660,20 @@ div#home-slider figure {
 	color: #fff;
 }
 
+.search-hero-icon img{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.glyphicon.glyphicon-search.proSearchBTN{
+	color: #fff;
+}
+
+.glyphicon.glyphicon-search.proSearchBTN:hover{
+	color: #ddd;
+}
+
+#mapSelector{
+	position: relative;
+	right: 15px;
+}

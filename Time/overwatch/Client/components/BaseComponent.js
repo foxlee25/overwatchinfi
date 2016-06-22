@@ -65,7 +65,7 @@ var Base = React.createClass({
         <div id="navBand" className="navbar navbar-inverse">
           <div>
             <div className="navbar-header">
-              <a className="navbar-brand"><Link to={'/search'}><img src="./img/logo/logo1.png" /></Link></a>
+              <a className="navbar-brand"><Link to={'/search'}><img src="./img/logo/owinfi.png" /></Link></a>
             </div>
             <ul className="nav navbar-nav">
               <li className="navTitle"><a><Link to={'/search'}>{appValues.home}</Link></a></li>
@@ -78,7 +78,7 @@ var Base = React.createClass({
               <MenuItem className="menuItem" eventKey={3}> <Link to={'/videoYoutube'}>{appValues.youtube}</Link></MenuItem>
               </NavDropdown>
             </ul>
-             {this.state.loginData?<div className="logout-btn"><span className="helloUser">Hi, {this.state.loginData.userId} </span> <span onClick={this.logout.bind(this)} className="violator violator-compact ">{appValues.logout}</span></div>:<span className="violator violator-compact pull-right"><a><Link to={'/login'}>Login</Link></a></span>}
+             {this.state.loginData?<div className="logout-btn"><span className="helloUser">Hi, {this.state.loginData.userId} </span> <span onClick={this.logout.bind(this)} className="violator violator-compact "><a href="#">{appValues.logout}</a></span></div>:<span className="violator violator-compact pull-right"><Link to={'/login'}>Login</Link></span>}
           </div>
         </div>
         <div className="pageMarginTop">

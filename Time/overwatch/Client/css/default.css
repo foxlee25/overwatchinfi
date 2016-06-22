@@ -272,10 +272,9 @@
 }
 
 .helloUser{
+    margin-right: 15px;
     font-size: 16px;
     color: #ffffff;
-    float: right;
-    margin-right: 20px;
     margin-top: 25px;
     font-weight: 200;
 }
@@ -288,7 +287,7 @@
 /** login and signup end **/
 /** search page begin **/
 .pro-search {
-    margin-top: 60px;
+    margin-top: 100px;
 }
 
 .searchRegion{
@@ -307,7 +306,7 @@
     width: 60%;
     max-width: 600px;
     margin: 0px auto;
-    margin-top: 30px;
+    margin-top: 100px;
 }
 
 .subsearchDiv{
@@ -332,7 +331,7 @@
 
 .row.search-sample {
     padding-top: 100px;
-    margin-top: 100px;
+    margin-top: 200px;
     padding-bottom: 100px;
     margin-bottom: 20px;
     background-color: white;
@@ -343,7 +342,7 @@
     color: #666666;
     line-height: 30px;
     font-size: 28px;
-    font-family: 'Oxygen',serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     position: relative;
     top: -36px;
 }
@@ -354,7 +353,7 @@
 
 .search-sample-block{
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
     color:#666666;
 }
 /** search page end **/
@@ -400,7 +399,9 @@
     margin-left: 5%;
 }
 .guideHeroList{
-    margin: 0px auto;
+    margin-top: 20px;
+    margin-left: 45px;
+    margin-bottom: 5px;
 }
 .guideHeroImg{
     display:inline;
@@ -436,7 +437,7 @@
 }
 
 .guide-map{
-    width:100%;
+    width:90%;
 }
 
 .guide-title{
@@ -647,9 +648,7 @@
 
 .side-comment ul.comments li,
 .side-comment .comment-form {
-    border: 1px solid #666;
-    border-left: 0;
-    border-right: 0;
+    border: 1px solid #999;
     padding: 15px 0;
     margin-top: -1px;
 }

@@ -159,7 +159,7 @@ var BuildGuide = React.createClass({
                             case 1:
                                 return (
                                     <div id="mapSelectionPage" className="row-fluid">
-                                        <div className="col-md-6">
+                                        <div className="col-md-6" id="mapSelector">
                                             {Underscore.map(this.state.maps, function(item){
                                                 return (
                                                     <span key={item.mapName} className="mapSelectionSpan" onClick={this.insertMap.bind(this, item)}>
