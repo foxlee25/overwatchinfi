@@ -36,7 +36,7 @@ var News = React.createClass({
 	render: function(){
 		return (
 			<div>
-				<div id="newsComponent" className="container">
+				<div id="newsComponent" >
 					<div className="marketing">
 					{_.map(this.state.page, function(item){
 						return(<NewsCard key={item.id} new={item} />);

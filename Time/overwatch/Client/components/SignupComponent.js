@@ -24,7 +24,7 @@ var Signup = React.createClass({
                 delete signup.password;
                 AppAction.loginSuccess(signup);
                 AppAction.toast(properties.signupSuccess);
-                window.location.assign("#/home");
+                window.location.assign("#/search");
             }else{
                 $('#signupForm-panelAlert').show();
             }

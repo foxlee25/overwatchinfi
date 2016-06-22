@@ -794,7 +794,7 @@
 }
 
 div#newsComponent {
-    width:96%;
+
 }
 
 .row{
@@ -822,6 +822,11 @@ div#newsComponent {
 
 .btn-social-icon{
     margin-left:10px;
+}
+
+.guide-side-disable{
+    box-shadow: none;
+    opacity: .65;
 }
 
 /** footer end **/

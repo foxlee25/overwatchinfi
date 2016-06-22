@@ -130,20 +130,25 @@ var BuildGuide = React.createClass({
             }
         });
     },
-    switchSide: function(side) {
-        if (side) {
-            $("#sideOffense").prop("disabled", true);
-            $("#sideDefense").prop("disabled", false);
-            this.state.side = side;
-            $("#sideDefense").click(function(){
-                this.switchSide(false);
-            }.bind(this));
-        } else {
-            $("#sideDefense").prop("disabled", true);
-            $("#sideOffense").prop("disabled", false);
-            this.state.side = side;
+    switchSide: function(side,type) {
+        if (type==='offense') {
+
+            if(!this.state.side){
+                $("#sideOffense").removeClass('guide-side-disable');
+                $("#sideDefense").addClass('guide-side-disable');
+                this.state.side = side;
+                this.forceUpdate();
+            }
+
+        } else if(type==='defense'){
+            if(this.state.side){
+                $("#sideOffense").addClass('guide-side-disable');
+                $("#sideDefense").removeClass('guide-side-disable');;
+                this.state.side = side;
+                this.forceUpdate();
+            }
         }
-        this.forceUpdate();
+
     },
     render: function () {
         if(this.state.maps) {
@@ -206,8 +211,8 @@ var BuildGuide = React.createClass({
                                         <div className="col-md-6">
                                             <div className="choose-side">
                                                 <p>{properties.chooseSide}, current side: {this.state.side?properties.offense:properties.defense}</p>
-                                                <button id="sideOffense" onClick={this.switchSide.bind(this, true)} className="btn btn-block btn-success btn-left">{properties.offense}</button>
-                                                <button id="sideDefense" className="btn btn-block btn-danger btn-right" disabled>{properties.defense}</button>
+                                                <button id="sideOffense" onClick={this.switchSide.bind(this, true, 'offense')} className="btn btn-block btn-success btn-left guide-side-disable" >{properties.offense}</button>
+                                                <button id="sideDefense" onClick={this.switchSide.bind(this, false, 'defense')} className="btn btn-block btn-danger btn-right" >{properties.defense}</button>
                                             </div>
                                             <div className="choose-team">
                                                 <p>{properties.chooseTeam}</p>

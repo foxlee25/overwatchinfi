@@ -24,7 +24,7 @@ var Login = React.createClass({
                 window.sessionStorage.setItem('userId',existingUser.userId);
                 AppAction.loginSuccess(response.data);
                 AppAction.toast(properties.loginSuccess);
-                window.location.assign("#/home");
+                window.location.assign("#/search");
 
             }else{
                 $('#loginForm-panelAlert').show();

@@ -32,7 +32,7 @@ var Base = React.createClass({
         window.sessionStorage.setItem('userId','');
         AppStore.setLoginData({})
         AppAction.toast(appValues.logout);
-        window.location.reload(false);
+        window.location.reload(true);
     },
   getLoginData: function(){
     this.setState({loginData: AppStore.getLoginData()});
@@ -78,7 +78,7 @@ var Base = React.createClass({
               <MenuItem className="menuItem" eventKey={3}> <Link to={'/videoYoutube'}>{appValues.youtube}</Link></MenuItem>
               </NavDropdown>
             </ul>
-             {this.state.loginData?<div className="logout-btn"><span className="helloUser">Hi, {this.state.loginData.userId} </span> <span onClick={this.logout.bind(this)} className="violator violator-compact "><a href="#">{appValues.logout}</a></span></div>:<span className="violator violator-compact pull-right"><Link to={'/login'}>Login</Link></span>}
+             {this.state.loginData?<div className="logout-btn"><span className="helloUser">Hi, {this.state.loginData.userId} </span> <span onClick={this.logout.bind(this)} className="violator violator-compact ">{appValues.logout}</span></div>:<span className="violator violator-compact pull-right"><a><Link to={'/login'}>Login</Link></a></span>}
           </div>
         </div>
         <div className="pageMarginTop">
