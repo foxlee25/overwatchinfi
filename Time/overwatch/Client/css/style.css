@@ -407,6 +407,7 @@ Img {
 	background-image: url("../img/background/detailBg.jpg");
 	margin-left: 50px;
 	margin-right: 50px;
+	margin-bottom: 30px;
 }
 
 .heroText {
@@ -1697,19 +1698,23 @@ div#home-slider figure {
 #guideComponent{
 	margin-left: 10%;
 	margin-right: 10%;
+	margin-bottom: 40px;
 }
 
 #herosComponent{
 	margin-left: 10%;
 	margin-right: 10%;
+	margin-bottom: 40px;
 }
 
 #newsComponent{
 	margin-left: 10%;
 	margin-right: 10%;
+	margin-bottom: 40px;
 }
 
 #videosComponent{
 	margin-left: 10%;
 	margin-right: 10%;
+	margin-bottom: 40px;
 }
