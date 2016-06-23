@@ -17,6 +17,12 @@ Img {
 
 .pageMarginTop{
 	margin-top: 90px;
+
+}
+
+.proPage{
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 #centerImg {
@@ -1096,11 +1102,13 @@ position: relative;
 	border: 2px solid #333;
 	border-radius: 50%;
 	text-align: center;
-	font: 25px Arial, sans-serif;
+	font: 20px Arial, sans-serif;
 	width: 50px;
 	height: 50px;
 	padding: 8px;
 	color: #333;
+	padding-top: 12px;
+	padding-left: 1px;
 }
 
 .profile-card-div::after {
@@ -1337,7 +1345,9 @@ position: relative;
 	width: 85%;
 	margin-left: 25px;
 	background-color: #eb9b27;
+	font-size: 24px;
 }
+
 .tbl-content{
 	width: 85%;
 	margin-left: 25px;
@@ -1345,13 +1355,13 @@ position: relative;
 	height:500px;
 	overflow-x:auto;
 	margin-top: 0px;
-	border: 1px solid rgba(255,255,255,0.3);
+	border: 1px solid rgba(0,0,0,0.5);
 }
 th{
 	padding: 20px 15px;
 	text-align: left;
 	font-weight: 500;
-	font-size: 12px;
+	font-size: 18px;
 	color: #333;
 	text-transform: uppercase;
 }
@@ -1360,9 +1370,10 @@ td{
 	text-align: left;
 	vertical-align:middle;
 	font-weight: 300;
-	font-size: 12px;
+	font-size: 16px;
 	color: #333;
-	border-bottom: solid 1px rgba(255,255,255,0.1);
+	border-bottom: 1px solid rgba(0,0,0,0.5);
+	border-right: 1px solid rgba(0,0,0,0.5);
 }
 
 .pro-search h4 {
@@ -1684,21 +1695,21 @@ div#home-slider figure {
 	right: 15px;
 }
 #guideComponent{
-	margin-left: 50px;
-	margin-right: 50px;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 #herosComponent{
-	margin-left: 50px;
-	margin-right: 50px;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 #newsComponent{
-	margin-left: 50px;
-	margin-right: 50px;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 #videosComponent{
-	margin-left: 50px;
-	margin-right: 50px;
+	margin-left: 10%;
+	margin-right: 10%;
 }

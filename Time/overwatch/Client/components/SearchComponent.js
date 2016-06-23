@@ -66,22 +66,22 @@ var Search = React.createClass({
                                     <div className="subsearchDiv">
                                         <div className="searchRegion">
                                             <select ref="region" className="form-control">
-                                            <option default value="us">us</option>
-                                            <option value="eu">eu</option>
+                                            <option default value="us">US</option>
+                                            <option value="eu">EU</option>
                                             </select>
                                         </div>
                                         <div className="searchPlatform">
                                              <select ref="platform" className="form-control">
-                                            <option default value="pc">pc</option>
-                                            <option value="xbl">xbox</option>
-                                            <option value="psn">play station</option>
+                                            <option default value="pc">PC</option>
+                                            <option value="xbl">Xbox</option>
+                                            <option value="psn">Play Station</option>
                                              </select>
                                         </div>
                                     </div>
                                 </div>
                         </div>
                         <div className="row search-sample">
-                            <div className="col-lg-12 search-sample-title">What is OverWatchinfi ?</div>
+                            <div className="col-lg-12 search-sample-title">What is OverWatchinfi?</div>
                             <div className="col-xs-12 col-sm-6 col-md-6 search-sample-block">
                                     <img className="search-sample-img"  src="./img/pro/pro_sample.png" />
                                      <div className="sample-text">Search personal statistics in OverWatch</div>

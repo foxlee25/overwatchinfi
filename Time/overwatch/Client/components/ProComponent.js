@@ -120,6 +120,7 @@ var Pro = React.createClass({
 			if (!this.state.battleTag){
 				return (
 					<div className="container">
+						<div className="proPage">
 						<div className="row pro-search">
 							<div className="col-lg-6">
 								<h4>Search</h4>
@@ -162,7 +163,9 @@ var Pro = React.createClass({
 								</figure>
 								</div>
 							</div>
+
 						}
+						</div>
 					</div>
 				);
 			}else{
@@ -176,6 +179,7 @@ var Pro = React.createClass({
 					if(this.state.gameData) {
 						return (
 							<div className="container">
+								<div className="proPage">
 								<ProfileCard profile={this.state.gameData.profile}/>
 								<div className="row">
 									<div className="col-md-6">
@@ -229,13 +233,16 @@ var Pro = React.createClass({
 									</div>
 								</div>
 							</div>
+							</div>
 						);
 					}else{
 						return (
 							<div className="container">
+								<div className="proPage">
 								<div className="loading-container">
 									<LoadingView />
 									<p>Loading...</p>
+								</div>
 								</div>
 							</div>
 						);
