@@ -393,7 +393,15 @@ function SideComments( el, currentUser, existingComments ) {
  // this.existingComments = _.cloneDeep(existingComments) || [];
   this.activeSection = null;
   // Event bindings
-    this.eventPipe.off();
+    this.eventPipe.off('showComments');
+  this.eventPipe.off('hideComments');
+  this.eventPipe.off('sectionSelected');
+  this.eventPipe.off('sectionDeselected');
+  this.eventPipe.off('commentPosted');
+  this.eventPipe.off('commentDeleted');
+  this.eventPipe.off('addCommentAttempted');
+
+
     this.eventPipe.on('showComments', _.bind(this.showComments, this));
     this.eventPipe.on('hideComments', _.bind(this.hideComments, this));
     this.eventPipe.on('sectionSelected', _.bind(this.sectionSelected, this));
@@ -418,18 +426,21 @@ SideComments.prototype.initialize = function( existingComments ) {
   this.sections = [];
     _.each(this.$el.find('.commentable-section'), function( section ){
       var sectionId = $(section).attr('id');
-      var i =0;
-      for(i =0 ; i < this.existingComments.length ; i++){
+      if(this.existingComments.length >0){
+        for(var i =0 ; i < this.existingComments.length ; i++){
           var existingComment = this.existingComments[i];
           if(existingComment.sectionId === sectionId){
             var sectionComments = existingComment.comments;
-            this.sections.push(new Section(this.eventPipe, $(section), this.currentUser, sectionComments));
+            this.sections.push(new Section(this.eventPipe, $(section), this.currentUser, sectionComments,sectionId));
             break;
           }else if(i === this.existingComments.length -1){
-            this.sections.push(new Section(this.eventPipe, $(section), this.currentUser, []));
+            this.sections.push(new Section(this.eventPipe, $(section), this.currentUser, [],sectionId));
           }
 
         }
+      }else{
+        this.sections.push(new Section(this.eventPipe, $(section), this.currentUser, [],sectionId));
+      }
 
     }, this);
 
@@ -599,14 +610,14 @@ var mobileCheck = addFile('./helpers/mobile-check.js');
  * @param {Array} comments   The array of comments for this section. Optional.
  */
 
-function Section( eventPipe, $el, currentUser, comments ) {
+function Section( eventPipe, $el, currentUser, comments ,sectionId) {
 	this.eventPipe = eventPipe;
 	this.$el = $el;
+    this.id=sectionId;
 	this.comments = comments ? comments : [];
 	this.currentUser = currentUser || null;
 	this.clickEventName = mobileCheck() ? 'touchstart' : 'click';
     this.$el.off();
-	this.id = $el.data('section-id');
 	this.$el.on(this.clickEventName, '.side-comment .marker', _.bind(this.markerClick, this));
 	this.$el.on(this.clickEventName, '.side-comment .add-comment', _.bind(this.addCommentClick, this));
 	this.$el.on(this.clickEventName, '.side-comment .post', _.bind(this.postCommentClick, this));
@@ -709,9 +720,8 @@ Section.prototype.postComment = function() {
 	var $commentBox = this.$el.find('.comment-box');
   var commentBody = $commentBox.val();
   var comment = {
-  	sectionId: this.id,
+  	sectionId: this.$el.attr('id'),
   	comment: commentBody,
-  	authorAvatarUrl: this.currentUser.avatarUrl,
   	authorName: this.currentUser.name,
   	authorId: this.currentUser.id
   };
@@ -760,7 +770,7 @@ Section.prototype.deleteCommentClick = function( event ) {
  */
 Section.prototype.deleteComment = function( commentId ) {
 	var comment = _.find(this.comments, { id: commentId });
-	comment.sectionId = this.id;
+	comment.sectionId =this.$el.attr('id');
 	this.eventPipe.emit('commentDeleted', comment);
 };
 

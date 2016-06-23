@@ -45,11 +45,6 @@ var BuildGuide = React.createClass({
     insertHero: function(item) {
         let team = this.state.selection.heros;
 
-        for(var i in team){
-            if(team[i].key === item.key){
-                return;
-            }
-        }
         if(team.length < 6){
             team.push(item);
         }else{

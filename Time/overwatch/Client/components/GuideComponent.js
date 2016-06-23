@@ -15,7 +15,6 @@ var newest = 'newest';
 var mostagree = 'mostagree';
 var oldest = 'oldest';
 
-
 var Guide = React.createClass({
     getInitialState: function(){
         return {
@@ -81,7 +80,6 @@ var Guide = React.createClass({
                 this.state.comments.insertComment(comment);
                 var url = '/guide/postComment';
                 AjaxService.post(url,{data:comment},function(response){
-
                 }.bind(this));
         }.bind(this));
         this.getGuides('first');
@@ -91,7 +89,7 @@ var Guide = React.createClass({
             this.forceUpdate();
         }.bind(this));
     },
-    loadComments: function(refresh){
+    loadComments: function(){
         var existingComments = [];
         for(var i=0 ; i<this.state.guides.length ; i++){
             var guide = this.state.guides[i];
@@ -111,7 +109,7 @@ var Guide = React.createClass({
                 existingComments.push(guideCommentModel);
             }
         };
-        this.state.comments.initialize(existingComments,refresh);
+        this.state.comments.initialize(existingComments);
 
     },
     render: function(){
