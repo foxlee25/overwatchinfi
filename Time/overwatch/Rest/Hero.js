@@ -12,8 +12,6 @@ router.get('/allheros', apicache('1 hour'), function(req, res) {
 	res.header('Charset', 'utf8');
 	
 	daoController.getDao('HeroDao', 'hero_findAll', {},function (heroArr) {
-		console.log('User rest getAllUsers' + heroArr);
-		console.log(heroArr[0]);
 		res.send(heroArr);
 	});
 });

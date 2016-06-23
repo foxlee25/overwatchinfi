@@ -1,7 +1,7 @@
 module.exports = {
 	appName: 'OverwatchInfi',
 	home: 'Home',
-	heros: 'Heros',
+	heros: 'Heroes',
 	news: 'News',
 	twits: 'Twitter',
     video: 'Video',

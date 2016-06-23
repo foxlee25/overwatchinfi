@@ -391,7 +391,6 @@ function SideComments( el, currentUser, existingComments ) {
   this.eventPipe = new Emitter;
   this.currentUser = _.clone(currentUser) || null;
  // this.existingComments = _.cloneDeep(existingComments) || [];
-  this.sections = [];
   this.activeSection = null;
   // Event bindings
     this.eventPipe.off();
@@ -414,30 +413,25 @@ Emitter(SideComments.prototype);
 /**
  * Adds the comments beside each commentable section.
  */
-var allExistingSestionId = [];
-SideComments.prototype.initialize = function( existingComments ,refresh) {
+SideComments.prototype.initialize = function( existingComments ) {
   this.existingComments = _.cloneDeep(existingComments) || [];
-  this.$el.off();
-  if(refresh){
+  this.sections = [];
     _.each(this.$el.find('.commentable-section'), function( section ){
-      var $section = $(section);
-      var sectionId = $section.data('section-id').toString();
-        allExistingSestionId.push(sectionId);
-        var sectionComments = _.find(this.existingComments, { sectionId: sectionId });
-        this.sections.push(new Section(this.eventPipe, $section, this.currentUser, sectionComments));
+      var sectionId = $(section).attr('id');
+      var i =0;
+      for(i =0 ; i < this.existingComments.length ; i++){
+          var existingComment = this.existingComments[i];
+          if(existingComment.sectionId === sectionId){
+            var sectionComments = existingComment.comments;
+            this.sections.push(new Section(this.eventPipe, $(section), this.currentUser, sectionComments));
+            break;
+          }else if(i === this.existingComments.length -1){
+            this.sections.push(new Section(this.eventPipe, $(section), this.currentUser, []));
+          }
+
+        }
+
     }, this);
-  }
-  else{
-    _.each(this.$el.find('.commentable-section'), function( section ){
-      var $section = $(section);
-      var sectionId = $section.data('section-id').toString();
-      if(allExistingSestionId.indexOf(sectionId)==-1){
-        allExistingSestionId.push(sectionId);
-        var sectionComments = _.find(this.existingComments, { sectionId: sectionId });
-        this.sections.push(new Section(this.eventPipe, $section, this.currentUser, sectionComments));
-      }
-    }, this);
-  }
 
 };
 
@@ -608,7 +602,7 @@ var mobileCheck = addFile('./helpers/mobile-check.js');
 function Section( eventPipe, $el, currentUser, comments ) {
 	this.eventPipe = eventPipe;
 	this.$el = $el;
-	this.comments = comments ? comments.comments : [];
+	this.comments = comments ? comments : [];
 	this.currentUser = currentUser || null;
 	this.clickEventName = mobileCheck() ? 'touchstart' : 'click';
     this.$el.off();

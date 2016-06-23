@@ -24,7 +24,7 @@ var Guide = React.createClass({
             currentSortType: 'newest'
         };
     },
-    getGuides: function(control,refresh){
+    getGuides: function(control){
         var url = '/guide/allGuides';
         var currentPageIndex = this.state.currentPageIndex;
         if(control==='pre'){
@@ -42,14 +42,14 @@ var Guide = React.createClass({
         AjaxService.post(url,{data :{sortType :this.state.currentSortType,pageIndex: currentPageIndex, guideNum : 10}},function(response){
             this.state.guides = response.data;
             this.forceUpdate();
-            this.loadComments(refresh);
+            this.loadComments();
             window.scrollTo(0, 0);
         }.bind(this));
     },
     updateSort : function(sort){
         this.state.currentPageIndex = 1;
         this.state.currentSortType = sort;
-        this.getGuides('first',false);
+        this.getGuides('first');
 
     },
     componentWillMount: function(){
@@ -84,7 +84,7 @@ var Guide = React.createClass({
 
                 }.bind(this));
         }.bind(this));
-        this.getGuides('first',true);
+        this.getGuides('first');
         var url = '/guide/getTotalGuideNum';
         AjaxService.post(url,{},function(response){
             this.state.totalNum = Math.ceil((response.data.guideNum / 10));
@@ -139,11 +139,11 @@ var Guide = React.createClass({
 
                 <nav className="pagin guide-pagin col-lg-12">
                     <ul className="pagination">
-                        <li><a onClick={this.getGuides.bind(this,'first',false)}>First</a></li>
-                        <li><a onClick={this.getGuides.bind(this,'pre',false)}>Pre</a></li>
+                        <li><a onClick={this.getGuides.bind(this,'first')}>First</a></li>
+                        <li><a onClick={this.getGuides.bind(this,'pre')}>Pre</a></li>
                         <li><a href="#">{this.state.currentPageIndex} of {this.state.totalNum}</a></li>
-                        <li><a onClick={this.getGuides.bind(this,'next',false)}>Next</a></li>
-                        <li><a onClick={this.getGuides.bind(this,'last',false)}>Last</a></li>
+                        <li><a onClick={this.getGuides.bind(this,'next')}>Next</a></li>
+                        <li><a onClick={this.getGuides.bind(this,'last')}>Last</a></li>
                     </ul>
                 </nav>
 
