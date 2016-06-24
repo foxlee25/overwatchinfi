@@ -1,6 +1,9 @@
 var React = require('react');
 
 var NoMatch = React.createClass({
+	getInitialState: function(){
+		return {};
+	},
 	render: function(){
 		return (
 			<div className="container">
@@ -9,3 +12,5 @@ var NoMatch = React.createClass({
 		);
 	}
 });
+
+module.exports = NoMatch;

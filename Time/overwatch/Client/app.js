@@ -1,6 +1,6 @@
 var React = require('react');
 var Render = require('react-dom');
-var Router = require('react-router').Router;
+import {Router, hashHistory} from 'react-router'
 var Routes = require('./config/routes');
 
-Render.render(<Router>{Routes}</Router>, document.getElementById('app'));
+Render.render(<Router history={hashHistory} >{Routes}</Router>, document.getElementById('app'));

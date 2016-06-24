@@ -14,13 +14,10 @@ var HeroDetail = require('../components/HeroDetailComponent');
 var NoMatch = require('../components/NoMatchComponent');
 var BuildGuide = require('../components/BuildGuideComponent');
 var Search = require('../components/SearchComponent');
-var Router = require('react-router');
-var browserHistory = Router.browserHistory;
-var Route = Router.Route;
-var IndexRoute = Router.IndexRoute;
+import {Router, Route, IndexRoute} from 'react-router'
 
 module.exports = (
-	<Router history={browserHistory}>
+	<Router>
 		<Route path='/' component={Base}>
 			<IndexRoute component={Search}></IndexRoute>
 			<Route path="home" component={Home} />
