@@ -51,9 +51,9 @@ var HeroCard = React.createClass({
 		return (
 			<div className="heroCardContainer">
 				<div className="heroCard">
-					<a><Link to={'/herodetail'}>
+					<Link to={'/herodetail'}>
 		  			<img onClick={this.setId.bind(this, this.props.hero.heroname)} className="heroCardImg img-responsive" src={"./img/hero/"+this.props.hero.imgPath} />
-					</Link></a>
+					</Link>
 			        <p className="card-text cardTitle">{this.props.hero.heroname}</p>
 			    </div>
 

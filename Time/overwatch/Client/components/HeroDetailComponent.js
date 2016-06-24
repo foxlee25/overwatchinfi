@@ -14,9 +14,6 @@ var HeroDetail = React.createClass({
 	componentDidMount: function(){
 		
 	},
-	componentWillUnmount: function(){
-
-	},
 	componentWillMount: function(){
 		var id = AppStore.getHeroId();
 		AjaxService.get(url+"/"+id, function(response){

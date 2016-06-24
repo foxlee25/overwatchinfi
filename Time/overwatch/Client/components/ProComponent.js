@@ -128,7 +128,7 @@ var Pro = React.createClass({
 									<input ref="search" type="text" className="form-control"
 										   placeholder={properties.battleTag}/>
 								  <span className="input-group-btn">
-									<button id="proSearchBTN" className="btn btn-default" type="button" onClick={this.searchBox.bind(this)}>Search</button>
+									<button id="proSearchBTN" className="btn btn-default" type="button" onClick={this.searchBox}>Search</button>
 								  </span>
 								</div>
 							</div>

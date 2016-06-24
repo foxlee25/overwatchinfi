@@ -65,20 +65,20 @@ var Base = React.createClass({
         <div id="navBand" className="navbar navbar-inverse">
           <div>
             <div className="navbar-header">
-              <a className="navbar-brand"><Link to={'/search'}><img src="./img/logo/owinfi.png" /></Link></a>
+              <Link className="navbar-brand" to={'/search'}><img src="./img/logo/owinfi.png" /></Link>
             </div>
             <ul className="nav navbar-nav">
-              <li className="navTitle"><a><Link to={'/search'}>{appValues.home}</Link></a></li>
-              <li className="navTitle"><a><Link to={'/guide'}>{appValues.guide}</Link></a></li>
-              <li className="navTitle"><a><Link to={'/heros'}>{appValues.heros}</Link></a></li>
-              <li className="navTitle"><a><Link to={'/news'}>{appValues.news}</Link></a></li>
-              <NavDropdown eventKey={3} title={appValues.video} className="navTitle" >
-                  <MenuItem className="menuItem" eventKey={3}> <Link to={'/videoGfycat'}>{appValues.gfycat}</Link></MenuItem>
+              <li className="navTitle"><Link to={'/search'}>{appValues.home}</Link></li>
+              <li className="navTitle"><Link to={'/guide'}>{appValues.guide}</Link></li>
+              <li className="navTitle"><Link to={'/heros'}>{appValues.heros}</Link></li>
+              <li className="navTitle"><Link to={'/news'}>{appValues.news}</Link></li>
+              <NavDropdown id="header-video-dropdown" eventKey={3} title={appValues.video} className="navTitle" >
+                  <MenuItem href="#/videoGfycat" className="menuItem" eventKey={3}>{appValues.gfycat}</MenuItem>
               <MenuItem divider />
-              <MenuItem className="menuItem" eventKey={3}> <Link to={'/videoYoutube'}>{appValues.youtube}</Link></MenuItem>
+              <MenuItem href="#/videoYoutube" className="menuItem" eventKey={3}> {appValues.youtube}</MenuItem>
               </NavDropdown>
             </ul>
-             {this.state.loginData?<div className="logout-btn"><span className="helloUser">Hi, {this.state.loginData.userId} </span> <span onClick={this.logout.bind(this)} className="violator violator-compact ">{appValues.logout}</span></div>:<span className="violator violator-compact pull-right"><a><Link to={'/login'}>Login</Link></a></span>}
+             {this.state.loginData?<div className="logout-btn"><span className="helloUser">Hi, {this.state.loginData.userId} </span> <span onClick={this.logout.bind(this)} className="violator violator-compact ">{appValues.logout}</span></div>:<span className="violator violator-compact pull-right"><Link to={'/login'}>Login</Link></span>}
           </div>
         </div>
         <div className="pageMarginTop">

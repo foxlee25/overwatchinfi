@@ -617,7 +617,7 @@ function Section( eventPipe, $el, currentUser, comments ,sectionId) {
 	this.comments = comments ? comments : [];
 	this.currentUser = currentUser || null;
 	this.clickEventName = mobileCheck() ? 'touchstart' : 'click';
-    this.$el.off();
+    this.$el.off(this.clickEventName);
 	this.$el.on(this.clickEventName, '.side-comment .marker', _.bind(this.markerClick, this));
 	this.$el.on(this.clickEventName, '.side-comment .add-comment', _.bind(this.addCommentClick, this));
 	this.$el.on(this.clickEventName, '.side-comment .post', _.bind(this.postCommentClick, this));

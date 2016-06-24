@@ -74,8 +74,8 @@ var GuideCard = React.createClass({
 					<div className="guide-title"><span>{this.props.guide.title}  ({this.props.guide.role})</span></div>
 		             <div className="guide-user">{this.props.guide.userId} at {dateFormat(this.props.guide.createTime,'mmmm dd hh:MM TT')}</div>
 
-					<div className="guideHeroList">{Underscore.map(this.props.guide.heroList, function(hero){
-							return(<img className="guideHeroImg"  src={"./img/hero/"+hero} />);
+					<div className="guideHeroList">{Underscore.map(this.props.guide.heroList, function(hero,index){
+							return(<img key={index} className="guideHeroImg"  src={"./img/hero/"+hero} />);
 						}.bind(this))}
 					</div>
                    <span className="guide-button"><img className="guide-button-img-like" onClick={this.likeGuide} src={"./img/icon/Down.png"}/></span>
@@ -96,7 +96,5 @@ var GuideCard = React.createClass({
 		);
 	}
 });
-//		<p>{this.props.guide.description}</p>
-//	<span className="guide-button"><a onClick={this.dislikeGuide}  className="btn btn-video glyphicon glyphicon-thumbs-down"></a></span>
-//  <span className="guide-button"><a onClick={this.likeGuide}  className="btn btn-video glyphicon glyphicon-thumbs-up"></a></span>
+
 module.exports = GuideCard;

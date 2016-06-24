@@ -14,7 +14,7 @@ import { Router, Route, Link } from 'react-router'
 var newest = 'newest';
 var mostagree = 'mostagree';
 var oldest = 'oldest';
-
+var commentGuideList = [];
 var Guide = React.createClass({
     getInitialState: function(){
         return {
@@ -76,11 +76,16 @@ var Guide = React.createClass({
         this.state.comments.on('commentPosted', function( comment ) {
                 var date = new Date();
                 var dateIso = date.toISOString();
-                comment.commentId = dateIso;
-                this.state.comments.insertComment(comment);
-                var url = '/guide/postComment';
-                AjaxService.post(url,{data:comment},function(response){
-                }.bind(this));
+                if(commentGuideList.indexOf(dateIso) > -1){
+                   return;
+                }
+            commentGuideList.push(dateIso);
+            comment.commentId = dateIso;
+            this.state.comments.insertComment(comment);
+            var url = '/guide/postComment';
+            AjaxService.post(url,{data:comment},function(response){
+            }.bind(this));
+
         }.bind(this));
         this.getGuides('first');
         var url = '/guide/getTotalGuideNum';
@@ -131,7 +136,7 @@ var Guide = React.createClass({
                 </div>
                 <div id="commentable-container" className="container commentable-container">
                     {Underscore.map(this.state.guides, function(guide,index){
-                        return( <div id={guide.createTime} data-section-id={guide.createTime} className="commentable-section"><GuideCard key={guide.createTime} guide={guide} /><div className="commentable-section-last"></div></div>);
+                        return( <div id={guide.createTime} key={guide.createTime} className="commentable-section"><GuideCard guide={guide} /><div className="commentable-section-last"></div></div>);
                     }.bind(this))}
                 </div>
 

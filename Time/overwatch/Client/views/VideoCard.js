@@ -47,11 +47,9 @@ var VideoCard = React.createClass({
 	render: function(){
 		return (
 			<div className="col-md-4 col-sm-6 col-xs-12">
-				<a >
-				
 						<div  className="videoCard">
                            	<Link to={'/player'}>
-							<picture onClick={this.setVideoData.bind(this)}>
+							<picture onClick={this.setVideoData}>
 								<source srcSet={"http://img.youtube.com/vi/"+this.props.video.videoId+"/mqdefault.jpg"} media="(min-width:991px)" />
 								<source srcSet={"http://img.youtube.com/vi/"+this.props.video.videoId+"/hqdefault.jpg"} media="(min-width:767px)" />
 								<source srcSet={"http://img.youtube.com/vi/"+this.props.video.videoId+"/sddefault.jpg"} />
@@ -63,8 +61,6 @@ var VideoCard = React.createClass({
 					         <span><a onClick={this.dislikeVideo} className="btn btn-video glyphicon glyphicon-thumbs-down"></a></span>
 				        	<span className="video-clickTime" >{this.state.dislikeTime}</span>
 					    </div>
-			    	
-			    </a>
 			</div>
 		);
 	}

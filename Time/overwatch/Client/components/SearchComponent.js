@@ -59,7 +59,7 @@ var Search = React.createClass({
                                     </div>
                                     <div className="input-group input-group-lg searchDiv">
                                      <input ref="search" type="text"  className="form-control" placeholder="Username" placeholder={properties.battleTag}/>
-                                     <span className="input-group-addon homeSearch" ><Link to={'/pro'}><span className="glyphicon glyphicon-search proSearchBTN" onClick={this.searchBox.bind(this)}></span></Link></span>
+                                     <span className="input-group-addon homeSearch" ><Link to={'/pro'}><span className="glyphicon glyphicon-search proSearchBTN" onClick={this.searchBox}></span></Link></span>
                                     </div>
                                 </div>
                                 <div className="col-lg-12">

@@ -86,7 +86,7 @@ var BuildGuide = React.createClass({
     submitCombo: function(){
         this.state.title = this.refs.title.value;
         this.state.description = this.refs.description.value;
-        if(this.state.title.length == 0 || this.state.description.length == 0){
+        if(this.state.title.length == 0 ){
             $("#guideTitleHint").css('visibility', 'visible');
             return;
         }

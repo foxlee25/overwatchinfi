@@ -62,7 +62,7 @@ var Gfycat = React.createClass({
     render: function(){
         return (
             <div className="col-md-4 col-sm-6 col-xs-12">
-                <div id={this.props.video.videoId} className="videoCard" onClick={this.setVideoData.bind(this)}>
+                <div id={this.props.video.videoId} className="videoCard" onClick={this.setVideoData}>
                     <video preload='auto' poster={'https://thumbs.gfycat.com/'+this.props.video.videoId+'-thumb360.jpg'} loop className='videoCardImg' >
                         <source src={'https://thumbs.gfycat.com/'+this.props.video.videoId+'-360.mp4'} type='video/mp4' />
                     </video>
