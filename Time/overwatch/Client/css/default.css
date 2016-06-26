@@ -446,7 +446,7 @@
 }
 
 .guide-title{
-    font-size: 18px;
+    font-size: 20px;
     display: inline;
     color: #333;
 }
@@ -464,6 +464,10 @@
     margin-top: 10px;
     margin-right: 10px;
     margin-bottom: 5px;
+}
+
+.heroSelectionPage>div{
+    margin-bottom: 30px;
 }
 
 /** guide ends **/
@@ -786,8 +790,7 @@
 #commentable-container {
     margin-top: 30px;
     color: #333;
-    margin-left: 4%;
-    width: 95%;
+    width: 100%;
 }
 
 .container {

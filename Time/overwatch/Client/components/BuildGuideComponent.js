@@ -159,7 +159,7 @@ var BuildGuide = React.createClass({
                             case 1:
                                 return (
                                     <div id="mapSelectionPage" className="row-fluid">
-                                        <div className="col-md-6" id="mapSelector">
+                                        <div className="col-md-5" id="mapSelector">
                                             {Underscore.map(this.state.maps, function(item){
                                                 return (
                                                     <span key={item.mapName} className="mapSelectionSpan" onClick={this.insertMap.bind(this, item)}>
@@ -193,7 +193,7 @@ var BuildGuide = React.createClass({
                             case 2:
                                 return (
                                     <div id="heroSelectionPage" className="row-fluid">
-                                        <div className="col-sm-6">
+                                        <div className="col-md-6">
                                             {Underscore.map(this.state.heros, function(item){
                                                 return (
                                                     <span key={item.key} className="heroSelectionSpan" onClick={this.insertHero.bind(this, item)}>
