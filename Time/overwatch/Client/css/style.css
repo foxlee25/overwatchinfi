@@ -39,8 +39,6 @@ Img {
 
 
 .heroCard {
-    padding: 10px;
-    padding-bottom: 10px;
 	margin: 10px;
 	background: rgba(0, 0, 0, 0.2);
     border-top-color: rgba(255, 255, 255, 0.1);
@@ -122,7 +120,7 @@ Img {
 }
 
 #navBand {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 0;
 	left: 0;
@@ -470,8 +468,8 @@ Img {
 	left: 50px;
 	top: 0;
 	float: inherit;
-	width: 35%;
-	margin: 15px;
+	width: 25%;
+	margin: 10px;
 }
 
 .heroSelectionSpan {
@@ -479,8 +477,8 @@ Img {
 	left: 50px;
 	top: 0;
 	float: left;
-	width: 25%;
-	margin: 15px;
+	width: 20%;
+	margin: 10px;
 }
 
 .mapSelectionSpan p{
@@ -491,7 +489,8 @@ Img {
  }
 
 .mapTarget {
-	width: 50%;
+	text-align: center;
+	float: left;
 }
 
 .mapTarget p {
@@ -500,20 +499,18 @@ Img {
 	font-style: italic;
 	font-size: 1.5em;
 	text-align: center;
-}
-
-.mapTarget button {
-position: relative;
-	top: 20px;
+	margin-bottom: 20px;
 }
 
 .emptyMapTarget {
+	margin: 0 auto;
 	border: 5px dashed #ddd;
-	border-radius: 20px;
-	margin: 10px;
+	border-radius: 10px;
+	margin-bottom: 30px;
 	background: rgba(239, 239, 239, 0.8);
 	margin-top: 100px;
-	height:340px;
+	height:300px;
+	width:520px;
 }
 
 .emptyMapTarget p{
@@ -526,9 +523,9 @@ position: relative;
 .mapTargetImg {
 	border: 5px solid #aaa;
 	border-radius: 10px;
-	width: 100%;
-	margin: 10px;
 	margin-top: 100px;
+	height: 300px;
+	width:520px;
 }
 
 .addMap {
@@ -702,8 +699,10 @@ position: relative;
 	left: 0;
 	top: 0;
 	float: left;
-	width: 30%;
-	margin: 5px;
+	margin-top: 16px;
+	width: 25%;
+	margin-left:20px;
+	margin-right: 30px;
 	border: 3px solid darkgray;
 	border-radius: 6px;
 }
@@ -713,8 +712,10 @@ position: relative;
 	left: 0;
 	top: 0;
 	float: left;
-	width: 30%;
-	margin: 5px;
+	margin-top: 16px;
+	width: 25%;
+	margin-left:20px;
+	margin-right: 30px;
 	border: 3px dashed darkgray;
 	border-radius: 6px;
 }
@@ -734,15 +735,21 @@ position: relative;
 	width: 100%;
 }
 
+#comboTitle {
+	margin-bottom: 30px;
+}
+
 #titlePage{
-	width: 60%;
+	background-color: #F7F7F7;
+	border-radius: 3px;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+	width: 50%;
+	max-width: 600px;
 	margin: 0 auto;
-	background-color: whitesmoke;
+	padding-bottom: 70px;
 	padding-left: 20px;
 	padding-right: 20px;
-	padding-bottom: 10px;
-	color: black;
-	border-radius: 10px;
+	text-align: center;
 }
 
 #titlePage label {
@@ -755,6 +762,8 @@ position: relative;
 #heroSelectionPage .btn {
 	margin-top: 30px;
 	margin-bottom: 0px;
+	width: 42%;
+	margin-left:10px;
 }
 
 #titlePage .btn{
@@ -763,7 +772,6 @@ position: relative;
 }
 
 #titlePage .form-group{
-	margin-top: 50px;
 }
 
 #titlePage span {
@@ -786,7 +794,7 @@ position: relative;
 }
 
 .choose-team {
-	margin-top:0px;
+	margin-top: 50px;
 	margin-bottom: 15px;
 }
 
@@ -801,8 +809,7 @@ position: relative;
 }
 
 .goToBuildGuide {
-	width: 90%;
-	margin-left: 3.6%;
+	width: 100%;
 }
 
 .home-video {
@@ -944,23 +951,17 @@ position: relative;
 
 .btn-left {
 	margin-top: 20px;
-	margin-left: 5px;
-	width: 40%;
+	width: 48%;
 	float: left;
 }
 
 .btn-right {
 	margin-top: 20px;
-	width: 40%;
+	width: 48%;
 	float: right;
-	/*margin-right: 20px;*/
-	position: relative;
-	right: 30px;
 }
 
 #mapNext {
-	position: relative;
-	left: 20px;
 	margin-top: 5px;
 	background-color: #eb9b27 !important;
 	color: #fff !important;
@@ -978,6 +979,7 @@ position: relative;
 	border-color: #eb9b27 !important;
 	background-color: #eb9b27 !important;
 	color: #fff !important;
+	display: inline-block;
 }
 #mapCancel:hover{
 	color: #333 !important;
@@ -990,6 +992,8 @@ position: relative;
 	background-color: #eb9b27 !important;
 	color: #fff !important;
 	border-color: #eb9b27 !important;
+	position: relative;
+	left: -40px;
 
 }
 #heroNext:hover{
