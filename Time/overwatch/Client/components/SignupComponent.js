@@ -43,7 +43,7 @@ var Signup = React.createClass({
                      <input name="signup-email"  type="email" className="form-control account-input" placeholder="Email"  required />
                      <input name="signup-userId" type="text" className="form-control account-input"  placeholder="Username"  required />
                      <input name="signup-password"  type="password" className="form-control account-input" placeholder="Password" required />
-                     <input type="submit" name="signupSubmit" className="signup signup-submit"  />
+                     <button type="submit" name="signupSubmit" className="signup signup-submit"  >Submit</button>
                   </form>
                </div>
             </div>

@@ -10,7 +10,7 @@ var Switch = require('rc-switch');
 var BuildGuide = React.createClass({
     getInitialState: function () {
         return {
-            side: false,
+            side: true,
             loop: [0, 1, 2, 3, 4, 5],
             steps: 1,
             heros: null,
@@ -159,7 +159,7 @@ var BuildGuide = React.createClass({
                             case 1:
                                 return (
                                     <div id="mapSelectionPage" className="row-fluid">
-                                        <div className="col-md-5" id="mapSelector">
+                                        <div className="col-md-6" id="mapSelector">
                                             {Underscore.map(this.state.maps, function(item){
                                                 return (
                                                     <span key={item.mapName} className="mapSelectionSpan" onClick={this.insertMap.bind(this, item)}>
@@ -171,22 +171,22 @@ var BuildGuide = React.createClass({
                                             }.bind(this))}
                                         </div>
                                         <div className="col-md-6">
-                                            <span className="mapTarget">
+                                            <div className="mapTarget">
                                                 {this.state.selection.map?
                                                     <img className="mapTargetImg" src={"./img/map_origin/"+this.state.selection.map.path} />:
                                                     <div className="emptyMapTarget"><p>{properties.mapSelection}</p></div> }
                                                 {this.state.selection.map?<p>{this.state.selection.map.mapName}</p>:null}
-                                                {this.state.selection.map?<button id="mapNext" className="btn btn-block btn-info btn-left" onClick={this.nextHero.bind(this)}>
+                                                {this.state.selection.map?<button id="mapNext" className="btn btn-block btn-lg btn-info btn-right" onClick={this.nextHero.bind(this)}>
                                                     {properties.next}
-                                                </button>:<button id="mapNext" className="btn btn-block btn-info btn-left" disabled>
+                                                </button>:<button id="mapNext" className="btn btn-block btn-lg btn-info btn-right" disabled>
                                                     {properties.next}
                                                 </button>}
                                                 <button onClick={() => {
                                                     window.location.assign("#/guide");
-                                                }} id="mapCancel" className="btn btn-block btn-danger btn-right">
+                                                }} id="mapCancel" className="btn btn-block btn-lg btn-danger btn-left">
                                                     {properties.cancel}
                                                 </button>
-                                            </span>
+                                            </div>
                                         </div>
                                     </div>
                                 );
@@ -206,8 +206,8 @@ var BuildGuide = React.createClass({
                                         <div className="col-md-6">
                                             <div className="choose-side">
                                                 <p>{properties.chooseSide}, current side: {this.state.side?properties.offense:properties.defense}</p>
-                                                <button id="sideOffense" onClick={this.switchSide.bind(this, true, 'offense')} className="btn btn-block btn-success btn-left guide-side-disable" >{properties.offense}</button>
-                                                <button id="sideDefense" onClick={this.switchSide.bind(this, false, 'defense')} className="btn btn-block btn-danger btn-right" >{properties.defense}</button>
+                                                <button id="sideOffense" onClick={this.switchSide.bind(this, true, 'offense')} className="btn btn-block btn-lg btn-success btn-left" >{properties.offense}</button>
+                                                <button id="sideDefense" onClick={this.switchSide.bind(this, false, 'defense')} className="btn btn-block btn-lg btn-danger btn-right guide-side-disable" >{properties.defense}</button>
                                             </div>
                                             <div className="choose-team">
                                                 <p>{properties.chooseTeam}</p>
@@ -216,20 +216,20 @@ var BuildGuide = React.createClass({
                                                 {Underscore.map(this.state.loop, function(index){
                                                     let hero = this.state.selection.heros[index];
                                                     if(hero){
-                                                        return (<span className="col-sm-2 heroTargetSpanSolid">
+                                                        return (<span className="col-md-1 heroTargetSpanSolid">
                                                                 <img className="heroTargetImg" src={"./img/hero/"+hero.imgPath} />
                                                                 <img onClick={this.removeHero.bind(this, index, true)} className="deleteMap" src="./img/icon/deleteMap.png" />
                                                             </span>);
                                                     }else{
-                                                        return (<span className="col-sm-2 heroTargetSpanDash">
+                                                        return (<span className="col-md-1 heroTargetSpanDash">
                                                             <img className="emptyHeroTarget" src="./img/icon/question.png" />
                                                         </span>);
                                                     }
                                                 }.bind(this))}
                                             </div>
-                                            {this.state.selection.heros.length==6?<button id="heroNext" className="btn btn-block btn-info btn-left" onClick={this.nextTitle.bind(this)}>
+                                            {this.state.selection.heros.length==6?<button id="heroNext" className="btn btn-block btn-lg btn-info btn-right" onClick={this.nextTitle.bind(this)}>
                                                 {properties.next}
-                                            </button>:<button id="heroNext" className="btn btn-block btn-info btn-left" disabled>
+                                            </button>:<button id="heroNext" className="btn btn-block btn-lg btn-info btn-right" disabled>
                                                 {properties.next}
                                             </button>}
                                             <button onClick={() => {
@@ -237,7 +237,7 @@ var BuildGuide = React.createClass({
                                             $('#step2').removeClass('selected');
                                             $('#step1').addClass('selected');
                                             this.forceUpdate();
-                                            }} id="heroCancel" className="btn btn-block btn-danger btn-right">
+                                            }} id="heroCancel" className="btn btn-block btn-lg btn-danger btn-left">
                                                 {properties.previous}
                                             </button>
                                         </div>
@@ -246,13 +246,13 @@ var BuildGuide = React.createClass({
                             case 3:
                                 return (
                                     <div id="titlePage" className="row-fluid">
+                    <span id="guideTitleHint" className="label label-info">{properties.guideInputHint}</span>
                                         <div className="form-group">
                                             <label for="comboTitle">Title</label>
                                             <input ref="title" type="text" className="form-control" id="comboTitle" maxlength="50" />
-                                            <label for="comboDescription">Comment:</label>
-                                            <textarea ref="description" className="form-control" rows="5" id="comboDescription" maxlength="1000"></textarea>
-                                            <span id="guideTitleHint" className="label label-info">{properties.guideInputHint}</span>
-                                            <button onClick={this.submitCombo.bind(this)} id="finishNext" className="btn btn-block btn-info">
+                                            <textarea ref="description" placeholder="(Optional)Comment..." className="form-control" rows="5" id="comboDescription" maxlength="1000"></textarea>
+
+                                            <button onClick={this.submitCombo.bind(this)} id="finishNext" className="btn btn-block btn-lg btn-info btn-right">
                                                 {properties.finish}
                                             </button>
                                             <button onClick={() => {
@@ -261,7 +261,7 @@ var BuildGuide = React.createClass({
                                             $('#step2').addClass('selected');
                                             this.forceUpdate();
                                             setTimeOut(function(){$('#mapNext').prop('disabled', false);}, 200);
-                                            }} id="finishCancel" className="btn btn-block btn-danger">
+                                            }} id="finishCancel" className="btn btn-block btn-lg btn-danger btn-left">
                                                 {properties.previous}
                                             </button>
                                         </div>

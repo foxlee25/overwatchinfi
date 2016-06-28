@@ -45,7 +45,7 @@ var Login = React.createClass({
                 <div id="loginForm-panelAlert" className="alert alert-danger" role="alert" >Error : Incorrect Username or Password</div>
                 <input name="login-userId" type="text" className="form-control account-input"  placeholder="Email or Username"  required />
                 <input name="login-password" type="password" className="form-control account-input"  placeholder="Password" required />
-                <input type="submit" name="loginSubmit" className="login login-submit"  />
+                <button type="submit" name="loginSubmit" className="login login-submit" >Submit</button>
                 </form>
                 <div className="login-help">
                  <Link to={'/signup'}>Sign Up</Link>
