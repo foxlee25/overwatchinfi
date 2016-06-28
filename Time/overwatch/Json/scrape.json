@@ -1,1 +1,711 @@
-[{"poster":"https://d1u1mce87gyfbn.cloudfront.net/hero/pharah/full-portrait.png","description":["Fareeha Amari's commitment to duty runs in her blood. She comes from a long line of highly decorated soldiers and burns with the desire to serve with honor.","As a child, Fareeha dreamed of following in her mother's footsteps and joining the global peacekeeping force, Overwatch. She enlisted in the Egyptian army, and her dogged persistence and tactical prowess caused her to rise up through the officer ranks. She was a courageous leader and earned the loyalty of all who served under her. With her exemplary record, Fareeha was well placed to join the ranks of Overwatch, but before she had that opportunity, Overwatch was disbanded.","After leaving the army with a commendation for distinguished service, she was offered employment with Helix Security International, a private security firm contracted to defend the artificial intelligence research facility beneath the Giza Plateau. The top-secret facility was touted as vital to the safety of not only the region but countries across the globe. Fareeha gladly accepted the choice assignment and received training in the Raptora Mark VI, an experimental combat suit designed for rapid mobility and devastating firepower.","Under the call sign \"Pharah,\" she works to safeguard the AI installation. Though she mourns Overwatch's passing, she still dreams of fighting the good fight and making a difference on a global scale.",""],"role":"Offense","overview":"Soaring through the air in her combat armor, and armed with a launcher that lays down high-explosive rockets, Pharah is a force to be reckoned with.","bio":{"realname":"Real Name: Fareeha Amari, Age: 32","occupation":"Occupation: Security Chief","base":"Base of Operations: Giza, Egypt","affiliation":"Affiliation: Helix Security International"},"abilities":{"name":["Rocket Launcher","Jump Jet","Concussive Blast","Barrage"],"desc":["Pharah’s primary weapon launches rockets that deal significant damage in a wide blast radius.","Propelled by her suit’s thrusters, Pharah soars high into the air.","Pharah looses a wrist rocket that knocks back any enemies it strikes.","Pharah directs a continuous salvo of mini-rockets to destroy groups of enemies."]},"_id":"pharah"},{"poster":"https://d1u1mce87gyfbn.cloudfront.net/hero/lucio/full-portrait.png","description":["Lúcio is an international celebrity who inspires social change through his music and actions.","Lúcio Correia dos Santos grew up in Rio de Janeiro, in a poor and crowded favela that was hit hard by the financial upheaval following the Omnic Crisis. As Brazil began the long process of recovery, he wanted to find a way to lift the spirits of those around him. He found his answer in music and its power to bring people together and even help them forget their troubles, if only for a short time. He performed on street corners, in block parties, and as he got older, at a string of legendary underground shows.","But Lúcio's close-knit community was thrown into chaos when the multinational Vishkar Corporation secured a contract to redevelop large tracts of the city. Lúcio and his neighbors had been told that the development would improve their lives. However, that promise never became a reality. Vishkar imposed controls on the residents in the name of building a more orderly society: enforcing curfews, cracking down on what the company perceived as lawless behavior, and exploiting the populace as a cheap labor force.","Lúcio wouldn't stand for it. He stole Vishkar sonic technology that had been used to suppress the people, and he converted it into a tool to rally them to action. In a popular uprising, they drove Vishkar out of their neighborhoods. Lúcio's leadership made him a star overnight and a symbol for positive social change. His music skyrocketed in popularity. Whereas he had once performed locally, he was now filling arenas across the world.","With his newfound fame, Lúcio realizes that he has an opportunity to make a difference and change the world for the better."],"role":"Support","overview":"On the battlefield, Lúcio’s cutting-edge Sonic Amplifier buffets enemies with projectiles and knocks foes back with blasts of sound. His songs can both heal his team or boost their movement speed, and he can switch between tracks on the fly.","bio":{"realname":"Real Name:  Lúcio Correia dos Santos,   Age: 26","occupation":"Occupation: DJ, Freedom Fighter","base":"Base of Operations: Rio de Janeiro, Brazil\t","affiliation":"Affiliation:  None"},"abilities":{"name":["Sonic Amplifier","Crossfade","Amp It Up","Sound Barrier"],"desc":["Lúcio can hit his enemies with sonic projectiles or knock them back with a blast of sound.","Lúcio continuously energizes himself—and nearby teammates—with music. He can switch between two songs: one amplifies movement speed, while the other regenerates health. ","Lúcio increases the volume on his speakers, boosting the effects of his songs. ","Protective  waves radiate  out from Lúcio’s Sonic Amplifier, briefly providing him and nearby allies with personal shields."]},"_id":"lucio"},{"poster":"https://d1u1mce87gyfbn.cloudfront.net/hero/roadhog/full-portrait.png","description":["Roadhog is a ruthless killer with a well-earned reputation for cruelty and wanton destruction.","After the Omnic Crisis, government officials gifted the Australian omnium and the surrounding area to the omnics that had nearly destroyed their country, hoping to establish a long-term peace accord. This arrangement permanently displaced Mako Rutledge and a large number of the Outback's residents, a scattered collection of survivalists, solar farmers, and people who just wanted to be left alone.\n","Furious over the loss of their homes, Mako and others turned to violent rebellion. They formed the Australian Liberation Front and struck against the omnium and its robot population to take back the lands that had been stolen. Events continued to escalate until the rebels sabotaged the omnium's fusion core, resulting in an explosion that destroyed the facility, irradiated the region, and littered the Outback with twisted metal and wreckage for kilometers around.\n","Mako watched as his home became an apocalyptic wasteland, and he was forever changed.","Adapting to his environment, he donned a mask and took to the broken highways of the Outback on his ramshackle chopper. Little by little, his humanity was forgotten. The last vestiges of Mako faded away and the ruthless killer Roadhog was born. "],"role":"Tank","overview":"Roadhog uses his signature Chain Hook to pull his enemies close before shredding them with blasts from his Scrap Gun. He’s hardy enough to withstand tremendous damage, and can recover his health with a short breather.","bio":{"realname":"Real Name: Mako Rutledge, Age: 48","occupation":"Occupation: Enforcer (formerly), Bodyguard","base":"Base of Operations: Junkertown, Australia (formerly)","affiliation":"Affiliation: Junkers (formerly)"},"abilities":{"name":["Scrap Gun","Take a Breather","Chain Hook","Whole Hog"],"desc":["Roadhog's Scrap Gun fires short-range blasts of shrapnel with a wide spread. Alternatively, it can launch a shrapnel ball that detonates farther away, scattering metal fragments from the point of impact.","Roadhog restores a chunk of his health over a brief period of time.","Roadhog hurls his chain at a target; if it catches, he yanks them into close range.","After cramming a top-loader onto his Scrap Gun, Roadhog pours in ammo. For a short time, he can crank out a stream of shrapnel that knocks back enemies."]},"_id":"roadhog"},{"poster":"https://d1u1mce87gyfbn.cloudfront.net/hero/reaper/full-portrait.png","description":["Some speak of a black-robed terrorist known only as the Reaper. His identity and motives are a mystery. What is known is that where he appears, death follows.","The Reaper is an extremely volatile mercenary, a ruthless and remorseless killer responsible for terrorist attacks across the world. He has fought in many armed conflicts in the last decades, showing no loyalty to any cause or organization.","Survivors have described a black shadow ghosting unscathed through the most hellish battlefields. The few bodies recovered of those he kills are pale, empty husks drained of life, their cells showing signs of intense degradation. It is possible that he is a byproduct of failed genetic alteration which forces his cells to simultaneously decay and regenerate at a hyper-accelerated rate.","Those attempting to track his movements have begun to see a pattern in his appearances. They believe that Reaper is hunting former Overwatch agents and systematically eliminating them.",""],"role":"Offense","overview":"Hellfire Shotguns, the ghostly ability to become immune to damage, and the power to step between shadows make Reaper one of the deadliest beings on Earth.","bio":{"realname":"Real Name: Unknown, Age: Unknown","occupation":"Occupation: Mercenary","base":"Base of Operations: Unknown","affiliation":"Affiliation: Unknown"},"abilities":{"name":["Hellfire Shotguns","Wraith Form","Shadow Step","Death Blossom"],"desc":["Reaper tears enemies apart with twin shotguns.","Reaper becomes a shadow for a short period of time. While in this form, he takes no damage and is able to pass through enemies, but cannot fire his weapons or use other abilities.","After marking a destination, Reaper disappears and reappears at that location.","In a blur of motion, Reaper empties both Hellfire Shotguns at breakneck speed, dealing massive damage to all nearby enemies."]},"_id":"reaper"},{"poster":"https://d1u1mce87gyfbn.cloudfront.net/hero/junkrat/full-portrait.png","description":["Junkrat is an explosives-obsessed freak who lives to cause chaos and destruction.","The attack on the Australian omnium's fusion core forever altered the landscape of the Outback. After the detonation, the area was transformed into a harsh, irradiated wasteland, littered with debris and the twisted fragments of the ruined facility, and unlivable to most.","But there were some who survived. Calling themselves the Junkers, they scavenged the husk of the omnium and formed a lawless, cutthroat society in its shadow. Junkrat was one of them, eking out a living reclaiming metal and components from the ruins. Like many others, he was affected by the lingering radiation. This touch of madness made him ideal for handling dangerous explosives, a love which he turned into an obsession.","He came to notoriety when he discovered an extremely valuable secret in the bones of the omnium. Though few knew the nature of what he found, he was nonetheless pursued by bounty hunters, gangs, and opportunists wherever he went, until he made a deal with the Junker enforcer Roadhog, who grudgingly agreed to be his personal bodyguard in exchange for a fifty-fifty share of the spoils. ","Now, with Roadhog in tow, Junkrat has left the Outback, and embarked upon an international crime spree leaving nothing but havoc and bedlam in his wake."],"role":"Defense","overview":"Junkrat’s area-denying armaments include a Frag Launcher that lobs bouncing grenades, Concussion Mines that send enemies flying, and Steel Traps that stop foes dead in their tracks. ","bio":{"realname":"Real Name: Jamison Fawkes, Age: 25","occupation":"Occupation: Anarchist, Thief, Demolitionist, Mercenary, Scavenger","base":"Base of Operations: Junkertown, Australia (formerly)","affiliation":"Affiliation: Junkers (formerly)"},"abilities":{"name":["Frag Launcher","Concussion Mine","Steel Trap","Total Mayhem","RIP-Tire"],"desc":["Junkrat's Frag Launcher lobs grenades a significant distance. They bounce to reach their destination, and blow up when they strike an enemy.","After placing one of his homemade Concussion Mines, Junkrat can trigger it to damage enemies and send them flying... or propel himself through the air.","Junkrat tosses out a giant, metal-toothed trap. Should an enemy wander too close to the trap, it clamps on, injuring and immobilizing them.","Junkrat's deranged sense of humor persists past his death. If killed, he drops several live grenades.","Junkrat revs up a motorized tire bomb and sends it rolling across the battlefield, climbing over walls and obstacles. He can remotely detonate the RIP-Tire to deal serious damage to enemies caught in the blast, or just wait for it to explode on its own. "]},"_id":"junkrat"},{"poster":"https://d1u1mce87gyfbn.cloudfront.net/hero/reinhardt/full-portrait.png","description":["Reinhardt Wilhelm styles himself as a champion of a bygone age, who lives by the knightly codes of valor, justice, and courage.","Over thirty years ago, Overwatch was founded to counter the threat of the robot uprisings around the world. Reinhardt, a highly decorated German soldier, was inducted as part of the original Overwatch strike team that put an end to the Omnic Crisis. After the conflict's resolution, Overwatch grew into a global institution, keeping the peace in a war-torn world. Reinhardt proved himself to be one of its most stalwart champions.","Reinhardt's unique ethics and larger-than-life persona earned the admiration of his peers and superiors alike. Never afraid to speak his mind, he was Overwatch's most vocal supporter and, when necessary, its harshest critic, providing a constant reminder that Overwatch was meant to be a force for good.","Having served into his late fifties, Reinhardt was faced with mandatory retirement from combat operations. Despondent about being removed from active duty, Reinhardt feared that his days of purpose and glory had ended. As times grew darker and Overwatch came under suspicion of corruption and sedition, Reinhardt could only watch as the cause he had dedicated his life to defending surrendered in disgrace.","Though Overwatch was eventually disbanded, Reinhardt was not content to sit idly by while the world fell to disorder. Once again donning his Crusader armor, he has vowed to fight for justice across Europe like a knight of old, defending the innocent and winning hearts and minds with the promise of better days to come."],"role":"Tank","overview":"Clad in powered armor and swinging his hammer, Reinhardt leads a rocket-propelled charge across the battleground and defends his squadmates with a massive energy barrier.","bio":{"realname":"Real Name: Reinhardt Wilhelm, Age: 61","occupation":"Occupation: Adventurer","base":"Base of Operations: Stuttgart, Germany","affiliation":"Affiliation: Overwatch (formerly)"},"abilities":{"name":["Rocket Hammer","Barrier Field","Charge","Fire Strike","Earthshatter"],"desc":["Reinhardt’s Rocket Hammer is an exemplary melee weapon, able to deal punishing damage in a wide arc with every swing.","Reinhardt projects a broad, forward-facing energy barrier, which can absorb substantial damage before it is destroyed. Though Reinhardt can protect himself and his companions behind the barrier, he cannot attack while sustaining it.","Reinhardt charges forth in a straight line, pinning the first enemy in his path and knocking others aside. If he collides with a wall, the foe he’s carrying suffers extreme damage.","By whipping his Rocket Hammer forward, Reinhardt slings a flaming projectile which pierces and damages any enemies it touches.","Reinhardt forcefully slams his Rocket Hammer into the ground, knocking down and damaging all enemies in front of him."]},"_id":"reinhardt"},{"poster":"https://d1u1mce87gyfbn.cloudfront.net/hero/torbjorn/full-portrait.png","description":["At its height, Overwatch possessed one of the most advanced armaments on the planet, which could be traced to the workshop of an ingenious engineer named Torbjörn Lindholm.","Before the Omnic Crisis, Torbjörn had gained notoriety for designing weapons systems used by countries around the world. However, his belief that technology must serve a better vision for humanity put him at odds with his employers, who desired to control his weapons using networked computer intelligence.","Torbjörn had a deep mistrust of sentient robotic intelligence, and while many of his peers wrote this off as paranoia, his worst fears were realized when the robot populations of the world turned against their human creators during the Omnic Crisis. Because of his engineering genius, he was recruited to join the original Overwatch strike team, and his many inventions proved integral to ending the crisis. In the years that followed, Overwatch became an international peacekeeping force, and Torbjörn remained a critical resource for all of its technological needs and signature weapons systems.","But in the aftermath of Overwatch's fall, many of Torbjörn's weapons were stolen or stashed away around the world. Feeling responsible for his creations, Torbjörn is determined to stop them from falling into the wrong hands and wreaking havoc on the innocent.",""],"role":"Defense","overview":"Torbjörn’s extensive arsenal includes a rivet gun and hammer, as well as a personal forge that he can use to build upgradeable turrets and dole out protective armor packs.","bio":{"realname":"Real Name: Torbjörn Lindholm, Age: 57","occupation":"Occupation: Weapons Designer","base":"Base of Operations: Gothenburg, Sweden","affiliation":"Affiliation: Overwatch (formerly)"},"abilities":{"name":["Rivet Gun","Forge Hammer","Build Turret","Armor Pack","Molten Core"],"desc":["Torbjörn fires rivets at long range, or ejects molten metal from his gun in a short, close-range burst.","Torbjörn uses his multipurpose hammer to build, upgrade and repair turrets. In a pinch, it can also be swung as a weapon.","Torbjörn constructs an enemy-tracking autocannon. He can use his Forge Hammer to repair or upgrade it, increasing its health and adding a second cannon barrel and a rocket launcher.","Torbjörn deploys an armor upgrade; either he or his allies can pick it up to absorb some  damage.","After overheating his personal forge, Torbjörn gains a significant amount of armor and scrap. He also attacks (and builds and repairs turrets) far faster than normal."]},"_id":"torbjorn"},{"poster":"https://d1u1mce87gyfbn.cloudfront.net/hero/symmetra/full-portrait.png","description":["Symmetra literally bends reality. By manipulating hard-light constructs, she crafts the world as she wishes it to be, in hopes of engineering a perfect society.","Following the Omnic Crisis, the Vishkar Corporation of southern India began the laborious process of creating new, self-sustaining cities to house the nation's displaced population. One such city, Utopaea, was created using radical hard-light technology that enabled its architechs to shape the city's streets, utilities, and living spaces in the blink of an eye.","After she was identified as one of the few capable of becoming a light-bending architech, young Satya Vaswani was plucked from extreme poverty and placed in the care of Vishkar's architech academy, never to return home. Isolated and lonely in her new life, Satya immersed herself in her education and training. She quickly grasped the applications of the technology and was one of the top students in her class. Satya approached hard-light manipulation differently than her peers, with their more procedural, mechanical constructions, instead weaving her constructs in the motions of the traditional dance of her homeland.","Though she was one of Utopaea's top architechs, the Vishkar Corporation saw far greater potential in Satya's abilities. Giving her the moniker \"Symmetra,\" Vishkar sent her on clandestine missions around the world to uphold its corporate interests and expand its influence into other countries.","Symmetra believes her actions serve the greater good in society. But there are times when she wonders whether the control and order she desires are truly best for humanity."],"role":"Support","overview":"Symmetra utilizes her light-bending Photon Projector to dispatch adversaries, shield her associates, construct teleportation pads and deploy particle-blasting Sentry Turrets.","bio":{"realname":"Real Name: Satya Vaswani, Age: 28","occupation":"Occupation: Architech","base":"Base of Operations: Utopaea, India","affiliation":"Affiliation: Vishkar Corporation"},"abilities":{"name":["Photon Projector","Sentry Turret","Photon Shield","Teleporter"],"desc":["Symmetra’s weapon emits a short-range beam that homes in on a nearby enemy, dealing continuous damage that increases the longer it is connected. The projector can also release a charged energy ball that deals high damage.","Symmetra sets up a small turret that automatically fires speed-reducing blasts at the nearest enemy within range. Several turrets can be built on the battlefield at once.","Symmetra surrounds an ally with a hard-light shield that absorbs damage and persists as long as that ally remains alive.","Symmetra places a teleporter exit pad at her current location, and connects it to a teleporter entry pad at her team’s starting point. Allies can travel through the entry pad to the exit pad instantly, enabling them to return to the fight swiftly after being defeated."]},"_id":"symmetra"},{"poster":"https://d1u1mce87gyfbn.cloudfront.net/hero/mccree/full-portrait.png","description":["Armed with his Peacekeeper revolver, the outlaw Jesse McCree doles out justice on his own terms.","McCree had already made a name for himself as a member of the notorious Deadlock Gang, which trafficked in illicit weapons and military hardware throughout the American Southwest, when he and his associates were busted in an Overwatch sting operation. With his expert marksmanship and resourcefulness, he was given the choice between rotting in a maximum-security lockup and joining Blackwatch, Overwatch's covert ops division. He chose the latter.","Although he was initially cynical, he came to believe that he could make amends for his past sins by righting the injustices of the world. McCree appreciated the flexibility afforded to the clandestine Blackwatch, unhindered by bureaucracy and red tape. But as Overwatch's influence waned, rogue elements within Blackwatch sought to bring down the organization and turn it to their own ends. Wanting no part of the infighting, McCree set off alone and went underground.","He resurfaced several years later as a gunslinger for hire. But while McCree's talents are sought after by parties great and small, he fights only for causes he believes are just.",""],"role":"Offense","overview":"Armed with his Peacekeeper revolver, McCree takes out targets with deadeye precision and dives out of danger with eagle-like speed.","bio":{"realname":"Real Name: Jesse McCree, Age: 37","occupation":"Occupation: Bounty Hunter","base":"Base of Operations: Santa Fe, New Mexico, USA","affiliation":"Affiliation: Overwatch (formerly)"},"abilities":{"name":["Peacekeeper","Combat Roll","Flashbang","Deadeye"],"desc":["McCree fires off a round from his trusty six-shooter. He can fan the Peacekeeper’s hammer to swiftly unload the entire cylinder. ","McCree dives in the direction he’s moving, effortlessly reloading his Peacekeeper in the process.","McCree heaves a blinding grenade that explodes shortly after it leaves his hand. The blast staggers enemies in a small radius.","Focus. Mark. Draw. McCree takes a few precious moments to aim; when he’s ready to fire, he shoots every enemy in his line of sight. The weaker his targets are, the faster he’ll line up a killshot."]},"_id":"mccree"},{"poster":"https://d1u1mce87gyfbn.cloudfront.net/hero/widowmaker/full-portrait.png","description":["Widowmaker is the perfect assassin: a patient, ruthlessly efficient killer who shows neither emotion nor remorse.","It is believed that in her former life, Widowmaker was married to Gérard Lacroix, an Overwatch agent spearheading operations against the Talon terrorist organization. After several unsuccessful attempts to eliminate Gérard, Talon decided to change its focus to his wife, Amélie. Talon operatives kidnapped her and subjected her to an intense program of neural reconditioning. They broke her will, suppressed her personality, and reprogrammed her as a sleeper agent. She was eventually found by Overwatch agents, apparently none the worse for wear, and returned to her normal life.","Two weeks later she killed Gérard in his sleep.","Her mission complete, Amélie returned to Talon, and they completed the process of turning her into a living weapon. She was given extensive training in the covert arts, and then her physiology was altered, drastically slowing her heart, which turned her skin cold and blue and numbed her ability to experience human emotion. Amélie was gone.","Now, Widowmaker is Talon's most effective assassin, feeling little save the satisfaction of a job well done."],"role":"Defense","overview":"Widowmaker equips herself with whatever it takes to eliminate her targets, including mines that dispense poisonous gas, a visor that grants her squad infra-sight, and a powerful sniper rifle that can fire in fully-automatic mode.","bio":{"realname":"Real Name: Amélie Lacroix, Age: 33","occupation":"Occupation: Assassin","base":"Base of Operations: Annecy, France","affiliation":"Affiliation: Talon"},"abilities":{"name":["Widow’s Kiss","Grappling Hook","Venom Mine","Infra-sight"],"desc":["Widowmaker’s versatile sniper rifle is ideal for scope-aimed shots at distant targets. Should targets close to medium range, the rifle can also be fired in fully-automatic mode.","Widowmaker launches a grappling hook towards the location she’s aiming at – when the hook connects with a scalable surface, she’s quickly drawn towards it, allowing her to expand her view of the battlefield and evade or flank targets.","Widowmaker adheres a swiftly-arming venom mine to nearly any surface. When a target wanders within range of the mine’s motion trigger, it explodes, delivering  poison gas to any enemies in the vicinity.","Widowmaker’s recon visor allows her to see the heat signatures of her targets through walls and objects for a moderate amount of time. This enhanced vision is shared with her allies."]},"_id":"widowmaker"},{"poster":"https://d1u1mce87gyfbn.cloudfront.net/hero/mercy/full-portrait.png","description":["A guardian angel to those who come under her care, Dr. Angela Ziegler is a peerless healer, a brilliant scientist, and a staunch advocate for peace.","Ziegler rose to become the head of surgery at a prominent Swiss hospital before pioneering a breakthrough in the field of applied nanobiology that radically improved the treatment of life-threatening illnesses and injuries. It was this expertise that attracted the attention of Overwatch.","Because her parents had been taken by war, Ziegler was opposed to the organization's militaristic approach to keeping global peace. Ultimately, she recognized that Overwatch offered her the opportunity to save lives on a much larger scale. As Overwatch's head of medical research, Angela sought to leverage her work for healing in frontline crises. The result was the Valkyrie swift-response suit, which Ziegler herself piloted on many Overwatch missions.","Despite her contributions to Overwatch, she was often at odds with her superiors and the organization's overarching aims. When Overwatch dissolved, Ziegler dedicated herself to helping those affected by war.","Though she spends most of her time caring for the broken and dispossessed in crisis areas around the world, Dr. Ziegler can be counted on to don her Valkyrie suit whenever innocents are imperiled."],"role":"Support","overview":"Mercy’s Valkyrie Suit helps keep her close to teammates like a guardian angel; healing, resurrecting or strengthening them with the beams emanating from her Caduceus Staff.","bio":{"realname":"Real Name: Angela Ziegler, Age: 37","occupation":"Occupation: Field Medic, First Responder","base":"Base of Operations: Zürich, Switzerland","affiliation":"Affiliation: Overwatch (formerly)"},"abilities":{"name":["Caduceus Staff","Caduceus Blaster","Guardian Angel","Angelic Descent","Resurrect"],"desc":["Mercy engages one of two beams that connect to an ally. By maintaining the beams, she can either restore that ally’s health or increase the amount of damage they deal.","Mercy shoots a  round from her sidearm. It's best reserved for emergency personal defense.","Mercy flies towards a targeted ally, allowing her to reach them quickly and provide assistance in crucial moments.","Propelled by her Valkyrie suit, Mercy slows the speed of her descent  from great heights.","Mercy radiates restorative power, bringing nearby dead allies back into the fight with full health."]},"_id":"mercy"},{"poster":"https://d1u1mce87gyfbn.cloudfront.net/hero/mei/full-portrait.png","description":["Mei is a scientist who has taken the fight to preserve the environment into her own hands.","Though many blamed the planet's escalating, unexplained climate phenomena on the advent of new technologies, the rapidly growing omnic population, and drastically increased consumption of resources, the true cause remained unknown. To find a solution, Overwatch established a series of eco-Watchpoints at remote, critical locations worldwide.","Mei-Ling Zhou was a member of this multiyear initiative. A peerless climatologist, she had introduced cutting-edge innovations in the field of climate manipulation that protected at-risk areas in Asia and beyond. She was assigned to the program's monitoring station at Watchpoint: Antarctica when disaster struck: a sudden, catastrophic polar storm battered the installation and cut it off from the outside world, leaving the facility damaged and the scientists stranded. As their supplies dwindled, they entered cryostasis in a last-ditch effort to survive until a rescue attempt could be made.","But that rescue never came. It was years later when the team's cryogenics chamber was finally discovered. Mei, still in hibernation, was the only survivor. The world Mei awoke to had gone through considerable changes: Overwatch was no more, the serious climate issues had worsened, and none of the eco-Watchpoints were in operation. Any clues that they had uncovered were lost.","Mei has decided to continue her work on her own. Equipped with a portable version of her climate-manipulation technology, she travels around the world, hoping to re-establish the eco-network and track down the causes of the threats to the planet's ecosystem."],"role":"Defense","overview":"Mei’s weather-altering devices slow opponents and protect locations. Her Endothermic Blaster unleashes damaging icicles and frost streams, and she can Cryo-Freeze herself to guard against counterattacks, or obstruct the opposing team's movements with an Ice Wall.","bio":{"realname":"Real Name: Mei-Ling Zhou, Age: 31","occupation":"Occupation: Climatologist, Adventurer","base":"Base of Operations: Xi’an, China (formerly)","affiliation":"Affiliation: Overwatch (formerly)"},"abilities":{"name":["Endothermic Blaster","Cryo-Freeze","Ice Wall","Blizzard"],"desc":["Mei’s blaster unleashes a concentrated, short-range stream of frost that damages, slows, and ultimately freezes enemies in place. Mei can also use her blaster to shoot icicle-like projectiles at medium range.","Mei instantly surrounds herself with a block of thick ice. She heals and ignores damage while encased, but cannot move or use abilities. ","Mei generates an enormous ice wall that obstructs lines of sight, stops movement, and blocks attacks. ","Mei deploys a weather-modification drone that emits gusts of wind and snow in a wide area. Enemies caught in the blizzard are slowed and take damage; those who linger too long are frozen solid. "]},"_id":"mei"},{"description":[],"bio":{},"abilities":{"name":[],"desc":[]},"_id":"d.va"},{"poster":"https://d1u1mce87gyfbn.cloudfront.net/hero/tracer/full-portrait.png","description":["The former Overwatch agent known as Tracer is a time-jumping adventurer and an irrepressible force for good.","Lena Oxton (call sign: \"Tracer\") was the youngest person ever inducted into Overwatch's experimental flight program. Known for her fearless piloting skills, she was handpicked to test the prototype of a teleporting fighter, the Slipstream. But during its first flight, the aircraft's teleportation matrix malfunctioned, and it disappeared. Lena was presumed dead.","She reappeared months later, but her ordeal had greatly changed her: her molecules had been desynchronized from the flow of time. Suffering from \"chronal disassociation,\" she was a living ghost, disappearing for hours and days at a time. Even for the brief moments she was present, she was unable to maintain physical form.","Overwatch's doctors and scientists were stumped, and Tracer's case seemed hopeless until a scientist named Winston  designed the chronal accelerator, a device capable of keeping Tracer anchored in the present. In addition, it gave Tracer the ability to control her own time, allowing her to speed it up and slow it down at will. With her newfound skills, she became one of Overwatch's most effective agents.","Since Overwatch's dissolution, Tracer has continued to right wrongs and fight the good fight wherever the opportunity presents itself."],"role":"Offense","overview":"Toting twin pulse pistols, energy-based time bombs, and rapid-fire banter, Tracer is able to \"blink\" through space and rewind her personal timeline as she battles to right wrongs the world over. ","bio":{"realname":"Real Name: Lena Oxton, Age: 26","occupation":"Occupation: Adventurer","base":"Base of Operations: London, England","affiliation":"Affiliation: Overwatch (formerly)"},"abilities":{"name":["Pulse Pistols","Blink","Recall","Pulse Bomb"],"desc":["Tracer rapid-fires both of her pistols.","Tracer zips horizontally through space in the direction she’s moving, and reappears several yards away. She stores up to three charges of the blink ability and generates more every few seconds.","Tracer bounds backward in time, returning her health, ammo and position on the map to precisely where they were a few seconds before.","Tracer lobs a large bomb that adheres to any surface or unfortunate opponent it lands on. After a brief delay, the bomb explodes, dealing high damage to all enemies within its blast radius."]},"_id":"tracer"},{"poster":"https://d1u1mce87gyfbn.cloudfront.net/hero/zenyatta/full-portrait.png","description":["Zenyatta is an omnic monk who wanders the world in search of spiritual enlightenment. It is said that those who cross his path are never the same again.","Years ago, following the Omnic Crisis, a group of outcast omnic robots experienced what they described as a spiritual awakening. They abandoned their preprogrammed lives to establish a communal monastery deep in the Himalayas. After many years of meditation on the nature of existence, they came to the belief that they were more than artificial intelligences and that, like humans, they possessed the essence of a soul.","Recognizing the spiritual equality they held with humans, the monks, led by the enigmatic robot known as Tekhartha Mondatta, sought to heal the wounds caused by the Omnic Crisis a generation earlier and bring humans and robots back into societal harmony. Their message was embraced by millions around the world, and they became global celebrities.","But one monk, Zenyatta, disagreed with this new direction. He believed that the way to repair the problems between humans and omnics was not through dogmatic teaching but through interpersonal connection and engagement.","Ultimately, Zenyatta followed his own path. He chose to leave the monastery and wander the world, helping those he meets to overcome their personal struggles and find inner peace. But, when necessary, he will fight to protect the innocent, be they omnic or human."],"role":"Support","overview":"Zenyatta calls upon orbs of harmony and discord to heal his teammates and weaken his opponents, all while pursuing a transcendent state of immunity to damage.","bio":{"realname":"Real Name: Tekhartha Zenyatta, Age: 20","occupation":"Occupation: Wandering Guru, Adventurer","base":"Base of Operations: Shambali Monastery, Nepal (formerly)","affiliation":"Affiliation: The Shambali (formerly)"},"abilities":{"name":["Orb of Destruction","Orb of Harmony","Orb of Discord","Transcendence"],"desc":["Zenyatta projects his destructive energy orbs either individually, or in a rapid-fire volley after a few seconds spent gathering power.","Zenyatta casts an orb over the shoulder of a targeted ally. So long as Zenyatta maintains line of sight, the orb slowly restores health to his ally. Only one ally can receive the orb's benefit at a time.","Attaching the orb of discord to an opponent amplifies the amount of damage they receive for as long as Zenyatta maintains line of sight. Only one opponent can suffer the orb's effects at a time.","Zenyatta enters a state of heightened existence for a short period of time. While transcendent, Zenyatta cannot use abilities or weapons, but is immune to damage and automatically restores his health  and that of nearby allies."]},"_id":"zenyatta"},{"poster":"https://d1u1mce87gyfbn.cloudfront.net/hero/soldier-76/full-portrait.png","description":["Currently the target of an international manhunt, the vigilante known as Soldier: 76 wages a personal war to expose the truth behind Overwatch's collapse.","Soldier: 76 revealed himself in a string of attacks that crisscrossed the globe, targeting financial institutions, shadowy corporations, and secure Overwatch facilities. Though to the outside world his motives are inscrutable, there are those who claim that he is a former Overwatch agent, determined to shed light on the conspiracy that brought down the organization.","While his true identity remains a mystery, he is believed to have been trained as a member of the American \"soldier enhancement program.\" He possesses physical capabilities exceeding those of a conventional soldier's, as well as other augmentations that make him a peerless combatant. In addition, he utilizes a cutting-edge arsenal, much of it stolen in raids on Overwatch installations.","Unrelenting in his search to find those responsible for Overwatch's fall, Soldier: 76 will stop at nothing to bring them to justice. ",""],"role":"Offense","overview":"Armed with cutting-edge weaponry, including an experimental pulse rifle that’s capable of firing spirals of high-powered Helix Rockets, Soldier: 76 has the speed and support know-how of a highly trained warrior.","bio":{"realname":"Real Name: Unknown, Age: Unknown","occupation":"Occupation: Vigilante","base":"Base of Operations: Unknown","affiliation":"Affiliation: Overwatch (formerly)"},"abilities":{"name":["Heavy Pulse Rifle","Helix Rockets","Sprint","Biotic Field","Tactical Visor"],"desc":["Soldier: 76’s rifle remains particularly steady while unloading fully-automatic pulse fire.","Tiny rockets spiral out of Soldier: 76’s Pulse Rifle in a single burst. The rockets’ explosion damages enemies in a small radius. ","Whether he needs to evade a firefight or get back into one, Soldier: 76 can rush ahead in a burst of speed. His sprint ends if he takes an action other than charging forward.","Soldier: 76 plants a biotic emitter on the ground. Its energy projection restores health to 76 and any of his squadmates within the field. ","Soldier: 76’s pinpoint targeting visor “locks” his aim on the threat closest to his crosshairs. If an enemy leaves his line of sight, Soldier: 76 can quickly switch to another target."]},"_id":"soldier:76"},{"poster":"https://d1u1mce87gyfbn.cloudfront.net/hero/winston/full-portrait.png","description":["A super-intelligent, genetically engineered gorilla, Winston is a brilliant scientist and a champion for humanity's potential.","The Horizon Lunar Colony was established as a first step for humanity's renewed exploration of space. Among its residents was a group of genetically enhanced gorillas that were intended to test the effects of prolonged habitation in space.","One gorilla displayed such rapid brain development from the gene therapy that he was taken under the wing of Dr. Harold Winston, who taught him science and inspired him with tales of human ingenuity. The young gorilla passed his days assisting with the scientists' experiments, watching the distant blue world outside his habitat window, dreaming of the endless possibilities that awaited him there.","But his life was thrown into chaos when the other gorillas led an uprising, killed the mission scientists, and claimed the colony for their own. Taking on the name of his beloved human caretaker, Winston built a makeshift rocket and escaped to Earth. There he found a new home with Overwatch, an organization that represented everything he had come to admire about humanity. Winston was finally able to live up to the heroic ideal that had been instilled in him.","Now with the fall of Overwatch, Winston has gone into seclusion, once again cut off from the world he believes in, but longing for the days of heroism to return."],"role":"Tank","overview":"Winston wields  impressive inventions—a jump pack, electricity-blasting Tesla Cannon, portable shield projector and more—with literal gorilla strength.","bio":{"realname":"Real Name: Winston, Age: 29","occupation":"Occupation: Scientist, Adventurer","base":"Base of Operations: Horizon Lunar Colony (formerly)","affiliation":"Affiliation: Overwatch (formerly)"},"abilities":{"name":["Tesla Cannon","Jump Pack","Barrier Projector","Primal Rage"],"desc":["Winston’s weapon fires a short-range electric barrage for as long as he holds down the trigger.","Assisted by his energy pack, Winston lunges through the air, dealing significant damage and staggering nearby enemies when he lands.","Winston’s barrier projector extends a bubble-shaped field that absorbs damage until it's destroyed. Allies protected by the barrier can return fire from within it.","Winston embraces his animal nature, significantly boosting his health  and making him very difficult to kill, strengthening his melee attack, and allowing him to use his Jump Pack ability more frequently. While raging, Winston can only make melee and Jump Pack attacks."]},"_id":"winston"},{"poster":"https://d1u1mce87gyfbn.cloudfront.net/hero/genji/full-portrait.png","description":["The cyborg Genji Shimada has made peace with the augmented body he once rejected, and in doing so, he has discovered a higher humanity.","As the youngest son of the master of the Shimada ninja clan, Genji lived a life of luxury and privilege. He had little interest in the family's illegal businesses, and although he excelled at and enjoyed his ninja training, he spent most of his time pursuing a playboy lifestyle. Many within the clan considered the carefree Genji to be a dangerous liability, and they resented his father for coddling and protecting him. Following the clan leader's untimely death, Genji's older brother, Hanzo, demanded that Genji take a more active role in their late father's empire. Genji refused, enraging Hanzo. The tension between the brothers built to a violent confrontation that left Genji on the verge of dying.","Hanzo believed that he had killed his brother, but Genji was rescued by Overwatch and the intervention of Dr. Angela Ziegler. The global security force saw Genji as a potential asset in its ongoing operations to combat the Shimada clan. As Genji's injuries left him clinging to life, Overwatch offered to rebuild his body in exchange for his help. He was put through an extensive process of cyberization, which enhanced his natural speed and agility and augmented his superlative ninja skills. Transformed into a living weapon, Genji single-mindedly set about the task of dismantling his family's criminal empire. ","But as time passed, Genji felt increasingly at war with himself. He was repulsed by the mechanical parts of his body and could not come to grips with what he had become. When his mission was complete, he abandoned Overwatch and wandered the world in search of meaning. He drifted for many years before crossing paths with the omnic monk Zenyatta. Though Genji initially rejected Zenyatta's wisdom, the benevolent omnic would not be deterred. In time, Zenyatta became his mentor, and under the monk's tutelage, Genji reconciled his dual existence as both man and machine. He learned to accept that although he had a cyborg body, his human soul was intact, and he came to see his new form as a gift and a unique strength.","Now, for the first time in his life, Genji is free. Even he cannot say where his path will ultimately lead."],"role":"Offense","overview":"Genji flings precise and deadly Shuriken at his targets, and uses his technologically-advanced katana to deflect projectiles or deliver a Swift Strike that cuts down enemies.","bio":{"realname":"Real Name: Genji Shimada, Age: 35","occupation":"Occupation: Adventurer","base":"Base of Operations: Shambali Monastery, Nepal","affiliation":"Affiliation: Shimada Clan (formerly), Overwatch (formerly)"},"abilities":{"name":["Shuriken","Deflect","Swift Strike","Dragonblade"],"desc":["Genji looses three deadly throwing stars in quick succession. Alternatively, he can throw three shuriken in a wider spread.\n","With lightning-quick swipes of his sword, Genji reflects an oncoming projectile and sends it rebounding towards his opponent. ","Genji darts forward, slashing with his katana and passing through foes in his path. If Genji eliminates a target, he can instantly use this ability again.","Genji brandishes his katana for a brief period of time. Until he sheathes his sword, Genji can deliver killing strikes to any targets within his reach."]},"_id":"genji"},{"poster":"https://d1u1mce87gyfbn.cloudfront.net/hero/hanzo/full-portrait.png","description":["Mastering his skills as a bowman and an assassin, Hanzo Shimada strives to prove himself as a warrior without peer.","The Shimada family was established centuries ago, a clan of assassins whose power grew over the years, enabling them to build a vast criminal empire that profited from lucrative trade in arms and illegal substances. As the eldest son of the family's head, Hanzo was bound by duty to succeed his father and rule the Shimada empire. From a young age, he was trained for that responsibility, displaying a natural aptitude for leadership and possessing an innate understanding of strategy and tactics. He also excelled in more practical areas: he was a prodigy in martial arts, swordplay, and bowmanship.","Upon the death of his father, the clan elders instructed Hanzo to straighten out his wayward younger brother so that he, too, might help rule the Shimada empire. When his brother refused, Hanzo was forced to kill him. This act broke Hanzo's heart and drove him to reject his father's legacy, ultimately leading him to abandon the clan and all that he had worked so hard to attain.","Now, Hanzo travels the world, perfecting his skills as a warrior, attempting to restore his honor and put the ghosts of his past to rest.",""],"role":"Defense","overview":"Hanzo’s versatile arrows can reveal his enemies or fragment to strike multiple targets. He can scale walls to fire his bow from on high, or summon a titanic spirit dragon.","bio":{"realname":"Real Name: Hanzo Shimada, Age: 38","occupation":"Occupation: Mercenary, Assassin","base":"Base of Operations: Hanamura, Japan (formerly)","affiliation":"Affiliation: Shimada Clan"},"abilities":{"name":["Storm Bow","Sonic Arrow","Scatter Arrow","Dragonstrike"],"desc":["Hanzo nocks and fires an arrow at his target.","Hanzo launches an arrow that contains a sonar tracking device. Any enemy within its detection radius is visibly marked, making them easier for Hanzo and his allies to hunt down.","Hanzo shoots a  fragmenting arrow that ricochets off walls and objects and can strike multiple targets at once.","Hanzo summons a Spirit Dragon which travels through the air in a line. It passes through walls in its way,  devouring any enemies it encounters."]},"_id":"hanzo"}]
+[
+  {
+    "poster": "https://d1u1mce87gyfbn.cloudfront.net/hero/hanzo/full-portrait.png",
+    "description": [
+      "Mastering his skills as a bowman and an assassin, Hanzo Shimada strives to prove himself as a warrior without peer.",
+      "The Shimada family was established centuries ago, a clan of assassins whose power grew over the years, enabling them to build a vast criminal empire that profited from lucrative trade in arms and illegal substances. As the eldest son of the family's head, Hanzo was bound by duty to succeed his father and rule the Shimada empire. From a young age, he was trained for that responsibility, displaying a natural aptitude for leadership and possessing an innate understanding of strategy and tactics. He also excelled in more practical areas: he was a prodigy in martial arts, swordplay, and bowmanship.",
+      "Upon the death of his father, the clan elders instructed Hanzo to straighten out his wayward younger brother so that he, too, might help rule the Shimada empire. When his brother refused, Hanzo was forced to kill him. This act broke Hanzo's heart and drove him to reject his father's legacy, ultimately leading him to abandon the clan and all that he had worked so hard to attain.",
+      "Now, Hanzo travels the world, perfecting his skills as a warrior, attempting to restore his honor and put the ghosts of his past to rest.",
+      ""
+    ],
+    "role": "Defense",
+    "overview": "Hanzo’s versatile arrows can reveal his enemies or fragment to strike multiple targets. He can scale walls to fire his bow from on high, or summon a titanic spirit dragon.",
+    "bio": {
+      "realname": "Real Name: Hanzo Shimada, Age: 38",
+      "occupation": "Occupation: Mercenary, Assassin",
+      "base": "Base of Operations: Hanamura, Japan (formerly)",
+      "affiliation": "Affiliation: Shimada Clan"
+    },
+    "abilities": {
+      "name": [
+        "Storm Bow",
+        "Sonic Arrow",
+        "Scatter Arrow",
+        "Dragonstrike"
+      ],
+      "desc": [
+        "Hanzo nocks and fires an arrow at his target.",
+        "Hanzo launches an arrow that contains a sonar tracking device. Any enemy within its detection radius is visibly marked, making them easier for Hanzo and his allies to hunt down.",
+        "Hanzo shoots a  fragmenting arrow that ricochets off walls and objects and can strike multiple targets at once.",
+        "Hanzo summons a Spirit Dragon which travels through the air in a line. It passes through walls in its way,  devouring any enemies it encounters."
+      ]
+    },
+    "_id": "hanzo"
+  },
+  {
+    "poster": "https://d1u1mce87gyfbn.cloudfront.net/hero/zarya/full-portrait.png",
+    "description": [
+      "Aleksandra Zaryanova is one of the world's strongest women, a celebrated athlete who sacrificed personal glory to protect her family, friends, and country in a time of war.",
+      "Aleksandra was born in a remote Siberian village that was on the front lines of the Omnic Crisis, which began some thirty years ago. Although Russian forces defeated the robots and shut down their omnium, the region was devastated by the conflict. Only a child at the time, Aleksandra was surrounded by the post-war destruction, and as she grew older, she swore that she would gain the strength to help her people recover.",
+      "Focusing on weightlifting and bodybuilding, Aleksandra was identified by the national athletics program as a potential star. She trained extensively, moving up the ranks while representing her country, and was expected to shatter longstanding records in the upcoming world championships.",
+      "But on the eve of the tournament, an attack came from the long-dormant Siberian omnium, and her village was thrust into war once again. Aleksandra immediately withdrew from the competition and rushed home to enlist in the local defense forces, sacrificing the life of fame and fortune she might have had.",
+      "Now she serves—a symbol to some, a stalwart fellow soldier to others. But for Aleksandra, it is a chance to use her great strength to protect the ones she loves."
+    ],
+    "role": "Tank",
+    "overview": "Deploying powerful personal barriers that convert incoming damage into energy for her massive Particle Cannon, Zarya is an invaluable asset on the front lines of any battle.",
+    "bio": {
+      "realname": "Real Name: Aleksandra Zaryanova, Age: 28",
+      "occupation": "Occupation: Soldier",
+      "base": "Base of Operations: Krasnoyarsk Front, Russia",
+      "affiliation": "Affiliation: Russian Defense Forces"
+    },
+    "abilities": {
+      "name": [
+        "Particle Cannon",
+        "Particle Barrier",
+        "Projected Barrier",
+        "Graviton Surge"
+      ],
+      "desc": [
+        "Zarya’s mighty Particle Cannon unleashes a short-range beam of destructive energy. Alternatively, Zarya can lob an explosive charge to strike multiple opponents.",
+        "The Particle Cannon can emit a personal barrier that shields Zarya against incoming attacks, redirecting their energy to enhance her weapon’s damage and the width of its beam.",
+        "Zarya surrounds one of her teammates with an energy barrier that simultaneously absorbs fire and boosts the power of her Particle Cannon.",
+        "Zarya launches a gravity bomb that draws in enemy combatants and deals damage while they’re trapped."
+      ]
+    },
+    "_id": "zarya"
+  },
+  {
+    "poster": "https://d1u1mce87gyfbn.cloudfront.net/hero/torbjorn/full-portrait.png",
+    "description": [
+      "At its height, Overwatch possessed one of the most advanced armaments on the planet, which could be traced to the workshop of an ingenious engineer named Torbjörn Lindholm.",
+      "Before the Omnic Crisis, Torbjörn had gained notoriety for designing weapons systems used by countries around the world. However, his belief that technology must serve a better vision for humanity put him at odds with his employers, who desired to control his weapons using networked computer intelligence.",
+      "Torbjörn had a deep mistrust of sentient robotic intelligence, and while many of his peers wrote this off as paranoia, his worst fears were realized when the robot populations of the world turned against their human creators during the Omnic Crisis. Because of his engineering genius, he was recruited to join the original Overwatch strike team, and his many inventions proved integral to ending the crisis. In the years that followed, Overwatch became an international peacekeeping force, and Torbjörn remained a critical resource for all of its technological needs and signature weapons systems.",
+      "But in the aftermath of Overwatch's fall, many of Torbjörn's weapons were stolen or stashed away around the world. Feeling responsible for his creations, Torbjörn is determined to stop them from falling into the wrong hands and wreaking havoc on the innocent.",
+      ""
+    ],
+    "role": "Defense",
+    "overview": "Torbjörn’s extensive arsenal includes a rivet gun and hammer, as well as a personal forge that he can use to build upgradeable turrets and dole out protective armor packs.",
+    "bio": {
+      "realname": "Real Name: Torbjörn Lindholm, Age: 57",
+      "occupation": "Occupation: Weapons Designer",
+      "base": "Base of Operations: Gothenburg, Sweden",
+      "affiliation": "Affiliation: Overwatch (formerly)"
+    },
+    "abilities": {
+      "name": [
+        "Rivet Gun",
+        "Forge Hammer",
+        "Build Turret",
+        "Armor Pack",
+        "Molten Core"
+      ],
+      "desc": [
+        "Torbjörn fires rivets at long range, or ejects molten metal from his gun in a short, close-range burst.",
+        "Torbjörn uses his multipurpose hammer to build, upgrade and repair turrets. In a pinch, it can also be swung as a weapon.",
+        "Torbjörn constructs an enemy-tracking autocannon. He can use his Forge Hammer to repair or upgrade it, increasing its health and adding a second cannon barrel and a rocket launcher.",
+        "Torbjörn deploys an armor upgrade; either he or his allies can pick it up to absorb some  damage.",
+        "After overheating his personal forge, Torbjörn gains a significant amount of armor and scrap. He also attacks (and builds and repairs turrets) far faster than normal."
+      ]
+    },
+    "_id": "torbjorn"
+  },
+  {
+    "poster": "https://d1u1mce87gyfbn.cloudfront.net/hero/genji/full-portrait.png",
+    "description": [
+      "The cyborg Genji Shimada has made peace with the augmented body he once rejected, and in doing so, he has discovered a higher humanity.",
+      "As the youngest son of the master of the Shimada ninja clan, Genji lived a life of luxury and privilege. He had little interest in the family's illegal businesses, and although he excelled at and enjoyed his ninja training, he spent most of his time pursuing a playboy lifestyle. Many within the clan considered the carefree Genji to be a dangerous liability, and they resented his father for coddling and protecting him. Following the clan leader's untimely death, Genji's older brother, Hanzo, demanded that Genji take a more active role in their late father's empire. Genji refused, enraging Hanzo. The tension between the brothers built to a violent confrontation that left Genji on the verge of dying.",
+      "Hanzo believed that he had killed his brother, but Genji was rescued by Overwatch and the intervention of Dr. Angela Ziegler. The global security force saw Genji as a potential asset in its ongoing operations to combat the Shimada clan. As Genji's injuries left him clinging to life, Overwatch offered to rebuild his body in exchange for his help. He was put through an extensive process of cyberization, which enhanced his natural speed and agility and augmented his superlative ninja skills. Transformed into a living weapon, Genji single-mindedly set about the task of dismantling his family's criminal empire. ",
+      "But as time passed, Genji felt increasingly at war with himself. He was repulsed by the mechanical parts of his body and could not come to grips with what he had become. When his mission was complete, he abandoned Overwatch and wandered the world in search of meaning. He drifted for many years before crossing paths with the omnic monk Zenyatta. Though Genji initially rejected Zenyatta's wisdom, the benevolent omnic would not be deterred. In time, Zenyatta became his mentor, and under the monk's tutelage, Genji reconciled his dual existence as both man and machine. He learned to accept that although he had a cyborg body, his human soul was intact, and he came to see his new form as a gift and a unique strength.",
+      "Now, for the first time in his life, Genji is free. Even he cannot say where his path will ultimately lead."
+    ],
+    "role": "Offense",
+    "overview": "Genji flings precise and deadly Shuriken at his targets, and uses his technologically-advanced katana to deflect projectiles or deliver a Swift Strike that cuts down enemies.",
+    "bio": {
+      "realname": "Real Name: Genji Shimada, Age: 35",
+      "occupation": "Occupation: Adventurer",
+      "base": "Base of Operations: Shambali Monastery, Nepal",
+      "affiliation": "Affiliation: Shimada Clan (formerly), Overwatch (formerly)"
+    },
+    "abilities": {
+      "name": [
+        "Shuriken",
+        "Deflect",
+        "Swift Strike",
+        "Dragonblade"
+      ],
+      "desc": [
+        "Genji looses three deadly throwing stars in quick succession. Alternatively, he can throw three shuriken in a wider spread.\n",
+        "With lightning-quick swipes of his sword, Genji reflects an oncoming projectile and sends it rebounding towards his opponent. ",
+        "Genji darts forward, slashing with his katana and passing through foes in his path. If Genji eliminates a target, he can instantly use this ability again.",
+        "Genji brandishes his katana for a brief period of time. Until he sheathes his sword, Genji can deliver killing strikes to any targets within his reach."
+      ]
+    },
+    "_id": "genji"
+  },
+  {
+    "poster": "https://d1u1mce87gyfbn.cloudfront.net/hero/symmetra/full-portrait.png",
+    "description": [
+      "Symmetra literally bends reality. By manipulating hard-light constructs, she crafts the world as she wishes it to be, in hopes of engineering a perfect society.",
+      "Following the Omnic Crisis, the Vishkar Corporation of southern India began the laborious process of creating new, self-sustaining cities to house the nation's displaced population. One such city, Utopaea, was created using radical hard-light technology that enabled its architechs to shape the city's streets, utilities, and living spaces in the blink of an eye.",
+      "After she was identified as one of the few capable of becoming a light-bending architech, young Satya Vaswani was plucked from extreme poverty and placed in the care of Vishkar's architech academy, never to return home. Isolated and lonely in her new life, Satya immersed herself in her education and training. She quickly grasped the applications of the technology and was one of the top students in her class. Satya approached hard-light manipulation differently than her peers, with their more procedural, mechanical constructions, instead weaving her constructs in the motions of the traditional dance of her homeland.",
+      "Though she was one of Utopaea's top architechs, the Vishkar Corporation saw far greater potential in Satya's abilities. Giving her the moniker \"Symmetra,\" Vishkar sent her on clandestine missions around the world to uphold its corporate interests and expand its influence into other countries.",
+      "Symmetra believes her actions serve the greater good in society. But there are times when she wonders whether the control and order she desires are truly best for humanity."
+    ],
+    "role": "Support",
+    "overview": "Symmetra utilizes her light-bending Photon Projector to dispatch adversaries, shield her associates, construct teleportation pads and deploy particle-blasting Sentry Turrets.",
+    "bio": {
+      "realname": "Real Name: Satya Vaswani, Age: 28",
+      "occupation": "Occupation: Architech",
+      "base": "Base of Operations: Utopaea, India",
+      "affiliation": "Affiliation: Vishkar Corporation"
+    },
+    "abilities": {
+      "name": [
+        "Photon Projector",
+        "Sentry Turret",
+        "Photon Shield",
+        "Teleporter"
+      ],
+      "desc": [
+        "Symmetra’s weapon emits a short-range beam that homes in on a nearby enemy, dealing continuous damage that increases the longer it is connected. The projector can also release a charged energy ball that deals high damage.",
+        "Symmetra sets up a small turret that automatically fires speed-reducing blasts at the nearest enemy within range. Several turrets can be built on the battlefield at once.",
+        "Symmetra surrounds an ally with a hard-light shield that absorbs damage and persists as long as that ally remains alive.",
+        "Symmetra places a teleporter exit pad at her current location, and connects it to a teleporter entry pad at her team’s starting point. Allies can travel through the entry pad to the exit pad instantly, enabling them to return to the fight swiftly after being defeated."
+      ]
+    },
+    "_id": "symmetra"
+  },
+  {
+    "poster": "https://d1u1mce87gyfbn.cloudfront.net/hero/widowmaker/full-portrait.png",
+    "description": [
+      "Widowmaker is the perfect assassin: a patient, ruthlessly efficient killer who shows neither emotion nor remorse.",
+      "It is believed that in her former life, Widowmaker was married to Gérard Lacroix, an Overwatch agent spearheading operations against the Talon terrorist organization. After several unsuccessful attempts to eliminate Gérard, Talon decided to change its focus to his wife, Amélie. Talon operatives kidnapped her and subjected her to an intense program of neural reconditioning. They broke her will, suppressed her personality, and reprogrammed her as a sleeper agent. She was eventually found by Overwatch agents, apparently none the worse for wear, and returned to her normal life.",
+      "Two weeks later she killed Gérard in his sleep.",
+      "Her mission complete, Amélie returned to Talon, and they completed the process of turning her into a living weapon. She was given extensive training in the covert arts, and then her physiology was altered, drastically slowing her heart, which turned her skin cold and blue and numbed her ability to experience human emotion. Amélie was gone.",
+      "Now, Widowmaker is Talon's most effective assassin, feeling little save the satisfaction of a job well done."
+    ],
+    "role": "Defense",
+    "overview": "Widowmaker equips herself with whatever it takes to eliminate her targets, including mines that dispense poisonous gas, a visor that grants her squad infra-sight, and a powerful sniper rifle that can fire in fully-automatic mode.",
+    "bio": {
+      "realname": "Real Name: Amélie Lacroix, Age: 33",
+      "occupation": "Occupation: Assassin",
+      "base": "Base of Operations: Annecy, France",
+      "affiliation": "Affiliation: Talon"
+    },
+    "abilities": {
+      "name": [
+        "Widow’s Kiss",
+        "Grappling Hook",
+        "Venom Mine",
+        "Infra-sight"
+      ],
+      "desc": [
+        "Widowmaker’s versatile sniper rifle is ideal for scope-aimed shots at distant targets. Should targets close to medium range, the rifle can also be fired in fully-automatic mode.",
+        "Widowmaker launches a grappling hook towards the location she’s aiming at – when the hook connects with a scalable surface, she’s quickly drawn towards it, allowing her to expand her view of the battlefield and evade or flank targets.",
+        "Widowmaker adheres a swiftly-arming venom mine to nearly any surface. When a target wanders within range of the mine’s motion trigger, it explodes, delivering  poison gas to any enemies in the vicinity.",
+        "Widowmaker’s recon visor allows her to see the heat signatures of her targets through walls and objects for a moderate amount of time. This enhanced vision is shared with her allies."
+      ]
+    },
+    "_id": "widowmaker"
+  },
+  {
+    "poster": "https://d1u1mce87gyfbn.cloudfront.net/hero/roadhog/full-portrait.png",
+    "description": [
+      "Roadhog is a ruthless killer with a well-earned reputation for cruelty and wanton destruction.",
+      "After the Omnic Crisis, government officials gifted the Australian omnium and the surrounding area to the omnics that had nearly destroyed their country, hoping to establish a long-term peace accord. This arrangement permanently displaced Mako Rutledge and a large number of the Outback's residents, a scattered collection of survivalists, solar farmers, and people who just wanted to be left alone.\n",
+      "Furious over the loss of their homes, Mako and others turned to violent rebellion. They formed the Australian Liberation Front and struck against the omnium and its robot population to take back the lands that had been stolen. Events continued to escalate until the rebels sabotaged the omnium's fusion core, resulting in an explosion that destroyed the facility, irradiated the region, and littered the Outback with twisted metal and wreckage for kilometers around.\n",
+      "Mako watched as his home became an apocalyptic wasteland, and he was forever changed.",
+      "Adapting to his environment, he donned a mask and took to the broken highways of the Outback on his ramshackle chopper. Little by little, his humanity was forgotten. The last vestiges of Mako faded away and the ruthless killer Roadhog was born. "
+    ],
+    "role": "Tank",
+    "overview": "Roadhog uses his signature Chain Hook to pull his enemies close before shredding them with blasts from his Scrap Gun. He’s hardy enough to withstand tremendous damage, and can recover his health with a short breather.",
+    "bio": {
+      "realname": "Real Name: Mako Rutledge, Age: 48",
+      "occupation": "Occupation: Enforcer (formerly), Bodyguard",
+      "base": "Base of Operations: Junkertown, Australia (formerly)",
+      "affiliation": "Affiliation: Junkers (formerly)"
+    },
+    "abilities": {
+      "name": [
+        "Scrap Gun",
+        "Take a Breather",
+        "Chain Hook",
+        "Whole Hog"
+      ],
+      "desc": [
+        "Roadhog's Scrap Gun fires short-range blasts of shrapnel with a wide spread. Alternatively, it can launch a shrapnel ball that detonates farther away, scattering metal fragments from the point of impact.",
+        "Roadhog restores a chunk of his health over a brief period of time.",
+        "Roadhog hurls his chain at a target; if it catches, he yanks them into close range.",
+        "After cramming a top-loader onto his Scrap Gun, Roadhog pours in ammo. For a short time, he can crank out a stream of shrapnel that knocks back enemies."
+      ]
+    },
+    "_id": "roadhog"
+  },
+  {
+    "poster": "https://d1u1mce87gyfbn.cloudfront.net/hero/reaper/full-portrait.png",
+    "description": [
+      "Some speak of a black-robed terrorist known only as the Reaper. His identity and motives are a mystery. What is known is that where he appears, death follows.",
+      "The Reaper is an extremely volatile mercenary, a ruthless and remorseless killer responsible for terrorist attacks across the world. He has fought in many armed conflicts in the last decades, showing no loyalty to any cause or organization.",
+      "Survivors have described a black shadow ghosting unscathed through the most hellish battlefields. The few bodies recovered of those he kills are pale, empty husks drained of life, their cells showing signs of intense degradation. It is possible that he is a byproduct of failed genetic alteration which forces his cells to simultaneously decay and regenerate at a hyper-accelerated rate.",
+      "Those attempting to track his movements have begun to see a pattern in his appearances. They believe that Reaper is hunting former Overwatch agents and systematically eliminating them.",
+      ""
+    ],
+    "role": "Offense",
+    "overview": "Hellfire Shotguns, the ghostly ability to become immune to damage, and the power to step between shadows make Reaper one of the deadliest beings on Earth.",
+    "bio": {
+      "realname": "Real Name: Unknown, Age: Unknown",
+      "occupation": "Occupation: Mercenary",
+      "base": "Base of Operations: Unknown",
+      "affiliation": "Affiliation: Unknown"
+    },
+    "abilities": {
+      "name": [
+        "Hellfire Shotguns",
+        "Wraith Form",
+        "Shadow Step",
+        "Death Blossom"
+      ],
+      "desc": [
+        "Reaper tears enemies apart with twin shotguns.",
+        "Reaper becomes a shadow for a short period of time. While in this form, he takes no damage and is able to pass through enemies, but cannot fire his weapons or use other abilities.",
+        "After marking a destination, Reaper disappears and reappears at that location.",
+        "In a blur of motion, Reaper empties both Hellfire Shotguns at breakneck speed, dealing massive damage to all nearby enemies."
+      ]
+    },
+    "_id": "reaper"
+  },
+  {
+    "poster": "https://d1u1mce87gyfbn.cloudfront.net/hero/dva/full-portrait.png",
+    "description": [
+      "D.Va is a former professional gamer who now uses her skills to pilot a state-of-the-art mech in defense of her homeland.",
+      "Twenty years ago, South Korea was attacked by a colossal omnic monstrosity that rose from the depths of the East China Sea. The massive, lumbering construct caused catastrophic damage to coastal cities before it was driven back beneath the waves. In response, the South Korean government developed a mechanized armored drone unit, called MEKA, to protect urban environments in future engagements with the omnic threat.",
+      "The government's fears proved to be well founded, as a disturbing pattern of attacks emerged. Every few years, the monstrosity would rise from the sea to assault South Korea and its neighbors. The omnic learned from these encounters, often reconfiguring itself in a different form and appearing with new weapons and capabilities. Each incident ended in a stalemate, with the monstrosity defeated but not destroyed.",
+      "As the omnic continued to adapt, it eventually disrupted MEKA's drone-control networks, forcing the military to place pilots in the mechs. Scrambling to find suitable candidates, the government turned to the country's professional gamers, who possessed the necessary reflexes and instincts to operate the mechs' advanced weapons systems. Top stars were drafted, including reigning world champion Hana Song, also known as \"D.Va.\" Famous for her elite skills, D.Va was a fierce competitor who played to win at all costs, and she had a well-earned reputation for showing no mercy to her opponents.",
+      "Seeing her new mission as a game, D.Va fearlessly charges into battle alongside the rest of her MEKA unit, ready to spring to her nation's defense at a moment's notice. Recently, she has begun to stream combat operations to her adoring fans, and her growing following has turned her into a global icon."
+    ],
+    "role": "Tank",
+    "overview": "D.Va’s mech is nimble and powerful—its twin Fusion Cannons blast away with autofire at short range, and she can use its Boosters to barrel over enemies and obstacles, or deflect attacks with her projectile-dismantling Defense Matrix.",
+    "bio": {
+      "realname": "Real Name: Hana Song, Age: 19",
+      "occupation": "Occupation: Pro Gamer (formerly), Mech Pilot",
+      "base": "Base of Operations: Busan, South Korea",
+      "affiliation": "Affiliation: Mobile Exo-Force of the Korean Army"
+    },
+    "abilities": {
+      "name": [
+        "Fusion Cannons",
+        "Light Gun",
+        "Boosters",
+        "Defense Matrix",
+        "Self-Destruct",
+        "Call Mech"
+      ],
+      "desc": [
+        "D.Va's mech is equipped with twin short-range rotating cannons. They lay down continuous, high-damage fire without needing to reload, but slow D.Va’s movement while they’re active.",
+        "While outside of her mech, D.Va can continue the fight with a mid-range automatic blaster. ",
+        "D.Va’s mech launches into the air, her momentum carrying her forward. She can turn and change directions or barrel through her enemies, knocking them back. ",
+        "D.Va can activate this forward-facing targeting array to shoot incoming projectiles out of the air.",
+        "D.Va ejects from her mech and sets its reactor to explode, dealing massive damage to nearby opponents. ",
+        "If her armored battle suit is destroyed, D.Va can call down a fresh mech and return to the fray."
+      ]
+    },
+    "_id": "dva"
+  },
+  {
+    "poster": "https://d1u1mce87gyfbn.cloudfront.net/hero/pharah/full-portrait.png",
+    "description": [
+      "Fareeha Amari's commitment to duty runs in her blood. She comes from a long line of highly decorated soldiers and burns with the desire to serve with honor.",
+      "As a child, Fareeha dreamed of following in her mother's footsteps and joining the global peacekeeping force, Overwatch. She enlisted in the Egyptian army, and her dogged persistence and tactical prowess caused her to rise up through the officer ranks. She was a courageous leader and earned the loyalty of all who served under her. With her exemplary record, Fareeha was well placed to join the ranks of Overwatch, but before she had that opportunity, Overwatch was disbanded.",
+      "After leaving the army with a commendation for distinguished service, she was offered employment with Helix Security International, a private security firm contracted to defend the artificial intelligence research facility beneath the Giza Plateau. The top-secret facility was touted as vital to the safety of not only the region but countries across the globe. Fareeha gladly accepted the choice assignment and received training in the Raptora Mark VI, an experimental combat suit designed for rapid mobility and devastating firepower.",
+      "Under the call sign \"Pharah,\" she works to safeguard the AI installation. Though she mourns Overwatch's passing, she still dreams of fighting the good fight and making a difference on a global scale.",
+      ""
+    ],
+    "role": "Offense",
+    "overview": "Soaring through the air in her combat armor, and armed with a launcher that lays down high-explosive rockets, Pharah is a force to be reckoned with.",
+    "bio": {
+      "realname": "Real Name: Fareeha Amari, Age: 32",
+      "occupation": "Occupation: Security Chief",
+      "base": "Base of Operations: Giza, Egypt",
+      "affiliation": "Affiliation: Helix Security International"
+    },
+    "abilities": {
+      "name": [
+        "Rocket Launcher",
+        "Jump Jet",
+        "Concussive Blast",
+        "Barrage"
+      ],
+      "desc": [
+        "Pharah’s primary weapon launches rockets that deal significant damage in a wide blast radius.",
+        "Propelled by her suit’s thrusters, Pharah soars high into the air.",
+        "Pharah looses a wrist rocket that knocks back any enemies it strikes.",
+        "Pharah directs a continuous salvo of mini-rockets to destroy groups of enemies."
+      ]
+    },
+    "_id": "pharah"
+  },
+  {
+    "poster": "https://d1u1mce87gyfbn.cloudfront.net/hero/tracer/full-portrait.png",
+    "description": [
+      "The former Overwatch agent known as Tracer is a time-jumping adventurer and an irrepressible force for good.",
+      "Lena Oxton (call sign: \"Tracer\") was the youngest person ever inducted into Overwatch's experimental flight program. Known for her fearless piloting skills, she was handpicked to test the prototype of a teleporting fighter, the Slipstream. But during its first flight, the aircraft's teleportation matrix malfunctioned, and it disappeared. Lena was presumed dead.",
+      "She reappeared months later, but her ordeal had greatly changed her: her molecules had been desynchronized from the flow of time. Suffering from \"chronal disassociation,\" she was a living ghost, disappearing for hours and days at a time. Even for the brief moments she was present, she was unable to maintain physical form.",
+      "Overwatch's doctors and scientists were stumped, and Tracer's case seemed hopeless until a scientist named Winston  designed the chronal accelerator, a device capable of keeping Tracer anchored in the present. In addition, it gave Tracer the ability to control her own time, allowing her to speed it up and slow it down at will. With her newfound skills, she became one of Overwatch's most effective agents.",
+      "Since Overwatch's dissolution, Tracer has continued to right wrongs and fight the good fight wherever the opportunity presents itself."
+    ],
+    "role": "Offense",
+    "overview": "Toting twin pulse pistols, energy-based time bombs, and rapid-fire banter, Tracer is able to \"blink\" through space and rewind her personal timeline as she battles to right wrongs the world over. ",
+    "bio": {
+      "realname": "Real Name: Lena Oxton, Age: 26",
+      "occupation": "Occupation: Adventurer",
+      "base": "Base of Operations: London, England",
+      "affiliation": "Affiliation: Overwatch (formerly)"
+    },
+    "abilities": {
+      "name": [
+        "Pulse Pistols",
+        "Blink",
+        "Recall",
+        "Pulse Bomb"
+      ],
+      "desc": [
+        "Tracer rapid-fires both of her pistols.",
+        "Tracer zips horizontally through space in the direction she’s moving, and reappears several yards away. She stores up to three charges of the blink ability and generates more every few seconds.",
+        "Tracer bounds backward in time, returning her health, ammo and position on the map to precisely where they were a few seconds before.",
+        "Tracer lobs a large bomb that adheres to any surface or unfortunate opponent it lands on. After a brief delay, the bomb explodes, dealing high damage to all enemies within its blast radius."
+      ]
+    },
+    "_id": "tracer"
+  },
+  {
+    "poster": "https://d1u1mce87gyfbn.cloudfront.net/hero/bastion/full-portrait.png",
+    "description": [
+      "Once a frontline combatant in the devastating Omnic Crisis, this curious Bastion unit now explores the world, fascinated by nature but wary of a fearful humanity.",
+      "Originally created for peacekeeping purposes, Bastion robot units possessed the unique ability to rapidly reconfigure themselves into an assault-cannon mode. But during the Omnic Crisis, they were turned against their human makers, forming the bulk of the omnics' rebel army. Following the resolution of the crisis, nearly all of them were destroyed or disassembled. To this day, Bastion units still symbolize the horrors of the conflict.",
+      "One unique Bastion unit, severely damaged in the final battles of the war, was left forgotten for over a decade. It lay dormant, exposed to the elements and rusting while nature slowly reclaimed it. Overgrown with vines and roots and nested upon by small animals, the robot sat inert, seemingly unaware of the passing of time. That was until one fateful day, when it unexpectedly reactivated. With its combat programming all but lost, it instead displayed an intense curiosity about the natural world and its inhabitants. This inquisitive Bastion unit set out to explore its surroundings and discover its purpose on a war-ravaged planet.",
+      "Though \"Bastion\" appears to be gentle—even harmless, at times—its core combat programming takes over when the unit senses danger, utilizing its entire arsenal to eliminate anything it perceives as a threat. This has led to instances of conflict with the few humans it has encountered, and has driven it to avoid populated areas in favor of the wild, uncharted regions of the world.",
+      ""
+    ],
+    "role": "Defense",
+    "overview": "Repair protocols and the ability to transform between stationary Assault, mobile Recon and devastating Tank configurations provide Bastion with a high probability of victory.",
+    "bio": {
+      "realname": "Real Name: SST Laboratories Siege Automaton E54, “Bastion\" , Age: 30",
+      "occupation": "Occupation: Battle Automaton",
+      "base": "Base of Operations: Unknown",
+      "affiliation": "Affiliation: None"
+    },
+    "abilities": {
+      "name": [
+        "Configuration: Recon",
+        "Configuration: Sentry",
+        "Reconfigure",
+        "Self-Repair",
+        "Configuration: Tank"
+      ],
+      "desc": [
+        "In Recon mode, Bastion is fully mobile, outfitted with a submachine gun that fires steady bursts of bullets at medium range.",
+        "In Sentry mode, Bastion is a stationary powerhouse equipped with a gatling gun capable of unleashing a hail of bullets. The gun's aim can be \"walked\" across multiple targets, dealing devastating damage at short to medium range.",
+        "Bastion transforms between its two primary combat modes to adapt to  battlefield conditions.",
+        "Bastion restores its health; it cannot move or fire weapons while the repair process is in effect.",
+        "In Tank mode, Bastion extends wheeled treads and a powerful long-range cannon. The cannon’s explosive shells demolish targets in a wide blast radius, but Bastion can only remain in this mode for a limited time. "
+      ]
+    },
+    "_id": "bastion"
+  },
+  {
+    "poster": "https://d1u1mce87gyfbn.cloudfront.net/hero/mccree/full-portrait.png",
+    "description": [
+      "Armed with his Peacekeeper revolver, the outlaw Jesse McCree doles out justice on his own terms.",
+      "McCree had already made a name for himself as a member of the notorious Deadlock Gang, which trafficked in illicit weapons and military hardware throughout the American Southwest, when he and his associates were busted in an Overwatch sting operation. With his expert marksmanship and resourcefulness, he was given the choice between rotting in a maximum-security lockup and joining Blackwatch, Overwatch's covert ops division. He chose the latter.",
+      "Although he was initially cynical, he came to believe that he could make amends for his past sins by righting the injustices of the world. McCree appreciated the flexibility afforded to the clandestine Blackwatch, unhindered by bureaucracy and red tape. But as Overwatch's influence waned, rogue elements within Blackwatch sought to bring down the organization and turn it to their own ends. Wanting no part of the infighting, McCree set off alone and went underground.",
+      "He resurfaced several years later as a gunslinger for hire. But while McCree's talents are sought after by parties great and small, he fights only for causes he believes are just.",
+      ""
+    ],
+    "role": "Offense",
+    "overview": "Armed with his Peacekeeper revolver, McCree takes out targets with deadeye precision and dives out of danger with eagle-like speed.",
+    "bio": {
+      "realname": "Real Name: Jesse McCree, Age: 37",
+      "occupation": "Occupation: Bounty Hunter",
+      "base": "Base of Operations: Santa Fe, New Mexico, USA",
+      "affiliation": "Affiliation: Overwatch (formerly)"
+    },
+    "abilities": {
+      "name": [
+        "Peacekeeper",
+        "Combat Roll",
+        "Flashbang",
+        "Deadeye"
+      ],
+      "desc": [
+        "McCree fires off a round from his trusty six-shooter. He can fan the Peacekeeper’s hammer to swiftly unload the entire cylinder. ",
+        "McCree dives in the direction he’s moving, effortlessly reloading his Peacekeeper in the process.",
+        "McCree heaves a blinding grenade that explodes shortly after it leaves his hand. The blast staggers enemies in a small radius.",
+        "Focus. Mark. Draw. McCree takes a few precious moments to aim; when he’s ready to fire, he shoots every enemy in his line of sight. The weaker his targets are, the faster he’ll line up a killshot."
+      ]
+    },
+    "_id": "mccree"
+  },
+  {
+    "poster": "https://d1u1mce87gyfbn.cloudfront.net/hero/soldier-76/full-portrait.png",
+    "description": [
+      "Currently the target of an international manhunt, the vigilante known as Soldier: 76 wages a personal war to expose the truth behind Overwatch's collapse.",
+      "Soldier: 76 revealed himself in a string of attacks that crisscrossed the globe, targeting financial institutions, shadowy corporations, and secure Overwatch facilities. Though to the outside world his motives are inscrutable, there are those who claim that he is a former Overwatch agent, determined to shed light on the conspiracy that brought down the organization.",
+      "While his true identity remains a mystery, he is believed to have been trained as a member of the American \"soldier enhancement program.\" He possesses physical capabilities exceeding those of a conventional soldier's, as well as other augmentations that make him a peerless combatant. In addition, he utilizes a cutting-edge arsenal, much of it stolen in raids on Overwatch installations.",
+      "Unrelenting in his search to find those responsible for Overwatch's fall, Soldier: 76 will stop at nothing to bring them to justice. ",
+      ""
+    ],
+    "role": "Offense",
+    "overview": "Armed with cutting-edge weaponry, including an experimental pulse rifle that’s capable of firing spirals of high-powered Helix Rockets, Soldier: 76 has the speed and support know-how of a highly trained warrior.",
+    "bio": {
+      "realname": "Real Name: Unknown, Age: Unknown",
+      "occupation": "Occupation: Vigilante",
+      "base": "Base of Operations: Unknown",
+      "affiliation": "Affiliation: Overwatch (formerly)"
+    },
+    "abilities": {
+      "name": [
+        "Heavy Pulse Rifle",
+        "Helix Rockets",
+        "Sprint",
+        "Biotic Field",
+        "Tactical Visor"
+      ],
+      "desc": [
+        "Soldier: 76’s rifle remains particularly steady while unloading fully-automatic pulse fire.",
+        "Tiny rockets spiral out of Soldier: 76’s Pulse Rifle in a single burst. The rockets’ explosion damages enemies in a small radius. ",
+        "Whether he needs to evade a firefight or get back into one, Soldier: 76 can rush ahead in a burst of speed. His sprint ends if he takes an action other than charging forward.",
+        "Soldier: 76 plants a biotic emitter on the ground. Its energy projection restores health to 76 and any of his squadmates within the field. ",
+        "Soldier: 76’s pinpoint targeting visor “locks” his aim on the threat closest to his crosshairs. If an enemy leaves his line of sight, Soldier: 76 can quickly switch to another target."
+      ]
+    },
+    "_id": "soldier:76"
+  },
+  {
+    "poster": "https://d1u1mce87gyfbn.cloudfront.net/hero/mercy/full-portrait.png",
+    "description": [
+      "A guardian angel to those who come under her care, Dr. Angela Ziegler is a peerless healer, a brilliant scientist, and a staunch advocate for peace.",
+      "Ziegler rose to become the head of surgery at a prominent Swiss hospital before pioneering a breakthrough in the field of applied nanobiology that radically improved the treatment of life-threatening illnesses and injuries. It was this expertise that attracted the attention of Overwatch.",
+      "Because her parents had been taken by war, Ziegler was opposed to the organization's militaristic approach to keeping global peace. Ultimately, she recognized that Overwatch offered her the opportunity to save lives on a much larger scale. As Overwatch's head of medical research, Angela sought to leverage her work for healing in frontline crises. The result was the Valkyrie swift-response suit, which Ziegler herself piloted on many Overwatch missions.",
+      "Despite her contributions to Overwatch, she was often at odds with her superiors and the organization's overarching aims. When Overwatch dissolved, Ziegler dedicated herself to helping those affected by war.",
+      "Though she spends most of her time caring for the broken and dispossessed in crisis areas around the world, Dr. Ziegler can be counted on to don her Valkyrie suit whenever innocents are imperiled."
+    ],
+    "role": "Support",
+    "overview": "Mercy’s Valkyrie Suit helps keep her close to teammates like a guardian angel; healing, resurrecting or strengthening them with the beams emanating from her Caduceus Staff.",
+    "bio": {
+      "realname": "Real Name: Angela Ziegler, Age: 37",
+      "occupation": "Occupation: Field Medic, First Responder",
+      "base": "Base of Operations: Zürich, Switzerland",
+      "affiliation": "Affiliation: Overwatch (formerly)"
+    },
+    "abilities": {
+      "name": [
+        "Caduceus Staff",
+        "Caduceus Blaster",
+        "Guardian Angel",
+        "Angelic Descent",
+        "Resurrect"
+      ],
+      "desc": [
+        "Mercy engages one of two beams that connect to an ally. By maintaining the beams, she can either restore that ally’s health or increase the amount of damage they deal.",
+        "Mercy shoots a  round from her sidearm. It's best reserved for emergency personal defense.",
+        "Mercy flies towards a targeted ally, allowing her to reach them quickly and provide assistance in crucial moments.",
+        "Propelled by her Valkyrie suit, Mercy slows the speed of her descent  from great heights.",
+        "Mercy radiates restorative power, bringing nearby dead allies back into the fight with full health."
+      ]
+    },
+    "_id": "mercy"
+  },
+  {
+    "poster": "https://d1u1mce87gyfbn.cloudfront.net/hero/junkrat/full-portrait.png",
+    "description": [
+      "Junkrat is an explosives-obsessed freak who lives to cause chaos and destruction.",
+      "The attack on the Australian omnium's fusion core forever altered the landscape of the Outback. After the detonation, the area was transformed into a harsh, irradiated wasteland, littered with debris and the twisted fragments of the ruined facility, and unlivable to most.",
+      "But there were some who survived. Calling themselves the Junkers, they scavenged the husk of the omnium and formed a lawless, cutthroat society in its shadow. Junkrat was one of them, eking out a living reclaiming metal and components from the ruins. Like many others, he was affected by the lingering radiation. This touch of madness made him ideal for handling dangerous explosives, a love which he turned into an obsession.",
+      "He came to notoriety when he discovered an extremely valuable secret in the bones of the omnium. Though few knew the nature of what he found, he was nonetheless pursued by bounty hunters, gangs, and opportunists wherever he went, until he made a deal with the Junker enforcer Roadhog, who grudgingly agreed to be his personal bodyguard in exchange for a fifty-fifty share of the spoils. ",
+      "Now, with Roadhog in tow, Junkrat has left the Outback, and embarked upon an international crime spree leaving nothing but havoc and bedlam in his wake."
+    ],
+    "role": "Defense",
+    "overview": "Junkrat’s area-denying armaments include a Frag Launcher that lobs bouncing grenades, Concussion Mines that send enemies flying, and Steel Traps that stop foes dead in their tracks. ",
+    "bio": {
+      "realname": "Real Name: Jamison Fawkes, Age: 25",
+      "occupation": "Occupation: Anarchist, Thief, Demolitionist, Mercenary, Scavenger",
+      "base": "Base of Operations: Junkertown, Australia (formerly)",
+      "affiliation": "Affiliation: Junkers (formerly)"
+    },
+    "abilities": {
+      "name": [
+        "Frag Launcher",
+        "Concussion Mine",
+        "Steel Trap",
+        "Total Mayhem",
+        "RIP-Tire"
+      ],
+      "desc": [
+        "Junkrat's Frag Launcher lobs grenades a significant distance. They bounce to reach their destination, and blow up when they strike an enemy.",
+        "After placing one of his homemade Concussion Mines, Junkrat can trigger it to damage enemies and send them flying... or propel himself through the air.",
+        "Junkrat tosses out a giant, metal-toothed trap. Should an enemy wander too close to the trap, it clamps on, injuring and immobilizing them.",
+        "Junkrat's deranged sense of humor persists past his death. If killed, he drops several live grenades.",
+        "Junkrat revs up a motorized tire bomb and sends it rolling across the battlefield, climbing over walls and obstacles. He can remotely detonate the RIP-Tire to deal serious damage to enemies caught in the blast, or just wait for it to explode on its own. "
+      ]
+    },
+    "_id": "junkrat"
+  },
+  {
+    "poster": "https://d1u1mce87gyfbn.cloudfront.net/hero/mei/full-portrait.png",
+    "description": [
+      "Mei is a scientist who has taken the fight to preserve the environment into her own hands.",
+      "Though many blamed the planet's escalating, unexplained climate phenomena on the advent of new technologies, the rapidly growing omnic population, and drastically increased consumption of resources, the true cause remained unknown. To find a solution, Overwatch established a series of eco-Watchpoints at remote, critical locations worldwide.",
+      "Mei-Ling Zhou was a member of this multiyear initiative. A peerless climatologist, she had introduced cutting-edge innovations in the field of climate manipulation that protected at-risk areas in Asia and beyond. She was assigned to the program's monitoring station at Watchpoint: Antarctica when disaster struck: a sudden, catastrophic polar storm battered the installation and cut it off from the outside world, leaving the facility damaged and the scientists stranded. As their supplies dwindled, they entered cryostasis in a last-ditch effort to survive until a rescue attempt could be made.",
+      "But that rescue never came. It was years later when the team's cryogenics chamber was finally discovered. Mei, still in hibernation, was the only survivor. The world Mei awoke to had gone through considerable changes: Overwatch was no more, the serious climate issues had worsened, and none of the eco-Watchpoints were in operation. Any clues that they had uncovered were lost.",
+      "Mei has decided to continue her work on her own. Equipped with a portable version of her climate-manipulation technology, she travels around the world, hoping to re-establish the eco-network and track down the causes of the threats to the planet's ecosystem."
+    ],
+    "role": "Defense",
+    "overview": "Mei’s weather-altering devices slow opponents and protect locations. Her Endothermic Blaster unleashes damaging icicles and frost streams, and she can Cryo-Freeze herself to guard against counterattacks, or obstruct the opposing team's movements with an Ice Wall.",
+    "bio": {
+      "realname": "Real Name: Mei-Ling Zhou, Age: 31",
+      "occupation": "Occupation: Climatologist, Adventurer",
+      "base": "Base of Operations: Xi’an, China (formerly)",
+      "affiliation": "Affiliation: Overwatch (formerly)"
+    },
+    "abilities": {
+      "name": [
+        "Endothermic Blaster",
+        "Cryo-Freeze",
+        "Ice Wall",
+        "Blizzard"
+      ],
+      "desc": [
+        "Mei’s blaster unleashes a concentrated, short-range stream of frost that damages, slows, and ultimately freezes enemies in place. Mei can also use her blaster to shoot icicle-like projectiles at medium range.",
+        "Mei instantly surrounds herself with a block of thick ice. She heals and ignores damage while encased, but cannot move or use abilities. ",
+        "Mei generates an enormous ice wall that obstructs lines of sight, stops movement, and blocks attacks. ",
+        "Mei deploys a weather-modification drone that emits gusts of wind and snow in a wide area. Enemies caught in the blizzard are slowed and take damage; those who linger too long are frozen solid. "
+      ]
+    },
+    "_id": "mei"
+  },
+  {
+    "poster": "https://d1u1mce87gyfbn.cloudfront.net/hero/zenyatta/full-portrait.png",
+    "description": [
+      "Zenyatta is an omnic monk who wanders the world in search of spiritual enlightenment. It is said that those who cross his path are never the same again.",
+      "Years ago, following the Omnic Crisis, a group of outcast omnic robots experienced what they described as a spiritual awakening. They abandoned their preprogrammed lives to establish a communal monastery deep in the Himalayas. After many years of meditation on the nature of existence, they came to the belief that they were more than artificial intelligences and that, like humans, they possessed the essence of a soul.",
+      "Recognizing the spiritual equality they held with humans, the monks, led by the enigmatic robot known as Tekhartha Mondatta, sought to heal the wounds caused by the Omnic Crisis a generation earlier and bring humans and robots back into societal harmony. Their message was embraced by millions around the world, and they became global celebrities.",
+      "But one monk, Zenyatta, disagreed with this new direction. He believed that the way to repair the problems between humans and omnics was not through dogmatic teaching but through interpersonal connection and engagement.",
+      "Ultimately, Zenyatta followed his own path. He chose to leave the monastery and wander the world, helping those he meets to overcome their personal struggles and find inner peace. But, when necessary, he will fight to protect the innocent, be they omnic or human."
+    ],
+    "role": "Support",
+    "overview": "Zenyatta calls upon orbs of harmony and discord to heal his teammates and weaken his opponents, all while pursuing a transcendent state of immunity to damage.",
+    "bio": {
+      "realname": "Real Name: Tekhartha Zenyatta, Age: 20",
+      "occupation": "Occupation: Wandering Guru, Adventurer",
+      "base": "Base of Operations: Shambali Monastery, Nepal (formerly)",
+      "affiliation": "Affiliation: The Shambali (formerly)"
+    },
+    "abilities": {
+      "name": [
+        "Orb of Destruction",
+        "Orb of Harmony",
+        "Orb of Discord",
+        "Transcendence"
+      ],
+      "desc": [
+        "Zenyatta projects his destructive energy orbs either individually, or in a rapid-fire volley after a few seconds spent gathering power.",
+        "Zenyatta casts an orb over the shoulder of a targeted ally. So long as Zenyatta maintains line of sight, the orb slowly restores health to his ally. Only one ally can receive the orb's benefit at a time.",
+        "Attaching the orb of discord to an opponent amplifies the amount of damage they receive for as long as Zenyatta maintains line of sight. Only one opponent can suffer the orb's effects at a time.",
+        "Zenyatta enters a state of heightened existence for a short period of time. While transcendent, Zenyatta cannot use abilities or weapons, but is immune to damage and automatically restores his health  and that of nearby allies."
+      ]
+    },
+    "_id": "zenyatta"
+  },
+  {
+    "poster": "https://d1u1mce87gyfbn.cloudfront.net/hero/winston/full-portrait.png",
+    "description": [
+      "A super-intelligent, genetically engineered gorilla, Winston is a brilliant scientist and a champion for humanity's potential.",
+      "The Horizon Lunar Colony was established as a first step for humanity's renewed exploration of space. Among its residents was a group of genetically enhanced gorillas that were intended to test the effects of prolonged habitation in space.",
+      "One gorilla displayed such rapid brain development from the gene therapy that he was taken under the wing of Dr. Harold Winston, who taught him science and inspired him with tales of human ingenuity. The young gorilla passed his days assisting with the scientists' experiments, watching the distant blue world outside his habitat window, dreaming of the endless possibilities that awaited him there.",
+      "But his life was thrown into chaos when the other gorillas led an uprising, killed the mission scientists, and claimed the colony for their own. Taking on the name of his beloved human caretaker, Winston built a makeshift rocket and escaped to Earth. There he found a new home with Overwatch, an organization that represented everything he had come to admire about humanity. Winston was finally able to live up to the heroic ideal that had been instilled in him.",
+      "Now with the fall of Overwatch, Winston has gone into seclusion, once again cut off from the world he believes in, but longing for the days of heroism to return."
+    ],
+    "role": "Tank",
+    "overview": "Winston wields  impressive inventions—a jump pack, electricity-blasting Tesla Cannon, portable shield projector and more—with literal gorilla strength.",
+    "bio": {
+      "realname": "Real Name: Winston, Age: 29",
+      "occupation": "Occupation: Scientist, Adventurer",
+      "base": "Base of Operations: Horizon Lunar Colony (formerly)",
+      "affiliation": "Affiliation: Overwatch (formerly)"
+    },
+    "abilities": {
+      "name": [
+        "Tesla Cannon",
+        "Jump Pack",
+        "Barrier Projector",
+        "Primal Rage"
+      ],
+      "desc": [
+        "Winston’s weapon fires a short-range electric barrage for as long as he holds down the trigger.",
+        "Assisted by his energy pack, Winston lunges through the air, dealing significant damage and staggering nearby enemies when he lands.",
+        "Winston’s barrier projector extends a bubble-shaped field that absorbs damage until it's destroyed. Allies protected by the barrier can return fire from within it.",
+        "Winston embraces his animal nature, significantly boosting his health  and making him very difficult to kill, strengthening his melee attack, and allowing him to use his Jump Pack ability more frequently. While raging, Winston can only make melee and Jump Pack attacks."
+      ]
+    },
+    "_id": "winston"
+  },
+  {
+    "poster": "https://d1u1mce87gyfbn.cloudfront.net/hero/reinhardt/full-portrait.png",
+    "description": [
+      "Reinhardt Wilhelm styles himself as a champion of a bygone age, who lives by the knightly codes of valor, justice, and courage.",
+      "Over thirty years ago, Overwatch was founded to counter the threat of the robot uprisings around the world. Reinhardt, a highly decorated German soldier, was inducted as part of the original Overwatch strike team that put an end to the Omnic Crisis. After the conflict's resolution, Overwatch grew into a global institution, keeping the peace in a war-torn world. Reinhardt proved himself to be one of its most stalwart champions.",
+      "Reinhardt's unique ethics and larger-than-life persona earned the admiration of his peers and superiors alike. Never afraid to speak his mind, he was Overwatch's most vocal supporter and, when necessary, its harshest critic, providing a constant reminder that Overwatch was meant to be a force for good.",
+      "Having served into his late fifties, Reinhardt was faced with mandatory retirement from combat operations. Despondent about being removed from active duty, Reinhardt feared that his days of purpose and glory had ended. As times grew darker and Overwatch came under suspicion of corruption and sedition, Reinhardt could only watch as the cause he had dedicated his life to defending surrendered in disgrace.",
+      "Though Overwatch was eventually disbanded, Reinhardt was not content to sit idly by while the world fell to disorder. Once again donning his Crusader armor, he has vowed to fight for justice across Europe like a knight of old, defending the innocent and winning hearts and minds with the promise of better days to come."
+    ],
+    "role": "Tank",
+    "overview": "Clad in powered armor and swinging his hammer, Reinhardt leads a rocket-propelled charge across the battleground and defends his squadmates with a massive energy barrier.",
+    "bio": {
+      "realname": "Real Name: Reinhardt Wilhelm, Age: 61",
+      "occupation": "Occupation: Adventurer",
+      "base": "Base of Operations: Stuttgart, Germany",
+      "affiliation": "Affiliation: Overwatch (formerly)"
+    },
+    "abilities": {
+      "name": [
+        "Rocket Hammer",
+        "Barrier Field",
+        "Charge",
+        "Fire Strike",
+        "Earthshatter"
+      ],
+      "desc": [
+        "Reinhardt’s Rocket Hammer is an exemplary melee weapon, able to deal punishing damage in a wide arc with every swing.",
+        "Reinhardt projects a broad, forward-facing energy barrier, which can absorb substantial damage before it is destroyed. Though Reinhardt can protect himself and his companions behind the barrier, he cannot attack while sustaining it.",
+        "Reinhardt charges forth in a straight line, pinning the first enemy in his path and knocking others aside. If he collides with a wall, the foe he’s carrying suffers extreme damage.",
+        "By whipping his Rocket Hammer forward, Reinhardt slings a flaming projectile which pierces and damages any enemies it touches.",
+        "Reinhardt forcefully slams his Rocket Hammer into the ground, knocking down and damaging all enemies in front of him."
+      ]
+    },
+    "_id": "reinhardt"
+  },
+  {
+    "poster": "https://d1u1mce87gyfbn.cloudfront.net/hero/lucio/full-portrait.png",
+    "description": [
+      "Lúcio is an international celebrity who inspires social change through his music and actions.",
+      "Lúcio Correia dos Santos grew up in Rio de Janeiro, in a poor and crowded favela that was hit hard by the financial upheaval following the Omnic Crisis. As Brazil began the long process of recovery, he wanted to find a way to lift the spirits of those around him. He found his answer in music and its power to bring people together and even help them forget their troubles, if only for a short time. He performed on street corners, in block parties, and as he got older, at a string of legendary underground shows.",
+      "But Lúcio's close-knit community was thrown into chaos when the multinational Vishkar Corporation secured a contract to redevelop large tracts of the city. Lúcio and his neighbors had been told that the development would improve their lives. However, that promise never became a reality. Vishkar imposed controls on the residents in the name of building a more orderly society: enforcing curfews, cracking down on what the company perceived as lawless behavior, and exploiting the populace as a cheap labor force.",
+      "Lúcio wouldn't stand for it. He stole Vishkar sonic technology that had been used to suppress the people, and he converted it into a tool to rally them to action. In a popular uprising, they drove Vishkar out of their neighborhoods. Lúcio's leadership made him a star overnight and a symbol for positive social change. His music skyrocketed in popularity. Whereas he had once performed locally, he was now filling arenas across the world.",
+      "With his newfound fame, Lúcio realizes that he has an opportunity to make a difference and change the world for the better."
+    ],
+    "role": "Support",
+    "overview": "On the battlefield, Lúcio’s cutting-edge Sonic Amplifier buffets enemies with projectiles and knocks foes back with blasts of sound. His songs can both heal his team or boost their movement speed, and he can switch between tracks on the fly.",
+    "bio": {
+      "realname": "Real Name:  Lúcio Correia dos Santos,   Age: 26",
+      "occupation": "Occupation: DJ, Freedom Fighter",
+      "base": "Base of Operations: Rio de Janeiro, Brazil\t",
+      "affiliation": "Affiliation:  None"
+    },
+    "abilities": {
+      "name": [
+        "Sonic Amplifier",
+        "Crossfade",
+        "Amp It Up",
+        "Sound Barrier"
+      ],
+      "desc": [
+        "Lúcio can hit his enemies with sonic projectiles or knock them back with a blast of sound.",
+        "Lúcio continuously energizes himself—and nearby teammates—with music. He can switch between two songs: one amplifies movement speed, while the other regenerates health. ",
+        "Lúcio increases the volume on his speakers, boosting the effects of his songs. ",
+        "Protective  waves radiate  out from Lúcio’s Sonic Amplifier, briefly providing him and nearby allies with personal shields."
+      ]
+    },
+    "_id": "lucio"
+  }
+]
