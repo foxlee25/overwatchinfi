@@ -61,6 +61,7 @@
     "underscore": "^1.8.3",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1",
+    "webworker-threads": "^0.7.5",
     "x-ray": "^2.3.0"
   }
 }
