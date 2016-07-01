@@ -45,8 +45,8 @@ var Pro = React.createClass({
 		var region = region;
 		var platform = platform;
 		var achievements = `https://api.lootbox.eu/${platform}/${region}/${battleTag}/achievements`;
-		var allHero = `https://api.lootbox.eu/${platform}/${region}/${battleTag}/allHeroes/`;
-		var heros = `https://api.lootbox.eu/${platform}/${region}/${battleTag}/heroes`;
+		var allHero = `https://api.lootbox.eu/${platform}/${region}/${battleTag}/quick-play/allHeroes/`;
+		var heros = `https://api.lootbox.eu/${platform}/${region}/${battleTag}/quick-play/heroes`;
 		var profile = `https://api.lootbox.eu/${platform}/${region}/${battleTag}/profile`;
 
 		async.parallel({
