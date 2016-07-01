@@ -6,6 +6,7 @@ var url = '/video/getAllVideos';
 var totalNum = 30;
 var Video = React.createClass({
 	getInitialState: function(){
+		window.localStorage.setItem('currentPage', 'videoYoutube');
 		return {
 			videos: []
 		};

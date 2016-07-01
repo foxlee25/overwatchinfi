@@ -24,7 +24,11 @@ var Signup = React.createClass({
                 delete signup.password;
                 AppAction.loginSuccess(signup);
                 AppAction.toast(properties.signupSuccess);
-                window.location.assign("#/search");
+                if(window.localStorage.getItem('currentPage')){
+                    window.location.assign("#/"+window.localStorage.getItem('currentPage'));
+                }else{
+                    window.location.assign("#/search");
+                }
             }else{
                 $('#signupForm-panelAlert').show();
             }

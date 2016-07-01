@@ -24,7 +24,12 @@ var Login = React.createClass({
                 window.sessionStorage.setItem('userId',existingUser.userId);
                 AppAction.loginSuccess(response.data);
                 AppAction.toast(properties.loginSuccess);
-                window.location.assign("#/search");
+                if(window.localStorage.getItem('currentPage')){
+                    window.location.assign("#/"+window.localStorage.getItem('currentPage'));
+                }else{
+                    window.location.assign("#/search");
+                }
+
 
             }else{
                 $('#loginForm-panelAlert').show();

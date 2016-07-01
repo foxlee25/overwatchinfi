@@ -7,6 +7,7 @@ var $ = require('jquery');
 var totalNum = 28;
 var Video = React.createClass({
     getInitialState: function(){
+        window.localStorage.setItem('currentPage', 'videoGfycat');
         return {
             videos: []
         };

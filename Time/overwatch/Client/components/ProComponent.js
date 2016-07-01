@@ -13,6 +13,7 @@ var $ = require('jquery');
 
 var Pro = React.createClass({
 	getInitialState: function() {
+		window.localStorage.setItem('currentPage', 'pro');
 		var userId = window.sessionStorage.getItem('userId');
 		var battleTag = {};
 		if(AppStore.getBattleTag().battleTag) {

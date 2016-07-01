@@ -5,6 +5,7 @@ var NewsCard = require('../views/NewsCard');
 
 var News = React.createClass({
 	getInitialState: function(){
+		window.localStorage.setItem('currentPage', 'news');
 		return {
 			news: [],
 			page: []

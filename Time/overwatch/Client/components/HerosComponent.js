@@ -5,6 +5,7 @@ var HeroCard = require('../views/HeroCard');
 var url = '/hero/allheros';
 var Heros = React.createClass({
 	getInitialState: function(){
+		window.localStorage.setItem('currentPage', 'heros');
 		return {
 			heros: []
 		};

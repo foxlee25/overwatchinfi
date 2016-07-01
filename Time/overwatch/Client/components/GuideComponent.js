@@ -17,6 +17,7 @@ var oldest = 'oldest';
 var commentGuideList = [];
 var Guide = React.createClass({
     getInitialState: function(){
+        window.localStorage.setItem('currentPage', 'guide');
         return {
             guides: [],
             userId: null,

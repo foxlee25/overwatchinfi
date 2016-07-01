@@ -21,6 +21,7 @@ var Search = React.createClass({
        // var battleTag = JSON.parse(window.localStorage.getItem('battleTag'));
         var battleTag ='' ;
         window.localStorage.setItem('battleTag', '');
+        window.localStorage.setItem('currentPage', 'search');
         return {info: null, userId: userId, searchError: false, battleTag: battleTag, gameData: null, loading: false};
     },
     componentWillMount: function(){
