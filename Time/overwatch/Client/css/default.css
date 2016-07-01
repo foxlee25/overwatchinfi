@@ -447,8 +447,8 @@
 }
 
 .guide-map{
-    width:90%;
-    margin-top: 25px;
+    width: 100%;
+    margin-top: 5px;
 }
 
 .guide-title{
@@ -470,6 +470,12 @@
     margin-top: 10px;
     margin-right: 10px;
     margin-bottom: 5px;
+}
+
+.guide-map-name{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
 }
 
 .heroSelectionPage>div{

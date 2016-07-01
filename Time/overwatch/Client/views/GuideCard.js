@@ -4,6 +4,28 @@ var dateFormat = require('dateformat');
 var AjaxService = require('../service/AjaxService');
 var likeGuideList = [];
 var dislikeGuideList = [];
+
+var mapName = {"map_Ilios_stage_1.jpg": "Ilios1",
+    "map_Ilios_stage_2.jpg": "Ilios2",
+    "map_Ilios_stage_3.jpg": "Ilios3",
+     "map_dorado.jpg": "Dorado",
+     "map_hanamura.jpg": "Hanamura",
+    "map_hollywood.jpg": "Hollywood",
+    "map_kings_row.jpg": "KingsRow",
+    "map_lijiang_tower_stage_1.jpg": "Lijiang-Tower1",
+    "map_lijiang_tower_stage_2.jpg": "Lijiang-Tower2",
+    "map_lijiang_tower_stage_3.jpg": "Lijiang-Tower3",
+    "map_nepal_stage_1.jpg": "Nepal1",
+    "map_nepal_stage_2.jpg": "Nepal2",
+    "map_nepal_stage_3.jpg": "Nepal3",
+    "map_numbani.jpg": "Numbani",
+    "map_route_66.jpg": "Route66",
+    "map_temple_of_anubis.jpg": "Temple-of-Anubis",
+    "map_volskaya_Industries.jpg": "Volskaya",
+    "map_watchpoint_gibraltar.jpg": "Watchpoint"}
+
+
+
 var GuideCard = React.createClass({
 	getInitialState: function(){
 		return {};
@@ -68,7 +90,7 @@ var GuideCard = React.createClass({
 			<div className="guideCard col-md-12" >
 				<div className="col-md-4">
 					<img className="guide-map"  src={"./img/map_origin/"+this.props.guide.map} />
-			
+			        <div className="guide-map-name">{mapName[this.props.guide.map]}</div>
 				</div>
 				<div className="col-md-8">
 					<div className="guide-title"><span>{this.props.guide.title}  ({this.props.guide.role})</span></div>
@@ -80,13 +102,13 @@ var GuideCard = React.createClass({
 					</div>
                    <span className="guide-button"><img className="guide-button-img-like" onClick={this.likeGuide} src={"./img/icon/Down.png"}/></span>
                     <div className="progress guideProgress">
+            {this.state.likeTime?<div className="progress-bar progress-bar-success" style={this.state.likeStyle} >
+        {this.state.likeTime} Agree ({this.state.likeStyle.width})
+        </div>:<div className="progress-bar progress-bar-success" style={this.state.likeStyle} ></div>}
+        {this.state.dislikeTime?<div className="progress-bar progress-bar-danger" style={this.state.dislikeStyle}  >
+            {this.state.dislikeTime} Disagree ({this.state.dislikeStyle.width})
+        </div>: <div className="progress-bar progress-bar-danger" style={this.state.dislikeStyle}  ></div>}
 
-						<div className="progress-bar progress-bar-success" style={this.state.likeStyle} >
-                                {this.state.likeTime} Agree ({this.state.likeStyle.width})
-						</div>
-						<div className="progress-bar progress-bar-danger" style={this.state.dislikeStyle}  >
-							    {this.state.dislikeTime} Disagree ({this.state.dislikeStyle.width})
-						</div>
 					</div>
                     <span className="guide-button"><img className="guide-button-img-dislike" onClick={this.dislikeGuide} src={"./img/icon/Up.png"}/></span>
 
