@@ -291,7 +291,7 @@
 }
 
 .homeSearch{
-    background-color:#eb9b27;;
+    background-color:#eb9b27;
 }
 
 
@@ -480,6 +480,14 @@
 
 .heroSelectionPage>div{
     margin-bottom: 30px;
+}
+
+.guide-remove-icon{
+    -webkit-transform: scale(3, 3);
+    transform: scale(3, 3);
+    position: absolute;
+    left: -8px;
+    top: -8px;
 }
 
 /** guide ends **/
@@ -850,6 +858,12 @@ div#newsComponent {
 .guide-side-disable{
     box-shadow: none;
     opacity: .65;
+}
+
+div#shareBtn {
+    margin-left: 15px;
+    background-color: #3b5998;
+    color: white;
 }
 
 /** footer end **/

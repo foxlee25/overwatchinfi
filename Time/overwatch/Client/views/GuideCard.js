@@ -31,6 +31,7 @@ var GuideCard = React.createClass({
 		return {};
 	},
 	componentWillMount: function(){
+        this.state.userId = window.sessionStorage.getItem('userId');
         if(this.props.guide.likeTime){
             this.state.likeTime = this.props.guide.likeTime;
         }else{
@@ -82,12 +83,18 @@ var GuideCard = React.createClass({
         this.forceUpdate();
         AjaxService.post(url,{data: {createTime : guide.createTime,type : 'dislike'}});
     },
+    removeGuide: function(guideId){
+        var url = '/guide/removeGuide';
+        AjaxService.post(url,{data: {guideId : guideId}});
+        window.location.reload(true);
+    },
 	componentDidMount: function() {
 
 	},
 	render: function(){
 		return (
 			<div className="guideCard col-md-12" >
+        {this.state.userId==='admin'?<div onClick={this.removeGuide.bind(this, this.props.guide.createTime)} className="glyphicon glyphicon-remove-circle guide-remove-icon"></div>:<div></div>}
 				<div className="col-md-4">
 					<img className="guide-map"  src={"./img/map_origin/"+this.props.guide.map} />
 			        <div className="guide-map-name">{mapName[this.props.guide.map]}</div>

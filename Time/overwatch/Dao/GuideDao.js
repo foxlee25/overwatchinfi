@@ -98,6 +98,10 @@ var guideClick = function(db, guide){
 //
 // };
 
+var removeGuide = function(db, data){
+    db.collection('HeroGuide').remove({'createTime': data.guideId});
+};
+
 var insertGuide = function(db, data, restCallback){
     db.collection('HeroGuide').insertOne(data, function(err, result){
         if(err){
@@ -112,7 +116,8 @@ var GuideDao = {
     guide_findAll : findAllGuides,
     insert_guide: insertGuide,
     guide_click: guideClick,
-    guide_findTotalNum: findTotalGuideNum
+    guide_findTotalNum: findTotalGuideNum,
+    guide_remove: removeGuide
 }
 
 module.exports = GuideDao;

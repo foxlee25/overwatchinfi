@@ -34,6 +34,14 @@ router.post('/getTotalGuideNum', function (req, res) {
     });
 });
 
+/**path is /guide/removeGuide**/
+router.post('/removeGuide', function (req, res) {
+    res.header('Content-type', 'application/json');
+    res.header('Charset', 'utf8');
+    var guide = req.body.data;
+    daoController.getDao('GuideDao', 'guide_remove', guide);
+});
+
 /**path is /guide/clickGuide**/
 router.post('/clickGuide', function (req, res) {
     res.header('Content-type', 'application/json');
