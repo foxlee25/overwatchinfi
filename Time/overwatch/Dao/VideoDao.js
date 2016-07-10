@@ -1,7 +1,7 @@
 //using paging get video data
 var findAllVideo = function (db, data ,restCallback) {
    var videoArr = [];
-    var cursor = db.collection('Video').find({source : data.source}).skip(data.videoNum*(data.pageIndex-1)).limit(data.videoNum);
+    var cursor = db.collection('Video').find({source : data.source}).sort({'_id':-1}).skip(data.videoNum*(data.pageIndex-1)).limit(data.videoNum);
     cursor.each(function (err, doc) {
         if (doc != null) {
             videoArr.push(doc);
@@ -41,9 +41,16 @@ var videoClick = function(db, video){
 
 }
 
+
+var videoRemove = function(db, video){
+    db.collection('Video').remove({videoId: video.videoId});;
+    
+}
+
 var VideoDao = {
     video_click : videoClick,
     video_findAll: findAllVideo,
+    video_remove: videoRemove,
     video_addAllFromPlaylist : addAllVideoFromPlaylist
 }
 

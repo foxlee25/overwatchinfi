@@ -3,7 +3,7 @@ var AjaxService = require('../service/AjaxService');
 var Underscore= require('underscore');
 var VideoCard = require('../views/VideoCard');
 var url = '/video/getAllVideos';
-var totalNum = 30;
+var totalNum = 28;
 var Video = React.createClass({
 	getInitialState: function(){
 		window.localStorage.setItem('currentPage', 'videoYoutube');

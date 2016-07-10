@@ -12,6 +12,7 @@ var Gfycat = React.createClass({
         return stateVar;
     },
     componentWillMount: function(){
+        this.state.userId = window.sessionStorage.getItem('userId');
         this.state.likeTime = this.props.video.likeTime;
         this.state.dislikeTime = this.props.video.dislikeTime;
     },
@@ -52,6 +53,11 @@ var Gfycat = React.createClass({
         this.forceUpdate();
         AjaxService.post(url,{data: {videoId : video.videoId ,type : 'dislike'}});
     },
+    removeVideo: function(videoId){
+        var url = '/video/removeVideo';
+        AjaxService.post(url,{data: {videoId : videoId}});
+        window.location.assign("#/videoGfycat");
+    },
     setVideoData: function(){
         var videoData = {
             url: "https://thumbs.gfycat.com/"+this.props.video.videoId+"-360.mp4",
@@ -63,7 +69,8 @@ var Gfycat = React.createClass({
         return (
             <div className="col-md-4 col-sm-6 col-xs-12">
                 <div id={this.props.video.videoId} className="videoCard" onClick={this.setVideoData}>
-                    <video preload='auto' poster={'https://thumbs.gfycat.com/'+this.props.video.videoId+'-thumb360.jpg'} loop className='videoCardImg' >
+        {this.state.userId==='admin'?<div onClick={this.removeVideo.bind(this, this.props.video.videoId)} className="glyphicon glyphicon-remove-circle video-remove-icon"></div>:<div></div>}
+        <video preload='auto' poster={'https://thumbs.gfycat.com/'+this.props.video.videoId+'-thumb360.jpg'} loop className='videoCardImg' >
                         <source src={'https://thumbs.gfycat.com/'+this.props.video.videoId+'-360.mp4'} type='video/mp4' />
                     </video>
                     <span>

@@ -12,6 +12,14 @@ router.post('/getAllVideos', function (req, res) {
     });
 });
 
+/**path is /video/removeVideo**/
+router.post('/removeVideo', function (req, res) {
+    res.header('Content-type', 'application/json');
+    res.header('Charset', 'utf8');
+    var video = req.body.data;
+    daoController.getDao('VideoDao', 'video_remove', video);
+});
+
 /**path is /video/clickVideo**/
 router.post('/clickVideo', function (req, res) {
     res.header('Content-type', 'application/json');

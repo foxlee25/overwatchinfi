@@ -24,6 +24,14 @@
 
 }
 
+.video-remove-icon{
+    -webkit-transform: scale(2, 2);
+    transform: scale(2, 2);
+    position: absolute;
+    left: 0px;
+    top: 18px;
+}
+
 .btn-video {
     color: #545454;
     background-color: #D8D2D2;
@@ -483,8 +491,8 @@
 }
 
 .guide-remove-icon{
-    -webkit-transform: scale(3, 3);
-    transform: scale(3, 3);
+    -webkit-transform: scale(2, 2);
+    transform: scale(2, 2);
     position: absolute;
     left: -8px;
     top: -8px;

@@ -10,6 +10,7 @@ var VideoCard = React.createClass({
 		return {};
 	},
 	componentWillMount: function(){
+		this.state.userId = window.sessionStorage.getItem('userId');
 		this.state.likeTime = this.props.video.likeTime;
 		this.state.dislikeTime = this.props.video.dislikeTime;
 	},
@@ -40,6 +41,11 @@ var VideoCard = React.createClass({
 		this.forceUpdate();
 		AjaxService.post(url,{data: {videoId : video.videoId ,type : 'dislike'}});
 	},
+	removeVideo: function(videoId){
+		var url = '/video/removeVideo';
+		AjaxService.post(url,{data: {videoId : videoId}});
+		window.location.assign("#/videoYoutube");
+	},
 	setVideoData: function(){
 		this.props.video.genre = "youtube";
 		AppAction.videoData(this.props.video);
@@ -48,6 +54,7 @@ var VideoCard = React.createClass({
 		return (
 			<div className="col-md-4 col-sm-6 col-xs-12">
 						<div  className="videoCard">
+		{this.state.userId==='admin'?<div onClick={this.removeVideo.bind(this, this.props.video.videoId)} className="glyphicon glyphicon-remove-circle video-remove-icon"></div>:<div></div>}
                            	<Link to={'/player'}>
 							<picture onClick={this.setVideoData}>
 								<source srcSet={"http://img.youtube.com/vi/"+this.props.video.videoId+"/mqdefault.jpg"} media="(min-width:991px)" />
