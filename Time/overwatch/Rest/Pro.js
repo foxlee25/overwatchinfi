@@ -1,43 +1,87 @@
 'use strict'
-var express = require('express');
-var daoController = require('../DaoController.js');
-var router = express.Router();
-var blizzardScrapper = require('../util/BlizzardScrapper');
 
-router.post('/all', function(req, res) {
-	res.header('Content-type', 'application/json');
-	res.header('Access-Control-Allow-Headers', '*');
-	res.header('Access-Control-Allow-Origin', '*');
-	res.header('Charset', 'utf8');
+const express = require('express');
+const router = express.Router();
+const apicache = require('apicache').options({ debug: true }).middleware;
+const blizzardSource = require('../util/BlizzardSource');
 
-	daoController.getDao('ProDao', 'pro_getData', req.body, function (doc, db) {
-		db.close();
-		if(doc.length > 0){
-			res.send({info: doc[0]});
+router.get('/battle/basicinfo/:platform/:region/:battleTag',apicache('1 day'), (req, res) => {
+	req.apicacheGroup = req.params.platform+req.params.region+req.params.battleTag;
+	
+	var promise = new Promise((resolve, reject) => {
+		blizzardSource.basicInfo(resolve, reject, req.params.region, req.params.platform, req.params.battleTag);
+	});
+
+	promise.then( (val) => {
+		if(val === {}){
+			res.status(400).send();
 		}else{
-			res.send({info: null});
+			res.send(val);
 		}
 	});
 });
 
-router.get('/main/:platform/:region/:battleTag', function(req, res){
-	res.header('Content-type', 'application/json');
-	res.header('Access-Control-Allow-Headers', '*');
-	res.header('Access-Control-Allow-Origin', '*');
-	res.header('Charset', 'utf8');
+router.get('/battle/featurestats/:platform/:region/:battleTag/:type', apicache('1 day'), (req, res) => {
+	req.apicacheGroup = req.params.platform+req.params.region+req.params.battleTag+req.type;
 
-	let promise = new Promise(function(resolve, reject){
-		blizzardScrapper.getBattleTagMainData(resolve, reject, req.params.region, req.params.platform, req.params.battleTag);
+	var promise = new Promise((resolve, reject) => {
+		blizzardSource.featureStats(resolve, reject, req.params.region, req.params.platform, req.params.battleTag, req.params.type);
 	});
 
-	promise.then(function(val){
-		if(val == {}){
+	promise.then( (val) => {
+		if(val === {}){
 			res.status(400).send();
-		}else {
+		}else{
 			res.send(val);
 		}
-	}).catch(function(val){
-		res.status(400).send();
+	});
+});
+
+router.get('/battle/heros/:platform/:region/:battleTag/:type', apicache('1 day'), (req, res) => {
+	req.apicacheGroup = req.params.platform+req.params.region+req.params.battleTag+req.type;
+
+	var promise = new Promise((resolve, reject) => {
+		blizzardSource.heros(resolve, reject, req.params.region, req.params.platform, req.params.battleTag, req.params.type);
+	});
+
+	promise.then( (val) => {
+		if(val === {}){
+			res.status(400).send();
+		}else{
+			res.send(val);
+		}
+	});
+});
+
+router.get('/battle/careerBest/:platform/:region/:battleTag/:type', apicache('1 day'), (req, res) => {
+	req.apicacheGroup = req.params.platform+req.params.region+req.params.battleTag+req.type;
+
+	var promise = new Promise((resolve, reject) => {
+		blizzardSource.careerBest(resolve, reject, req.params.region, req.params.platform, req.params.battleTag, req.params.type);
+	});
+
+	promise.then( (val) => {
+		if(val === {}){
+			res.status(400).send();
+		}else{
+			res.send(val);
+		}
+	});
+});
+
+router.get('/battle/achievements/:platform/:region/:battleTag', apicache('1 day'), (req, res) => {
+	req.apicacheGroup = req.params.platform+req.params.region+req.params.battleTag+req.type;
+
+	var promise = new Promise((resolve, reject) => {
+		blizzardSource.achievements(resolve, reject, req.params.region, req.params.platform, req.params.battleTag);
+	});
+
+	promise.then( (val) => {
+		if(val === {}){
+			res.status(400).send();
+		}else{
+			res.send(val);
+		}
 	});
 });
 
