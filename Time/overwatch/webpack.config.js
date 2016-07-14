@@ -13,12 +13,8 @@ var config = {
   },
   module : {
     loaders : [
-      {
-        test : /\.jsx?/,
-        include : APP_DIR,
-        exclude : BOWER_DIR,
-        loader : 'babel'
-      }
+      {test : /\.jsx?/, include : APP_DIR, exclude : BOWER_DIR, loader : 'babel'},
+      {test: /\.css$/, loader: 'style!css'},
     ]
   }
 };

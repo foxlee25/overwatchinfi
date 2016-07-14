@@ -1,0 +1,113 @@
+.featureStats {
+    width: 90%;
+    margin: auto;
+    border: 1px solid #e5e4e2;
+    padding: 10px;
+}
+
+.featureStats h4 {
+    float: left;
+    padding-left: 10px;
+}
+
+.featureStatsList {
+    clear: both;
+    display: flex;
+    margin-left: 30px;
+    flex-direction: row;
+}
+
+.featureStatsItem {
+    flex: 1;
+}
+
+.commonHeros {
+    float: left;
+    border: 1px solid #e5e4e2;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.commonHeros h4 {
+    float: left;
+    padding-left: 10px;
+}
+
+.commonHerosList {
+    clear: both;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.commonHerosItem {
+    flex: 1;
+}
+
+.heroTable {
+    width: 80%;
+    margin: auto;
+    border: 1px solid #e5e4e2;
+}
+
+.heroList {
+    display: flex;
+    flex-direction: row;
+}
+
+.heroItem {
+    flex: 1;
+}
+
+.recordTable {
+    width: 80%;
+    margin: auto;
+    border: 1px solid #e5e4e2;
+}
+
+.recordList {
+    display: flex;
+}
+
+.recordItem {
+    flex:1;
+}
+
+.achievementTable {
+    width: 90%;
+    margin: auto;
+    border: 1px solid #e5e4e2;
+}
+
+.achievementList .h4{
+    float: left;
+    margin-left: 10px;
+}
+
+.achievementList div {
+    clear: both;
+    display: flex;
+    flex-direction: row;
+}
+
+.achievementCardFinished {
+    flex: 1;
+}
+
+.achievementCardFinished img {
+    background-color: ivory;
+}
+
+.achievementCardFinished p {
+}
+
+.achievementCardNotFinished {
+    flex: 1;
+}
+
+.achievementCardNotFinished img {
+    background-color: turquoise;
+}
+
+.achievementCardNotFinished p {
+}

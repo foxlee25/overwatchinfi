@@ -1,257 +1,120 @@
-var React = require('react');
-var properties = require('../i18/AppProps');
-var AjaxService = require('../service/AjaxService');
-var ProfileCard = require('../views/ProfileCard');
-var AchievementCard = require('../views/AchievementCard');
-var PlayedHeroCard = require('../views/PlayedHeroCard');
-var LoadingView = require('../views/LoadingView');
-var underscore = require('underscore');
-var AppStore = require('../flux/Store');
-var AppAction = require('../flux/Actions');
-var async = require('async');
-var $ = require('jquery');
+'use strict'
+const React = require('react');
+const properties = require('../i18/AppProps');
+const AjaxService = require('../service/AjaxService');
+const _ = require('underscore');
+const AppStore = require('../flux/Store');
+const CareerBestView = require('../views/pro/CareerBest');
+const Achievements = require('../views/pro/Achievements');
+const FeatureStats = require('../views/pro/FeatureStats');
+const CommonHeros = require('../views/pro/CommonHeros');
+const Heros = require('../views/pro/Heros');
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-var Pro = React.createClass({
-	getInitialState: function() {
-		window.localStorage.setItem('currentPage', 'pro');
-		var userId = window.sessionStorage.getItem('userId');
-		var battleTag = {};
-		if(AppStore.getBattleTag().battleTag) {
-			battleTag = AppStore.getBattleTag();
-		}else{
-			battleTag = JSON.parse(window.localStorage.getItem('battleTag'));
-		}
+const pro = React.createClass({
+    getInitialState: function() {
+        window.localStorage.setItem('currentPage', 'pro');
+        var userId = window.sessionStorage.getItem('userId');
+        var battleTag = {};
+        if(AppStore.getBattleTag().battleTag) {
+            battleTag = AppStore.getBattleTag();
+        }else{
+            battleTag = JSON.parse(window.localStorage.getItem('battleTag'));
+        }
 
-		return {info: null, userId: userId, searchError: false, battleTag: battleTag, gameData: null, loading: false};
-	},
-	componentWillMount: function(){
-		if(this.state.battleTag) {
-			this.search(this.state.battleTag.battleTag, this.state.battleTag.region, this.state.battleTag.platform);
-		}
-	},
-	componentDidMount: function(){
-		$(window).on("load resize ", function() {
-			var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
-			$('.tbl-header').css({'padding-right':scrollWidth});
-		}).resize();
-	},
-	searchBox: function(){
-		this.search(this.refs.search.value.replace("#","-"), this.refs.region.value, this.refs.platform.value);
-	},
-	search: function(battleTag, region, platform){
-		this.state.loading = true;
-		this.state.searchError = false;
-		this.forceUpdate();
-		var battleTag = battleTag;
-		var region = region;
-		var platform = platform;
-		var achievements = `https://api.lootbox.eu/${platform}/${region}/${battleTag}/achievements`;
-		var allHero = `https://api.lootbox.eu/${platform}/${region}/${battleTag}/quick-play/allHeroes/`;
-		var heros = `https://api.lootbox.eu/${platform}/${region}/${battleTag}/quick-play/heroes`;
-		var profile = `https://api.lootbox.eu/${platform}/${region}/${battleTag}/profile`;
+        return {info: null, userId: userId, searchError: false, battleTag: battleTag, gameData: null, loading: false, type: 0};
+    },
+    componentWillMount: function() {
+    },
+    battleService: function(subdomain) {
+        if(this.state[subdomain]){
+            return;
+        }
 
-		async.parallel({
-			achievements: (callback) => {
-				AjaxService.get(achievements, (response) => {
-					if(response instanceof Error){
-						callback(response, null);
-						return;
-					}
-					callback(null, response.data);
-				});
-			},
-			allHero: (callback) => {
-				AjaxService.get(allHero, (response) => {
-					if(response instanceof Error){
-						callback(response, null);
-						return;
-					}
-					callback(null, response.data);
-				});
-			},
-			heros: (callback) => {
-				AjaxService.get(heros, (response) => {
-					if(response instanceof Error){
-						callback(response, null);
-						return;
-					}
-					callback(null, response.data);
-				});
-			},
-			profile: (callback) => {
-				AjaxService.get(profile, (response) => {
-					if(response instanceof Error){
-						callback(response, null);
-						return;
-					}
-					callback(null, response.data);
-				});
-			}}, (err, response) => {
-				this.state.loading = false;
+        const battle = this.state.battleTag;
 
-				if(err){
-					this.state.searchError = true;
-					AppAction.toast(properties.searchError);
-					this.forceUpdate();
-					window.location.assign("#/search");
-					return;
-				}
+        AjaxService.get(`/pro/battle/${subdomain}/${battle.platform}/${battle.region}/${battle.battleTag}`, (res) => {
+            if(res instanceof Error){
+                console.error(res);
+                return;
+            }
 
-				if(response.profile.error){
-					AppAction.toast(properties.noMatchFound);
-					this.forceUpdate();
-					window.location.assign("#/search");
-					return;
-				}
+            this.state[subdomain] = res.data;
+            this.forceUpdate();
+        });
+    },
+    battleServiceWithType: function(subdomain, type) {
+        if(this.state[`${subdomain}${type}`]){
+            return;
+        }
 
-				let data = {
-					battleTag: battleTag,
-					region: region,
-					platform: platform
-				};
-				this.state.gameData = response;
-				this.state.battleTag = data;
-				AppAction.setHeroData(response);
-				this.forceUpdate();
-				window.localStorage.setItem('battleTag', JSON.stringify(data));
-			}
-		);
-	},
-	render: function() {
-			if (!this.state.battleTag){
-				return (
-					<div className="container">
-						<div className="proPage">
-						<div className="row pro-search">
-							<div className="col-lg-6">
-								<h4>Search</h4>
-								<div className="input-group">
-									<input ref="search" type="text" className="form-control"
-										   placeholder={properties.battleTag}/>
-								  <span className="input-group-btn">
-									<button id="proSearchBTN" className="btn btn-default" type="button" onClick={this.searchBox}>Search</button>
-								  </span>
-								</div>
-							</div>
-							<div className="col-lg-6">
-								<div className="col-md-6">
-									<h4>{properties.region}</h4>
-									<select ref="region" className="form-control">
-										<option default value="us">us</option>
-										<option value="eu">eu</option>
-									</select>
-								</div>
-								<div className="col-md-6">
-									<h4>{properties.platform}</h4>
-									<select ref="platform" className="form-control">
-										<option default value="pc">pc</option>
-										<option value="xbl">xbox</option>
-										<option value="psn">play station</option>
-									</select>
-								</div>
-							</div>
-						</div>
-							{this.state.loading? <div className="loading-container"><LoadingView /><p>Loading...</p></div>:
-							<div>
-								<div className="feature-tip">
-									<h4>Input your battle tag to get the latest stats.</h4>
-								</div>
-								< div id="feature-slider">
-								<figure>
-									<img src={'./img/pro/feature1.png'} alt />
-									<img src={'./img/pro/feature2.png'} alt />
-									<img src={'./img/pro/feature1.png'} alt />
-								</figure>
-								</div>
-							</div>
+        const battle = this.state.battleTag;
 
-						}
-						</div>
-					</div>
-				);
-			}else{
-				if(this.state.searchError) {
-					return (
-						<div className="container">
-							<p>There is something wrong with your search</p>
-						</div>
-					);
-				}else{
-					if(this.state.gameData) {
-						return (
-							<div className="container">
-								<div className="proPage">
-								<ProfileCard profile={this.state.gameData.profile}/>
-								<div className="row">
-									<div className="col-md-6">
-										<div className="achievement-span">
-											<span style={{color: "#333"}}>Achievements</span>
-										</div>
-										{underscore.map(this.state.gameData.achievements.achievements, (item) => {
-											return (<AchievementCard achievement={item}/>);
-										})}
-									</div>
-									<div className="col-md-6">
-										<div className="played-hero-span">
-											<span style={{color: "#333"}}>Played heros</span>
-										</div>
-										{underscore.map(this.state.gameData.heros, (hero) => {
-											if (hero.percentage > 0) {
-												return (<PlayedHeroCard hero={hero}/>);
-											} else {
-												return null;
-											}
-										})}
-									</div>
-								</div>
-								<div className="row">
-									<div className="played-heros-span">
-										<span style={{color: "#333"}}>Stats</span>
-									</div>
-									<div className="tbl-header">
-										<table className="pro-table" cellpadding="0" cellspacing="0" border="0">
-											<thead>
-											<tr>
-												<th>Stat</th>
-												<th>Value</th>
-											</tr>
-											</thead>
-										</table>
-									</div>
-									<div className="tbl-content">
-										<table className="pro-table" cellpadding="0" cellspacing="0" border="0">
-											<tbody>
-											{underscore.map(this.state.gameData.allHero, (value, key) => {
-												return (
-													<tr>
-														<td>{key}</td>
-														<td>{value}</td>
-													</tr>
-												);
-											})}
-											</tbody>
-										</table>
-									</div>
-								</div>
-							</div>
-							</div>
-						);
-					}else{
-						return (
-							<div className="container">
-								<div className="proPage">
-								<div className="loading-container">
-									<LoadingView />
-									<p>Loading...</p>
-								</div>
-								</div>
-							</div>
-						);
-					}
-				}
-			}
-	}
+        AjaxService.get(`/pro/battle/${subdomain}/${battle.platform}/${battle.region}/${battle.battleTag}/${type}`, (res) => {
+            if(res instanceof Error){
+                console.error(res);
+                return;
+            }
+
+            this.state[`${subdomain}${type}`] = res.data;
+            this.forceUpdate();
+        })
+    },
+    componentDidMount: function() {
+        this.battleService('basicinfo');
+        this.battleService('achievements');
+        this.battleServiceWithType('featurestats', this.state.type);
+        this.battleServiceWithType('heros', this.state.type);
+        this.battleServiceWithType('careerBest', this.state.type);
+    },
+    handleSelect:function(index, last) {
+        console.log('Selected tab: ' + index + ', Last tab: ' + last);
+    },
+    render: function() {
+        if(this.state.basicinfo == null
+            || this.state.heros0 == null
+            || this.state.careerBest0 == null
+            || this.state.featurestats0 == null){
+            return <div>loading</div>
+        }else {
+            return (
+                <div>
+                    <div className="proTopBar">
+                        <p>
+                            {this.state.basicinfo.profileName}
+                        </p>
+                        <p>
+                            {this.state.basicinfo.level} {this.state.basicinfo.platform} {this.state.basicinfo.gameWins}
+                        </p>
+                    </div>
+                    <Tabs style={{width: "80%", margin: "auto"}} onSelect={this.handleSelect} selectedIndex={0}>
+                        <TabList>
+                            <Tab>General</Tab>
+                            <Tab>Heros</Tab>
+                            <Tab>Best record</Tab>
+                            <Tab>Achievements</Tab>
+                        </TabList>
+                        <TabPanel>
+                            <FeatureStats data={this.state[`featurestats${this.state.type}`]} />
+                            <div style={{width: "90%", margin: "auto"}}>
+                                <CommonHeros style={{width: "50%"}} data={this.state[`heros${this.state.type}`]} />
+                            </div>
+                        </TabPanel>
+                        <TabPanel>
+                            <Heros data={this.state[`heros${this.state.type}`]} />
+                        </TabPanel>
+                        <TabPanel>
+                            <CareerBestView data={this.state[`careerBest${this.state.type}`]} />
+                        </TabPanel>
+                        <TabPanel>
+                            <Achievements data={this.state.achievements.achievements} />
+                        </TabPanel>
+                    </Tabs>
+                </div>
+            );
+        }
+    }
 });
 
+module.exports = pro;
 
-module.exports = Pro;

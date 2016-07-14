@@ -1,11 +1,13 @@
 'use strict'
 
-var xRay = require('x-ray');
-var xray = new xRay();
+const xRay = require('x-ray');
+const xray = new xRay();
+const properties = require('./properties');
 
 var blizzardSource = {
     basicInfo: (resolve, reject, region, platform, battleTag) => {
-        var url = 'https://playoverwatch.com/en-us/career/'+platform+'/'+region+'/'+battleTag;
+        var url = `${properties.blizzardCareer}${platform}/${region}/${battleTag}`;
+
         xray(url, {
             profileName: '.masthead-player h1',
             level: '.player-level .u-vertical-center',
@@ -20,7 +22,8 @@ var blizzardSource = {
         });
     },
     featureStats: (resolve, reject, region, platform, battleTag, type) => {
-        var url = 'https://playoverwatch.com/en-us/career/'+platform+'/'+region+'/'+battleTag;
+        var url = `${properties.blizzardCareer}${platform}/${region}/${battleTag}`;
+
         if(type === '0'){
             var switcher = '#quick-play';
         }else if(type === '1'){
@@ -28,10 +31,8 @@ var blizzardSource = {
         }
 
         xray(url, {
-            featuredStats: {
                 name: [`${switcher} .card-copy`],
                 value: [`${switcher} .card-heading`]
-            },
         })( (err, data) => {
             if(err){
                 reject();
@@ -42,7 +43,8 @@ var blizzardSource = {
         });
     },
     heros: (resolve, reject, region, platform, battleTag, type) => {
-        var url = 'https://playoverwatch.com/en-us/career/'+platform+'/'+region+'/'+battleTag;
+        var url = `${properties.blizzardCareer}${platform}/${region}/${battleTag}`;
+
         if(type === '0'){
             var switcher = '#quick-play';
         }else if(type === '1'){
@@ -50,11 +52,9 @@ var blizzardSource = {
         }
 
         xray(url, {
-            heros: {
                 heroName: [`${switcher} section:nth-child(2) .row .progress-category:nth-child(6) .title`],
                 heroImg: [`${switcher} section:nth-child(2) .row .progress-category:nth-child(6) img@src`],
                 description: [`${switcher} section:nth-child(2) .row .progress-category:nth-child(6) .description`]
-            },
         })( (err, data) => {
             if(err){
                 reject();
@@ -65,7 +65,8 @@ var blizzardSource = {
         });
     },
     careerBest: (resolve, reject, region, platform, battleTag, type) => {
-        var url = 'https://playoverwatch.com/en-us/career/'+platform+'/'+region+'/'+battleTag;
+        var url = `${properties.blizzardCareer}${platform}/${region}/${battleTag}`;
+
         if(type === '0'){
             var switcher = '#quick-play';
         }else if(type === '1'){
@@ -73,10 +74,8 @@ var blizzardSource = {
         }
 
         xray(url, {
-            heros: {
                 name: [`${switcher} .row .row .js-stats:first-child .column:nth-child(3) table tbody tr td:first-child`],
                 value: [`${switcher} .row .row .js-stats:first-child .column:nth-child(3) table tbody tr td:nth-child(2)`]
-            },
         })( (err, data) => {
             if(err){
                 reject();
@@ -87,7 +86,7 @@ var blizzardSource = {
         });
     },
     achievements: (resolve, reject, region, platform, battleTag, type) => {
-        var url = 'https://playoverwatch.com/en-us/career/'+platform+'/'+region+'/'+battleTag;
+        var url = `${properties.blizzardCareer}${platform}/${region}/${battleTag}`;
 
         xray(url, {
             achievements: {

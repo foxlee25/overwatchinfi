@@ -1717,3 +1717,8 @@ div#home-slider figure {
 	margin-right: 10%;
 	margin-bottom: 40px;
 }
+
+.proTopBar {
+	width: 70%;
+	margin: auto;
+}
