@@ -44,7 +44,7 @@ var VideoCard = React.createClass({
 	removeVideo: function(videoId){
 		var url = '/video/removeVideo';
 		AjaxService.post(url,{data: {videoId : videoId}});
-		window.location.assign("#/videoYoutube");
+		window.location.reload(true);
 	},
 	setVideoData: function(){
 		this.props.video.genre = "youtube";

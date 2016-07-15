@@ -5,7 +5,6 @@ var React = require('react');
 var AjaxService = require('../service/AjaxService');
 var CommentsLib= require('../side-comments/release/side-comments.js');
 //var SideComments=require('./CommentComponent.js');
-var $ = require('jquery');
 var Underscore = require('underscore');
 var AppStore = require('../flux/Store.js');
 var GuideCard = require('../views/GuideCard');

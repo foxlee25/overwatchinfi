@@ -1,8 +1,8 @@
 var React = require('react');
 var AjaxService = require('../service/AjaxService');
 var Underscore= require('underscore');
+var $ = require('jquery');
 var VideoCard = require('../views/VideoCard');
-var url = '/video/getAllVideos';
 var totalNum = 28;
 var Video = React.createClass({
 	getInitialState: function(){
@@ -12,9 +12,11 @@ var Video = React.createClass({
 		};
 	},
 	componentWillMount: function(){
+		this.state.userId = window.sessionStorage.getItem('userId');
 		this.state.currentPageIndex = 1;
 	},
     getVideos : function(control){
+		var url = '/video/getAllVideos';
 		var currentPageIndex = this.state.currentPageIndex;
 		if(control==='pre'){
 			if (currentPageIndex > 1)
@@ -34,9 +36,27 @@ var Video = React.createClass({
 			window.scrollTo(0, 0);
         }.bind(this));
     },
+	submitVideo : function(){
+		var url = '/video/addYoutubeVideo';
+		var youtubeVideoId = $('#adminaddyoutubevideo').find('input[name="youtubevideoinput"]').val();
+	
+		var videoModel = {};
+		videoModel.videoId = youtubeVideoId;
+		videoModel.source = 'youtube';
+		videoModel.watchTime=0;
+		videoModel.likeTime=0;
+		videoModel.dislikeTime=0;
+		videoModel.url='https://www.youtube.com/embed/'+videoModel.videoId;
+		AjaxService.post(url,{data :videoModel});
+		setTimeout(function(){ window.location.reload(true); }, 2000);
+
+	},
 	render: function(){
 		return (
         <div>
+		{this.state.userId==='admin'?<div id="adminaddyoutubevideo" className="form-inline">
+			<input name="youtubevideoinput" type="text" className="form-control youtubevideoinput"  placeholder="Input Video Id"  required />
+		    <button onClick={this.submitVideo.bind(this)}   name="videoSubmit" className="btn btn-primary" >Submit</button></div>:<div></div>}
 			<div className="container-fluid">
 				<div id="videosComponent" className="row">
 					{Underscore.map(this.state.videos, function(video){

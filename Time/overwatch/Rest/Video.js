@@ -20,6 +20,14 @@ router.post('/removeVideo', function (req, res) {
     daoController.getDao('VideoDao', 'video_remove', video);
 });
 
+/**path is /video/addYoutubeVideo**/
+router.post('/addYoutubeVideo', function (req, res) {
+    res.header('Content-type', 'application/json');
+    res.header('Charset', 'utf8');
+    var video = req.body.data;
+    daoController.getDao('VideoDao', 'video_addYoutube', video);
+});
+
 /**path is /video/clickVideo**/
 router.post('/clickVideo', function (req, res) {
     res.header('Content-type', 'application/json');

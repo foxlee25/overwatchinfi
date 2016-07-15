@@ -41,6 +41,11 @@ var videoClick = function(db, video){
 
 }
 
+var videoAddYoutube = function(db, video){
+    db.collection('Video').insert(video);
+
+}
+
 
 var videoRemove = function(db, video){
     db.collection('Video').remove({videoId: video.videoId});;
@@ -51,6 +56,7 @@ var VideoDao = {
     video_click : videoClick,
     video_findAll: findAllVideo,
     video_remove: videoRemove,
+    video_addYoutube: videoAddYoutube,
     video_addAllFromPlaylist : addAllVideoFromPlaylist
 }
 
