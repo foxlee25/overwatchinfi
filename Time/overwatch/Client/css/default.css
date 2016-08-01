@@ -24,6 +24,21 @@
 
 }
 
+.news-remove-icon{
+    -webkit-transform: scale(2, 2);
+    transform: scale(2, 2);
+    position: absolute;
+    left: -9px;
+    top: -9px;
+    position: absolute;
+}
+
+div#adminaddNews {
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+}
+
 .video-remove-icon{
     -webkit-transform: scale(2, 2);
     transform: scale(2, 2);

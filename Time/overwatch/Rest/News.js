@@ -5,6 +5,23 @@ var cronJob = require('cron').CronJob;
 var daoController = require('../DaoController');
 var router = express.Router();
 
+/**path is /news/removeNews**/
+router.post('/removeNews', function (req, res) {
+    res.header('Content-type', 'application/json');
+    res.header('Charset', 'utf8');
+    var news = req.body.data;
+    daoController.getDao('NewsDao', 'remove_news', news);
+});
+
+
+/**path is /news/addNews**/
+router.post('/addNews', function (req, res) {
+    res.header('Content-type', 'application/json');
+    res.header('Charset', 'utf8');
+    var news = req.body.data;
+    daoController.getDao('NewsDao', 'add_news', news);
+});
+
 var job = new cronJob({
     cronTime: '00 00 24 * * *',
     onTick: function() {
@@ -20,6 +37,8 @@ var job = new cronJob({
       start: false,
       timeZone: "America/Los_Angeles"
 });
+
+
 
 job.start();
 

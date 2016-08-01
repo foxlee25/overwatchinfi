@@ -184,6 +184,7 @@ Img {
 	/*background-color: rgba(128, 128, 128, 0.2);*/
 	background-color: f2f2f2;
 	border: 2px solid #d3d3d3;
+	position: relative;
 	/*border-radius: 5px;*/
 }
 

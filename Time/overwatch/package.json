@@ -15,9 +15,11 @@
     "cors": "^2.7.1",
     "dateformat": "^1.0.12",
     "express": "^4.13.4",
+    "formidable": "^1.0.17",
     "jquery": "^2.2.4",
     "jshashes": "^1.0.5",
-    "object-assign": "^4.1.0"
+    "object-assign": "^4.1.0",
+    "sitemap": "^1.8.0"
   },
   "devDependencies": {
     "apicache": "0.0.14",

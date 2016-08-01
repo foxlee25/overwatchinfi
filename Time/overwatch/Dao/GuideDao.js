@@ -42,6 +42,19 @@ var findAllGuides = function (db, data ,restCallback) {
             }
         ]).skip(data.guideNum*(data.pageIndex-1)).limit(data.guideNum);
     }
+    else if(data.sortType==='hotest'){
+        var cursor = db.collection('HeroGuide').aggregate([
+            {
+                $lookup:
+                {
+                    from: "GuideComment",
+                    localField: "createTime",
+                    foreignField: "sectionId",
+                    as: "guideComment"
+                }
+            }
+        ]).sort({totalTime: -1}).skip(data.guideNum*(data.pageIndex-1)).limit(data.guideNum);
+    }
     cursor.each(function (err, doc) {
         if (doc != null) {
             guideArr.push(doc);
@@ -70,13 +83,19 @@ var guideClick = function(db, guide){
             if(!realGuide.likeTime)
                 realGuide.likeTime =0;
             db.collection('HeroGuide').update({createTime: guide.createTime},{$set : {likeTime :realGuide.likeTime+ 1} });
+            if(realGuide.dislikeTime==0){
+                realGuide.dislikeTime = 1;
+            }
+            db.collection('HeroGuide').update({createTime: guide.createTime},{$set : {bestGuide :(realGuide.likeTime+ 1) / realGuide.dislikeTime} });
 
         }else if(guide.type === 'dislike'){
             if(!realGuide.dislikeTime)
                 realGuide.dislikeTime =0;
             db.collection('HeroGuide').update({createTime: guide.createTime},{$set : {dislikeTime :realGuide.dislikeTime+ 1} });
-
+            db.collection('HeroGuide').update({createTime: guide.createTime},{$set : {bestGuide : realGuide.likeTime  / (realGuide.dislikeTime +1) } });
         }
+        db.collection('HeroGuide').update({createTime: guide.createTime},{$set : {totalTime :realGuide.totalTime+ 1} });
+
     });
 
 
@@ -98,8 +117,46 @@ var guideClick = function(db, guide){
 //
 // };
 
+// var removeGuide = function(db, data){
+//     db.collection('HeroGuide').remove({'createTime': data.guideId});
+// };
+
+// var removeGuide = function(db, data){
+//     db.collection('HeroGuide').find().snapshot().forEach(
+//         function (guide) {
+//             console.log('removeGuide : '+JSON.stringify(guide));
+//             db.collection('HeroGuide').update(
+//                 {
+//                     _id: guide._id
+//                 },
+//                 {
+//                     $set: {
+//                         totalTime: guide.likeTime +  guide.dislikeTime
+//                     }
+//                 }
+//             );
+//         }
+//     );
+// };
+
 var removeGuide = function(db, data){
-    db.collection('HeroGuide').remove({'createTime': data.guideId});
+    db.collection('HeroGuide').find().snapshot().forEach(
+        function (guide) {
+            if(guide.dislikeTime==0){
+                guide.dislikeTime = 1;
+            }
+            db.collection('HeroGuide').update(
+                {
+                    _id: guide._id
+                },
+                {
+                    $set: {
+                        bestGuide: guide.likeTime / guide.dislikeTime
+                    }
+                }
+            );
+        }
+    );
 };
 
 var insertGuide = function(db, data, restCallback){

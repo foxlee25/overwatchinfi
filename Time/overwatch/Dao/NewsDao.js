@@ -2,7 +2,7 @@ var Underscore= require('underscore');
 
 var readNews = function(db, data, restCallback){
     var newsArr = [];
-    var cursor = db.collection('News').find();
+    var cursor = db.collection('News').find().sort({'_id':-1});
     cursor.each(function (err, doc) {
         if (doc != null) {
             newsArr.push(doc);
@@ -23,9 +23,22 @@ var saveNews = function(db, data){
     });
 }
 
+var newsRemove = function(db, data){
+    console.log('dao newsRemove : '+data.newsId);
+    db.collection('News').remove({id: data.newsId});;
+
+}
+
+var newsAdd = function(db, data){
+    db.collection('News').insert(data);
+
+}
+
 var NewsDao = {
     read_news: readNews,
-    save_news: saveNews
+    save_news: saveNews,
+    remove_news: newsRemove,
+    add_news: newsAdd
 }
 
 module.exports = NewsDao;
