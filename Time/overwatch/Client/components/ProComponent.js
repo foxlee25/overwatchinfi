@@ -9,7 +9,10 @@ const Achievements = require('../views/pro/Achievements');
 const FeatureStats = require('../views/pro/FeatureStats');
 const CommonHeros = require('../views/pro/CommonHeros');
 const Heros = require('../views/pro/Heros');
+import CircularProgressbar from 'react-circular-progressbar';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+
+require('../views/pro/pro.css');
 
 const pro = React.createClass({
     getInitialState: function() {
@@ -78,7 +81,51 @@ const pro = React.createClass({
             return <div>loading</div>
         }else {
             return (
-                <div>
+                <div className="proContainer">
+                    <div className="featureStats">
+                    <h4>Feature Stats</h4>
+                    <div></div>
+                    <hr/>
+                    <div></div>
+                    {_.map(this.state[`featurestats${this.state.type}`].name, (item, i) => {
+                        return (
+                            <div key={item} className="featureStatsList">
+                                <div className="featureStatsKey">
+                                    <h5>{item}</h5>
+                                </div>
+                                <div className="featureStatsValue">
+                                    <div className="progress">
+                                        <div className="progress-bar" role="progressbar" aria-valuenow={this.state[`featurestats${this.state.type}`].value[i]}
+                                          aria-valuemin="0" aria-valuemax="20" style={{width: this.state[`featurestats${this.state.type}`].value[i].indexOf(".")==-1?parseInt(this.state[`featurestats${this.state.type}`].value[i].replace(",",""))/60+"%":this.state[`featurestats${this.state.type}`].value[i]*5+"%"}}>
+                                            {this.state[`featurestats${this.state.type}`].value[i]}
+                                          </div>
+                                        </div>      
+                                    </div>
+                            </div>
+                        );
+                    })}
+                    </div>
+                    <div style={{height: "20px"}}></div>
+                    <div className="heroStats">
+                    <h4>Hero Stats</h4>
+                    <div></div>
+                    <hr />
+                    <div></div>
+                    <div className="row">
+                        {_.map(this.state[`heros${this.state.type}`].heroName, (item, i) => {
+                            let percent = parseInt(this.state[`heros${this.state.type}`].description[i].replace("%", ""));
+                            return (
+                                <div key={item} className="col-sm-4 col-md-3 heroStatsGrid">
+                                    <img src={this.state[`heros${this.state.type}`].heroImg[i]} className="heroStatsGridImg" />
+                                    <div className="heroStatsCircle">
+                                        <CircularProgressbar percentage={percent} />
+                                    </div>
+                                    <p>{item}</p>
+                                </div>
+                            );
+                        })}
+                    </div>
+                    </div>
                     <div className="proTopBar">
                         <p>
                             {this.state.basicinfo.profileName}

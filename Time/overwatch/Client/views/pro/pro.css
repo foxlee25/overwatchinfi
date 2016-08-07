@@ -3,11 +3,13 @@
     margin: auto;
     border: 1px solid #e5e4e2;
     padding: 10px;
+    background: #ffffff;
 }
 
 .featureStats h4 {
     float: left;
     padding-left: 10px;
+    color: #666666;
 }
 
 .featureStatsList {
@@ -15,10 +17,54 @@
     display: flex;
     margin-left: 30px;
     flex-direction: row;
+    background: ffff;
+    box-shadow: 1px;
 }
 
-.featureStatsItem {
+.featureStatsKey {
     flex: 1;
+}
+
+.featureStatsValue{
+    flex: 2;
+}
+
+.heroStats {
+    width: 90%;
+    margin: auto;
+    border: 1px solid #e5e4e2;
+    padding: 10px;
+    background: #ffffff;
+}
+
+.heroStats h4{
+    float: left;
+    padding-left: 10px;
+    color: #666666;
+}
+
+.heroStats .row {
+    background: #ffffff;
+    width: 90%;
+    margin: auto;
+}
+
+.heroStatsGrid {
+    margin: 10px;
+    background: #ffffff;
+    box-shadow: 1px;
+}
+
+.heroStatsGrid p{
+    color: #666666;
+    clear: both;
+    margin: 5px;
+}
+
+.heroStatsGridImg {
+    float: left;
+    margin-top: 10px;
+    width: 30%;
 }
 
 .commonHeros {
@@ -110,4 +156,36 @@
 }
 
 .achievementCardNotFinished p {
+}
+
+.proContainer {
+    margin-top: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: #3e98c7;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: #d6d6d6;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+  fill: #3e98c7;
+  font-size: 20px;
+  dominant-baseline: middle;
+  text-anchor: middle;
+}
+
+.heroStatsCircle {
+    float: left;
+    margin-top: 10px;
+    width: 70%;
+    padding-right: 10px;
+    padding-left: 40px;
 }
