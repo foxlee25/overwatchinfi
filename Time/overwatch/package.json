@@ -17,6 +17,7 @@
     "dateformat": "^1.0.12",
     "express": "^4.13.4",
     "formidable": "^1.0.17",
+    "highcharts": "^4.2.5",
     "jquery": "^2.2.4",
     "jshashes": "^1.0.5",
     "object-assign": "^4.1.0",

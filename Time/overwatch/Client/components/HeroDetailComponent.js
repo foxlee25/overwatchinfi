@@ -27,7 +27,7 @@ var HeroDetail = React.createClass({
 			return(
 				<div className="container-fluid">
 					<div className="detailBg">
-						<img id="heroImg" className="heroImg" src={this.state.detail.poster} />
+						<img className="heroImg" src={this.state.detail.poster} />
 						<div className="heroText">
 							<h1>{this.state.detail._id.toUpperCase()}</h1>
 							<h3>Biography</h3>

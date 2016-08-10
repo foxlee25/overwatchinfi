@@ -1,6 +1,7 @@
 var express = require('express');
 var daoController = require('../DaoController.js');
 var router = express.Router();
+var fs = require('fs');
 var apicache = require('apicache').middleware;
 
 //Router to get heros
@@ -10,10 +11,18 @@ router.get('/allheros', apicache('1 hour'), function(req, res) {
 	res.header('Access-Control-Allow-Headers', '*');
 	res.header('Access-Control-Allow-Origin', '*');
 	res.header('Charset', 'utf8');
-	
-	daoController.getDao('HeroDao', 'hero_findAll', {},function (heroArr) {
-		res.send(heroArr);
+
+	fs.readFile('./Json/heros.json', 'utf8', function (err, data) {
+		if (err) {
+			console.error(err);
+			res.send([]);
+			return;
+		}
+		res.send(data);
 	});
+	// daoController.getDao('HeroDao', 'hero_findAll', {},function (heroArr) {
+	// 	res.send(heroArr);
+	// });
 });
 
 /** path is /hero/addHeroDetails **/
@@ -22,7 +31,7 @@ router.post('/addHeroDetails', function (req, res) {
 	daoController.getDao('HeroDao', 'hero_addDetails', heroDetails);
 });
 
-/**path is /video/clickHero **/
+/**path is /hero/clickHero **/
 router.post('/clickHero', function (req, res) {
 	res.header('Content-type', 'application/json');
 	res.header('Charset', 'utf8');
@@ -30,7 +39,7 @@ router.post('/clickHero', function (req, res) {
 	daoController.getDao('HeroDao', 'hero_click', hero);
 });
 
-/**path is /video/heroDetail **/
+/**path is /hero/heroDetail **/
 router.get('/heroDetail/:id', function(req, res) {
 	res.header('Content-type', 'application/json');
 	res.header('Charset', 'utf8');
@@ -44,6 +53,20 @@ router.get('/heroDetail/:id', function(req, res) {
 		res.send(detailObj);
 
 	})
+});
+
+router.get('/mapList', function(req, res) {
+	res.header('Content-type', 'application/json');
+	res.header('Charset', 'utf8');
+	fs.readFile('./Json/HeroJsonTotal.json', 'utf8', function (err, data) {
+		if (err) {
+			console.error(err);
+			res.send([]);
+			return;
+		}
+		Console.log(JSON.stringify(data));
+		res.send(data);
+	});
 });
 
 module.exports = router;
