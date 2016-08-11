@@ -29,6 +29,19 @@ const pro = React.createClass({
     },
     componentWillMount: function() {
     },
+    lootBoxService: function(subdomain) {
+        const battle = this.state.battleTag;
+
+        AjaxService.get("https://api.lootbox.eu/"+battle.platform+"/"+battle.region+"/"+battle.battleTag+"/"+subdomain, (res) => {
+            if(res instanceof Error){
+                console.error(res);
+                return;
+            }
+
+            this.state[subdomain] = res.data;
+            this.forceUpdate();
+        });
+    },
     battleService: function(subdomain) {
         if(this.state[subdomain]){
             return;
@@ -65,7 +78,8 @@ const pro = React.createClass({
     },
     componentDidMount: function() {
         this.battleService('basicinfo');
-        this.battleService('achievements');
+        //this.battleService('achievements');
+        this.lootBoxService('achievements');
         this.battleServiceWithType('featurestats', this.state.type);
         this.battleServiceWithType('heros', this.state.type);
         this.battleServiceWithType('careerBest', this.state.type);
@@ -82,12 +96,35 @@ const pro = React.createClass({
         }else {
             return (
                 <div className="proContainer">
+                    <div className="bestRecord">
+                        <h4>Best record</h4>
+                        <br/>
+                        <hr/>
+                        <div></div> 
+                    </div>
+                    <div className="row" style={{width: "90%", margin: "auto"}}>
+                    {_.map(this.state[`careerBest${this.state.type}`].name, (item, i) => {
+                        let displayValue = item.replace("- Most in Game", "");
+                        return (
+                            <div className="col-md-2 col-sm-3 bestRecordCard">
+                                <p>{displayValue}</p>
+                                <hr />
+                                <h4>{this.state[`careerBest${this.state.type}`].value[i]}</h4>
+                            </div>
+                        );
+                    })}
+                    </div>
+                    <br/>
+                    <div style={{height: "20px"}}></div>
                     <div className="featureStats">
                     <h4>Feature Stats</h4>
-                    <div></div>
+                    <br/>
                     <hr/>
                     <div></div>
                     {_.map(this.state[`featurestats${this.state.type}`].name, (item, i) => {
+                        if(i == 6){
+                            return;
+                        }
                         return (
                             <div key={item} className="featureStatsList">
                                 <div className="featureStatsKey">
@@ -105,58 +142,68 @@ const pro = React.createClass({
                         );
                     })}
                     </div>
+                    <br/>
                     <div style={{height: "20px"}}></div>
                     <div className="heroStats">
                     <h4>Hero Stats</h4>
-                    <div></div>
+                    <br />
                     <hr />
                     <div></div>
                     <div className="row">
                         {_.map(this.state[`heros${this.state.type}`].heroName, (item, i) => {
-                            let percent = parseInt(this.state[`heros${this.state.type}`].description[i].replace("%", ""));
+                            let type = ['offense', 'defense', 'tank', 'support'][Math.floor(Math.random()*4)];
                             return (
-                                <div key={item} className="col-sm-4 col-md-3 heroStatsGrid">
-                                    <img src={this.state[`heros${this.state.type}`].heroImg[i]} className="heroStatsGridImg" />
-                                    <div className="heroStatsCircle">
-                                        <CircularProgressbar percentage={percent} />
+                                <div key={item} className="heroStatsList">
+                                    <div style={{flex: 1}}>
+                                        <b>{i+1}</b>
                                     </div>
-                                    <p>{item}</p>
+                                    <div style={{flex: 2}}>
+                                        {item}
+                                    </div>
+                                    <div style={{flex: 2}}>
+                                        <img style={{height: "40px"}} src={this.state[`heros${this.state.type}`].heroImg[i]} />
+                                    </div>
+                                    <div style={{flex: 2}}>
+                                        <img style={{height: "40px"}} src={`./img/icon/${type}.png`} />
+                                    </div>
+                                    <div className="heroStatsValue">
+                                        <div className="progress">
+                                            <div className="progress-bar" role="progressbar" aria-valuenow={this.state[`heros${this.state.type}`].description[i]}
+                                            aria-valuemin="0" aria-valuemax="100" style={{width: this.state[`heros${this.state.type}`].description[i]}}>
+                                                {this.state[`heros${this.state.type}`].description[i]}
+                                            </div>
+                                        </div>      
+                                    </div>
                                 </div>
                             );
                         })}
                     </div>
                     </div>
-                    <div className="proTopBar">
-                        <p>
-                            {this.state.basicinfo.profileName}
-                        </p>
-                        <p>
-                            {this.state.basicinfo.level} {this.state.basicinfo.platform} {this.state.basicinfo.gameWins}
-                        </p>
+                    <br/>
+                    <div style={{height: "20px"}}></div>
+                    <div className="bestRecord">
+                        <h4>Achievements</h4>
+                        <br/>
+                        <hr/>
+                        <div></div> 
                     </div>
-                    <Tabs style={{width: "80%", margin: "auto"}} onSelect={this.handleSelect} selectedIndex={0}>
-                        <TabList>
-                            <Tab>General</Tab>
-                            <Tab>Heros</Tab>
-                            <Tab>Best record</Tab>
-                            <Tab>Achievements</Tab>
-                        </TabList>
-                        <TabPanel>
-                            <FeatureStats data={this.state[`featurestats${this.state.type}`]} />
-                            <div style={{width: "90%", margin: "auto"}}>
-                                <CommonHeros style={{width: "50%"}} data={this.state[`heros${this.state.type}`]} />
-                            </div>
-                        </TabPanel>
-                        <TabPanel>
-                            <Heros data={this.state[`heros${this.state.type}`]} />
-                        </TabPanel>
-                        <TabPanel>
-                            <CareerBestView data={this.state[`careerBest${this.state.type}`]} />
-                        </TabPanel>
-                        <TabPanel>
-                            <Achievements data={this.state.achievements.achievements} />
-                        </TabPanel>
-                    </Tabs>
+                    <div className="row" style={{width: "90%", margin: "auto"}}>
+                    {_.map(this.state.achievements.achievements, (item, i) => {
+                        if(item.finished){
+                            return (
+                                <div key={item.name} className="col-md-1 col-sm-2 achievementCard">
+                                    <img className="achievementCardImgActive" src={item.image} />
+                                </div>
+                            );
+                        }else{
+                            return (
+                                <div key={item.name} className="col-md-1 col-sm-2 achievementCard">
+                                    <img className="achievementCardImgInactive" src={item.image} />
+                                </div>
+                            );
+                        }
+                    })}
+                    </div>
                 </div>
             );
         }

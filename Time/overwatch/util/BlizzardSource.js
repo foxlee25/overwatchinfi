@@ -74,8 +74,8 @@ var blizzardSource = {
         }
 
         xray(url, {
-                name: [`${switcher} .row .row .js-stats:first-child .column:nth-child(3) table tbody tr td:first-child`],
-                value: [`${switcher} .row .row .js-stats:first-child .column:nth-child(3) table tbody tr td:nth-child(2)`]
+                name: [`${switcher} section:nth-child(3) .row .row:nth-child(4) .column:nth-child(3) table tbody tr td:first-child`],
+                value: [`${switcher} section:nth-child(3) .row .row:nth-child(4) .column:nth-child(3) table tbody tr td:nth-child(2)`]
         })( (err, data) => {
             if(err){
                 reject();
@@ -92,62 +92,62 @@ var blizzardSource = {
             achievements: {
                 general: {
                     finished: {
-                        name: ['#achievements-section .row .toggle-display:nth-child(4) .m-hoverable .content'],
-                        img: ['#achievements-section .row .toggle-display:nth-child(4) .m-hoverable img@src']
+                        name: ['#achievements-section .row .toggle-display:nth-child(4) .column .tooltip .media-card-caption .media-card-title'],
+                        img: ['#achievements-section .row .toggle-display:nth-child(4) .column .tooltip img@src']
                     },
                     notFinished: {
-                        name: ['#achievements-section .row .toggle-display:nth-child(4) .m-disabled .content'],
-                        img: ['#achievements-section .row .toggle-display:nth-child(4) .m-disabled img@src']
+                        name: ['#achievements-section .row .toggle-display:nth-child(4) .column .m-disabled .media-card-caption .media-card-title'],
+                        img: ['#achievements-section .row .toggle-display:nth-child(4) .column .m-disabled img@src']
                     }
                 },
                 offense: {
                     finished: {
-                        name: ['#achievements-section .row .toggle-display:nth-child(5) .m-hoverable .content'],
-                        img: ['#achievements-section .row .toggle-display:nth-child(5) .m-hoverable img@src'],
+                        name: ['#achievements-section .row .toggle-display:nth-child(5) .column .tooltip .media-card-caption .media-card-title'],
+                        img: ['#achievements-section .row .toggle-display:nth-child(5) .column .tooltip img@src'],
                     },
                     notFinished: {
-                        name: ['#achievements-section .row .toggle-display:nth-child(5) .m-disabled .content'],
-                        img: ['#achievements-section .row .toggle-display:nth-child(5) .m-disabled img@src']
+                        name: ['#achievements-section .row .toggle-display:nth-child(5) .column .m-disabled .media-card-caption .media-card-title'],
+                        img: ['#achievements-section .row .toggle-display:nth-child(5) .column .m-disabled img@src']
                     }
                 },
                 deffense: {
                     finished: {
-                        name: ['#achievements-section .row .toggle-display:nth-child(6) .m-hoverable .content'],
-                        img: ['#achievements-section .row .toggle-display:nth-child(6) .m-hoverable img@src'],
+                        name: ['#achievements-section .row .toggle-display:nth-child(6) .column .tooltip .media-card-caption .media-card-title'],
+                        img: ['#achievements-section .row .toggle-display:nth-child(6) .column .tooltip img@src'],
                     },
                     notFinished: {
-                        name: ['#achievements-section .row .toggle-display:nth-child(6) .m-disabled .content'],
-                        img: ['#achievements-section .row .toggle-display:nth-child(6) .m-disabled img@src']
+                        name: ['#achievements-section .row .toggle-display:nth-child(6) .column .m-disabled .media-card-caption .media-card-title'],
+                        img: ['#achievements-section .row .toggle-display:nth-child(6) .column .m-disabled img@src']
                     }
                 },
                 tank: {
                     finished: {
-                        name: ['#achievements-section .row .toggle-display:nth-child(7) .m-hoverable .content'],
-                        img: ['#achievements-section .row .toggle-display:nth-child(7) .m-hoverable img@src'],
+                        name: ['#achievements-section .row .toggle-display:nth-child(7) .column .tooltip .media-card-caption .media-card-title'],
+                        img: ['#achievements-section .row .toggle-display:nth-child(7) .column .tooltip img@src'],
                     },
                     notFinished: {
-                        name: ['#achievements-section .row .toggle-display:nth-child(7) .m-disabled .content'],
-                        img: ['#achievements-section .row .toggle-display:nth-child(7) .m-disabled img@src']
+                        name: ['#achievements-section .row .toggle-display:nth-child(7) .column .m-disabled .media-card-caption .media-card-title'],
+                        img: ['#achievements-section .row .toggle-display:nth-child(7) .column .m-disabled img@src']
                     }
                 },
                 support: {
                     finished: {
-                        name: ['#achievements-section .row .toggle-display:nth-child(8) .m-hoverable .content'],
-                        img: ['#achievements-section .row .toggle-display:nth-child(8) .m-hoverable img@src'],
+                        name: ['#achievements-section .row .toggle-display:nth-child(8) .column .tooltip .media-card-caption .media-card-title'],
+                        img: ['#achievements-section .row .toggle-display:nth-child(8) .column .tooltip img@src'],
                     },
                     notFinished: {
-                        name: ['#achievements-section .row .toggle-display:nth-child(8) .m-disabled .content'],
-                        img: ['#achievements-section .row .toggle-display:nth-child(8) .m-disabled img@src']
+                        name: ['#achievements-section .row .toggle-display:nth-child(8) .column .m-disabled .media-card-caption .media-card-title'],
+                        img: ['#achievements-section .row .toggle-display:nth-child(8) .column .m-disabled img@src']
                     }
                 },
                 map: {
                     finished: {
-                        name: ['#achievements-section .row .toggle-display:nth-child(9) .m-hoverable .content'],
-                        img: ['#achievements-section .row .toggle-display:nth-child(9) .m-hoverable img@src'],
+                        name: ['#achievements-section .row .toggle-display:nth-child(9) .column .tooltip .media-card-caption .media-card-title'],
+                        img: ['#achievements-section .row .toggle-display:nth-child(9) .column .tooltip img@src'],
                     },
                     notFinished: {
-                        name: ['#achievements-section .row .toggle-display:nth-child(9) .m-disabled .content'],
-                        img: ['#achievements-section .row .toggle-display:nth-child(9) .m-disabled img@src']
+                        name: ['#achievements-section .row .toggle-display:nth-child(9) .column .m-disabled .media-card-caption .media-card-title'],
+                        img: ['#achievements-section .row .toggle-display:nth-child(9) .column .m-disabled img@src']
                     }
                 }
             },

@@ -189,3 +189,72 @@
     padding-right: 10px;
     padding-left: 40px;
 }
+
+.heroStatsList {
+    clear: both;
+    display: flex;
+    margin-left: 30px;
+    flex-direction: row;
+    background: ffff;
+    box-shadow: 1px;
+}
+
+.heroStatsValue {
+    flex: 4;
+}
+
+.bestRecord {
+    width: 90%;
+    margin: auto;
+    border: 1px solid #e5e4e2;
+    padding: 10px;
+    background: #ffffff;
+}
+
+.bestRecord h4 {
+    float: left;
+    padding-left: 10px;
+    color: #666666;
+}
+
+.bestRecordCard{
+    margin: 10px;
+    border: 1px solid #e5e4e2;
+    padding: 10px;
+    background: #ffffff;
+}
+
+.bestRecordCard p {
+    text-align: center;
+}
+
+.bestRecordCard h4 {
+    text-align: center;
+}
+
+.achievementCard {
+    height: 80px;
+    margin: 10px;
+    border: 1px solid #e5e4e2;
+    padding: 10px;
+    background: #ffffff;
+}
+
+.achievementCard p {
+    text-align: center;
+}
+
+.achievementCardImgActive {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    background: #5e6c7d;
+}
+
+.achievementCardImgInactive {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    background: #e9eae9;
+    
+}

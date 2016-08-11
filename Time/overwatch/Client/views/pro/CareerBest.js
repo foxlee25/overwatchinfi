@@ -11,6 +11,7 @@ const careerBest = React.createClass({
         data: React.PropTypes.object
     },
     render: function(){
+        debugger;
         return (
             <div className="recordTable">
                 {_.map(this.props.data.name, (item, index) => {
