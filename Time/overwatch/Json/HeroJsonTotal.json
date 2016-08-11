@@ -2,7 +2,7 @@
     {
  "heroId": 1,
  "heroName": "Genji",
- "heroPortrait": "url",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/genji/full-portrait.png",
  "heroImage" : "url",
   "performace":{
   "role": "offense",
@@ -203,7 +203,7 @@
 {
  "heroId": 2,
  "heroName": "McCree",
- "heroPortrait": "url",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/mccree/full-portrait.png",
  "heroImage" : "url",
   "performace":{
   "role": "offense",
@@ -379,7 +379,7 @@
 {
  "heroId": 3,
  "heroName": "Pharah",
- "heroPortrait": "url",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/pharah/full-portrait.png",
  "heroImage" : "url",
   "performace":{
   "role": "offense",
@@ -541,7 +541,7 @@
 {
  "heroId": 4,
  "heroName": "Reaper",
- "heroPortrait": "url",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/reaper/full-portrait.png",
  "heroImage" : "url",
   "performace":{
   "role": "offense",
@@ -732,7 +732,7 @@
 {
  "heroId": 5,
  "heroName": "Soldier76",
- "heroPortrait": "url",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/soldier-76/full-portrait.png",
  "heroImage" : "url",
   "performace":{
   "role": "offense",
@@ -911,7 +911,7 @@
 {
  "heroId": 6,
  "heroName": "Tracer",
- "heroPortrait": "url",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/tracer/full-portrait.png",
  "heroImage" : "url",
   "performace":{
   "role": "offense",
@@ -1077,7 +1077,7 @@
 {
     "heroId":7,
 "heroName": "Bastion",
- "heroPortrait": "url",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/bastion/full-portrait.png",
  "hero picture" : "url",
   "performance":{
   "role": "DEFENSE",
@@ -1255,7 +1255,7 @@
 {
     "heroId":8,
 "heroName": "Hanzo",
- "heroPortrait": "url",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/hanzo/full-portrait.png",
  "hero picture" : "url",
   "performance":{
   "role": "DEFENSE",
@@ -1436,7 +1436,7 @@
 {
     "heroId":9,
 "heroName": "Junkrat",
- "heroPortrait": "url",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/junkrat/full-portrait.png",
  "hero picture" : "url",
   "performance":{
   "role": "DEFENSE",
@@ -1624,7 +1624,7 @@
 {
     "heroId":10,
 "heroName": "Mei",
- "heroPortrait": "url",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/mei/full-portrait.png",
  "hero picture" : "url",
   "performance":{
   "role": "DEFENSE",
@@ -1811,7 +1811,7 @@
 {
     "heroId":11,
 "heroName": "Torbjorn",
- "heroPortrait": "url",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/torbjorn/full-portrait.png",
  "hero picture" : "url",
   "performance":{
   "role": "DEFENSE",
@@ -2049,7 +2049,7 @@
 {
     "heroId":12,
 "heroName": "Widowmaker",
- "heroPortrait": "url",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/widowmaker/full-portrait.png",
  "hero picture" : "url",
   "performance":{
   "role": "DEFENSE",
@@ -2252,7 +2252,7 @@
 {
  "heroId":13,
 "heroName": "D.VA",
- "heroPortrait": "url",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/dva/full-portrait.png",
  "hero picture" : "url",
   "performance":{
   "role": "TANK",
@@ -2461,8 +2461,8 @@
 },
 {
     "heroId":14,
-    "heroName": "REINHARDT",
- "heroPortrait": "url",
+    "heroName": "Reinhardt",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/reinhardt/full-portrait.png",
  "hero picture" : "url",
   "performance":{
   "role": "TANK",
@@ -2640,7 +2640,7 @@
 {
     "heroId":15,
 "heroName": "Roadhog",
- "heroPortrait": "url",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/roadhog/full-portrait.png",
  "hero picture" : "url",
   "performance":{
   "role": "TANK",
@@ -2815,7 +2815,7 @@
 {
     "heroId":16,
 "heroName": "Winston",
- "heroPortrait": "url",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/winston/full-portrait.png",
  "hero picture" : "url",
   "performance":{
   "role": "TANK",
@@ -2976,7 +2976,7 @@
 {
     "heroId":17,
 "heroName": "Zarya",
- "heroPortrait": "url",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/zarya/full-portrait.png",
  "hero picture" : "url",
   "performance":{
   "role": "TANK",
@@ -3166,7 +3166,7 @@
 {
  "heroId": 18,
  "heroName": "Ana",
- "heroPortrait": "url",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/ana/full-portrait.png",
  "heroImage" : "url",
   "performace":{
   "role": "support",
@@ -3319,7 +3319,7 @@
 {
 "heroId": 19,
  "heroName": "Lucio",
- "heroPortrait": "url",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/lucio/full-portrait.png",
  "hero picture" : "url",
   "performance":{
   "role": "support",
@@ -3534,7 +3534,7 @@
 },
 {"heroId": 20,
 "heroName": "Mercy",
- "heroPortrait": "url",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/mercy/full-portrait.png",
  "hero picture" : "url",
   "performance":{
   "role": "support",
@@ -3799,7 +3799,7 @@
 },
 {"heroId": 21,
 "heroName": "Symmetra",
- "heroPortrait": "url",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/symmetra/full-portrait.png",
  "hero picture" : "url",
   "performance":{
   "role": "support",
@@ -3981,7 +3981,7 @@
 {
 "heroId": 22,
  "heroName": "Zenyatta",
- "heroPortrait": "url",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/zenyatta/full-portrait.png",
  "hero picture" : "url",
   "performance":{
   "role": "support",

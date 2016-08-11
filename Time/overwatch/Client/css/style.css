@@ -444,7 +444,17 @@ Img {
 }
 
 .heroImg {
-	width: 100%;
+	width: 500px;
+	float:left;
+}
+
+#heroSkillChart {
+	float: left;
+	width: 50%;
+}
+
+rect.highcharts-background {
+	fill: none;
 }
 
 .mapSelectionImg {

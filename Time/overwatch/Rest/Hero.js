@@ -8,8 +8,6 @@ var apicache = require('apicache').middleware;
 /** path is /hero/allheros **/
 router.get('/allheros', apicache('1 hour'), function(req, res) {
 	res.header('Content-type', 'application/json');
-	res.header('Access-Control-Allow-Headers', '*');
-	res.header('Access-Control-Allow-Origin', '*');
 	res.header('Charset', 'utf8');
 
 	fs.readFile('./Json/heros.json', 'utf8', function (err, data) {
@@ -18,11 +16,31 @@ router.get('/allheros', apicache('1 hour'), function(req, res) {
 			res.send([]);
 			return;
 		}
-		res.send(data);
+		var obj = JSON.parse(data);;
+		res.send(obj);
 	});
 	// daoController.getDao('HeroDao', 'hero_findAll', {},function (heroArr) {
 	// 	res.send(heroArr);
 	// });
+});
+
+/** path is /hero/getHeroDetail **/
+router.post('/getHeroDetail', function (req, res) {
+	res.header('Content-type', 'application/json');
+	res.header('Charset', 'utf8');
+	var heroId = req.body.data-1;
+	fs.readFile('./Json/HeroJsonTotal.json',  function (err, data) {
+		if (err) {
+			console.error(err);
+			res.send([]);
+			return;
+		}
+		var obj = JSON.parse(data);;
+		console.log(JSON.stringify(obj[heroId]));
+		res.send(obj[heroId]);
+	});
+
+
 });
 
 /** path is /hero/addHeroDetails **/
@@ -53,20 +71,6 @@ router.get('/heroDetail/:id', function(req, res) {
 		res.send(detailObj);
 
 	})
-});
-
-router.get('/mapList', function(req, res) {
-	res.header('Content-type', 'application/json');
-	res.header('Charset', 'utf8');
-	fs.readFile('./Json/HeroJsonTotal.json', 'utf8', function (err, data) {
-		if (err) {
-			console.error(err);
-			res.send([]);
-			return;
-		}
-		Console.log(JSON.stringify(data));
-		res.send(data);
-	});
 });
 
 module.exports = router;
