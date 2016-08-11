@@ -49,10 +49,10 @@ var HeroCard = React.createClass({
 	},
 	render: function(){
 		return (
-			<div className="heroCardContainer">
+			<div  className="heroCardContainer">
 				<div className="heroCard">
-					<Link to={'/herodetail'}>
-		  			<img onClick={this.setId.bind(this, this.props.hero.heroname)} className="heroCardImg img-responsive" src={"./img/hero/"+this.props.hero.imgPath} />
+					<Link to={'/heroskill'}>
+		  			<img onClick={this.setId.bind(this, this.props.hero.heroId)} className="heroCardImg img-responsive" src={"./img/hero/"+this.props.hero.imgPath} />
 					</Link>
 			        <p className="card-text cardTitle">{this.props.hero.heroname}</p>
 			    </div>

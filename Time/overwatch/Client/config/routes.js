@@ -11,6 +11,7 @@ var Guide = require('../components/GuideComponent');
 var Pro = require('../components/ProComponent');
 var Player = require('../components/PlayerComponent');
 var HeroDetail = require('../components/HeroDetailComponent');
+var HeroSkill = require('../components/HeroSkillComponent');
 var NoMatch = require('../components/NoMatchComponent');
 var BuildGuide = require('../components/BuildGuideComponent');
 var Search = require('../components/SearchComponent');
@@ -31,7 +32,7 @@ module.exports = (
 			<Route path="guide" component={Guide} />
             <Route path="pro" component={Pro} />
 			<Route path="player" component={Player} />
-			<Route path="herodetail" component={HeroDetail} />
+			<Route path="heroskill" component={HeroSkill} />
 			<Route path="buildGuide" component={BuildGuide} />
 			<Route path="*" component={NoMatch} />
 		</Route>

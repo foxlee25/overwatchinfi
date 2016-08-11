@@ -1,0 +1,4166 @@
+[
+    {
+ "heroId": 1,
+ "heroName": "Genji",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/genji/full-portrait.png",
+ "heroImage" : "url",
+  "performace":{
+  "role": "offense",
+  "accurateRole": "break battle array, core DPS"
+   },
+  "basic":
+  {
+  "health": 200,
+  "amor": 0,
+  "shield": 0
+  },
+  "skill":
+  [{ 
+  "skillId":"101",
+  "skillName":"passive：cyber agility",
+  "skillImage":"url",
+  "hotkey":"SPACE",
+  "description":"Genji's passive abilities are:  He can climb walls and do a double jump in mid-air.",
+  "attribute":
+  [
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":102,
+  "skillName":"SHURIKEN",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"Genji looses three deadly throwing stars in quick succession.",
+  "attribute":
+  [
+  {"dammage":28},
+  {"ammo":24},
+  {"reload":"1s"},
+  {"rps":"3rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"103",
+  "skillName":"SHURIKEN(right-click)",
+  "skillImage":"url",
+  "hotkey":"right-click",
+  "description":"Alternatively, he can throw three shuriken in a wider spread.",
+  "attribute":
+  [
+  {"dammage":28},
+  {"ammo":24},
+  {"reload":"1s"},
+  {"rps":"4rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+    ]
+  },
+   { 
+  "skillId":"104",
+  "skillName":"SWIFT STRIKE",
+  "skillImage":"url",
+  "hotkey":"SHIFT",
+  "description":"Genji darts forward, slashing with his katana and passing through foes in his path. If Genji eliminates a target, he can instantly use this ability again",
+  "attribute":
+  [
+  {"dammage":50},
+  {"ammo":null},
+  {"reload":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":"14~15m"},
+  {"coolDown":"8s"},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"105",
+  "skillName":"DEFLECT",
+  "skillImage":"url",
+  "hotkey":"E",
+  "description":"With lightning-quick swipes of his sword, Genji reflects an oncoming projectile and sends it rebounding towards his opponent.",
+  "attribute":
+  [
+  {"dammage":null},
+  {"ammo":null},
+  {"reload":null},
+  {"rps":null},
+  {"skillRange":"180-degree viewing angle in front"},
+  {"chargeRange":null},
+  {"coolDown":"8s"},
+  {"casting":null},
+  {"duration":"2s"},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"106",
+  "skillName":"DRAGONBLADE",
+  "skillImage":"url",
+  "hotkey":"E",
+  "description":"Genji brandishes his katana for a brief period of time. Until he sheathes his sword, Genji can deliver killing strikes to any targets within his reach.",
+  "attribute":
+  [
+  {"damage": 120},
+  {"ammo":null},
+  {"reload":null},
+  {"rps":null},
+  {"skillRange":"5~6m"},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":"1s"},
+  {"duration":"8s"},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"ultimate_charging": null}
+  ]
+  }
+],
+  
+ "winRate" :"50.6%",
+
+  "strong_against":[
+  { "heroId":12,
+    "heroImage": "url"
+  },
+  { "heroId":7,
+    "heroImage": "url"
+  }],
+  "against":[
+  { "heroId":18,
+    "heroImage": "url"
+  },
+  { "heroId":20,
+    "heroImage": "url"
+  },
+  { "heroId":8,
+    "heroImage": "url"
+  }],
+  "pentacle":{ "damage": 3,
+    "survival":3,
+    "mobility":3,
+    "special":0,
+    "ultimateCharge":3,
+    "difficulty":3
+   }
+},
+{
+ "heroId": 2,
+ "heroName": "McCree",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/mccree/full-portrait.png",
+ "heroImage" : "url",
+  "performace":{
+  "role": "offense",
+  "accurateRole": "front break, core DPS"
+   },
+  "basic":
+  {
+  "health": 200,
+  "amor": 0,
+  "shield": 0
+  },
+  "skill":
+  [{ 
+  "skillId":"201",
+  "skillName":"Peacekeeper",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"McCree fires off a round from his trusty six-shooter",
+  "attribute":
+  [
+  {"damage":"20-70"},
+  {"ammo":6},
+  {"reloadTime":"1.5s"},
+  {"rps":"2rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"202",
+  "skillName":"Peacekeeper(Fan Fire)",
+  "skillImage":"url",
+  "hotkey":"right-click",
+  "description":"McCree fires off a round from his trusty six-shooter. He can fan the Peacekeeper's hammer (alternate fire ability) to swiftly unload the entire chamber.",
+  "attribute":
+  [
+  {"dammage":45},
+  {"ammo":6},
+  {"reload":"1.5s"},
+  {"rps":"6rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"203",
+  "skillName":"Combat Roll",
+  "skillImage":"url",
+  "hotkey":"Shift",
+  "description":"McCree dives in the direction he's moving, effortlessly reloading his Peacekeeper in the process.",
+  "attribute":
+  [
+  {"dammage":null},
+  {"ammo":null},
+  {"reload":null},
+  {"rps":null},
+  {"skillRange":"6m"},
+  {"chargeRange":null},
+  {"coolDown":"8s"},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+   { 
+  "skillId":"204",
+  "skillName":"Flashbang",
+  "skillImage":"url",
+  "hotkey":"E",
+  "description":"McCree heaves a blinding grenade that explodes shortly after it leaves his hand. The blast staggers enemies in a small radius.",
+  "attribute":
+  [
+  {"dammage":25},
+  {"ammo":null},
+  {"reload":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":"10m"},
+  {"coolDown":"10s"},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"stun Time": "0.7s"}
+  ]
+  },
+  { 
+  "skillId":"205",
+  "skillName":"Deadeye",
+  "skillImage":"url",
+  "hotkey":"Q",
+  "description":"Focus. Mark. Draw. McCree takes a few precious seconds to aim; when he's ready to fire, he shoots every enemy in his line of sight. The weaker his targets are, the faster he'll line up a killshot.",
+  "attribute":
+  [
+  {"dammage":null},
+  {"ammo":null},
+  {"reload":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"null"},
+  {"casting":null},
+  {"duration":"10s"},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": "1 second per 200 health of each enemy in sight"}
+  ]
+  }
+],
+  
+ "winRate" :"48%",
+
+  "strong_against":[
+  { "heroId":4,
+    "heroImage": "url"
+  },
+  { "heroId":14,
+    "heroImage": "url"
+  }],
+
+  "against":[
+  { "heroId":16,
+    "heroImage": "url"
+  },
+  { "heroId":3,
+    "heroImage": "url"
+  }],
+
+  
+  "pentacle":{ "damage": 3,
+    "survival":0,
+    "mobility":0,
+    "special":1,
+    "ultimateCharge":1,
+    "difficulty":2
+   }
+},
+{
+ "heroId": 3,
+ "heroName": "Pharah",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/pharah/full-portrait.png",
+ "heroImage" : "url",
+  "performace":{
+  "role": "offense",
+  "accurateRole": "front push"
+   },
+  "basic":
+  {
+  "health": 200,
+  "amor": 0,
+  "shield": 0
+  },
+  "skill":
+  [{ 
+  "skillId":"301",
+  "skillName":"Rocket Launcher",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"Pharah's primary weapon launches rockets that deal significant damage in a wide blast radius.",
+  "attribute":
+  [
+  {"damage":120},
+  {"ammo":6},
+  {"reloadTime":"1s"},
+  {"rps":"1rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"302",
+  "skillName":"Jump Jet",
+  "skillImage":"url",
+  "hotkey":"Shift",
+  "description":"Propelled by her suit's thrusters, Pharah soars high into the air.",
+  "attribute":
+  [
+  {"dammage":null},
+  {"ammo":null},
+  {"reload":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"10s"},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"303",
+  "skillName":"Concussive Blast",
+  "skillImage":"url",
+  "hotkey":"E",
+  "description":"Pharah looses a wrist rocket that knocks back any enemies it strikes.",
+  "attribute":
+  [
+  {"dammage":1},
+  {"ammo":null},
+  {"reload":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"12s"},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+   { 
+  "skillId":"304",
+  "skillName":"Barrage",
+  "skillImage":"url",
+  "hotkey":"Q",
+  "description":"Pharah directs a continuous salvo of mini-rockets to destroy groups of enemies.",
+  "attribute":
+  [
+  {"dammage":"40 per rocket"},
+  {"ammo":null},
+  {"reload":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":"3s"},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  }
+],
+  
+ "winRate" :"48.7%",
+
+  "strong_against":[
+  { "heroId":10,
+    "heroImage": "url"
+  },
+  { "heroId":9,
+    "heroImage": "url"
+  }],
+
+
+  "against":[
+  { "heroId":4,
+    "heroImage": "url"
+  },
+  { "heroId":16,
+    "heroImage": "url"
+  },
+  { "heroId":19,
+    "heroImage": "url"
+  },
+  { "heroId":21,
+    "heroImage": "url"
+  },
+  { "heroId":17,
+    "heroImage": "url"
+  },
+  { "heroId":14,
+    "heroImage": "url"
+  }],
+
+  
+  "pentacle":{ "damage": 3,
+    "survival":1,
+    "mobility":3,
+    "special":0,
+    "ultimateCharge":1,
+    "difficulty":1
+   }
+},
+{
+ "heroId": 4,
+ "heroName": "Reaper",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/reaper/full-portrait.png",
+ "heroImage" : "url",
+  "performace":{
+  "role": "offense",
+  "accurateRole": "break battle array, core DPS"
+   },
+  "basic":
+  {
+  "health": 250,
+  "amor": 0,
+  "shield": 0
+  },
+  "skill":
+  [{ 
+  "skillId":"401",
+  "skillName":"The Reaping",
+  "skillImage":"url",
+  "hotkey":null,
+  "description":"Reaper can collect Soul Globes to regain health.",
+  "attribute":
+  [
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"402",
+  "skillName":"Hellfire Shotguns",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"Reaper tears enemies apart with twin shotguns.",
+  "attribute":
+  [
+  {"dammage":" 2-7 per pellet (20 pellets per shot) - 140 max damage "},
+  {"ammo":8},
+  {"reload":"1.5 second"},
+  {"rps":"2 per second"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"403",
+  "skillName":"Wraith Form",
+  "skillImage":"url",
+  "hotkey":"Right-click",
+  "description":"Reaper becomes a shadow for a short period of time. While in this form, he takes no damage and is able to pass through enemies, but cannot fire his weapons or use other abilities.",
+  "attribute":
+  [
+  {"dammage":null},
+  {"ammo":null},
+  {"reload":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"8s"},
+  {"casting":null},
+  {"duration":"3 s"},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+   { 
+  "skillId":"404",
+  "skillName":"Shadow Step",
+  "skillImage":"url",
+  "hotkey":"E",
+  "description":"After marking a destination, Reaper disappears and reappears at that location.",
+  "attribute":
+  [
+  {"dammage":null},
+  {"ammo":null},
+  {"reload":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"10 s"},
+  {"casting":"2 s"},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"405",
+  "skillName":"Death Blossom",
+  "skillImage":"url",
+  "hotkey":"Q",
+  "description":"In a blur of motion, Reaper empties both hellfire shotguns at breakneck speed, dealing massive damage to all nearby enemies.",
+  "attribute":
+  [
+  {"dammage":"200 per s"},
+  {"ammo":null},
+  {"reload":null},
+  {"rps":null},
+  {"skillRange":"8 meter radius"},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":"3s"},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  }
+],
+
+ "winRate" :"52.3%",
+
+  "strong_against":[
+  { "heroId":7,
+    "heroImage": "url"
+  },
+  { "heroId":20,
+    "heroImage": "url"
+  }],
+
+
+  "against":[
+  { "heroId":9,
+    "heroImage": "url"
+  },  
+  { "heroId":12,
+    "heroImage": "url"
+  },
+  { "heroId":16,
+    "heroImage": "url"
+  },
+  { "heroId":21,
+    "heroImage": "url"
+  },
+  { "heroId":18,
+    "heroImage": "url"
+  },  
+  { "heroId":10,
+    "heroImage": "url"
+  },
+  { "heroId":11,
+    "heroImage": "url"
+  }],
+
+  
+  "pentacle":{ "damage": 3,
+    "survival":1,
+    "mobility":2,
+    "special":0,
+    "ultimateCharge":1,
+    "difficulty":1
+   }
+},
+{
+ "heroId": 5,
+ "heroName": "Soldier76",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/soldier-76/full-portrait.png",
+ "heroImage" : "url",
+  "performace":{
+  "role": "offense",
+  "accurateRole": "front fire, core DPS"
+   },
+  "basic":
+  {
+  "health": 200,
+  "amor": 0,
+  "shield": 0
+  },
+  "skill":
+  [{ 
+  "skillId":"501",
+  "skillName":"Sprint",
+  "skillImage":"url",
+  "hotkey":"Shift",
+  "description":"Whether he needs to evade a firefight or get back into one, Soldier: 76 can rush ahead in a burst of speed. His sprint ends if he takes an action other than charging forward.",
+  "attribute":
+  [
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"502",
+  "skillName":"Heavy Pulse Rifle",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"Soldier: 76's rifle remains particularly steady while unloading fully-automatic pulse fire.",
+  "attribute":
+  [
+  {"dammage":"5-17"},
+  {"ammo":25},
+  {"reload":"1s"},
+  {"rps":"10rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"503",
+  "skillName":"Helix Rockets",
+  "skillImage":"url",
+  "hotkey":"Right-click",
+  "description":"Tiny rockets spiral out of Soldier: 76's Pulse Rifle in a single burst. The rockets' explosion damages enemies in a small radius.",
+  "attribute":
+  [
+  {"dammage":"direct hit of 120 - (up to 80 splash damage, and a max of 40 self damage)"},
+  {"ammo":null},
+  {"reload":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"8s"},
+  {"casting":"2s"},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+   { 
+  "skillId":"504",
+  "skillName":"Biotic Field",
+  "skillImage":"url",
+  "hotkey":"E",
+  "description":"Soldier: 76 plants a biotic emitter on the ground. Its energy projection restores health to 76 and any of his squadmates within the field.",
+  "attribute":
+  [
+  {"dammage":null},
+  {"ammo":null},
+  {"reload":null},
+  {"rps":null},
+  {"skillRange":"5 meter radius"},
+  {"chargeRange":null},
+  {"coolDown":"15s"},
+  {"casting":null},
+  {"duration":"5s"},
+  {"healing":"35 per s"},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"505",
+  "skillName":"Tactical Visor",
+  "skillImage":"url",
+  "hotkey":"Q",
+  "description":"Soldier: 76's pinpoint targeting visor locks his aim on the threat closest to his crosshairs. If an enemy leaves his line of sight, Soldier: 76 can quickly switch to another target.",
+  "attribute":
+  [
+  {"dammage":"10-17  (has fall-off distance damage)"},
+  {"ammo":null},
+  {"reload":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":"6s"},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  }
+],
+  
+ "winRate" :"52.3%",
+
+  "strong_against":[
+  { "heroId":3,
+    "heroImage": "url"
+  },
+  { "heroId":6,
+    "heroImage": "url"
+  }],
+
+
+  "against":[
+  { "heroId":20,
+    "heroImage": "url"
+  },
+  { "heroId":22,
+    "heroImage": "url"
+  },
+  { "heroId":15,
+    "heroImage": "url"
+  }],
+
+  
+  "pentacle":{ "damage": 3,
+    "survival":2,
+    "mobility":2,
+    "special":1,
+    "ultimateCharge":1,
+    "difficulty":1
+   }
+},
+{
+ "heroId": 6,
+ "heroName": "Tracer",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/tracer/full-portrait.png",
+ "heroImage" : "url",
+  "performace":{
+  "role": "offense",
+  "accurateRole": "break battle array, core DPS"
+   },
+  "basic":
+  {
+  "health": 150,
+  "amor": 0,
+  "shield": 0
+  },
+  "skill":
+  [{ 
+  "skillId":"601",
+  "skillName":"Pulse Pistols",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"Tracer rapid-fires both of her pistols.",
+  "attribute":
+  [
+  {"damage":"3 - 12 per hit (1 shot is two bullets) -  (fall-off distance damage)"},
+  {"ammo":40},
+  {"reloadTime":"1 s"},
+  {"rps":"40rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"602",
+  "skillName":"Blink",
+  "skillImage":"url",
+  "hotkey":"Shift",
+  "description":"Tracer zips horizontally through space in the direction she's moving, and reappears several yards away. She stores up to three charges of the blink ability and generates more every few seconds.",
+  "attribute":
+  [
+  {"dammage":null},
+  {"ammo":null},
+  {"reload":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"3 s per charge"},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"charge": "3"}
+  ]
+  },
+  { 
+  "skillId":"603",
+  "skillName":"Recall",
+  "skillImage":"url",
+  "hotkey":"E",
+  "description":"Tracer bounds backward in time, returning her health, ammo and position on the map to precisely where they were three seconds before.",
+  "attribute":
+  [
+  {"dammage":null},
+  {"ammo":null},
+  {"reload":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"12 s"},
+  {"casting":null},
+  {"duration":"1.25 s"},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+   { 
+  "skillId":"604",
+  "skillName":"Pulse Bomb",
+  "skillImage":"url",
+  "hotkey":"Q",
+  "description":"Tracer lobs a large bomb that adheres to any surface or unfortunate opponent it lands on. After a brief delay, the bomb explodes, dealing high damage to all enemies within its blast radius.",
+  "attribute":
+  [
+  {"dammage":400},
+  {"ammo":null},
+  {"reload":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  }
+],
+  
+ "winRate" :"49.2%",
+
+  "strong_against":[
+  { "heroId":18,
+    "heroImage": "url"
+  },
+  { "heroId":7,
+    "heroImage": "url"
+  }],
+
+
+  "against":[
+  { "heroId":20,
+    "heroImage": "url"
+  },
+  { "heroId":12,
+    "heroImage": "url"
+  },
+  { "heroId":11,
+    "heroImage": "url"
+  },
+  { "heroId":14,
+    "heroImage": "url"
+  },
+  { "heroId":1,
+    "heroImage": "url"
+  },
+  { "heroId":22,
+    "heroImage": "url"
+  },
+  { "heroId":8,
+    "heroImage": "url"
+  }],
+
+  
+  "pentacle":{ "damage": 2,
+    "survival":2,
+    "mobility":3,
+    "special":0,
+    "ultimateCharge":2,
+    "difficulty":2
+   }
+},
+{
+    "heroId":7,
+"heroName": "Bastion",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/bastion/full-portrait.png",
+ "hero picture" : "url",
+  "performance":{
+  "role": "DEFENSE",
+  "accurateRole": "block area"
+   },
+  "basic":
+  {
+  "health": 200, 
+  "Armor": 100,
+  "shield": 0
+  },
+  "skill":
+  [{ 
+  "skillId":"701",
+  "skillName":"configuration(recon)",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"In Recon mode, Bastion is fully mobile, outfitted with a submachine gun that fires steady bursts of bullets at medium range.",
+   "attribute":
+  [
+  {"damage":"6~20"},
+  {"ammo":20},
+  {"reloadTime":"2s"},
+  {"rps":"8rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+   ]
+  },
+  { 
+  "skillId":"702",
+  "skillName":"configuration(sentry)",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"In Sentry mode, Bastion is a stationary powerhouse equipped with a gatling gun capable of unleashing a hail of bullets. The gun's aim can be walked across multiple targets, dealing devastating damage at short to medium range.",
+  "attribute":
+  [
+  {"damage":"4~15"},
+  {"ammo":200},
+  {"reloadTime":"2.5s"},
+  {"rps":"30rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"703",
+  "skillName":"reconfigure",
+  "skillImage":"url",
+  "hotkey":"shift",
+  "description":"Bastion transforms between its two primary combat modes to adapt to battlefield conditions.",
+  "attribute":
+  [
+  {"damage":null},
+  {"ammunition":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":"0.5"},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+]
+  },
+   { 
+  "skillId":"704",
+  "skillName":"self-repair",
+  "skillImage":"url",
+  "hotkey":"E",
+  "description":"Bastion restores its health; it cannot move or fire weapons while the repair process is in effect.",
+  "attribute":
+  [
+  {"damage":null},
+  {"ammunition":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"1s"},
+  {"casting":null},
+  {"duration":null},
+  {"healing":"25%hps"},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+ ]
+  },
+  { 
+  "skillId":"705",
+  "skillName":"configuration(tank)",
+  "skillImage":"url",
+  "hotkey":"Q",
+  "description":"In Tank mode, Bastion extends wheeled treads and a powerful long-range cannon. The cannon’s explosive shells demolish targets in a wide blast radius, but Bastion can only remain in this mode for a limited time.",
+  "attribute":
+  [
+  {"damage":205},
+  {"ammo":"unlimited"},
+  {"reloadTime":null},
+  {"rps":"1rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":"1s"},
+  {"duration":"8s"},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  }
+],
+  
+ "winRate" :"52.7%",
+
+  "strong_against":[
+  { "heroId":2,
+    "heroImage": "url"
+  },
+  { "heroId":5,
+    "heroImage": "url"
+  }],
+
+  "against":[
+  { "heroId":20,
+    "heroImage": "url"
+  },
+  { "heroId":17,
+    "heroImage": "url"
+  },
+  { "heroId":3,
+    "heroImage": "url"
+  }],
+
+  
+  "pentacle":{ "damage": 3,
+    "survival":1,
+    "mobility":0,
+    "special":0,
+"ultimateCharge":1,
+"difficulty":1
+   }
+},
+{
+    "heroId":8,
+"heroName": "Hanzo",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/hanzo/full-portrait.png",
+ "hero picture" : "url",
+  "performance":{
+  "role": "DEFENSE",
+  "accurateRole": "harass enemy flanks"
+   },
+  "basic":
+  {
+  "health": 200, 
+  "Armor": 0,
+  "shield": 0
+  },
+  "skill":
+  [{ 
+  "skillId":"801",
+  "skillName":"(passive skill)cyber agility",
+  "skillImage":"url",
+  "hotkey":"space",
+  "description":"climbing walls",
+   "attribute":
+  [
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+   ]
+  },
+  { 
+  "skillId":"802",
+  "skillName":"storm arrow",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"Hanzo nocks and fires an arrow at his target.",
+  "attribute":
+  [
+  {"damage":"29~125"},
+  {"ammo":"unlimited"},
+  {"reloadTime":null},
+  {"rps":"1rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":"0.5s max damage"},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"803",
+  "skillName":"sonic arrow",
+  "skillImage":"url",
+  "hotkey":"shift",
+  "description":"Hanzo launches an arrow that contains a sonar tracking device. Any enemy within its detection radius is visibly marked, making them easier for Hanzo and his allies to hunt down.",
+  "attribute":
+  [
+  {"damage":"29~125"},
+  {"ammunition":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":"10m"},
+  {"chargeRange":null},
+  {"coolDown":"20s"},
+  {"casting":"0.5s max damage"},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+]
+  },
+   { 
+  "skillId":"804",
+  "skillName":"scatter arrow",
+  "skillImage":"url",
+  "hotkey":"E",
+  "description":"Hanzo shoots a fragmenting arrow that ricochets off walls and objects and can strike multiple targets at once.",
+  "attribute":
+  [
+  {"damage":"75 per arrow, 6 arrows"},
+  {"ammunition":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"10s"},
+  {"casting":"0.5s max damage"},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+ ]
+  },
+  { 
+  "skillId":"805",
+  "skillName":"dragonstrike",
+  "skillImage":"url",
+  "hotkey":"Q",
+  "description":"Hanzo summons a Spirit Dragon which travels through the air in a line. It passes through walls in its way, devouring any enemies it encounters.",
+  "attribute":
+  [
+  {"damage":"more than 200dps"},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":"1.5s"},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  }
+],
+  
+ "winRate" :"48.4%",
+
+  "strong_against":[
+  { "heroId":7,
+    "heroImage": "url"
+  },
+  { "heroId":22,
+    "heroImage": "url"
+  }],
+
+  "against":[
+  { "heroId":20,
+    "heroImage": "url"
+  },
+  { "heroId":11,
+    "heroImage": "url"
+  },
+  { "heroId":18,
+    "heroImage": "url"
+  },
+  { "heroId":15,
+    "heroImage": "url"
+  }],
+
+  
+  "pentacle":{ "damage": 3,
+    "survival":0,
+    "mobility":2,
+    "special":1,
+"ultimateCharge":1,
+"difficulty":3
+   }
+},
+{
+    "heroId":9,
+"heroName": "Junkrat",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/junkrat/full-portrait.png",
+ "hero picture" : "url",
+  "performance":{
+  "role": "DEFENSE",
+  "accurateRole": "control"
+   },
+  "basic":
+  {
+  "health": 200, 
+  "Armor": 0,
+  "shield": 0
+  },
+  "skill":
+  [{ 
+  "skillId":"901",
+  "skillName":"(passive skill)total mayhem",
+  "skillImage":"url",
+  "hotkey":null,
+  "description":"Junkrat's deranged sense of humor persists past his death. If killed, he drops several live grenades.",
+   "attribute":
+  [
+  {"damage":"60 per grenade"},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+   ]
+  },
+  { 
+  "skillId":"902",
+  "skillName":"frag launcher",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"Junkrat's Frag Launcher lobs grenades a significant distance. They bounce to reach their destination, and blow up when they strike an enemy.",
+  "attribute":
+  [
+  {"damage":120},
+  {"ammo":5},
+  {"reloadTime":"1.5s"},
+  {"rps":"1.5rps"},
+  {"skillRange":"2m"},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"903",
+  "skillName":"concussion mine",
+  "skillImage":"url",
+  "hotkey":"shift",
+  "description":"After placing one of his homemade Concussion Mines, Junkrat can trigger it to damage enemies and send them flying... or propel himself through the air.",
+  "attribute":
+  [
+  {"damage":120},
+  {"ammunition":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":"3m"},
+  {"chargeRange":null},
+  {"coolDown":"8s"},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+]
+  },
+   { 
+  "skillId":"904",
+  "skillName":"steel trap",
+  "skillImage":"url",
+  "hotkey":"E",
+  "description":"Junkrat tosses out a giant, metal-toothed trap. Should an enemy wander too close to the trap, it clamps on, injuring and immobilizing them.",
+  "attribute":
+  [
+  {"damage":80},
+  {"ammunition":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":"1m"},
+  {"chargeRange":null},
+  {"coolDown":"10s"},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+ ]
+  },
+  { 
+  "skillId":"905",
+  "skillName":"rip-tire",
+  "skillImage":"url",
+  "hotkey":"Q",
+  "description":"Junkrat revs up a motorized tire bomb and sends it rolling across the battlefield, climbing over walls and obstacles. He can remotely detonate the RIP-Tire to deal serious damage to enemies caught in the blast, or just wait for it to explode on its own.",
+  "attribute":
+  [
+    {"hp":100},
+    {"damage":600},
+    {"ammo":null},
+    {"reloadTime":null},
+    {"rps":null},
+    {"skillRange":"10m"},
+    {"chargeRange":null},
+    {"coolDown":null},
+    {"casting":"1s"},
+    {"duration":"10s"},
+    {"healing":null},
+    {"heighest":null},
+    {"special": null},
+    {"critical":null},
+    {"armor":null},
+    {"consume":null},
+    {"charging": null}
+  ]
+  }
+],
+  
+ "winRate" :"50%",
+
+  "strong_against":[
+  { "heroId":7,
+    "heroImage": "url"
+  },
+  { "heroId":10,
+    "heroImage": "url"
+  }],
+
+  "against":[
+  { "heroId":15,
+    "heroImage": "url"
+  },
+  { "heroId":6,
+    "heroImage": "url"
+  },
+  { "heroId":14,
+    "heroImage": "url"
+  },
+  { "heroId":11,
+    "heroImage": "url"
+  },
+  { "heroId":21,
+    "heroImage": "url"
+  },
+  { "heroId":13,
+    "heroImage": "url"
+  }],
+
+  
+  "pentacle":{ "damage": 2,
+  "survival":0,
+  "mobility":1,
+  "special":1,
+  "ultimateCharge":2,
+  "difficulty":2
+   }
+},
+{
+    "heroId":10,
+"heroName": "Mei",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/mei/full-portrait.png",
+ "hero picture" : "url",
+  "performance":{
+  "role": "DEFENSE",
+  "accurateRole": "control, surround enemy"
+   },
+  "basic":
+  {
+  "health": 250, 
+  "Armor": 0,
+  "shield": 0
+  },
+  "skill":
+  [{ 
+  "skillId":"1001",
+  "skillName":"endothermic blaster",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"Mei’s blaster unleashes a concentrated, short-range stream of frost that damages, slows, and ultimately freezes enemies in place.",
+   "attribute":
+  [
+  {"hp":null},
+  {"damage":"45dps"},
+  {"ammo":200},
+  {"reloadTime":"1.5s"},
+  {"rps":"20rps"},
+  {"skillRange":"10m"},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": "freezes enemies in 2s"},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+   ]
+  },
+  { 
+  "skillId":"1002",
+  "skillName":"endothermic blaster",
+  "skillImage":"url",
+  "hotkey":"right-click",
+  "description":"Mei can also use her blaster to shoot icicle-like projectiles at medium range.",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":"22~75"},
+  {"ammo":"200, 25 per shot"},
+  {"reloadTime":"1.5s"},
+  {"rps":"1.8rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"1003",
+  "skillName":"cryo-freeze",
+  "skillImage":"url",
+  "hotkey":"shift",
+  "description":"Mei instantly surrounds herself with a block of thick ice. She heals and ignores damage while encased, but cannot move or use abilities.",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":null},
+  {"ammunition":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"12s"},
+  {"casting":null},
+  {"duration":"4s"},
+  {"healing":150},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+]
+  },
+   { 
+  "skillId":"1004",
+  "skillName":"ice wall",
+  "skillImage":"url",
+  "hotkey":"E",
+  "description":"Junkrat tosses out a giant, metal-toothed trap. Should an enemy wander too close to the trap, it clamps on, injuring and immobilizing them.",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":null},
+  {"ammunition":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"10s"},
+  {"casting":null},
+  {"duration":"4.5"},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+ ]
+  },
+  { 
+  "skillId":"1005",
+  "skillName":"bilzzard",
+  "skillImage":"url",
+  "hotkey":"Q",
+  "description":"Mei deploys a weather-modification drone that emits gusts of wind and snow in a wide area. Enemies caught in the blizzard are slowed and take damage; those who linger too long are frozen solid.",
+  "attribute":
+  [
+    {"hp":null},
+    {"damage":100},
+    {"ammo":null},
+    {"reloadTime":null},
+    {"rps":null},
+    {"skillRange":null},
+    {"chargeRange":null},
+    {"coolDown":null},
+    {"casting":"1.5s"},
+    {"duration":"5s"},
+    {"healing":null},
+    {"heighest":null},
+    {"special": null},
+    {"critical":null},
+    {"armor":null},
+    {"consume":null},
+    {"charging": null}
+  ]
+  }
+],
+  
+ "winRate" :"50.4%",
+
+  "strong_against":[
+  { "heroId":1,
+    "heroImage": "url"
+  },
+  { "heroId":6,
+    "heroImage": "url"
+  }],
+
+  "against":[
+  { "heroId":13,
+    "heroImage": "url"
+  },
+  { "heroId":16,
+    "heroImage": "url"
+  },
+  { "heroId":7,
+    "heroImage": "url"
+  },
+  { "heroId":15,
+    "heroImage": "url"
+  }],
+
+  
+  "pentacle":{ 
+    "damage": 1,
+    "survival":3,
+    "mobility":0,
+    "special":3,
+    "ultimateCharge":2,
+    "difficulty":3
+   }
+},
+{
+    "heroId":11,
+"heroName": "Torbjorn",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/torbjorn/full-portrait.png",
+ "hero picture" : "url",
+  "performance":{
+  "role": "DEFENSE",
+  "accurateRole": "defense"
+   },
+  "basic":
+  {
+  "health": 200, 
+  "Armor": 0,
+  "shield": 0
+  },
+  "skill":
+  [{ 
+  "skillId":"1101",
+  "skillName":"(passive skill)collect fragments",
+  "skillImage":"url",
+  "hotkey":null,
+  "description":"Torbjorn can find the fragment from the dead enemy or friend",
+   "attribute":
+  [
+  {"hp":null},
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special":null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+   ]
+  },
+  { 
+  "skillId":"1102",
+  "skillName":"rivet gun",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"Torbjörn fires rivets at long range.",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":70},
+  {"ammo":18},
+  {"reloadTime":"2s"},
+  {"rps":"2rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"1103",
+  "skillName":"rivet gun",
+  "skillImage":"url",
+  "hotkey":"right-click",
+  "description":"Ejects molten metal from his gun in a short, close-range burst.",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":150},
+  {"ammo":"18, 3 per shot"},
+  {"reloadTime":null},
+  {"rps":"1rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"2s"},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+]
+  },
+   { 
+  "skillId":"1104",
+  "skillName":"forge hammer",
+  "skillImage":"url",
+  "hotkey":null,
+  "description":"Torbjörn uses his multipurpose hammer to build, upgrade and repair turrets. In a pinch, it can also be swung as a weapon.",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":75},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+ ]
+  },
+  { 
+  "skillId":"1105",
+  "skillName":"build turret",
+  "skillImage":"url",
+  "hotkey":"shift",
+  "description":"Torbjörn constructs an enemy-tracking autocannon. He can use his Forge Hammer to repair or upgrade it, increasing its health and adding a second cannon barrel and a rocket launcher.",
+  "attribute":
+  [
+    {"hp":null},
+    {"damage":null},
+    {"ammo":null},
+    {"reloadTime":null},
+    {"rps":null},
+    {"skillRange":null},
+    {"chargeRange":null},
+    {"coolDown":"8s"},
+    {"casting":null},
+    {"duration":null},
+    {"healing":null},
+    {"heighest":null},
+    {"special": null},
+    {"critical":null},
+    {"armor":null},
+    {"consume":null},
+    {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"1106",
+  "skillName":"armor pack",
+  "skillImage":"url",
+  "hotkey":"E",
+  "description":"Torbjörn deploys an armor upgrade; either he or his allies can pick it up to absorb some damage.",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":75},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"6s"},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":75},
+  {"consume":50},
+  {"charging": null}
+ ]
+  },
+  { 
+  "skillId":"1107",
+  "skillName":"molten core",
+  "skillImage":"url",
+  "hotkey":"Q",
+  "description":"After overheating his personal forge, Torbjörn gains a significant amount of armor and scrap. He also attacks (and builds and repairs turrets) far faster than normal.",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":"12s"},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+ ]
+  }
+],
+  
+ "winRate" :"59.2%",
+
+  "strong_against":[
+  { "heroId":2,
+    "heroImage": "url"
+  },
+  { "heroId":15,
+    "heroImage": "url"
+  }],
+
+  "against":[
+  { "heroId":1,
+    "heroImage": "url"
+  },
+  { "heroId":22,
+    "heroImage": "url"
+  },
+   { "heroId":21,
+    "heroImage": "url"
+  }],
+
+  
+  "pentacle":{ 
+    "damage": 2,
+    "survival":1,
+    "mobility":0,
+    "special":1,
+    "ultimateCharge":2,
+    "difficulty":2
+   }
+},
+{
+    "heroId":12,
+"heroName": "Widowmaker",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/widowmaker/full-portrait.png",
+ "hero picture" : "url",
+  "performance":{
+  "role": "DEFENSE",
+  "accurateRole": "block are, sniper"
+   },
+  "basic":
+  {
+  "health": 200, 
+  "Armor": 0,
+  "shield": 0
+  },
+  "skill":
+  [{ 
+  "skillId":"1201",
+  "skillName":"widow kiss",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":" Should targets close to medium range, the rifle can be fired in fully-automatic mode.",
+   "attribute":
+  [
+  {"hp":null},
+  {"damage":13},
+  {"ammo":30},
+  {"reloadTime":"1.5s"},
+  {"rps":"10rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"highest time":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+   ]
+  },
+  { 
+  "skillId":"1202",
+  "skillName":"widow kiss",
+  "skillImage":"url",
+  "hotkey":"right-click",
+  "description":"Widowmaker’s versatile sniper rifle is ideal for scope-aimed shots at distant targets.",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":12},
+  {"ammo":30},
+  {"reloadTime":"1.5s"},
+  {"rps":"1rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"highest time":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":"2.5 times"}
+  ]
+  },
+  { 
+  "skillId":"1203",
+  "skillName":"grappling hook",
+  "skillImage":"url",
+  "hotkey":"shift",
+  "description":"Widowmaker launches a grappling hook towards the location she’s aiming at – when the hook connects with a scalable surface, she’s quickly drawn towards it, allowing her to expand her view of the battlefield and evade or flank targets.",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":null},
+  {"ammunition":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"12s"},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"highest time":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+]
+  },
+   { 
+  "skillId":"1204",
+  "skillName":"venom mine",
+  "skillImage":"url",
+  "hotkey":"E",
+  "description":"Widowmaker adheres a swiftly-arming venom mine to nearly any surface. When a target wanders within range of the mine’s motion trigger, it explodes, delivering poison gas to any enemies in the vicinity.",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":75},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":"3m"},
+  {"chargeRange":null},
+  {"coolDown":"15s"},
+  {"casting":null},
+  {"duration":"5s"},
+  {"healing":null},
+  {"highest time":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+ ]
+  },
+  { 
+  "skillId":"1205",
+  "skillName":"infra-sight",
+  "skillImage":"url",
+  "hotkey":"Q",
+  "description":"Widowmaker’s recon visor allows her to see the heat signatures of her targets through walls and objects for a moderate amount of time. This enhanced vision is shared with her allies.",
+  "attribute":
+  [
+    {"hp":null},
+    {"damage":null},
+    {"ammo":null},
+    {"reloadTime":null},
+    {"rps":null},
+    {"skillRange":null},
+    {"chargeRange":null},
+    {"coolDown":null},
+    {"casting":null},
+    {"duration":"15.5s"},
+    {"healing":null},
+    {"highest time":null},
+    {"special": null},
+    {"critical":null},
+    {"armor":null},
+    {"consume":null},
+    {"charging": null},
+    {"head_shot":null}
+  ]
+  }
+],
+  
+ "winRate" :"49%",
+
+  "strong_against":[
+  { "heroId":22,
+    "heroImage": "url"
+  },
+  { "heroId":18,
+    "heroImage": "url"
+  }],
+
+  "against":[
+  { "heroId":3,
+    "heroImage": "url"
+  },
+  { "heroId":8,
+    "heroImage": "url"
+  },
+  { "heroId":2,
+    "heroImage": "url"
+  },
+  { "heroId":20,
+    "heroImage": "url"
+  },
+  { "heroId":9,
+    "heroImage": "url"
+  },
+  { "heroId":7,
+    "heroImage": "url"
+  },
+  { "heroId":10,
+    "heroImage": "url"
+  },
+  { "heroId":17,
+    "heroImage": "url"
+  }],
+
+  
+  "pentacle":{ "damage": 2,
+  "survival":1,
+  "mobility":2,
+  "special":1,
+  "ultimateCharge":2,
+  "difficulty":2
+   }
+},
+{
+ "heroId":13,
+"heroName": "D.VA",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/dva/full-portrait.png",
+ "hero picture" : "url",
+  "performance":{
+  "role": "TANK",
+  "accurateRole": "Formation Breaker"
+   },
+  "basic":
+  {
+  "health": 150, 
+  "Armor": 0,
+  "shield": 0
+  },
+  "skill":
+  [{ 
+  "skillId":"1301",
+  "skillName":"FUSION CANNONS",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"D.Va's mech is equipped with twin short-range rotating cannons. They lay down continuous, high-damage fire without needing to reload, but slow D.Va’s movement while they’re active.",
+   "attribute":
+  [
+  {"damage":"0.5-3"},
+  {"ammo":8},
+  {"reloadTime":null},
+  {"rps":"7rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+   ]
+  },
+  { 
+  "skillId":"1302",
+  "skillName":"LIGHT GUN",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"While outside of her mech, D.Va can continue the fight with a mid-range automatic blaster.",
+  "attribute":
+  [
+  {"damage":"14"},
+  {"ammo":"20"},
+  {"reloadTime":null},
+  {"rps":"6.66rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"1303",
+  "skillName":"DEFENSE MATRIX",
+  "skillImage":"url",
+  "hotkey":"right-click",
+  "description":"D.Va can activate this forward-facing targeting array to shoot incoming projectiles out of the air.",
+   "attribute":
+  [
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"1s"},
+  {"casting":null},
+  {"duration":"4s"},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": "10s"}
+   ]
+  },
+  { 
+  "skillId":"1304",
+  "skillName":"BOOSTERS",
+  "skillImage":"url",
+  "hotkey":"shift",
+  "description":"D.Va’s mech launches into the air, her momentum carrying her forward. She can turn and change directions or barrel through her enemies, knocking them back.",
+  "attribute":
+  [
+  {"damage":"25"},
+  {"ammunition":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":"30m"},
+  {"chargeRange":null},
+  {"coolDown":"5s"},
+  {"casting":null},
+  {"duration":"2s"},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+]
+  },
+   { 
+  "skillId":"1305",
+  "skillName":"SELF-DESTRUCT",
+  "skillImage":"url",
+  "hotkey":"Q",
+  "description":"D.Va ejects from her mech and sets its reactor to explode, dealing massive damage to nearby opponents.",
+  "attribute":
+  [
+  {"damage":"1000"},
+  {"ammunition":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":"20m"},
+  {"chargeRange":null},
+  {"coolDown":"1s"},
+  {"casting":"3s"},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+ ]
+  },
+  { 
+  "skillId":"1306",
+  "skillName":"CALL MECH",
+  "skillImage":"url",
+  "hotkey":"Q",
+  "description":"If her armored battle suit is destroyed, D.Va can call down a fresh mech and return to the fray.",
+  "attribute":
+  [
+  {"damage":null},
+  {"ammo":"400"},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":"2s"},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  }
+],
+  
+ "winRate" :"53.6%",
+
+  "strong_against":[
+  { "heroId":12,
+    "heroImage": "url"
+  },
+  { "heroId":7,
+    "heroImage": "url"
+  }],
+
+  "against":[
+  { "heroId":11,
+    "heroImage": "url"
+  },
+  { "heroId":1,
+    "heroImage": "url"
+  },
+  { "heroId":20,
+    "heroImage": "url"
+  },
+  { "heroId":3,
+    "heroImage": "url"
+  },
+  { "heroId":18,
+    "heroImage": "url"
+  }],
+
+  
+  "pentacle":{ "damage": 1,
+    "survival":3,
+    "mobility":2,
+    "special":0,
+"ultimateCharge":2,
+"difficulty":2
+   }
+},
+{
+    "heroId":14,
+    "heroName": "Reinhardt",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/reinhardt/full-portrait.png",
+ "hero picture" : "url",
+  "performance":{
+  "role": "TANK",
+  "accurateRole": "Formation Breaker"
+   },
+  "basic":
+  {
+  "health": 300, 
+  "Armor": 200,
+  "shield": 0
+  },
+  "skill":
+  [{ 
+  "skillId":"1401",
+  "skillName":"ROCKET HAMMER",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"Reinhardt’s Rocket Hammer is an exemplary melee weapon, able to deal punishing damage in a wide arc with every swing.",
+   "attribute":
+  [
+  {"damage":"75"},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":"1rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+   ]
+  },
+  { 
+  "skillId":"1402",
+  "skillName":"BARRIER FIELD",
+  "skillImage":"url",
+  "hotkey":"right-click",
+  "description":"Reinhardt projects a broad, forward-facing energy barrier, which can absorb substantial damage before it is destroyed. Though Reinhardt can protect himself and his companions behind the barrier, he cannot attack while sustaining it.",
+  "attribute":
+  [
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"5s"},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":"2000"},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"1403",
+  "skillName":"CHARGE",
+  "skillImage":"url",
+  "hotkey":"shift",
+  "description":"Reinhardt charges forth in a straight line, pinning the first enemy in his path and knocking others aside. If he collides with a wall, the foe he’s carrying suffers extreme damage.",
+  "attribute":
+  [
+  {"damage":"50-300"},
+  {"ammunition":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"10s"},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+]
+  },
+   { 
+  "skillId":"1404",
+  "skillName":"FIRE STRIKE",
+  "skillImage":"url",
+  "hotkey":"E",
+  "description":"By whipping his Rocket Hammer forward, Reinhardt slings a flaming projectile which pierces and damages any enemies it touches.",
+  "attribute":
+  [
+  {"damage":"100"},
+  {"ammunition":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"6s"},
+  {"casting":"0.25s"},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+ ]
+  },
+  { 
+  "skillId":"1405",
+  "skillName":"EARTHSHATTER",
+  "skillImage":"url",
+  "hotkey":"Q",
+  "description":"Reinhardt forcefully slams his Rocket Hammer into the ground, knocking down and damaging all enemies in front of him.",
+  "attribute":
+  [
+  {"damage":"50"},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":"0.5s"},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": "Stun 2.5s"},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  }
+],
+  
+ "winRate" :"51.5%",
+
+  "strong_against":[
+  { "heroId":5,
+    "heroImage": "url"
+  },
+  { "heroId":8,
+    "heroImage": "url"
+  }],
+
+  "against":[
+  { "heroId":18,
+    "heroImage": "url"
+  },
+  { "heroId":11,
+    "heroImage": "url"
+  },
+  { "heroId":12,
+    "heroImage": "url"
+  }],
+
+  
+  "pentacle":{ "damage": 1,
+    "survival":1,
+    "mobility":1,
+    "special":2,
+"ultimateCharge":2,
+"difficulty":1
+   }
+},
+{
+    "heroId":15,
+"heroName": "Roadhog",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/roadhog/full-portrait.png",
+ "hero picture" : "url",
+  "performance":{
+  "role": "TANK",
+  "accurateRole": "Formation Breaker"
+   },
+  "basic":
+  {
+  "health": 600, 
+  "Armor": 0,
+  "shield": 0
+  },
+  "skill":
+  [{ 
+  "skillId":"1501",
+  "skillName":"SCRAP GUN",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"Roadhog's Scrap Gun fires short-range blasts of shrapnel with a wide spread. Alternatively, it can launch a shrapnel ball that detonates farther away, scattering metal fragments from the point of impact.",
+   "attribute":
+  [
+  {"damage":"4-9"},
+  {"ammo":"4"},
+  {"reloadTime":"1.5"},
+  {"rps":"1rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+   ]
+  },
+  { 
+  "skillId":"1502",
+  "skillName":"TAKE A BREATHER",
+  "skillImage":"url",
+  "hotkey":"E",
+  "description":"Roadhog restores a chunk of his health over a brief period of time.",
+  "attribute":
+  [
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"8s"},
+  {"casting":null},
+  {"duration":"1s"},
+  {"healing":"300"},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"1503",
+  "skillName":"CHAIN HOOK",
+  "skillImage":"url",
+  "hotkey":"shift",
+  "description":"Roadhog hurls his chain at a target; if it catches, he yanks them into close range.",
+  "attribute":
+  [
+  {"damage":"30"},
+  {"ammunition":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"6s"},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+]
+  },
+   { 
+  "skillId":"1504",
+  "skillName":"WHOLE HOG",
+  "skillImage":"url",
+  "hotkey":"Q",
+  "description":"After cramming a top-loader onto his Scrap Gun, Roadhog pours in ammo. For a short time, he can crank out a stream of shrapnel that knocks back enemies.",
+  "attribute":
+  [
+  {"damage":"4928"},
+  {"ammunition":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":"6s"},
+  {"healing":null},
+  {"heighest":null},
+  {"special": "knock back"},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+ ]
+  },
+  { 
+  "skillId":"1505",
+  "skillName":"SCRAP GUN",
+  "skillImage":"url",
+  "hotkey":"right-click",
+  "description":"Roadhog's Scrap Gun fires short-range blasts of shrapnel with a wide spread. Alternatively, it can launch a shrapnel ball that detonates farther away, scattering metal fragments from the point of impact.",
+  "attribute":
+  [
+  {"damage":"50"},
+  {"ammo":"4"},
+  {"reloadTime":"1.5s"},
+  {"rps":"0.75"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  }
+],
+  
+ "winRate" :"50.5%",
+
+  "strong_against":[
+  { "heroId":3,
+    "heroImage": "url"
+  },
+  { "heroId":6,
+    "heroImage": "url"
+  }],
+
+  "against":[
+  { "heroId":13,
+    "heroImage": "url"
+  },
+  { "heroId":20,
+    "heroImage": "url"
+  }],
+
+  
+  "pentacle":{ "damage": 2,
+    "survival":2,
+    "mobility":0,
+    "special":1,
+"ultimateCharge":2,
+"difficulty":1
+   }
+},
+{
+    "heroId":16,
+"heroName": "Winston",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/winston/full-portrait.png",
+ "hero picture" : "url",
+  "performance":{
+  "role": "TANK",
+  "accurateRole": "Formation Breaker"
+   },
+  "basic":
+  {
+  "health": 400, 
+  "Armor": 100,
+  "shield": 0
+  },
+  "skill":
+  [{ 
+  "skillId":"1601",
+  "skillName":"TESLA CANNON",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"Winston’s weapon fires a short-range electric barrage for as long as he holds down the trigger.",
+   "attribute":
+  [
+  {"damage":"57"},
+  {"ammo":100},
+  {"reloadTime":"1.5s"},
+  {"rps":"20rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+   ]
+  },
+  { 
+  "skillId":"1602",
+  "skillName":"JUMP PACK",
+  "skillImage":"url",
+  "hotkey":"shift",
+  "description":"Assisted by his energy pack, Winston lunges through the air, dealing significant damage and staggering nearby enemies when he lands.",
+  "attribute":
+  [
+  {"damage":"15-50"},
+  {"ammunition":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"6s"},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+]
+  },
+   { 
+  "skillId":"1603",
+  "skillName":"BARRIER PROJECTOR",
+  "skillImage":"url",
+  "hotkey":"E",
+  "description":"Winston’s barrier projector extends a bubble-shaped field that absorbs damage until it's destroyed. Allies protected by the barrier can return fire from within it.",
+  "attribute":
+  [
+  {"damage":null},
+  {"ammunition":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"13"},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":"600"},
+  {"consume":null},
+  {"charging": null}
+ ]
+  },
+  { 
+  "skillId":"1604",
+  "skillName":"PRIMAL RAGE",
+  "skillImage":"url",
+  "hotkey":"Q",
+  "description":"Winston embraces his animal nature, significantly boosting his health and making him very difficult to kill, strengthening his melee attack, and allowing him to use his Jump Pack ability more frequently. While raging, Winston can only make melee and Jump Pack attacks.",
+  "attribute":
+  [
+  {"damage":"40"},
+  {"ammo":"100"},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":"10s"},
+  {"healing":null},
+  {"heighest":null},
+  {"special": "health 900"},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  }
+],
+  
+ "winRate" :"51.5%",
+
+  "strong_against":[
+  { "heroId":21,
+    "heroImage": "url"
+  },
+  { "heroId":8,
+    "heroImage": "url"
+  }],
+
+  "against":[
+  { "heroId":1,
+    "heroImage": "url"
+  },
+  { "heroId":12,
+    "heroImage": "url"
+  },
+  { "heroId":20,
+    "heroImage": "url"
+  },
+  { "heroId":11,
+    "heroImage": "url"
+  },
+  { "heroId":6,
+    "heroImage": "url"
+  },
+  { "heroId":18,
+    "heroImage": "url"
+  }],
+
+  
+  "pentacle":{ "damage": 2,
+    "survival":2,
+    "mobility":1,
+    "special":2,
+"ultimateCharge":2,
+"difficulty":2
+   }
+},
+{
+    "heroId":17,
+"heroName": "Zarya",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/zarya/full-portrait.png",
+ "hero picture" : "url",
+  "performance":{
+  "role": "TANK",
+  "accurateRole": "Formation Breaker"
+   },
+  "basic":
+  {
+  "health": 200, 
+  "Armor": 0,
+  "shield": 200
+  },
+  "skill":
+  [{ 
+  "skillId":"1701",
+  "skillName":"PARTICLE CANNON",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"Zarya’s mighty Particle Cannon unleashes a short-range beam of destructive energy. Alternatively, Zarya can lob an explosive charge to strike multiple opponents.",
+   "attribute":
+  [
+  {"damage":" 4.75"},
+  {"ammo":"100"},
+  {"reloadTime":"1.5"},
+  {"rps":"20rps"},
+  {"skillRange":null},
+  {"chargeRange":"16m"},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+   ]
+  },
+  { 
+  "skillId":"1702",
+  "skillName":"PARTICLE CANNON",
+  "skillImage":"url",
+  "hotkey":"right-click",
+  "description":"Zarya’s mighty Particle Cannon unleashes a short-range beam of destructive energy. Alternatively, Zarya can lob an explosive charge to strike multiple opponents.",
+  "attribute":
+  [
+  {"damage":"47"},
+  {"ammo":"100"},
+  {"reloadTime":"1.5"},
+  {"rps":"1.2rps"},
+  {"skillRange":"2m"},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"1703",
+  "skillName":"PARTICLE BARRIERS",
+  "skillImage":"url",
+  "hotkey":"shift",
+  "description":"The Particle Cannon can emit a personal barrier that shields Zarya against incoming attacks, redirecting their energy to enhance her weapon’s damage and the width of its beam.",
+  "attribute":
+  [
+  {"damage":null},
+  {"ammunition":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"10s"},
+  {"casting":null},
+  {"duration":"2s"},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":"200"},
+  {"consume":null},
+  {"charging": null}
+]
+  },
+   { 
+  "skillId":"1704",
+  "skillName":"PROJECTED BARRIER",
+  "skillImage":"url",
+  "hotkey":"E",
+  "description":"Zarya surrounds one of her teammates with an energy barrier that simultaneously absorbs fire and boosts the power of her Particle Cannon.",
+  "attribute":
+  [
+  {"damage":null},
+  {"ammunition":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":"30m"},
+  {"chargeRange":null},
+  {"coolDown":"8s"},
+  {"casting":null},
+  {"duration":"2s"},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":"200"},
+  {"consume":null},
+  {"charging": null}
+ ]
+  },
+  { 
+  "skillId":"1705",
+  "skillName":"GRAVITON SURGE",
+  "skillImage":"url",
+  "hotkey":"Q",
+  "description":"Zarya launches a gravity bomb that draws in enemy combatants and deals damage while they’re trapped.",
+  "attribute":
+  [
+  {"damage":"22"},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":"8m"},
+  {"chargeRange":"40m"},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":"4s"},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  }
+],
+  
+ "winRate" :"52.4%",
+
+  "strong_against":[
+  { "heroId":16,
+    "heroImage": "url"
+  },
+  { "heroId":1,
+    "heroImage": "url"
+  }],
+
+  "against":[
+  { "heroId":10,
+    "heroImage": "url"
+  },
+  { "heroId":19,
+    "heroImage": "url"
+  },
+  { "heroId":22,
+    "heroImage": "url"
+  },
+  { "heroId":5,
+    "heroImage": "url"
+  },
+  { "heroId":13,
+    "heroImage": "url"
+  },
+  { "heroId":21,
+    "heroImage": "url"
+  },
+  { "heroId":2,
+    "heroImage": "url"
+  }],
+
+  
+  "pentacle":{ "damage": 2,
+    "survival":2,
+    "mobility":0,
+    "special":2,
+"ultimateCharge":1,
+"difficulty":3
+   }
+},
+{
+ "heroId": 18,
+ "heroName": "Ana",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/ana/full-portrait.png",
+ "heroImage" : "url",
+  "performace":{
+  "role": "support",
+  "accurateRole": "break battle array, core DPS"
+   },
+  "basic":
+  {
+  "health": 200,
+  "amor": 0,
+  "shield": 0
+  },
+  "skill":
+  [{ 
+  "skillId":"1801",
+  "skillName":"Biotic Rifle",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"Ana's rifle shoots darts that can restore health to her allies or deal ongoing damage to her enemies. She can use the rifle's scope to zoom in on targets and make highly accurate shots.",
+  "attribute":
+  [
+  {"damage":"80 per shot"},
+  {"ammo":10},
+  {"reloadTime":"1.5 s"},
+  {"rps":"0.8rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":"75 per shot"},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },
+  { 
+  "skillId":"1802",
+  "skillName":"Sleep Dart",
+  "skillImage":"url",
+  "hotkey":"Shift",
+  "description":"Ana fires a dart from her sidearm, rendering an enemy unconscious (though any damage will rouse them).",
+  "attribute":
+  [
+  {"dammage":5},
+  {"ammo":null},
+  {"reload":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"12 s"},
+  {"casting":"0.25 s"},
+  {"duration":"5 s"},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]},
+  
+   { 
+  "skillId":"1803",
+  "skillName":"Biotic Grenade",
+  "skillImage":"url",
+  "hotkey":"E",
+  "description":"Ana tosses a biotic bomb that deals damage to enemies and heals allies in a small area of effect. Affected allies briefly receive increased healing from all sources, while enemies caught in the blast cannot be healed for a few moments.",
+  "attribute":
+  [
+  {"dammage":"60 for all enemies in the vicinity"},
+  {"ammo":null},
+  {"reload":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"10 s"},
+  {"casting":null},
+  {"duration":"5 s"},
+  {"healing":"+100 for all allies in the vicinity (including Ana herself).  Plus doubles all healing effects."},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  },  
+   { 
+  "skillId":"1804",
+  "skillName":"Nano Boost",
+  "skillImage":"url",
+  "hotkey":"Q",
+  "description":"After Ana hits one of her allies with a nano boost, they temporarily move faster, deal more damage, and take less damage from enemies' attacks.",
+  "attribute":
+  [
+  {"dammage":null},
+  {"ammo":null},
+  {"reload":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":"8 s"},
+  {"healing":null},
+  {"heighest":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null}
+  ]
+  }
+],
+  
+ "winRate" :"47.1%",
+
+  "strong_against":[
+  { "heroId":"22",
+    "heroImage": "url"
+  },
+  { "heroId":"7",
+    "heroImage": "url"
+  }],
+
+
+  "against":[
+  { "heroId":"19",
+    "heroImage": "url"
+  },
+  { "heroId":"15",
+    "heroImage": "url"
+  },
+    { "heroId":"20",
+    "heroImage": "url"
+  }],
+
+  
+  "pentacle":{ "damage": 1,
+    "survival":1,
+    "mobility":0,
+    "special":3,
+    "ultimateCharge":2,
+    "difficulty":3
+   }
+},
+{
+"heroId": 19,
+ "heroName": "Lucio",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/lucio/full-portrait.png",
+ "hero picture" : "url",
+  "performance":{
+  "role": "support",
+  "accurateRole": "Healer and improve motility"
+   },
+  "basic":
+  {
+  "health": 200, 
+  "Armor": 0,
+  "shield": 0
+  },
+  "skill":
+  [{ 
+  "skillId":"1901",
+  "skillName":"(passive skill)walk on the wall",
+  "skillImage":"url",
+  "hotkey":null,
+  "description":"Lucio can walk on the wall",
+   "attribute":
+  [
+  {"hp":null},
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"highest time":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+   ]
+  },
+  { 
+  "skillId":"1902",
+  "skillName":"sonic amplifier",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"Lúcio can hit his enemies with sonic projectiles.",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":16},
+  {"ammo":20},
+  {"reloadTime":"1.25s"},
+  {"rps":"4rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"highest time":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+  ]
+  },
+  { 
+  "skillId":"1903",
+  "skillName":"sonic amplifier",
+  "skillImage":"url",
+  "hotkey":"right-click",
+  "description":"Lúcio can knock them back with a blast of sound.",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":25},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":"6m"},
+  {"chargeRange":null},
+  {"coolDown":"4s"},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"highest time":null},
+  {"special":null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+]
+  },
+   { 
+  "skillId":"1904",
+  "skillName":"crossfade",
+  "skillImage":"url",
+  "hotkey":"shift",
+  "description":"Lúcio continuously energizes himself—and nearby teammates—with music. He can switch between two songs: one amplifies movement speed, while the other regenerates health.",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"highest time":null},
+  {"special": "improve motility or heal 25hp/2s"},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+ ]
+  },
+  { 
+  "skillId":"1905",
+  "skillName":"amp it up",
+  "skillImage":"url",
+  "hotkey":"E",
+  "description":"Lúcio increases the volume on his speakers, boosting the effects of his songs.",
+  "attribute":
+  [
+    {"hp":null},
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"12s"},
+  {"casting":null},
+  {"duration":"3s"},
+  {"healing":null},
+  {"highest time":null},
+  {"special": "improve speed or heal 120hp/3s"},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+  ]
+  },
+  { 
+  "skillId":"1906",
+  "skillName":"sound barrier",
+  "skillImage":"url",
+  "hotkey":"Q",
+  "description":"Protective waves radiate out from Lúcio’s Sonic Amplifier, briefly providing him and nearby allies with personal shields.",
+  "attribute":
+  [
+    {"hp":null},
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":"1s"},
+  {"duration":"6s"},
+  {"healing":null},
+  {"highest time":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":500},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+  ]
+  }
+],
+  
+ "winRate" :"57.5%",
+
+  "strong_against":[
+  { "heroId":3,
+    "heroImage": "url"
+  },
+  { "heroId":16,
+    "heroImage": "url"
+  }],
+
+  "against":[
+  { "heroId":1,
+    "heroImage": "url"
+  },
+  { "heroId":10,
+    "heroImage": "url"
+  },
+  { "heroId":15,
+    "heroImage": "url"
+  }],
+
+  
+  "pentacle":{ "damage": 1,
+  "survival":1,
+  "mobility":2,
+  "special":2,
+  "ultimateCharge":2,
+  "difficulty":2
+   }
+},
+{"heroId": 20,
+"heroName": "Mercy",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/mercy/full-portrait.png",
+ "hero picture" : "url",
+  "performance":{
+  "role": "support",
+  "accurateRole": "Healer"
+   },
+  "basic":
+  {
+  "health": 200, 
+  "Armor": 0,
+  "shield": 0
+  },
+  "skill":
+  [{ 
+  "skillId":"2001",
+  "skillName":"(passive skill)recovery",
+  "skillImage":"url",
+  "hotkey":null,
+  "description":"When Mercy is uninjured in 3 sec, she can heals herself as 20hp/s",
+   "attribute":
+  [
+  {"hp":null},
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":"20hp/s"},
+  {"highest time":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+   ]
+  },
+  { 
+  "skillId":"2002",
+  "skillName":"caduceus staff",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"Mercy engages one of two beams that connect to an ally. By maintaining the beams, she can either restore that ally’s health or increase the amount of damage they deal.",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":"50hps"},
+  {"highest time":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+  ]
+  },
+  { 
+  "skillId":"2003",
+  "skillName":"caduceus staff",
+  "skillImage":"url",
+  "hotkey":"right-click",
+  "description":"Mercy engages one of two beams that connect to an ally. By maintaining the beams, she can either restore that ally’s health or increase the amount of damage they deal.",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"highest time":null},
+  {"special": "increase 30% damage"},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+]
+  },
+   { 
+  "skillId":"2004",
+  "skillName":"caduceus blaster",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"Mercy shoots a round from her sidearm. It's best reserved for emergency personal defense.",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":20},
+  {"ammo":20},
+  {"reloadTime":"1s"},
+  {"rps":"5rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"highest time":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+ ]
+  },
+  { 
+  "skillId":"2005",
+  "skillName":"guardian angel",
+  "skillImage":"url",
+  "hotkey":"shift",
+  "description":"Mercy flies towards a targeted ally, allowing her to reach them quickly and provide assistance in crucial moments.",
+  "attribute":
+  [
+    {"hp":null},
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"1.5s"},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"highest time":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+  ]
+  },
+  { 
+  "skillId":"2006",
+  "skillName":"angelic descent",
+  "skillImage":"url",
+  "hotkey":"space",
+  "description":"Propelled by her Valkyrie suit, Mercy slows the speed of her descent from great heights.",
+  "attribute":
+  [
+    {"hp":null},
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"highest time":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+  ]
+  },
+  { 
+  "skillId":"2007",
+  "skillName":"guardian angel",
+  "skillImage":"url",
+  "hotkey":"shift",
+  "description":"Mercy flies towards a targeted ally, allowing her to reach them quickly and provide assistance in crucial moments.",
+  "attribute":
+  [
+    {"hp":null},
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"1.5s"},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"highest time":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+  ]
+  },
+  { 
+  "skillId":"2008",
+  "skillName":"resurrect",
+  "skillImage":"url",
+  "hotkey":"Q",
+  "description":"Mercy radiates restorative power, bringing nearby dead allies back into the fight with full health.",
+  "attribute":
+  [
+    {"hp":null},
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":"1s"},
+  {"duration":null},
+  {"healing":null},
+  {"highest time":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+  ]
+  }
+],
+  
+ "winRate" :"47.6%",
+
+  "strong_against":[
+  { "heroId":9,
+    "heroImage": "url"
+  },
+  { "heroId":17,
+    "heroImage": "url"
+  }],
+
+  "against":[
+  { "heroId":10,
+    "heroImage": "url"
+  }],
+
+  
+  "pentacle":{ "damage": 0,
+  "survival":1,
+  "mobility":3,
+  "special":2,
+  "ultimateCharge":3,
+  "difficulty":1
+   }
+},
+{"heroId": 21,
+"heroName": "Symmetra",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/symmetra/full-portrait.png",
+ "hero picture" : "url",
+  "performance":{
+  "role": "support",
+  "accurateRole": "Jumper"
+   },
+  "basic":
+  {
+  "health": 100, 
+  "Armor": 0,
+  "shield": 100
+  },
+  "skill":
+  [{ 
+  "skillId":"2101",
+  "skillName":"photon projector",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"Symmetra’s weapon emits a short-range beam that homes in on a nearby enemy, dealing continuous damage that increases the longer it is connected.",
+   "attribute":
+  [
+  {"hp":null},
+  {"damage":"30~100dps"},
+  {"ammo":100},
+  {"reloadTime":"0s"},
+  {"rps":"7~8rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"highest time":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+   ]
+  },
+  { 
+  "skillId":"2102",
+  "skillName":"photon projector",
+  "skillImage":"url",
+  "hotkey":"right-click",
+  "description":"The projector can also release a charged energy ball that deals high damage.",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":"25~125"},
+  {"ammo":"100, 20 per shot"},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":"2s"},
+  {"duration":null},
+  {"healing":null},
+  {"highest time":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+  ]
+  },
+  { 
+  "skillId":"2103",
+  "skillName":"sentry turret",
+  "skillImage":"url",
+  "hotkey":"shift",
+  "description":"Widowmaker launches a grappling hook towards the location she’s aiming at – when the hook connects with a scalable surface, she’s quickly drawn towards it, allowing her to expand her view of the battlefield and evade or flank targets.",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":"25dps"},
+  {"ammunition":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"10s"},
+  {"casting":"1s"},
+  {"duration":null},
+  {"healing":null},
+  {"highest time":6},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+]
+  },
+   { 
+  "skillId":"2104",
+  "skillName":"photon shield",
+  "skillImage":"url",
+  "hotkey":"E",
+  "description":"Symmetra surrounds an ally with a hard-light shield that absorbs damage and persists as long as that ally remains alive.",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":"1s"},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"highest time":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":25},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+ ]
+  },
+  { 
+  "skillId":"2105",
+  "skillName":"teleporter",
+  "skillImage":"url",
+  "hotkey":"Q",
+  "description":"Symmetra places a teleporter exit pad at her current location, and connects it to a teleporter entry pad at her team’s starting point. Allies can travel through the entry pad to the exit pad instantly, enabling them to return to the fight swiftly after being defeated.",
+  "attribute":
+  [
+    {"hp":200},
+    {"damage":null},
+    {"ammo":null},
+    {"reloadTime":null},
+    {"rps":null},
+    {"skillRange":null},
+    {"chargeRange":null},
+    {"coolDown":null},
+    {"casting":"2s"},
+    {"duration":null},
+    {"healing":null},
+    {"highest time":6},
+    {"special": null},
+    {"critical":null},
+    {"armor":null},
+    {"consume":null},
+    {"charging": null},
+    {"head_shot":null}
+  ]
+  }
+],
+  
+ "winRate" :"60.5%",
+
+  "strong_against":[
+  { "heroId":7,
+    "heroImage": "url"
+  },
+  { "heroId":14,
+    "heroImage": "url"
+  }],
+
+  "against":[
+  { "heroId":1,
+    "heroImage": "url"
+  }],
+
+  
+  "pentacle":{ "damage": 1,
+  "survival":0,
+  "mobility":1,
+  "special":2,
+  "ultimateCharge":2,
+  "difficulty":2
+   }
+},
+{
+"heroId": 22,
+ "heroName": "Zenyatta",
+ "heroPortrait": "https://d1u1mce87gyfbn.cloudfront.net/hero/zenyatta/full-portrait.png",
+ "hero picture" : "url",
+  "performance":{
+  "role": "support",
+  "accurateRole": "Jumper"
+   },
+  "basic":
+  {
+  "health": 50, 
+  "Armor": 0,
+  "shield": 150
+  },
+  "skill":
+  [{ 
+  "skillId":"2201",
+  "skillName":"(passive skill)Levitate",
+  "skillImage":"url",
+  "hotkey":null,
+  "description":"When Zenyatta is moving, there is no sound.",
+   "attribute":
+  [
+  {"hp":null},
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"highest time":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+   ]
+  },
+  { 
+  "skillId":"2202",
+  "skillName":"orb of destruction",
+  "skillImage":"url",
+  "hotkey":"left-click",
+  "description":"Zenyatta projects his destructive energy orbs either individually。",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":40},
+  {"ammo":20},
+  {"reloadTime":"1.5"},
+  {"rps":"3rps"},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":null},
+  {"healing":null},
+  {"highest time":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+  ]
+  },
+  { 
+  "skillId":"2203",
+  "skillName":"orb of destruction",
+  "skillImage":"url",
+  "hotkey":"right-click",
+  "description":"in a rapid-fire volley after a few seconds spent gathering power.",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":40},
+  {"ammo":"20, 5 per shot"},
+  {"reloadTime":"1.5s"},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":"2~2.5s"},
+  {"duration":null},
+  {"healing":null},
+  {"highest time":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+]
+  },
+   { 
+  "skillId":"2204",
+  "skillName":"orb of harmony",
+  "skillImage":"url",
+  "hotkey":"shift",
+  "description":"Zenyatta casts an orb over the shoulder of a targeted ally. So long as Zenyatta maintains line of sight, the orb slowly restores health to his ally. Only one ally can receive the orb's benefit at a time.",
+  "attribute":
+  [
+  {"hp":null},
+  {"damage":null},
+  {"ammo":null},
+  {"reloadTime":null},
+  {"rps":null},
+  {"skillRange":null},
+  {"chargeRange":null},
+  {"coolDown":null},
+  {"casting":null},
+  {"duration":"target died or invisiable in 3 sec"},
+  {"healing":"30hps"},
+  {"highest time":null},
+  {"special": null},
+  {"critical":null},
+  {"armor":null},
+  {"consume":null},
+  {"charging": null},
+  {"head_shot":null}
+ ]
+  },
+  { 
+  "skillId":"2205",
+  "skillName":"orb of discord",
+  "skillImage":"url",
+  "hotkey":"E",
+  "description":"Attaching the orb of discord to an opponent amplifies the amount of damage they receive for as long as Zenyatta maintains line of sight. Only one opponent can suffer the orb's effects at a time.",
+  "attribute":
+  [
+    {"hp":null},
+    {"damage":null},
+    {"ammo":null},
+    {"reloadTime":null},
+    {"rps":null},
+    {"skillRange":null},
+    {"chargeRange":null},
+    {"coolDown":null},
+    {"casting":null},
+    {"duration":"target died or invisiable in 3 sec"},
+    {"healing":null},
+    {"highest time":null},
+    {"special": "improve 50％ damage"},
+    {"critical":null},
+    {"armor":null},
+    {"consume":null},
+    {"charging": null},
+    {"head_shot":null}
+  ]
+  }
+],
+  
+ "winRate" :"50.4%",
+
+  "strong_against":[
+  { "heroId":"15",
+    "heroImage": "url"
+  },
+  { "heroId":"13",
+    "heroImage": "url"
+  }],
+
+  "against":[
+  { "heroId":"14",
+    "heroImage": "url"
+  },
+  { "heroId":"16",
+    "heroImage": "url"
+  }],
+
+  
+  "pentacle":{ "damage": 2,
+  "survival":0,
+  "mobility":0,
+  "special":2,
+  "ultimateCharge":2,
+  "difficulty":3
+   }
+}
+]
