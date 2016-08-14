@@ -899,3 +899,54 @@ div#shareBtn {
 }
 
 /** footer end **/
+div.heroNavCard{
+    float:left;
+}
+
+div.heroNavCard div.playedHeroCard{
+    width:80px;
+    -ms-transform: skewX(-20deg); /* IE 9 */
+    -webkit-transform: skewX(-20deg); /* Safari */
+    transform: skewX(-20deg);
+    background-color: #e0e0e0;
+    box-shadow: 4px 2px 4px 2px #c1bfbf;
+    overflow: hidden;
+}
+
+div.heroNavCard div.playedHeroCard img{
+    transform: skewX(20deg);
+    height: 70px;
+}
+
+#heroNavList{
+    float:left;
+}
+
+#heroNavList .playedHeroCard:hover {
+    -ms-transform: scale(1.2) skewX(-20deg); /* IE 9 */
+    -webkit-transform: scale(1.2) skewX(-20deg); /* Safari */
+    transform: scale(1.2) skewX(-20deg);
+    cursor: pointer;
+    background-color: #eb9b27;
+    border-radius: 3px;
+
+}
+
+div.heroNavCard .heroNavCard-heroName{
+    color : black;
+    padding-left:10px;
+}
+
+.chartBlock{
+    background-color: #f2f2f2;
+}
+
+#heroBasicChart{
+    float:right;
+    margin-right:5%;
+}
+
+#heroWinRateChart{
+    float:left;
+    margin-bottom:50px;
+}
