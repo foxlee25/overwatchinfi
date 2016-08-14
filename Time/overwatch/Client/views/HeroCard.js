@@ -45,7 +45,7 @@ var HeroCard = React.createClass({
 		AjaxService.post(url,{data: {key : hero.key,type :'dislike'}});
 	},
 	setId: function(id){
-		AppAction.setHeroId(id);
+		window.sessionStorage.setItem('heroId',id);
 	},
 	render: function(){
 		return (
