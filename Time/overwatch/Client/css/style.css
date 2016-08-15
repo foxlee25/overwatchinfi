@@ -446,6 +446,7 @@ Img {
 .heroImg {
 	width: 420px;
 	float:left;
+	margin-left: 5%;
 }
 
 #heroSkillChart {

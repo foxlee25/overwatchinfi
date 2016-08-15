@@ -4,6 +4,7 @@ const properties = require('../i18/AppProps');
 const AjaxService = require('../service/AjaxService');
 const _ = require('underscore');
 const AppStore = require('../flux/Store');
+var LoadingView = require('../views/LoadingView');
 const CareerBestView = require('../views/pro/CareerBest');
 const Achievements = require('../views/pro/Achievements');
 const FeatureStats = require('../views/pro/FeatureStats');
@@ -92,7 +93,10 @@ const pro = React.createClass({
             || this.state.heros0 == null
             || this.state.careerBest0 == null
             || this.state.featurestats0 == null){
-            return <div>loading</div>
+            return 	(<div className="loading-container">
+                <LoadingView />
+                <p>Loading...</p>
+            </div>)
         }else {
             return (
                 <div className="proContainer">
@@ -163,7 +167,7 @@ const pro = React.createClass({
                                     <div style={{flex: 2}}>
                                         <img style={{height: "40px"}} src={this.state[`heros${this.state.type}`].heroImg[i]} />
                                     </div>
-                                    <div style={{flex: 2}}>
+                                    <div style={{flex: 2}} className="heroStatsIcon">
                                         <img style={{height: "40px"}} src={`./img/icon/${type}.png`} />
                                     </div>
                                     <div className="heroStatsValue">

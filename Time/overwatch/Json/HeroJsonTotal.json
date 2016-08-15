@@ -4241,8 +4241,8 @@
       "accurateRole": "Formation Breaker"
     },
     "basic": {
-      "health": 150,
-      "armor": 0,
+      "health": 100,
+      "armor": 400,
       "shield": 0
     },
     "skill": [

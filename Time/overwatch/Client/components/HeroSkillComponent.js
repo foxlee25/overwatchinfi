@@ -23,7 +23,7 @@ var HeroSkill = React.createClass({
         return (
             <div className = "container-fluid">
         {this.state.heroDetail?<img className="heroImg col-md-6 col-sm-6 col-xs-12" src={this.state.heroDetail.heroPortrait} />:<div></div>}
-                <div id="heroAbilityChart"  className="col-md-6 col-sm-6 col-xs-12 chartBlock">
+                <div id="heroAbilityChart"  className="col-md-5 col-sm-5 col-xs-12 chartBlock">
                 </div>
                 <div id="heroWinRateChart"  className="col-md-5 col-sm-5 col-xs-12 chartBlock">
                 </div>
@@ -41,6 +41,7 @@ var HeroSkill = React.createClass({
         var basic = this.state.heroDetail.basic;
         Highcharts.chart('heroBasicChart', {
             chart: {
+                width: 400,
                 type: 'column'
             },
             title: {
@@ -54,35 +55,36 @@ var HeroSkill = React.createClass({
             },
             series: [{
                 name: 'basic',
-                data: [basic.health, basic.armor, basic.shield],
-                color: '#f7a35c',
-                lineColor: '#f7a35c'
+                data: [basic.health, basic.armor, basic.shield]
             }]
         });
     },
     abilityChart : function(){
         var heroName = this.state.heroDetail.heroName;
         var pentacle = this.state.heroDetail.pentacle;
-        pentacle.damage = pentacle.damage*2;
-        pentacle.survival = pentacle.survival*2;
-        pentacle.mobility = pentacle.mobility*2;
-        pentacle.special = pentacle.special*2;
-        var ultimateCharge = pentacle.ultimateCharge*2;
-        var difficulty = pentacle.difficulty*2;
+        pentacle.damage = pentacle.damage*3;
+        pentacle.survival = pentacle.survival*3;
+        pentacle.mobility = pentacle.mobility*3;
+        pentacle.special = pentacle.special*3;
+        var ultimateCharge = pentacle.ultimateCharge*3;
+        var difficulty = pentacle.difficulty*3;
         Highcharts.chart('heroAbilityChart', {
-
+            credits: {
+                enabled: false
+            },
             chart: {
                 polar: true,
+                width: 450,
                 type: 'line'
             },
 
             title: {
                 text: heroName+ ' Ability',
-                x: -80
+                x: -60
             },
 
             pane: {
-                size: '80%'
+                size: '75%'
             },
 
             xAxis: {
@@ -94,9 +96,9 @@ var HeroSkill = React.createClass({
 
             yAxis: {
                 gridLineInterpolation: 'polygon',
-                max: 6,
                 lineWidth: 0,
-                min: 0
+                min: 0,
+                max: 10
             },
 
             tooltip: {
@@ -116,8 +118,9 @@ var HeroSkill = React.createClass({
                 name: 'Ability Analysis',
                 data: [pentacle.damage, pentacle.survival, pentacle.mobility, pentacle.special, ultimateCharge, difficulty],
                 pointPlacement: 'on',
-                color: '#f7a35c',
-                lineColor: '#f7a35c'
+                type: 'area',
+                fillColor: 'rgba(173, 214, 245, 0.5)',
+
             }]
 
         });
@@ -127,6 +130,7 @@ var HeroSkill = React.createClass({
 
         Highcharts.chart('heroWinRateChart', {
             chart: {
+                width: 400,
                 type: 'areaspline'
             },
             title: {
@@ -167,9 +171,7 @@ var HeroSkill = React.createClass({
             },
             series: [{
                 name: 'win rate',
-                data: winRate,
-                color: '#f7a35c',
-                lineColor: '#f7a35c'
+                data: winRate
             }]
         });
 
