@@ -12,6 +12,7 @@ var blizzardSource = {
             profileName: '.masthead-player h1',
             level: '.player-level .u-vertical-center',
             platform: '#profile-platforms a',
+            profileImage: '#overview-section .u-relative .row .column .masthead .masthead-player img@src',
             gameWins: '.masthead-detail span'})( (err, data) => {
             if(err){
                 reject();

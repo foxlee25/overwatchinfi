@@ -93,13 +93,20 @@ const pro = React.createClass({
             || this.state.heros0 == null
             || this.state.careerBest0 == null
             || this.state.featurestats0 == null){
-            return 	(<div className="loading-container">
-                <LoadingView />
-                <p>Loading...</p>
-            </div>)
+            return (<div className="centerLoading">
+                <img src="./img/icon/loading-spinner.gif" />
+                </div>);
+
         }else {
             return (
                 <div className="proContainer">
+                    <div className="basicInfo">
+                        <img src={this.state.basicinfo.profileImage} />
+                        <div>
+                            <h3>{this.state.basicinfo.profileName}</h3>
+                            <h5>Level {this.state.basicinfo.level} with {this.state.basicinfo.gameWins} game wins</h5>
+                        </div>
+                    </div>
                     <div className="bestRecord">
                         <h4>Best record</h4>
                         <br/>

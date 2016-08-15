@@ -268,3 +268,34 @@
     background: #e9eae9;
     
 }
+
+.basicInfo {
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+
+.basicInfo img:first-child {
+    width: 100px;
+    margin: 10px;
+    display: inline;
+}
+
+.basicInfo div:nth-child(2) {
+    position: absolute;
+    top: 100px;
+    left: 365px;
+};
+
+.centerLoading {
+    float: right;
+}
+
+.centerLoading img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
