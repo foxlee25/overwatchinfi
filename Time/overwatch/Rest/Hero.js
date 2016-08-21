@@ -29,7 +29,7 @@ router.post('/getHeroDetail', function (req, res) {
 	res.header('Content-type', 'application/json');
 	res.header('Charset', 'utf8');
 	var heroId = req.body.data-1;
-	fs.readFile('./Json/HeroJsonTotal.json',  function (err, data) {
+	fs.readFile('./Json/HeroJsonTotalNew.json',  function (err, data) {
 		if (err) {
 			console.error(err);
 			res.send([]);

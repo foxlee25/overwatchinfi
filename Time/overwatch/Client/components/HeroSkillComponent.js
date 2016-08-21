@@ -16,19 +16,35 @@ var HeroSkill = React.createClass({
     getInitialState: function(){
         return {
             heroDetail:null,
+            heroCompares:null,
             heros : null
         };
     },
     render: function(){
         return (
             <div className = "container-fluid">
-        {this.state.heroDetail?<img className="heroImg col-md-6 col-sm-6 col-xs-12" src={this.state.heroDetail.heroPortrait} />:<div></div>}
-                <div id="heroAbilityChart"  className="col-md-5 col-sm-5 col-xs-12 chartBlock">
+                <div className="row heroRow">
+                    {this.state.heroDetail?<img className="heroImg col-md-5 col-sm-5 col-xs-12" src={this.state.heroDetail.heroPortrait} />:<div></div>}
+                    <div id="heroAbilityChart"  className="col-md-5 col-sm-5 col-xs-12 chartBlock">
+                    </div>
                 </div>
-                <div id="heroWinRateChart"  className="col-md-5 col-sm-5 col-xs-12 chartBlock">
+
+                <div className="row heroRow">
+                    <div id="heroSkillPieChart"  className="col-md-5 col-sm-5 col-xs-12 chartBlock">
+                    </div>
+
+                    <div id="heroBasicChart"  className="col-md-5 col-sm-5 col-xs-12 chartBlock">
+                    </div>
                 </div>
-            <div id="heroBasicChart"  className="col-md-5 col-sm-5 col-xs-12 chartBlock">
-            </div>
+
+                <div className="row heroRow">
+                    <div id="heroWinRateChart"  className="col-md-5 col-sm-5 col-xs-12 chartBlock">
+                    </div>
+                    <div id="heroWinRateQuickMatchChart"  className="col-md-5 col-sm-5 col-xs-12 chartBlock">
+                    </div>
+
+                 </div>
+
                 <div id="heroNavList">
                     {Underscore.map(this.state.heros, function(hero){
                         return(<HeroNavCard key={hero.key} hero={hero} />);
@@ -45,16 +61,21 @@ var HeroSkill = React.createClass({
                 type: 'column'
             },
             title: {
-                text: 'Hero Basic'
+                text: 'Basic Statistics'
             },
             xAxis: {
                 categories: ['Health', 'Armor', 'Shield']
             },
+            tooltip: {
+                pointFormat: '',
+                headerFormat: '<span style="color:{point.color}">\u25CF</span>  {point.x}: <b>{point.y}</b>'
+            },
             credits: {
                 enabled: false
             },
+
             series: [{
-                name: 'basic',
+                name: 'Basic Statistics',
                 data: [basic.health, basic.armor, basic.shield]
             }]
         });
@@ -126,32 +147,30 @@ var HeroSkill = React.createClass({
         });
     },
     winRateChart: function(){
-        var winRate = this.state.heroDetail.winRate;
-
+        var winRateCompetitive = this.state.heroDetail.winRateCompetitive;
+        var winRateQuick = this.state.heroDetail.winRateQuick;
+        var patchName = this.state.heroDetail.patchName;
         Highcharts.chart('heroWinRateChart', {
             chart: {
                 width: 400,
                 type: 'areaspline'
             },
             title: {
-                text: 'Win Rate % By Patch'
+                text: 'Win Rate / Competitive'
             },
             xAxis: {
-                categories: ['1', '2', '3'],
-                plotBands: [{ // visualize the weekend
-                    from: 4.5,
-                    to: 6.5,
-                    color: 'rgba(68, 170, 213, .2)'
-                }],
+                categories: patchName,
                 title: {
                     text: 'Patch'
                 }
             },
             yAxis: {
-                max: 100,
+                max: 60,
+                min:45,
+                tickInterval: 5,
                 title: {
                     text: 'Percent'
-                },
+                }
 
             },
 
@@ -159,7 +178,7 @@ var HeroSkill = React.createClass({
                 shared: true,
                 valueSuffix: '%',
                 headerFormat: '',
-                pointFormat: '<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b>'
+                pointFormat: '<span style="color:{point.color}">\u25CF</span> win rate : <b>{point.y}</b>'
             },
             credits: {
                 enabled: false
@@ -170,8 +189,101 @@ var HeroSkill = React.createClass({
                 }
             },
             series: [{
-                name: 'win rate',
-                data: winRate
+                name: 'Win Rate / Competitive',
+                data: winRateCompetitive
+            }]
+        });
+
+        Highcharts.chart('heroWinRateQuickMatchChart', {
+            chart: {
+                width: 400,
+                type: 'areaspline'
+            },
+            title: {
+                text: 'Win Rate / Quick Match'
+            },
+            xAxis: {
+                categories: patchName,
+                title: {
+                    text: 'Patch'
+                }
+            },
+            yAxis: {
+                max: 60,
+                min:45,
+                tickInterval: 5,
+                title: {
+                    text: 'Percent'
+                }
+
+            },
+
+            tooltip: {
+                shared: true,
+                valueSuffix: '%',
+                headerFormat: '',
+                pointFormat: '<span style="color:{point.color}">\u25CF</span> win rate : <b>{point.y}</b>'
+            },
+            credits: {
+                enabled: false
+            },
+            plotOptions: {
+                areaspline: {
+                    fillOpacity: 0.5
+                }
+            },
+            series: [{
+                name: 'Win Rate / Quick Match',
+                data: winRateQuick
+            }]
+        });
+
+    },
+    skillPieChart : function(){
+
+        var heroSkillList = this.state.heroDetail.heroSkillList;
+        var heroSkillValue = this.state.heroDetail.heroSkillValue;
+
+        var heroSkillArr = [];
+        heroSkillList.forEach(function(skill,index){
+            var subSkillArr = [];
+            subSkillArr.push(skill,heroSkillValue[index]);
+            heroSkillArr.push(subSkillArr);
+        });
+
+        Highcharts.chart('heroSkillPieChart', {
+            chart: {
+                type: 'pie',
+                options3d: {
+                    enabled: true,
+                    alpha: 45,
+                    beta: 0
+                }
+            },
+            title: {
+                text: 'Skills frequency of use'
+            },
+            credits: {
+                enabled: false
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    depth: 35,
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}'
+                    }
+                }
+            },
+            tooltip: {
+                pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {point.percentage:.1f}%</b>'
+            },
+            series: [{
+                type: 'pie',
+                name: 'frequency of use',
+                data: heroSkillArr
             }]
         });
 
@@ -192,6 +304,7 @@ var HeroSkill = React.createClass({
             this.abilityChart();
             this.winRateChart();
             this.basicChart();
+            this.skillPieChart();
             this.forceUpdate();
             
         }.bind(this));
