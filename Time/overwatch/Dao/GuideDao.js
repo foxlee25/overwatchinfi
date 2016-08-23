@@ -117,9 +117,9 @@ var guideClick = function(db, guide){
 //
 // };
 
-// var removeGuide = function(db, data){
-//     db.collection('HeroGuide').remove({'createTime': data.guideId});
-// };
+var removeGuide = function(db, data){
+    db.collection('HeroGuide').remove({'createTime': data.guideId});
+};
 
 // var removeGuide = function(db, data){
 //     db.collection('HeroGuide').find().snapshot().forEach(
@@ -139,25 +139,25 @@ var guideClick = function(db, guide){
 //     );
 // };
 
-var removeGuide = function(db, data){
-    db.collection('HeroGuide').find().snapshot().forEach(
-        function (guide) {
-            if(guide.dislikeTime==0){
-                guide.dislikeTime = 1;
-            }
-            db.collection('HeroGuide').update(
-                {
-                    _id: guide._id
-                },
-                {
-                    $set: {
-                        bestGuide: guide.likeTime / guide.dislikeTime
-                    }
-                }
-            );
-        }
-    );
-};
+// var removeGuide = function(db, data){
+//     db.collection('HeroGuide').find().snapshot().forEach(
+//         function (guide) {
+//             if(guide.dislikeTime==0){
+//                 guide.dislikeTime = 1;
+//             }
+//             db.collection('HeroGuide').update(
+//                 {
+//                     _id: guide._id
+//                 },
+//                 {
+//                     $set: {
+//                         bestGuide: guide.likeTime / guide.dislikeTime
+//                     }
+//                 }
+//             );
+//         }
+//     );
+// };
 
 var insertGuide = function(db, data, restCallback){
     db.collection('HeroGuide').insertOne(data, function(err, result){

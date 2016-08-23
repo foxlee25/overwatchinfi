@@ -40,6 +40,7 @@ Img {
 
 .heroCard {
 	margin: 10px;
+	text-align:center;
 	background: rgba(0, 0, 0, 0.2);
     border-top-color: rgba(255, 255, 255, 0.1);
     border-top-style: solid;
@@ -82,29 +83,30 @@ Img {
 @media only screen and (min-width: 991px){
 	.heroCardContainer {
 		float: left;
-		width: 16.6%;
 	}
 }
 
 @media only screen and (min-width: 767px) and (max-width: 990px){
 	.heroCardContainer {
 		float: left;
-		width: 20%;
 	}
 }
 
 @media only screen and (min-width: 399px) and (max-width: 766px){
 	.heroCardContainer {
 		float: left;
-		width: 33.3%;
+
 	}
 }
 
 @media only screen and (max-width: 398px){
 	.heroCardContainer {
 		float: left;
-		width: 100%;
 	}
+}
+
+img.heroCardImg {
+	width: 120px;
 }
 
 #app {

@@ -101,8 +101,10 @@ const pro = React.createClass({
             return (
                 <div className="proContainer">
                     <div className="basicInfo">
+                        <div className="basicInfoImg">
                         <img src={this.state.basicinfo.profileImage} />
-                        <div>
+                        </div>
+                        <div className="basicInfoText">
                             <h3>{this.state.basicinfo.profileName}</h3>
                             <h5>Level {this.state.basicinfo.level} with {this.state.basicinfo.gameWins} game wins</h5>
                         </div>
