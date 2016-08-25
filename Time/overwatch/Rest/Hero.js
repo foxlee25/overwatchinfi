@@ -4,6 +4,11 @@ var router = express.Router();
 var fs = require('fs');
 var apicache = require('apicache').middleware;
 
+router.all('*', function (req, res ,next) {
+	daoController.getDao('AnalysisDao', 'page_click', "heroPage");
+    next();
+});
+
 //Router to get heros
 /** path is /hero/allheros **/
 router.get('/allheros', apicache('1 hour'), function(req, res) {

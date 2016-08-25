@@ -15,6 +15,7 @@ DaoManager.HeroDao = require('./Dao/HeroDao.js');
 DaoManager.ProDao = require('./Dao/ProDao.js');
 DaoManager.GuideDao = require('./Dao/GuideDao.js');
 DaoManager.CommentDao = require('./Dao/CommentDao.js');
+DaoManager.AnalysisDao = require('./Dao/AnalysisDao.js');
 /**
  *  daoFileName use to separate dao files.
  *  restCallback will be called after daoMethod excute.

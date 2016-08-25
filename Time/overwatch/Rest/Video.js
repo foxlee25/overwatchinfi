@@ -2,6 +2,11 @@ var express = require('express');
 var daoController = require('../DaoController.js');
 var router = express.Router();
 
+router.all('*', function (req, res ,next) {
+    daoController.getDao('AnalysisDao', 'page_click', "videoPage");
+    next();
+});
+
 /**path is /video/getAllVideos**/
 router.post('/getAllVideos', function (req, res) {
     res.header('Content-type', 'application/json');

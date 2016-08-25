@@ -6,6 +6,11 @@ var daoController = require('../DaoController.js');
 var fs = require('fs');
 var router = express.Router();
 
+router.all('*', function (req, res ,next) {
+    daoController.getDao('AnalysisDao', 'page_click', "guidePage");
+    next();
+});
+
 /**path is /guide/getGuides **/
 router.post('/allGuides', function (req, res) {
     res.header('Content-type', 'application/json');

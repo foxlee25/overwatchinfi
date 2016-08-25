@@ -5,6 +5,11 @@ var cronJob = require('cron').CronJob;
 var daoController = require('../DaoController');
 var router = express.Router();
 
+router.all('*', function (req, res ,next) {
+    daoController.getDao('AnalysisDao', 'page_click', "newsPage");
+    next();
+});
+
 /**path is /news/removeNews**/
 router.post('/removeNews', function (req, res) {
     res.header('Content-type', 'application/json');
